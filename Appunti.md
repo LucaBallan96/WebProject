@@ -1,1 +1,3 @@
-Potremmo scrivere tipo le cose da fare o da migliorare e quando le abbiamo fatte le cancelliamo 
+1. Nome sito
+2. Accessibilita (alla fine)
+3. Relazione (alla fine)
