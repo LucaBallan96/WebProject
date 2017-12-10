@@ -8,10 +8,56 @@
 		<meta name="keywords" content="Edilizia, settore edile, Treviso, Costruzioni Bordignon">
 		<meta name="author" content="Luca Ballan, Giovanni Calore">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style/stylesheet_desktop.css">
 		<link rel="stylesheet" media="screen and (max-width 480px)" href="style/stylesheet_mobile.css">
-		<link rel="stylesheet" media="screen and (max-width 1024px)" href="style/stylesheet_desktop.css">
 		<link rel="stylesheet" media="print" href="style/stylesheet_print.css">
 	</head>
 	<body>
+		<!-- NAVIGATION -->
+		<div class="navbar">
+			<div class="dropdown">
+				<button class="drop_button">Azienda</button>
+				<div class="drop_content">
+					<a href="#">Storia</a>
+					<a href="#">Sedi</a>
+					<a href="#">Persone</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="drop_button">Progetti</button>
+				<div class="drop_content">
+					<a href="#">In corso</a>
+					<a href="#">Terminati</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="drop_button">Iniziative</button>
+				<div class="drop_content">
+					<a href="#">Sponsor</a>
+					<a href="#">Stampa</a>
+					<a href="#">Lavora con noi</a>
+				</div>	
+			</div>
+		</div>
+		<!-- IMAGES -->
+		<div class="images">
+			<img class="home_image" src="images/home1.jpg">
+			<img class="home_image" src="images/home2.jpg">
+		</div>
+		<script>
+			var index = 0;
+			changeImage();
+			function changeImage() {
+				var i;
+				var x = document.getElementsByClassName("home_image");
+				for (i = 0; i < x.length; i++) {
+				   x[i].style.display="none";
+				}
+				index++;
+				if (index > x.length) {index = 1}
+				x[index-1].style.display="block";
+				setTimeout(changeImage, 5000);
+			}
+		</script>
 	</body>
 </html>
