@@ -7,17 +7,22 @@
 
 /* NAVIGATION */
 
-.navbar {
+#compact_menu {  /* only mobile */
+	display: none;
+}
+#close_menu { /* only mobile */
+	display: none;
+}
+#navbar {
 	position: fixed;
 	width: 100%;
 	background-color: transparent;
 }
 .dropdown {
 	float: left;
-	transition: 1s;
 }
 .drop_button {
-	padding: 1em 2em;
+	padding: 1em 1.5em;
 	border: none;
 	background-color: inherit;
 	color: #a4bdff;

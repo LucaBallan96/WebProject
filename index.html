@@ -8,13 +8,24 @@
 		<meta name="keywords" content="Edilizia, settore edile, Treviso, Costruzioni Bordignon">
 		<meta name="author" content="Luca Ballan, Giovanni Calore">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="style/stylesheet_desktop.css">
-		<link rel="stylesheet" media="screen and (max-width 480px)" href="style/stylesheet_mobile.css">
+		<link rel="stylesheet" media="screen and (min-width:480px)" href="style/stylesheet_desktop.css">
+		<link rel="stylesheet" media="screen and (max-width:480px)" href="style/stylesheet_mobile.css">
 		<link rel="stylesheet" media="print" href="style/stylesheet_print.css">
 	</head>
 	<body>
 		<!-- NAVIGATION -->
-		<div class="navbar">
+
+		<button id="compact_menu" onclick="display_navbar(this)">
+			<div class="cm_line"></div>
+			<div class="cm_line"></div>
+			<div class="cm_line"></div>
+		</button>
+
+		<button id="close_menu" onclick="close_navbar(this)">
+			x
+		</button>
+
+		<div id="navbar">
 			<div class="dropdown">
 				<button class="drop_button">Azienda</button>
 				<div class="drop_content">
@@ -57,6 +68,16 @@
 				if (index > x.length) {index = 1}
 				x[index-1].style.display="block";
 				setTimeout(changeImage, 5000);
+			}
+			function display_navbar(cm) {
+				document.getElementById("navbar").style.display="block";
+				document.getElementById("close_menu").style.display="block";
+				cm.style.display="none";
+			}
+			function close_navbar(closebtn) {
+				document.getElementById("navbar").style.display="none";
+				document.getElementById("compact_menu").style.display="block";
+				closebtn.style.display="none";
 			}
 		</script>
 	</body>
