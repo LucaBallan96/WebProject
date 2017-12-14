@@ -48,6 +48,7 @@
 			</div>
 			<button id="contacts">Contatti</button>
 			<button id="admin">Area Privata</button>
+			<button id="close" onclick="close_navbar(this)">X</button>
 		</div>
 		<!-- FIRST-->
 		<div id="first_div">
@@ -68,6 +69,15 @@
 		<div class="div_padding_vertical"></div>
 		
 		<!--SCRIPT-->
-		<script src="menuScript.js"></script>
+		<script type="text/javascript">
+			function display_navbar(cm) {
+    			document.getElementById("navbar").style.left="0%";
+    			cm.style.display="none";
+			}
+			function close_navbar(cl) {
+    			document.getElementById("navbar").style.left="-100%";
+    			document.getElementById("compact_menu").style.display="block";
+			}
+		</script>
 	</body>
 </html>

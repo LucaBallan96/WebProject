@@ -8,12 +8,26 @@
 /* NAVIGATION */
 
 #compact_menu {  /* only mobile */
-	display: none;
+	position: fixed;
+	display: block;
+	border: none;
+	padding: 1em 1.5em;
+	background-color: #00bbffcb;
+}
+.cm_line {
+	background-color: white;
+	width: 30px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
 }
 #navbar {
 	position: fixed;
+	left: -100%;
 	width: 100%;
-	background-color: #00bbff57;
+	height: 100%;
+	background-color: #00bbffcb;
+	transition: 0.4s;
 }
 #home_link {
 	display: block;
@@ -24,6 +38,7 @@
 	position: relative;
 	width: 100%;
 	padding: 0.8em;
+	border-bottom: 1px dotted black;
 }
 .dropdown, #contacts {
 	display: block;
@@ -31,8 +46,9 @@
 .drop_button {
 	padding: 1em 1.5em;
 	border: none;
+	border-bottom: 1px dotted black;
 	background-color: inherit;
-	color: #a4bdff;
+	color: #000000;
 	font-size: 1em;
 }
 .drop_content {
@@ -47,19 +63,29 @@
 #contacts, #admin {
 	padding: 1em 1.5em;
 	border: none;
+	border-bottom: 1px dotted black;
 	background-color: transparent;
-	color: #a4bdff;
+	color: #000000;
 	font-size: 1em;
 }
 #admin {
 	display: none;
 	float: right;
 }
+#close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border: none;
+	color: black;
+	background-color: transparent;
+	font-size: 25px;
+}
 #logo:hover {
 	cursor: pointer;
 }
 .dropdown:hover .drop_button, #admin:hover, #contacts:hover {
-	background-color: #00bbff2c;
+	background-color: #ffffff6e;
 }
 /*
 .dropdown:hover .drop_content {
