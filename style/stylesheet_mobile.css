@@ -69,8 +69,9 @@
 	font-size: 1em;
 }
 #admin {
-	display: none;
-	float: right;
+	position: absolute;
+	bottom: 0px;
+	border-top: 1px dotted;
 }
 #close {
 	position: absolute;

@@ -13,7 +13,7 @@
 #navbar {
 	position: fixed;
 	width: 100%;
-	background-color: #00bbff57;
+	background-color: #0099ff57;
 }
 #home_link {
 	float: left;
@@ -32,24 +32,26 @@
 	padding: 1em 1.5em;
 	border: none;
 	background-color: inherit;
-	color: #a4bdff;
+	color: white;
 	font-size: 1em;
 }
 .drop_content {
 	position: absolute;
-	visibility: hidden;	
+	visibility: hidden;
+	background-color: #0099ff57;
 }
 .drop_content a{
 	padding: 1em;
-	color: #a4bdff;
+	color: white;
 	text-decoration: none;
 	display: block;
+	background-color: #008cff7a;
 }
 #contacts, #admin {
 	padding: 1em 1.5em;
 	border: none;
 	background-color: transparent;
-	color: #a4bdff;
+	color: white;
 	font-size: 1em;
 }
 #admin {
@@ -62,13 +64,13 @@
 	cursor: pointer;
 }
 .dropdown:hover .drop_button, #admin:hover, #contacts:hover {
-	background-color: #00bbff2c;
+	background-color: #008cff7a;
 }
 .dropdown:hover .drop_content {
 	visibility: visible;
 }
 .drop_content a:hover {
-	border-bottom: 1px solid #d3d6dd;
+	background-color: #002fff80;
 }
 
 /* IMAGES */
