@@ -11,6 +11,7 @@
 	display: none;
 }
 #navbar {
+	z-index: 1;
 	position: fixed;
 	width: 100%;
 	background-color: #0099ff57;
@@ -80,35 +81,40 @@
 }
 /* FIRST DIV */
 #first_div{
+	float: left;
 	position: relative;
-	z-index: -1;
 	width: 100%;
-	height: 600px;
-	background-color: #b1e0ff;
+	height: 500px;
+	overflow: hidden;
 }
-#logo_img{
+#operai1_img{
 	position: relative;
-	display: block;
-	height: 100px;
-	width: 400px;
-	left: 50%;
-	top: 45%;
+	width: 1500px;
+	height: auto;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	
+}
+#logo_bianco{
+	z-index: 1;
+	position: relative;
+	height: 160px;
+	width: 550px;
+	text-outline: -85px;%;
+	left: 32%;
 	transform: translate(-50%,-50%);
 }
-#slogan1{
-	position: relative;
-	width: 492px;
-	top: 45%;
-	left: 50%;
-	transform: translate(-50%);
-	font-size: 24px;
-	color: #078ce4;
-}
+
+
+
 .div_padding_horizontal{
 	position: relative;
+	float: left;
 	height: 10px;
 	width: 100%;
 	background-color: white;
+
 }
 .div_padding_vertical{
 	float: left;
@@ -149,5 +155,26 @@
 	height:auto;
 	top: 60%;
 	left: 50%;
+	transform: translate(-50%,-50%);
+}
+/*FOURTH DIV*/
+#fourth_div{
+	float: left;
+	position: relative;
+	z-index: -1;
+	width: 100%;
+	height: 600px;
+	background-color: #b1e0ff;
+
+
+	
+}
+#logo_img{
+	position: relative;
+	display: block;
+	height: 100px;
+	width: 400px;
+	left: 50%;
+	top: 45%;
 	transform: translate(-50%,-50%);
 }
