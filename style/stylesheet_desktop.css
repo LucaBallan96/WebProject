@@ -97,7 +97,7 @@
 	position: relative;
 	height: 160px;
 	width: 550px;
-	text-outline: -85px;%;
+	top:-85%;
 	left: 32%;
 	transform: translate(-50%,-50%);
 }
