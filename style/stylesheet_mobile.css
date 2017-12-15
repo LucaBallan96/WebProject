@@ -65,7 +65,7 @@
 	border: none;
 	border-bottom: 1px dotted black;
 	background-color: transparent;
-	color: #000000;
+	color: black;
 	font-size: 1em;
 }
 #admin {
@@ -95,10 +95,4 @@
 */
 .drop_content a:hover {
 	border-bottom: 1px solid #a4bdff;
-}
-
-/* IMAGES */
-
-.home_image {
-	width: 100%;
 }
