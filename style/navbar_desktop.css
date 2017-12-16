@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVIGATION */
+
+#compact_menu {  /* only mobile */
+	display: none;
+}
+#navbar {
+	z-index: 1;
+	position: fixed;
+	left: 0%;
+	width: 100%;
+	background-color: #0099ffa8;
+}
+#home_link {
+	float: left;
+	width: 9em;
+	text-decoration: none;
+}
+#logo {
+	position: relative;
+	width: 100%;
+	padding: 0.8em;
+}
+.dropdown, #contacts {
+	float: left;
+}
+.drop_button {
+	padding: 1em 1.5em;
+	border: none;
+	background-color: inherit;
+	color: white;
+	font-size: 1em;
+}
+.drop_content {
+	position: absolute;
+	visibility: hidden;
+	background-color: #0099ffa8;
+}
+.drop_content a{
+	padding: 1em;
+	color: white;
+	text-decoration: none;
+	display: block;
+	background-color: #008cff7a;
+}
+#contacts, #admin {
+	padding: 1em 1.5em;
+	border: none;
+	background-color: transparent;
+	color: white;
+	font-size: 1em;
+}
+#admin {
+	float: right;
+}
+#close {
+	display: none;
+}
+#logo:hover {
+	cursor: pointer;
+}
+.dropdown:hover .drop_button, #admin:hover, #contacts:hover {
+	background-color: #008cff7a;
+}
+.dropdown:hover .drop_content {
+	visibility: visible;
+}
+.drop_content a:hover {
+	background-color: #002fff80;
+}

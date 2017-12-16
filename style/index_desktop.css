@@ -1,79 +1,4 @@
-* {
-    box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-/* NAVIGATION */
-
-#compact_menu {  /* only mobile */
-	display: none;
-}
-#navbar {
-	z-index: 1;
-	position: fixed;
-	left: 0%;
-	width: 100%;
-	background-color: #0099ff57;
-}
-#home_link {
-	float: left;
-	width: 9em;
-	text-decoration: none;
-}
-#logo {
-	position: relative;
-	width: 100%;
-	padding: 0.8em;
-}
-.dropdown, #contacts {
-	float: left;
-}
-.drop_button {
-	padding: 1em 1.5em;
-	border: none;
-	background-color: inherit;
-	color: white;
-	font-size: 1em;
-}
-.drop_content {
-	position: absolute;
-	visibility: hidden;
-	background-color: #0099ff57;
-}
-.drop_content a{
-	padding: 1em;
-	color: white;
-	text-decoration: none;
-	display: block;
-	background-color: #008cff7a;
-}
-#contacts, #admin {
-	padding: 1em 1.5em;
-	border: none;
-	background-color: transparent;
-	color: white;
-	font-size: 1em;
-}
-#admin {
-	float: right;
-}
-#close {
-	display: none;
-}
-#logo:hover {
-	cursor: pointer;
-}
-.dropdown:hover .drop_button, #admin:hover, #contacts:hover {
-	background-color: #008cff7a;
-}
-.dropdown:hover .drop_content {
-	visibility: visible;
-}
-.drop_content a:hover {
-	background-color: #002fff80;
-}
+@import url("navbar_desktop.css");
 
 /* FIRST DIV */
 
@@ -114,7 +39,7 @@
 	background-color: white;
 }
 
-/*SECOND DIV*/
+/* SECOND DIV */
 
 #second_div{
 	position: relative;
@@ -133,7 +58,7 @@
 	transform: translate(-50%,-50%);
 }
 
-/*THIRD DIV*/
+/* THIRD DIV */
 
 #third_div{
 	float: left;
@@ -152,20 +77,15 @@
 	transform: translate(-50%,-50%);
 }
 
-/*FOURTH DIV*/
+/* FOURTH DIV */
 
 #fourth_div{
-	
 	position: relative;
 	width: 100%;
-
 	height: 970px;
 	overflow: hidden;
-
-
 }
 #ingegneri_img{
-	
 	position: relative;
 	display: block;
 	width: 1700px;
@@ -173,18 +93,20 @@
 	top: 48%;
 	transform: translate(-50%,-50%);
 }
-/*FIFTH DIV*/
+
+/* FIFTH DIV */
+
 #fifth_div{
 	position: relative;
 	top:-122.5%;
-	box-shadow: 0 6px 10px 0 rgba(12, 11, 11, 0.2), 0 10px 26px 0 rgba(3, 3, 3, 0.19);
+	box-shadow: 0 6px 10px 0 #0c0b0b33, 0 10px 26px 0 #03030330;
 	width: calc(50% - 15px);
 	margin-left: 10px;
 	height: 300px;
 	overflow: hidden;
 }
 #fifth_div:hover,#sixth_div:hover,#seven_div:hover{
-	box-shadow: 0 6px 10px 0 rgba(169, 240, 252, 0.87),0 6px 10px 0 rgba(169, 240, 252, 0.87) ;
+	box-shadow: 0 6px 10px 0 #a9f0fcde, 0 6px 10px 0 #a9f0fcde ;
 }
 #donna_img{
 	position: relative;
@@ -194,11 +116,13 @@
 	left: 50%;
 	transform: translate(-50%,-50%);
 }
-/*SIXTH DIV*/
+
+/* SIXTH DIV */
+
 #sixth_div{
 	position: relative;
 	top:-120.5%;
-	box-shadow: 0 6px 10px 0 rgba(12, 11, 11, 0.2), 0 10px 26px 0 rgba(3, 3, 3, 0.19);
+	box-shadow: 0 6px 10px 0 #0c0b0b33, 0 10px 26px 0 #03030330;
 	width: calc(50% - 15px);
 	margin-left: 10px;
 	height: 300px;
@@ -213,11 +137,13 @@
 	left: 50%;
 	transform: translate(-50%,-50%);
 }
-/*SEVEN DIV*/
+
+/* SEVENTH DIV */
+
 #seven_div{
 	position: relative;
-	top:-118.5%;
-	box-shadow: 0 6px 10px 0 rgba(12, 11, 11, 0.2), 0 10px 26px 0 rgba(3, 3, 3, 0.19);
+	top: -118.5%;
+	box-shadow: 0 6px 10px 0 #0c0b0b33, 0 10px 26px 0 #03030330;
 	width: calc(50% - 15px);
 	margin-left: 10px;
 	height: 300px;
