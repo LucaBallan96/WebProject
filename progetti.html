@@ -7,49 +7,15 @@
 		<meta name="description" content="Costruzioni Bordignon S.r.l., con oltre tre generazioni di storia alle spalle, opera nel settore edile residenziale, industriale, pubblico, nei restauri e nelle infrastrutture mirando ed ottenendo sempre grande apprezzamento dai suoi Clienti, grazie alla sua esperienza, dedizione e continua innovazione">
 		<meta name="keywords" content="Edilizia, settore edile, Treviso, Costruzioni Bordignon">
 		<meta name="author" content="Luca Ballan, Giovanni Calore">
-		<link rel="stylesheet" media="screen and (min-width:720px)" href="style/progetti_desktop.css">
-		<link rel="stylesheet" media="screen and (max-width:720px)" href="style/progetti_mobile.css">
-		<link rel="stylesheet" media="print" href="style/progetti_print.css">
+		<link rel="stylesheet" media="screen and (min-width:720px)" href="style/progetti/progetti_desktop.css">
+		<link rel="stylesheet" media="screen and (max-width:720px)" href="style/progetti/progetti_mobile.css">
+		<link rel="stylesheet" media="print" href="style/progetti/progetti_print.css">
 	</head>
 	<body>
         <!--SCRIPT-->
 		<script type="text/javascript" src="script/menuScript.js"></script>
 
-        <!-- NAVIGATION -->
-		<button id="compact_menu" onclick="display_navbar(this)">
-			<div class="cm_line"></div>
-			<div class="cm_line"></div>
-			<div class="cm_line"></div>
-		</button>
-
-		<div id="navbar">
-			<a id="home_link" href="#"><img id="logo" src="images/logo.png"></a>
-			<div class="dropdown">
-				<button class="drop_button">Azienda</button>
-				<div class="drop_content">
-					<a href="#"><pre>Storia&#9&#9&gt</pre></a>
-					<a href="#"><pre>Sedi&#9&#9&#9&gt</pre></a>
-					<a href="#"><pre>Persone&#9&#9&gt</pre></a>
-				</div>
-			</div>
-			<div class="dropdown">
-				<button class="drop_button">Progetti</button>
-				<div class="drop_content">
-					<a href="#"><pre>In corso&#9&#9&gt</pre></a>
-					<a href="#"><pre>Terminati&#9&#9&gt</pre></a>
-				</div>
-			</div>
-			<div class="dropdown">
-				<button class="drop_button">Iniziative</button>
-				<div class="drop_content">
-					<a href="#"><pre>Sponsor&#9&#9&#9&gt</pre></a>
-					<a href="#"><pre>Stampa&#9&#9&#9&gt</pre></a>
-					<a href="#"><pre>Lavora con Noi&#9&gt</pre></a>
-				</div>	
-			</div>
-			<button id="contacts">Contatti</button>
-			<button id="admin">Area Privata</button>
-			<button id="close" onclick="close_navbar(this)">X</button>
-		</div>
+		<!-- NAVIGATION -->
+		<?php include "navbar.php" ?>
 	</body>
 </html>
