@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVIGATION */
+
+#compact_menu {  /* only mobile */
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	display: block;
+	border: none;
+	padding: 0.5em 0.8em;
+	background-color: #00bbffcb;
+}
+.cm_line {
+	background-color: white;
+	width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 6px 0;
+}
+#navbar {
+	position: fixed;
+	z-index: 1;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background-color: #00bbffcb;
+	transition: 0.4s;
+}
+#home_link {
+	display: block;
+	width: 9em;
+	text-decoration: none;
+}
+#logo {
+	position: relative;
+	width: 100%;
+	padding: 0.8em;
+	border-bottom: 1px dotted black;
+}
+.dropdown, #contacts {
+	display: block;
+}
+.drop_button {
+	padding: 1em 1.5em;
+	border: none;
+	border-bottom: 1px dotted black;
+	background-color: inherit;
+	color: #000000;
+	font-size: 1em;
+}
+.drop_content {
+	display: none;	
+}
+.drop_content a{
+	padding: 1em;
+	color: #a4bdff;
+	text-decoration: none;
+	display: block;
+}
+#contacts, #admin {
+	padding: 1em 1.5em;
+	border: none;
+	border-bottom: 1px dotted black;
+	background-color: transparent;
+	color: black;
+	font-size: 1em;
+}
+#admin {
+	position: absolute;
+	bottom: 0px;
+	border-top: 1px dotted;
+}
+#close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border: none;
+	color: black;
+	background-color: transparent;
+	font-size: 25px;
+}
+#logo:hover {
+	cursor: pointer;
+}
+.dropdown:hover .drop_button, #admin:hover, #contacts:hover {
+	background-color: #ffffff6e;
+}
+/*
+.dropdown:hover .drop_content {
+	display: block;
+}
+*/
+.drop_content a:hover {
+	border-bottom: 1px solid #a4bdff;
+}

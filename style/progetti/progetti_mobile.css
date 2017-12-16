@@ -1,0 +1,30 @@
+@import url("../navbar_mobile.css");
+
+#header1 {
+    padding: 3.5em 2em 2em;
+    font-size: 1.5em;
+    color: #0077ff;
+    text-align: center;
+}
+.project {
+    position: relative;
+    width: calc(50% - 1em);
+    height: 200px;
+    float: left;
+    overflow: hidden;
+    margin: 0.4em 0.5em;
+}
+.pr_image {
+    position: relative;
+    width: 400px;
+    height: auto;
+    top: 50%;
+	left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+}
+.project:hover .pr_image {
+    cursor: pointer;
+    width: 450px;
+    opacity: 0.7;
+}
