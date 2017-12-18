@@ -27,3 +27,9 @@
     width: 450px;
     opacity: 0.7;
 }
+#header2 {
+    padding: 2em 2em;
+    color: #0077ff;
+    text-align: center;
+    clear: both;
+}
