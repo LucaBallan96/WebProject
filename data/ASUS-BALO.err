@@ -1503,3 +1503,4 @@ Version: '5.7.20-log'  socket: ''  port: 3306  MySQL Community Server (GPL)
 2017-12-19T11:15:50.002243Z 0 [Note] End of list of non-natively partitioned tables
 2017-12-19T12:36:56.154945Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 2925901ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
 2017-12-19T12:55:10.745946Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 971231ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2017-12-19T15:01:41.697201Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 1787963ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
