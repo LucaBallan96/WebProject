@@ -52,9 +52,7 @@
 }
 #contacts, #admin {
 	padding: 1em 1.5em;
-	border: none;
-	outline: none;
-	background-color: transparent;
+	text-decoration: none;
 	color: white;
 	font-size: 1em;
 }
@@ -67,8 +65,12 @@
 #logo:hover {
 	cursor: pointer;
 }
-.dropdown:hover .drop_button, #admin:hover, #contacts:hover {
+.dropdown:hover .drop_button {
 	background-color: #008cff7a;
+}
+#admin:hover, #contacts:hover {
+	background-color: #008cff7a;
+	cursor: pointer;
 }
 .dropdown:hover .drop_content {
 	visibility: visible;
