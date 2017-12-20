@@ -57,72 +57,10 @@
 		<h1 id="header1">PROGETTI IN CORSO</h1>
 
 		<!-- PROGETTI -->
-
 		<?php include 'queries/get_progetti.php';?>
-
-		<!--
-		<a href="info_progetto.php" class="project">
-			<img class="pr_image" src="images/progetto1.jpg"/>
-			<div class="pr_title"><div>Titolo progetto</div></div>
-		</a>
-		<div class="project">
-			<img class="pr_image" src="images/progetto2.jpg"/>
-		</div>
-		<div class="project">
-			<img class="pr_image" src="images/progetto3.jpg"/>
-		</div>
-		<div class="project">
-			<img class="pr_image" src="images/progetto4.jpg"/>
-		</div>
-		<div class="project">
-			<img class="pr_image" src="images/progetto5.jpg"/>
-		</div>
-		<div class="project">
-			<img class="pr_image" src="images/progetto6.jpg"/>
-		</div>
-		<div class="project">
-			<img class="pr_image" src="images/progetto7.jpg"/>
-		</div>
-		-->
 
 		<!-- HEADER -->
 		<h1 id="header2">PROGETTI TERMINATI</h1>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<p>Ciao</p>
+
 	</body>
 </html>

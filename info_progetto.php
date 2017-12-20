@@ -51,5 +51,9 @@
             <a href="admin.php" id="admin">Area Privata</a>
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
+
+        <!-- INFO PROGETTO -->
+        <?php include 'queries/get_info_progetto.php';?>
+
     </body>
 </html>

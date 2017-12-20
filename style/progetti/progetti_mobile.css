@@ -23,7 +23,7 @@
     transform: translate(-50%,-50%);
     transition: 0.5s;
 }
-.pr_title {
+.pr_name {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -33,7 +33,7 @@
     color: white;
     font-weight: bold;
 }
-.pr_title div {
+.pr_name div {
     position: relative;
     top: 30%;
     text-align: center;
