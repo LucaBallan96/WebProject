@@ -53,7 +53,11 @@
         </div>
 
         <!-- INFO PROGETTO -->
-        <?php include 'queries/get_info_progetto.php';?>
+        <?php include 'DBConnection.php';
+            $progetto=$_SESSION['progetto'];
+            $conn=new DBConnection();
+            $conn->get_info_progetto($progetto);
+        ?>
 
     </body>
 </html>

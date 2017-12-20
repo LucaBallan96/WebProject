@@ -1,7 +1,6 @@
 <?php
 	class DBConnection {
 		private $conn;
-
 		public function __construct(){ 
 			// Create connection
 			$this->conn = new mysqli("localhost:3306", "root", "tecweb2017");
@@ -10,16 +9,20 @@
 				die("Connection failed: " . $this->conn->connect_error);
 			}
 		}
+		function __destruct() {
+			$this->conn->close();
+		}  	
+
+		// LISTA PROGETTI
 		public function get_progetti() {
-			$sql = "SELECT * FROM webproject.progetti ORDER BY 'status'";
+			$sql = "SELECT * FROM webproject.progetti";
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
-			// output data of each row
 				$incorso="";
 				$terminati="";
 				while($row = $result->fetch_assoc()) {
 					if($row['status']=='in corso') {
-						$incorso=$incorso."<a href='info_progetto.php' class='project'>
+						$incorso=$incorso."<a href='info_progetto.php' id='".$row['id']."' class='project'>
 								<img class='pr_image' src='images/".$row['image']."'/>
 								<div class='pr_name'><div>".$row['name']."</div></div>
 							</a>";
@@ -36,9 +39,10 @@
 				echo "<p>Nessun progetto disponibile</p>";
 			}
 		}
-		// Distruttore 
-		function __destruct() {
-			$this->conn->close();
-		}  	
+
+		// INFO PROGETTO
+		public function get_info_progetti($progetto) {
+			
+		}
 	}
 ?>
