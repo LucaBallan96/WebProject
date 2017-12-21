@@ -53,14 +53,11 @@
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
 
-		<!-- HEADER -->
-		<h1 id="header1">PROGETTI IN CORSO</h1>
-
 		<!-- PROGETTI -->
-		<?php include 'queries/get_progetti.php';?>
-
-		<!-- HEADER -->
-		<h1 id="header2">PROGETTI TERMINATI</h1>
+        <?php include 'DBConnection.php';
+            $conn=new DBConnection();
+            $conn->get_progetti();
+        ?>
 
 	</body>
 </html>
