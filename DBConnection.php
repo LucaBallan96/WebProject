@@ -22,7 +22,7 @@
 				$terminati="";
 				while($row = $result->fetch_assoc()) {
 					if($row['status']=='in corso') {
-						$incorso=$incorso."<a href='info_progetto.php' id='".$row['id']."' class='project'>
+						$incorso=$incorso."<a href='info_progetto.php?numero=".$row['id']."' class='project'>
 								<img class='pr_image' src='images/".$row['image']."'/>
 								<div class='pr_name'><div>".$row['name']."</div></div>
 							</a>";
@@ -41,8 +41,13 @@
 		}
 
 		// INFO PROGETTO
-		public function get_info_progetti($progetto) {
-			
+		public function get_info_progetto($progetto) {
+			if($progetto==1) {}
+				//echo "porcoddio";
+			else if($progetto==7) {}
+				//echo "porcamadonna";
+			else {}
+				//echo "madonnasilura";
 		}
 	}
 ?>
