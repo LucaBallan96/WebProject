@@ -49,8 +49,3 @@
 .project:hover .pr_name div {
     text-decoration: underline;
 }
-#pad_over_footer {
-    clear: both;
-    width: 100%;
-    height: 5em;
-}
