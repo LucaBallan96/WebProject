@@ -36,7 +36,7 @@
                 <button id="menu_bt2" class="drop_button" onclick="display_content(this)">Progetti</button>
                 <div id="content_menu_bt2" class="drop_content">
                     <a href="progetti.php"><pre>In corso&#9&#9&gt</pre></a>
-                    <a href="progetti.php"><pre>Terminati&#9&#9&gt</pre></a>
+                    <a href="progetti.php#header2"><pre>Terminati&#9&#9&gt</pre></a>
                 </div>
             </div>
             <div class="dropdown">
@@ -47,7 +47,7 @@
                     <a href="iniziative.php"><pre>Lavora con Noi&#9&gt</pre></a>
                 </div>	
             </div>
-            <a href="contatti.html" id="contacts">Contatti</a>
+            <a href="#div_container_contatti" id="contacts">Contatti</a>
             <a href="admin.php" id="admin">Area Privata</a>
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
