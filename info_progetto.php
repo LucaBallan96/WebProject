@@ -59,28 +59,5 @@
             $conn->get_info_progetto($progetto);
         ?>
 
-        <!--
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <div id="prova">
-            <div id="text">Ultimo progetto</div>
-        </div>
-        -->
-
-        <h1 id='header'>NOME PROGETTO</h1>
-        <div id='div_image'><img src='images/progetto1.jpg'></img></div>
-        <div id='div_specifiche'>
-            <p class='specifica'>Committente</p><hr/>
-            <p class='specifica'>Tipologia</p><hr/>
-            <p class='specifica'>Località</p><hr/>
-            <p class='specifica'>Direttore dei lavori</p><hr/>
-            <p class='specifica'>Stato</p>
-        </div>
-        <div id="div_desc"></div>
-
     </body>
 </html>

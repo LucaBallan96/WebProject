@@ -59,5 +59,23 @@
             $conn->get_progetti();
         ?>
 
+        <!-- FOOTER -->
+        <div id="footer">
+            <div>
+                <div>
+                    <a>A</a>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a>B</a>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <a>C</a>
+                </div>
+            </div>
+        </div>
 	</body>
 </html>
