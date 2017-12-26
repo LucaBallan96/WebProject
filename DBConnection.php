@@ -37,7 +37,7 @@
 							</a>";
 				}
 				$result->free();
-				echo "<h1 id='header1'>PROGETTI IN CORSO</h1>".$incorso."<h1 id='header2'>PROGETTI TERMINATI</h1>".$terminati."<div id='pad_over_footer'></div>";
+				echo "<h1 id='header1'>PROGETTI IN CORSO</h1>".$incorso."<h1 id='header2'>PROGETTI TERMINATI</h1>".$terminati;
 			} else {
 				echo "<p>Nessun progetto disponibile</p>";
 			}
