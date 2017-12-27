@@ -24,13 +24,13 @@
 				$incorso="";
 				$terminati="";
 				while($row = $result->fetch_assoc()) {
-					if($row['status']=='in corso') {
+					if($row['status']=='In corso') {
 						$incorso=$incorso."<a href='info_progetto.php?numero=".$row['id']."' class='project'>
 								<img class='pr_image' src='images/".$row['image']."'/>
 								<div class='pr_name'><div>".$row['name']."</div></div>
 							</a>";
 					}
-					else if($row['status']=='terminato')
+					else if($row['status']=='Terminato')
 						$terminati=$terminati."<a href='info_progetto.php?numero=".$row['id']."' class='project'>
 								<img class='pr_image' src='images/".$row['image']."'/>
 								<div class='pr_name'><div>".$row['name']."</div></div>
@@ -52,11 +52,11 @@
 				echo "<h1 id='header'>".$row['name']."</h1>
 						<div id='div_image'><img src='images/".$row['image']."'></img></div>
 						<div id='div_specifiche'>
-							<p class='specifica'>Committente ".$row['client']."</p><hr/>
-							<p class='specifica'>Tipologia ".$row['type']."</p><hr/>
-							<p class='specifica'>Località ".$row['location']."</p><hr/>
-							<p class='specifica'>Direttore dei lavori ".$row['director']."</p><hr/>
-							<p class='specifica'>Stato ".$row['status']."</p>
+							<div class='specifica'>Committente<p class='spec_data'>".$row['client']."</p></div><hr/>
+							<div class='specifica'>Tipologia<p class='spec_data'>".$row['type']."</p></div><hr/>
+							<div class='specifica'>Località<p class='spec_data'>".$row['location']."</p></div><hr/>
+							<div class='specifica'>Direttore dei lavori<p class='spec_data'>".$row['director']."</p></div><hr/>
+							<div class='specifica'>Stato<p class='spec_data'>".$row['status']."</p></div>
 						</div>
 						<div id='div_desc'>".$row['description']."</div>";
 			}

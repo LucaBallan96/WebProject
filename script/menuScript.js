@@ -1,6 +1,6 @@
 window.addEventListener("resize", function() {
     var x=screen.width;
-    if(window.matchMedia("screen and (min-width:720px)").matches) {
+    if(window.matchMedia("screen and (min-width:1025px)").matches) {
         document.getElementById("navbar").style.left="0%";
         document.getElementById("compact_menu").style.display="none";
     }

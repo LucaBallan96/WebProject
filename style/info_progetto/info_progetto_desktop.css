@@ -28,17 +28,19 @@
     padding-bottom: 2em;
 }
 #div_image img {
-    width: 600px;
+    width: 700px;
 }
 #div_specifiche {
     width: 100%;
     height: auto;
 }
 .specifica {
-    width: 100%;
     color: gray;
     font-size: 1.5em;
     padding: 2em 18em;
+}
+.spec_data {
+    float: right;
 }
 hr {
     margin: 0 20em;
@@ -49,4 +51,9 @@ hr {
     clear: both;
     width: 100%;
     height: auto;
+    padding: 2em 8em;
+    text-align: center;
+    color: gray;
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
