@@ -7,8 +7,8 @@
 		<meta name="description" content="Costruzioni Bordignon S.r.l., con oltre tre generazioni di storia alle spalle, opera nel settore edile residenziale, industriale, pubblico, nei restauri e nelle infrastrutture mirando ed ottenendo sempre grande apprezzamento dai suoi Clienti, grazie alla sua esperienza, dedizione e continua innovazione">
 		<meta name="keywords" content="Edilizia, settore edile, Treviso, Costruzioni Bordignon">
 		<meta name="author" content="Luca Ballan, Giovanni Calore">
-		<link rel="stylesheet" media="screen and (min-width:1024px)" href="style/progetti/progetti_desktop.css">
-		<link rel="stylesheet" media="screen and (max-width:1024px) and (min-width:720px)" href="style/progetti/progetti_tablet.css">
+		<link rel="stylesheet" media="screen and (min-width:1025px)" href="style/progetti/progetti_desktop.css">
+		<link rel="stylesheet" media="screen and (max-width:1024px) and (min-width:721px)" href="style/progetti/progetti_tablet.css">
 		<link rel="stylesheet" media="screen and (max-width:720px)" href="style/progetti/progetti_mobile.css">
 		<link rel="stylesheet" media="print" href="style/progetti/progetti_print.css">
 	</head>
@@ -52,6 +52,10 @@
             <a href="admin.php" id="admin">Area Privata</a>
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
+        <div id="navbar_bottom_padding"></div>
+
+        <button id="grid_view" class="view">Griglia</button>
+        <button id="list_view" class="view">Lista</button>
 
 		<!-- PROGETTI -->
         <?php include 'DBConnection.php';
