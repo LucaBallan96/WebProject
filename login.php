@@ -7,12 +7,13 @@
 		<meta name="description" content="Costruzioni Bordignon S.r.l., con oltre tre generazioni di storia alle spalle, opera nel settore edile residenziale, industriale, pubblico, nei restauri e nelle infrastrutture mirando ed ottenendo sempre grande apprezzamento dai suoi Clienti, grazie alla sua esperienza, dedizione e continua innovazione">
 		<meta name="keywords" content="Edilizia, settore edile, Treviso, Costruzioni Bordignon">
 		<meta name="author" content="Luca Ballan, Giovanni Calore">
-		<link rel="stylesheet" media="screen and (min-width:720px)" href="style/login/login_desktop.css">
+		<link rel="stylesheet" media="screen and (min-width:721px)" href="style/login/login_desktop.css">
 		<link rel="stylesheet" media="screen and (max-width:720px)" href="style/login/login_mobile.css">
 		<link rel="stylesheet" media="print" href="style/login/login_print.css">
 	</head>
 	<body>
-        <form action="">
+        <a id="back_link" href="index.html">Indietro</a>
+        <form action="DBConnection.php" method="post">
             <div id="container">
                 <div id="div_img">
                     <img src="images/login.png" id="user_img">
@@ -25,14 +26,22 @@
                         <input type="password" placeholder="Enter Password" name="p" required>
                     </div>
                     <div class="data">
-                        <input type="checkbox" checked="checked"> Remember me
+                        Forgot <a href="">password</a>?
                     </div>
                     <div id="div_buttons">
                         <button type="submit">Login</button>
                         <button type="reset" id="cancel_btn">Cancel</button>
-                    </div>
+                    </div> 
                 </div>
             </div>
-        </form>   
+        </form>
+        <?php
+            if(isset($_GET['error'])) {
+                if($_GET['error']==0)
+                    echo "<p style='width:100%; text-align:center'><b>Errore nelle credenziali, riprovare</b></p>";
+                if($_GET['error']==1)
+                    echo "<p style='width:100%; text-align:center'><b>L'utente non ha i permessi necessari per accedere come amministratore!</b></p>";
+            }
+        ?>
     </body>
 </html>

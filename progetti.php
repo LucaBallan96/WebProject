@@ -49,7 +49,7 @@
                 </div>	
             </div>
             <a href="#div_container_contatti" id="contacts">Contatti</a>
-            <a href="admin.php" id="admin">Area Privata</a>
+            <a href="login.php?compilato=0" id="admin">Area Privata</a>
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
         <div id="navbar_bottom_padding"></div>
@@ -58,7 +58,7 @@
         <button id="list_view" class="view">Lista</button>
 
 		<!-- PROGETTI -->
-        <?php include 'DBConnection.php';
+        <?php include "DBConnection.php";
             $conn=new DBConnection();
             $conn->get_progetti();
         ?>

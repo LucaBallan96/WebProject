@@ -1,9 +1,6 @@
 <?php
 	class DBConnection {
 		private $conn;
-		private static $servername="localhost:3306";
-		private static $username="root";
-		private static $password="tecweb2017";
 		public function __construct(){ 
 			// Create connection
 			$this->conn = new mysqli("localhost:3306", "root", "tecweb2017");
@@ -45,7 +42,7 @@
 
 		// INFO PROGETTO
 		public function get_info_progetto($progetto) {
-			$sql = "SELECT * FROM webproject.progetti WHERE id=$progetto";
+			$sql = "SELECT * FROM webproject.progetti WHERE id='$progetto'";
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
@@ -61,5 +58,32 @@
 						<div id='div_desc'>".$row['description']."</div>";
 			}
 		}
+
+		// VALIDAZIONE CREDENZIALI
+		public function validate($user, $psw) {
+			$sql = "SELECT * FROM webproject.utenti WHERE username='$user'";
+			$result = $this->conn->query($sql);
+			if ($result->num_rows > 0) {
+				$row = $result->fetch_assoc();
+				if($row['password']==$psw) {
+					if($row['role']=='normal')
+						return 1;
+					else if($row['role']=='admin')
+						return 2;
+				}
+			}
+			return 0;
+		}
+	}
+
+	if(isset($_POST['u'])) {
+    	$conn=new DBConnection();
+    	$num=$conn->validate($_POST['u'], $_POST['p']);
+    	if($num==2)
+        	header('Location: admin.php');
+    	else if($num==0)
+        	header('Location: login.php?error=0');
+    	else if($num==1)
+			header('Location: login.php?error=1');
 	}
 ?>
