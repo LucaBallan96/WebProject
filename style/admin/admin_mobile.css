@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/* NAVIGATION */
+
+#nav {
+    width: 150px;
+    height: 100%;
+    position: fixed;
+	background-color: #0099ffa8;
+}
+.nav_link {
+    width: 100%;
+    display: block;
+    padding: 3em 0em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.header {
+    width: 100%;
+    padding: 2em 2em;
+    color: #0077ff;
+    text-align: center;
+    clear: both;
+}
+.nav_link:hover {
+    text-decoration: underline;
+    background-color: #008cff7a;
+}
