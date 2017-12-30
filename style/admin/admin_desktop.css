@@ -8,12 +8,14 @@
 /* NAVIGATION */
 
 #nav {
-    width: 150px;
+    border: 1px solid blue;
+    width: 130px;
     height: 100%;
     position: fixed;
 	background-color: #0099ffa8;
 }
 .nav_link {
+    border: 1px solid orange;
     width: 100%;
     display: block;
     padding: 3em 0em;
@@ -22,8 +24,10 @@
     text-decoration: none;
 }
 .header {
-    width: 100%;
-    padding: 2em 2em;
+    border: 1px solid green;
+    width: calc(100% - 130px);
+    margin-left: 130px;
+    padding: 2em 0em;
     color: #0077ff;
     text-align: center;
     clear: both;

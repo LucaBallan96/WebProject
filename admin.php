@@ -13,12 +13,12 @@
 	</head>
 	<body>
 		<div id="nav">
-			<a href="index.html" class="nav_link">Home</a>
-			<a href="#impiegati" class="nav_link">Impiegati</a>
-			<a href="#progetti" class="nav_link">Progetti</a>
-			<a href="#articoli" class="nav_link">Articoli</a>
-			<a href="#utenti" class="nav_link">Utenti</a>
-			<a href="#lavoro" class="nav_link">Lavoro</a>
+			<a href="index.html" id="nav_home" class="nav_link">Home</a>
+			<a href="#impiegati" id="nav_people" class="nav_link">Impiegati</a>
+			<a href="#progetti" id="nav_projects" class="nav_link">Progetti</a>
+			<a href="#articoli" id="nav_articles" class="nav_link">Articoli</a>
+			<a href="#utenti" id="nav_users" class="nav_link">Utenti</a>
+			<a href="#lavoro" id="nav_work" class="nav_link">Lavoro</a>
 		</div>
 		<h1 id="impiegati" class="header">Impiegati e dirigenti d'azienda</h1>
 		<h1 id="progetti" class="header">Progetti in cui si impegna l'azienda</h1>
