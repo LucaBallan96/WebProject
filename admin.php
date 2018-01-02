@@ -25,6 +25,7 @@
 		<div id="container_imp">
 			<div id="left_container">
 				<div class="div_impiegato">
+					<a class="modify_btn" href=""></a>
 					<div class="imp_image" style="background-image:url('../../images/impiegato1.jpg')"></div>
 					<div class="imp_info">
 						<div class="imp_name"><div>Mario Rossi</div></div>
@@ -35,97 +36,138 @@
 				<input type="checkbox" id="check1" class="check_control"/>
 				<label class="btn" for="check1">
 					<div class="magic">
-						<div class="imp_more"><div>Età: 47 anni</div></div>
-						<div class="imp_more"><div>Settore: direttivo</div></div>
+						<div class="imp_more"><div>48 anni</div></div>
+						<div class="imp_more"><div>Settore: direzione</div></div>
 						<div class="imp_more"><div>Impiegato dell'azienda dal 2002</div></div>		
 					</div>
 					<div class="more_info"><div>+</div></div>
 				</label>
 				<div class="div_impiegato">
+					<a class="modify_btn" href=""></a>
 					<div class="imp_image" style="background-image:url('../../images/impiegato2.jpg')"></div>
 					<div class="imp_info">
-						<div class="imp_name"><div>Annamaria Bianchi</div></div>
-						<div class="imp_birth"><div>31-12-1985</div></div>
-						<div class="imp_role"><div>Vicepresidente</div></div>
+						<div class="imp_name"><div></div></div>
+						<div class="imp_birth"><div></div></div>
+						<div class="imp_role"><div></div></div>
 					</div>
 				</div>
 				<input type="checkbox" id="check2" class="check_control"/>
 				<label class="btn" for="check2">
-					<div class="magic"></div>
+					<div class="magic">
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>		
+					</div>
 					<div class="more_info"><div>+</div></div>
 				</label>
 				<div class="div_impiegato">
+					<a class="modify_btn" href=""></a>
 					<div class="imp_image" style="background-image:url('../../images/impiegato3.jpg')"></div>
 					<div class="imp_info">
-						<div class="imp_name"></div>
-						<div class="imp_role"></div>
+						<div class="imp_name"><div></div></div>
+						<div class="imp_birth"><div></div></div>
+						<div class="imp_role"><div></div></div>
 					</div>
 				</div>
 				<input type="checkbox" id="check3" class="check_control"/>
 				<label class="btn" for="check3">
-					<div class="magic"></div>
+					<div class="magic">
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>		
+					</div>
 					<div class="more_info"><div>+</div></div>
 				</label>
 				<div class="div_impiegato">
+					<a class="modify_btn" href=""></a>
 					<div class="imp_image" style="background-image:url('../../images/impiegato4.jpg')"></div>
 					<div class="imp_info">
-						<div class="imp_name"></div>
-						<div class="imp_role"></div>
+						<div class="imp_name"><div></div></div>
+						<div class="imp_birth"><div></div></div>
+						<div class="imp_role"><div></div></div>
 					</div>
 				</div>
 				<input type="checkbox" id="check4" class="check_control"/>
 				<label class="btn" for="check4">
-					<div class="magic"></div>
+					<div class="magic">
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>		
+					</div>
 					<div class="more_info"><div>+</div></div>
 				</label>
 			</div>
 			<div id="right_container">
 				<div class="div_impiegato">
+					<a class="modify_btn" href=""></a>
 					<div class="imp_image" style="background-image:url('../../images/impiegato5.jpg')"></div>
 					<div class="imp_info">
-						<div class="imp_name"></div>
-						<div class="imp_role"></div>
+						<div class="imp_name"><div></div></div>
+						<div class="imp_birth"><div></div></div>
+						<div class="imp_role"><div></div></div>
 					</div>
 				</div>
 				<input type="checkbox" id="check5" class="check_control"/>
 				<label class="btn" for="check5">
-					<div class="magic"></div>
+					<div class="magic">
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>		
+					</div>
 					<div class="more_info"><div>+</div></div>
 				</label>
 				<div class="div_impiegato">
+					<a class="modify_btn" href=""></a>
 					<div class="imp_image" style="background-image:url('../../images/impiegato6.jpg')"></div>
 					<div class="imp_info">
-						<div class="imp_name"></div>
-						<div class="imp_role"></div>
+						<div class="imp_name"><div></div></div>
+						<div class="imp_birth"><div></div></div>
+						<div class="imp_role"><div></div></div>
 					</div>
 				</div>
 				<input type="checkbox" id="check6" class="check_control"/>
 				<label class="btn" for="check6">
-					<div class="magic"></div>
+					<div class="magic">
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>		
+					</div>
 					<div class="more_info"><div>+</div></div>
 				</label>
 				<div class="div_impiegato">
+					<a class="modify_btn" href=""></a>
 					<div class="imp_image" style="background-image:url('../../images/impiegato7.jpg')"></div>
 					<div class="imp_info">
-						<div class="imp_name"></div>
-						<div class="imp_role"></div>
+						<div class="imp_name"><div></div></div>
+						<div class="imp_birth"><div></div></div>
+						<div class="imp_role"><div></div></div>
 					</div>
 				</div>
 				<input type="checkbox" id="check7" class="check_control"/>
 				<label class="btn" for="check7">
-					<div class="magic"></div>
+					<div class="magic">
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>		
+					</div>
 					<div class="more_info"><div>+</div></div>
 				</label>
 				<div class="div_impiegato">
+					<a class="modify_btn" href=""></a>
 					<div class="imp_image" style="background-image:url('../../images/impiegato8.jpg')"></div>
 					<div class="imp_info">
-						<div class="imp_name"></div>
-						<div class="imp_role"></div>
+						<div class="imp_name"><div></div></div>
+						<div class="imp_birth"><div></div></div>
+						<div class="imp_role"><div></div></div>
 					</div>
 				</div>
 				<input type="checkbox" id="check8" class="check_control"/>
 				<label class="btn" for="check8">
-					<div class="magic"></div>
+					<div class="magic">
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>
+						<div class="imp_more"><div></div></div>		
+					</div>
 					<div class="more_info"><div>+</div></div>
 				</label>
 			</div>
