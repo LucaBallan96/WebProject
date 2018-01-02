@@ -4,6 +4,13 @@
 	margin: 0;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+body {
+    background-image: url("../../images/admin_background.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 /* NAVIGATION */
 
@@ -15,7 +22,7 @@
 }
 .nav_link {
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: block;
     color: white;
     text-align: center;
@@ -45,12 +52,108 @@
 .header {
     width: calc(100% - 100px);
     margin-left: 100px;
-    padding: 2em 0em;
+    padding: 1.5em 0em;
     color: #0077ff;
-    text-align: center;
     font-size: 1.4em;
+    text-align: center;
     clear: both;
 }
 .nav_link:hover {
     background-color: #008cff7a;
+}
+
+/* IMPIEGATI */
+
+#container_imp {
+    width: calc(100% - 100px);
+    display: table;
+    margin-left: 100px;
+}
+#left_container, #right_container {
+    width: calc(100% - 40px);
+    float: left;
+}
+#left_container, #right_container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.div_impiegato {
+    width: 100%;
+    height: 300px;
+    background-color: #0099ffa8;
+}
+.imp_image {
+    border: 1px solid #0099ffa8;
+    border-bottom: none;
+    width: 100%;
+    height: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imp_info {
+    width: 100%;
+    height: 35%;
+}
+.imp_name, .imp_role, .imp_birth {
+    width: 100%;
+    height: 33.3%;
+    color: white;
+    font-size: 1em;
+}
+.imp_name div, .imp_role div, .imp_birth div {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding-left: 1em;
+}
+.more_info {
+    border: 1px solid #0099ffa8;
+    width: 100%;
+    height: 30px;
+    clear: both;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    background-color: #0099ffa8;  
+    margin-bottom: 30px;  
+}
+.more_info div {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.more_info:hover {
+    text-decoration: underline;
+    background-color: #008cff7a;
+}
+.check_control {
+    display: none;
+}
+.magic {
+    width: 100%;
+    height: 0;
+    display: block;
+    background-color: #0099ffa8;
+    transition: 0.5s;
+}
+.check_control:checked + label > .magic {
+    height: 100px;
+    border-top: 1px solid #0099ffa8;
+}
+.check_control:checked + label .imp_more {
+    font-size: 0.8em;
+}
+.imp_more {
+    width: 100%;
+    height: 33.3%;
+    color: white;
+    font-size: 0;
+    transition: 0.5s;
+}
+.imp_more div {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding-left: 1.5em;
 }
