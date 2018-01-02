@@ -1,1 +1,39 @@
 @import url("../navbar_desktop.css");
+#menu_bt1 {
+    background-color: #008cff7a;
+}
+
+
+/*TITLE*/
+
+#title{
+    padding-top: 80px;
+    color: rgba(0, 73, 169, 0.888);
+
+    font-size: 36px;
+}
+
+.subtitle{
+    color: rgba(0, 73, 169, 0.888);
+    font-size: 24px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+a{
+    color: rgb(8, 8, 136);
+    
+}
+.text_general{
+    color: rgb(98, 105, 146);
+}
+
+
+/*SEDI*/
+
+span{
+    color: rgb(8, 8, 136);
+}
+#text_sedi{
+    padding-left: 30px;
+}
