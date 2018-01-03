@@ -81,15 +81,15 @@ body {
     right: 0;
     width: 60px;
     height: 60px;
-    background-image: url("../../images/modify.png");
+    background-image: url("../../images/modify_user.png");
     background-position: center;
-    background-size: 40px;
+    background-size: 50px;
     background-repeat: no-repeat;
 }
 .modify_btn:hover {
     background-color: #008cff7a;
 }
-.form_div {
+.modify_form_div, .remove_form_div {
     position: fixed;
     top: 0;
     left: -100%;
@@ -100,7 +100,7 @@ body {
     background-color: #0099ffa8;
     transition: 0.5s;
 }
-.modify_control:checked ~ .form_div {
+.modify_control:checked ~ .modify_form_div {
     left: 0;
 }
 .modify_control:checked + label {
@@ -163,6 +163,84 @@ body {
     background-color: #0077ff; 
 }
 
+/* FORM DI RIMOZIONE */
+
+.remove_btn {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../images/remove_user.png");
+    background-position: center;
+    background-size: 50px;
+    background-repeat: no-repeat;
+}
+.remove_btn:hover {
+    background-color: #008cff7a;
+}
+.remove_control:checked ~ .remove_form_div {
+    left: 0;
+}
+.remove_control:checked + label {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-image: url("../../images/close.png");
+}
+.remove_form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 200px;
+    background-color: #a1d9ff;
+}
+.remove_fieldset {
+    border: none;
+    float: left;
+    width: 100%;
+    height: calc(100% - 2em);
+    margin-top: 2em;
+    padding: 3em;
+    color: #696969;
+    text-align: center;
+}
+.radio_choice {
+    display: none;
+}
+.yes_no_div {
+    width: 100%;
+    text-align: center;
+}
+.yes_no_div label {
+    float: center;
+    padding: 1em;
+    color: white;
+    background-color: #0099ffa8;
+    margin-right: 2em;
+}
+.yes_no_div label:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: #0077ff; 
+}
+.radio_choice:checked + label {
+    border: 2px solid white;
+    background-color: #0077ff;
+}
+.apply_btn {
+    border: none;
+    outline: none;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    padding: 1em;
+    color: white;
+    background-color: #0099ffa8;
+}
+
 /* IMPIEGATI */
 
 .imp_image {
@@ -216,7 +294,7 @@ body {
     text-decoration: underline;
     background-color: #008cff7a;
 }
-.check_control, .modify_control {
+.check_control, .modify_control, .remove_control {
     display: none;
 }
 .magic {
