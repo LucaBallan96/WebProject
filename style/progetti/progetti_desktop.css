@@ -16,6 +16,7 @@
 }
 .view:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
 #header1 {
     padding: 0em 2em 2em;

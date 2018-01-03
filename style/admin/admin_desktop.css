@@ -72,6 +72,9 @@ body {
     height: 250px;
     background-color: #0099ffa8;
 }
+
+/* FORM DI MODIFICA */
+
 .modify_btn {
     position: absolute;
     top: 0;
@@ -86,6 +89,82 @@ body {
 .modify_btn:hover {
     background-color: #008cff7a;
 }
+.form_div {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #0099ffa8;
+    transition: 0.5s;
+}
+.modify_control:checked ~ .form_div {
+    left: 0;
+}
+.modify_control:checked + label {
+    position: fixed;
+    z-index: 2;
+    background-image: url("../../images/close.png");
+}
+.modify_form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 80%;
+    background-color: #a1d9ff;
+}
+.modify_personal_info, .modify_company_info {
+    border: none;
+    width: 50%;
+    height: calc(85% - 2em);
+    float: left;
+    color: #696969;
+    padding: 2.5em 2em;
+    margin-top: 2em;
+}
+.modify_personal_info div {
+    height: 12.5%;
+}
+.modify_personal_info input {
+    width: 150px;
+    float: right;
+}
+.file_select input {
+    width: 220px;
+}
+.modify_company_info div {
+    height: 10%;
+}
+.submit_reset_div {
+    width: 100%;
+    height: calc(15% - 2em);
+    clear: both;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.submit_btn, .reset_btn {
+    border: none;
+    outline: none;
+    padding: 1em;
+    font-size: 1em;
+    color: white;
+    background-color: #0099ffa8;
+}
+.reset_btn {
+    margin-left: 2em;
+}
+.submit_btn:hover, .reset_btn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: #0077ff; 
+}
+
+/* IMPIEGATI */
+
 .imp_image {
     border: 1px solid #0099ffa8;
     border-bottom: none;
@@ -101,17 +180,20 @@ body {
     width: 60%;
     height: 100%;
 }
-.imp_name, .imp_role, .imp_birth {
+.imp_name, .imp_role, .imp_birth, .imp_mail {
     width: calc(100% - 60px);
-    height: 33.3%;
+    height: 25%;
     color: white;
     font-size: 1.5em;
 }
-.imp_name div, .imp_role div, .imp_birth div {
+.imp_name div, .imp_role div, .imp_birth div, .imp_mail div {
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
     padding-left: 1.5em;
+}
+.imp_mail div a {
+    color: white;
 }
 .more_info {
     border: 1px solid #0099ffa8;
@@ -122,7 +204,8 @@ body {
     font-size: 2em;
     text-align: center;
     background-color: #0099ffa8;  
-    margin-bottom: 30px;  
+    margin-bottom: 30px;
+    transition: 0.5s;
 }
 .more_info div {
     position: relative;
@@ -133,7 +216,7 @@ body {
     text-decoration: underline;
     background-color: #008cff7a;
 }
-.check_control {
+.check_control, .modify_control {
     display: none;
 }
 .magic {
@@ -143,12 +226,17 @@ body {
     background-color: #0099ffa8;
     transition: 0.5s;
 }
-.check_control:checked + label > .magic {
+.check_control:checked + label .magic {
     height: 150px;
     border-top: 1px solid #0099ffa8;
 }
 .check_control:checked + label .imp_more {
     font-size: 1.2em;
+}
+.check_control:checked + label .more_info {
+    height: 0;
+    font-size: 0;
+    border-top: none;
 }
 .imp_more {
     width: 100%;
