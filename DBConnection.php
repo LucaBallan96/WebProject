@@ -87,9 +87,9 @@
 									<legend>Ruolo nell'azienda:</legend>";
 					for($i=0; $i<count($roles); $i++) {
 						if($row['role']==$roles[$i])
-							$stringa=$stringa."<div><label><input type='radio' name='role' value='".$roles[$i]."' checked> ".$roles[$i]."</label></div>";
+							$stringa=$stringa."<div><label><input type='radio' name='role' value='".$roles[$i]."' checked/> ".$roles[$i]."</label></div>";
 						else
-							$stringa=$stringa."<div><label><input type='radio' name='role' value='".$roles[$i]."'> ".$roles[$i]."</label></div>";
+							$stringa=$stringa."<div><label><input type='radio' name='role' value='".$roles[$i]."'/> ".$roles[$i]."</label></div>";
 					}
 					$stringa=$stringa."</fieldset>
 								<div class='submit_reset_div'>
@@ -105,9 +105,9 @@
 								<fieldset class='remove_fieldset'>
 									<legend>Rimuovere definitivamente ".$row['firstname']." ".$row['lastname']." e tutti i suoi dati?</legend>
 									<div class='yes_no_div'>
-										<input id='yes".$count."' class='radio_choice' type='radio' name='remove' value='yes' checked>
+										<input id='yes".$count."' class='radio_choice' type='radio' name='remove' value='yes' checked/>
 										<label for='yes".$count."'>Si, rimuovi</label>
-										<input id='no".$count."' class='radio_choice' type='radio' name='remove' value='no'>
+										<input id='no".$count."' class='radio_choice' type='radio' name='remove' value='no'/>
 										<label for='no".$count."'>No, mantieni</label>
 									</div>
 								</fieldset>

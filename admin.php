@@ -25,16 +25,33 @@
 
 		<!-- IMPIEGATI -->
 		<h1 id="impiegati" class="header">Impiegati e dirigenti d'azienda</h1>
-		<div id="container_imp">
+		<div class="container_est">
 			<?php include "DBConnection.php";
             	$conn=new DBConnection();
             	$conn->get_impiegati();
         	?>
 		</div>
 
+		<!-- PROGETTI -->
 		<h1 id="progetti" class="header">Progetti in cui si impegna l'azienda</h1>
+		<div class="container_est">
+			<input id='project_select1' class='pro_select' type='radio'/>
+			<label for='project_select1'>Progetto1</label>
+		</div>
+
+		<!-- ARTICOLI -->
 		<h1 id="articoli" class="header">Articoli e news</h1>
+		<div class="container_est">
+		</div>
+
+		<!-- UTENTI -->
 		<h1 id="utenti" class="header">Utenti del sito</h1>
+		<div class="container_est">
+		</div>
+
+		<!-- LAVORO -->
 		<h1 id="lavoro" class="header">Offerte e domande di lavoro</h1>
+		<div class="container_est">
+		</div>
     </body>
 </html>

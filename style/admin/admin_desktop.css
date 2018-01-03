@@ -34,6 +34,18 @@ body {
     top: 50%;
     transform: translate(0, -50%);
 }
+.nav_link:hover {
+    text-decoration: underline;
+    background-color: #008cff7a;
+}
+
+/* PARTI IN COMUNE */
+
+.container_est {
+    width: calc(100% - 130px);
+    display: table;
+    margin-left: 130px;
+}
 .header {
     width: calc(100% - 130px);
     margin-left: 130px;
@@ -42,18 +54,9 @@ body {
     text-align: center;
     clear: both;
 }
-.nav_link:hover {
-    text-decoration: underline;
-    background-color: #008cff7a;
-}
 
 /* IMPIEGATI */
 
-#container_imp {
-    width: calc(100% - 130px);
-    display: table;
-    margin-left: 130px;
-}
 #left_container, #right_container {
     width: calc(50% - 60px);
     float: left;
@@ -71,6 +74,92 @@ body {
     width: 100%;
     height: 250px;
     background-color: #0099ffa8;
+}
+.imp_image {
+    border: 1px solid #0099ffa8;
+    border-bottom: none;
+    float: left;
+    width: 40%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imp_info {
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+.imp_name, .imp_role, .imp_birth, .imp_mail {
+    width: calc(100% - 60px);
+    height: 25%;
+    color: white;
+    font-size: 1.3em;
+}
+.imp_name div, .imp_role div, .imp_birth div, .imp_mail div {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding-left: 1.5em;
+}
+.imp_mail div a {
+    color: white;
+}
+.more_info {
+    border: 1px solid #0099ffa8;
+    width: 100%;
+    height: 50px;
+    clear: both;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    background-color: #0099ffa8;  
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+.more_info div {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.more_info:hover {
+    text-decoration: underline;
+    background-color: #008cff7a;
+}
+.check_control, .modify_control, .remove_control {
+    display: none;
+}
+.magic {
+    width: 100%;
+    height: 0;
+    display: block;
+    background-color: #0099ffa8;
+    transition: 0.5s;
+}
+.check_control:checked + label .magic {
+    height: 150px;
+    border-top: 1px solid #0099ffa8;
+}
+.check_control:checked + label .imp_more {
+    font-size: 1.2em;
+}
+.check_control:checked + label .more_info {
+    height: 0;
+    font-size: 0;
+    border-top: none;
+}
+.imp_more {
+    width: 100%;
+    height: 33.3%;
+    color: white;
+    font-size: 0;
+    transition: 0.5s;
+}
+.imp_more div {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding-left: 1.5em;
 }
 
 /* FORM DI MODIFICA */
@@ -240,92 +329,16 @@ body {
     color: white;
     background-color: #0099ffa8;
 }
-
-/* IMPIEGATI */
-
-.imp_image {
-    border: 1px solid #0099ffa8;
-    border-bottom: none;
-    float: left;
-    width: 40%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.imp_info {
-    float: left;
-    width: 60%;
-    height: 100%;
-}
-.imp_name, .imp_role, .imp_birth, .imp_mail {
-    width: calc(100% - 60px);
-    height: 25%;
-    color: white;
-    font-size: 1.5em;
-}
-.imp_name div, .imp_role div, .imp_birth div, .imp_mail div {
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
-    padding-left: 1.5em;
-}
-.imp_mail div a {
-    color: white;
-}
-.more_info {
-    border: 1px solid #0099ffa8;
-    width: 100%;
-    height: 50px;
-    clear: both;
-    color: white;
-    font-size: 2em;
-    text-align: center;
-    background-color: #0099ffa8;  
-    margin-bottom: 30px;
-    transition: 0.5s;
-}
-.more_info div {
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
-}
-.more_info:hover {
+.apply_btn:hover {
+    cursor: pointer;
     text-decoration: underline;
-    background-color: #008cff7a;
+    background-color: #0077ff; 
 }
-.check_control, .modify_control, .remove_control {
-    display: none;
-}
-.magic {
-    width: 100%;
-    height: 0;
-    display: block;
-    background-color: #0099ffa8;
-    transition: 0.5s;
-}
-.check_control:checked + label .magic {
-    height: 150px;
-    border-top: 1px solid #0099ffa8;
-}
-.check_control:checked + label .imp_more {
-    font-size: 1.2em;
-}
-.check_control:checked + label .more_info {
-    height: 0;
-    font-size: 0;
-    border-top: none;
-}
-.imp_more {
-    width: 100%;
-    height: 33.3%;
-    color: white;
-    font-size: 0;
-    transition: 0.5s;
-}
-.imp_more div {
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
-    padding-left: 1.5em;
-}
+
+/* PROGETTI */
+
+/* ARTICOLI */
+
+/* UTENTI */
+
+/* LAVORO */
