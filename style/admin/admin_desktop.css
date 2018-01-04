@@ -346,6 +346,7 @@ body {
     margin: 0 40px;
 }
 .project_title {
+    position: relative;
     padding: 1em 2em;
     color: white;
     background-color: #0099ffa8;
@@ -355,47 +356,88 @@ body {
     text-decoration: underline;
     background-color: #2ba0ff; 
 }
-.project_info {
+.modify_proj_form {
     width: 100%;
     height: 0;
+    background-color: #83cdff;
     transition: 0.5s;
     overflow: hidden;
 }
-.pro_select:checked + label .project_info {
-    height: 300px;
+.project_info {
+    width: 100%;
+    height: 80%;
+}
+.proj_form_btns {
+    width: 100%;
+    height: 20%;
+    padding-top: 0.5em;
+    text-align: center;
+}
+.pro_select:checked + label .modify_proj_form {
+    height: 350px;
     border: 1px solid #0099ffa8;
-    background-color: #83cdff;
+}
+.pro_select:checked + label div .remove_proj_btn {
+    display: block;
 }
 .project_img, .project_data, .project_description {
     height: calc(100% - 2em);
     float: left;
     margin: 1em;
     color: #696969;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 .project_img {
-    width: calc(30% - 2em);
-    background-image: url('../../images/progetto1.jpg');
+    width: calc(35% - 2em);
+}
+.current_proj_img {
+    width: 100%;
+    height: 85%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+.change_proj_img {
+    font-size: 0.8em;
+    height: 15%;
+    padding-top: 0.5em;
+}
 .project_data {
-    width: calc(45% - 2em);
+    width: calc(40% - 2em);
 }
 .project_data div {
-    width: 50%;
+    width: 100%;
     height: 20%;
     padding: 0.5em;
-    float: left;
 }
-.project_data div div {
+.project_data div input[type="text"] {
     float: right;
+    width: 40%;
+    padding: 0.4em;
+}
+.project_data div label {
+    float: right;
+    padding-left: 0.5em;
 }
 .project_description {
     width: calc(25% - 2em);
     line-height: 1.5em;
     overflow-y: scroll;
+}
+.remove_proj_btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 50px;
+    background-image: url("../../images/remove.png");
+    background-position: center;
+    background-size: 35px;
+    background-repeat: no-repeat;
+}
+.remove_proj_btn:hover {
+    border: 2px solid white;
 }
 
 /* ARTICOLI */

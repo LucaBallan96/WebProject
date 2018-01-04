@@ -57,6 +57,68 @@
 			}
 		}
 
+		// PROGETTI ADMIN
+		public function get_progetti_admin() {
+			$sql = "SELECT DISTINCT * FROM webproject.progetti";
+			$result = $this->conn->query($sql);
+			if ($result->num_rows > 0) {
+				$count=1;
+				while($row = $result->fetch_assoc()) {
+					echo "<input id='project_select".$count."' class='pro_select' type='radio' name='pro_select'/>
+						<label class='project_label' for='project_select".$count."'>
+							<div class='project_title'>".$row['name']."
+								<input type='checkbox' id='removeproj".$count."' class='remove_control'/>
+								<label class='remove_proj_btn' for='removeproj".$count."'></label>
+								<div class='remove_form_div'>
+									<form class='remove_form' action='' method='post'>
+										<fieldset class='remove_fieldset'>
+											<legend>Rimuovere definitivamente il progetto ".$row['name']." e tutti i suoi dati?</legend>
+											<div class='yes_no_div'>
+												<input id='yes_proj".$count."' class='radio_choice' type='radio' name='remove' value='yes' checked/>
+												<label for='yes_proj".$count."'>Si, rimuovi</label>
+												<input id='no_proj".$count."' class='radio_choice' type='radio' name='remove' value='no'/>
+												<label for='no_proj".$count."'>No, mantieni</label>
+											</div>
+										</fieldset>
+										<input class='apply_btn' type='submit' value='Applica'/>
+									</form>
+								</div>
+							</div>
+							<form class='modify_proj_form' action='' method='post'>
+								<div class='project_info'>
+									<div class='project_img'>
+										<div class='current_proj_img' style='background-image:url(../../images/".$row['image'].")'></div>
+										<div class='change_proj_img'>Cambia: <input type='file' name='file' accept='.jpg, .jpeg, .png'/></div>
+									</div>
+									<div class='project_data'>
+										<div>Stato:";
+					if($row['status']=='In corso')
+						echo				"<label><input type='radio' name='status' value='In corso' checked/> In corso</label>
+											<label><input type='radio' name='status' value='Terminato'/> Terminato</label>";
+					else echo				"<label><input type='radio' name='status' value='In corso'/> In corso</label>
+											<label><input type='radio' name='status' value='Terminato' checked/> Terminato</label>";
+					echo				"</div>
+										<div>Committente:<input type='text' name='client' value='".$row['client']."'/></div>
+										<div>Tipologia:<input type='text' name='type' value='".$row['type']."'/></div>
+										<div>Luogo:<input type='text' name='location' value='".$row['location']."'/></div>
+										<div>Direttore dei lavori:<input type='text' name='director' value='".$row['director']."'/></div>
+									</div>
+									<div class='project_description'>".$row['description']."</div>
+								</div>
+								<div class='proj_form_btns'>
+									<input class='submit_btn' type='submit' value='Salva modifiche'/>
+									<input class='reset_btn' type='reset' value='Annulla modifiche'/>
+								</div>
+							</form>
+						</label>";
+					$count++;
+				}
+				$result->free();
+			} else {
+				echo "<p>Nessun progetto disponibile</p>";
+			}
+		}
+
 		// IMPIEGATI ADMIN
 		public function get_impiegati_admin() {
 			$sql = "SELECT DISTINCT * FROM webproject.impiegati";
@@ -79,7 +141,7 @@
 									<div>Data di nascita:<input type='date' name='birth' value='".$row['birth']."'/></div>
 									<div>Età<input type='number' name='age' value='".$row['age']."' min='18' max='99'/></div>
 									<div>e-mail<input type='email' value='".$row['mail']."' name='mail'/></div>
-									<div class='file_select'>Foto:<input type='file' name='image' value='../../images/".$row['image']."'/></div>
+									<div class='file_select'>Foto:<input type='file' name='image'/></div>
 									<div>Settore:<input type='text' name='branch' value='".$row['branch']."'/></div>
 									<div>Anno di inizio:<input type='number' name='begin' value='".$row['begin']."' min='1900' max='2018'/></div>
 								</fieldset>
