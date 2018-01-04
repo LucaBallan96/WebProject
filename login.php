@@ -38,9 +38,9 @@
         <?php
             if(isset($_GET['error'])) {
                 if($_GET['error']==0)
-                    echo "<p style='width:100%; text-align:center'><b>Errore nelle credenziali, riprovare</b></p>";
+                    echo "<p class='error'><b>Errore nelle credenziali, riprovare</b></p>";
                 if($_GET['error']==1)
-                    echo "<p style='width:100%; text-align:center'><b>L'utente non ha i permessi necessari per accedere come amministratore!</b></p>";
+                    echo "<p class='error'><b>L'utente non ha i permessi necessari per accedere come amministratore!</b></p>";
             }
         ?>
     </body>

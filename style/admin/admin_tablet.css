@@ -205,6 +205,9 @@ body {
     height: 80%;
     background-color: #a1d9ff;
 }
+.identity {
+    display: none;
+}
 .modify_personal_info, .modify_company_info {
     border: none;
     height: calc(85% - 2em);

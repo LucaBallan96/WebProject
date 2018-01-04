@@ -70,13 +70,13 @@
 								<input type='checkbox' id='removeproj".$count."' class='remove_control'/>
 								<label class='remove_proj_btn' for='removeproj".$count."'></label>
 								<div class='remove_form_div'>
-									<form class='remove_form' action='' method='post'>
+									<form class='remove_form' action='DBConnection.php' method='post'>
 										<fieldset class='remove_fieldset'>
 											<legend>Rimuovere definitivamente il progetto ".$row['name']." e tutti i suoi dati?</legend>
 											<div class='yes_no_div'>
-												<input id='yes_proj".$count."' class='radio_choice' type='radio' name='remove' value='yes' checked/>
+												<input id='yes_proj".$count."' class='radio_choice' type='radio' name='remove_proj' value='".$row['id']."' checked/>
 												<label for='yes_proj".$count."'>Si, rimuovi</label>
-												<input id='no_proj".$count."' class='radio_choice' type='radio' name='remove' value='no'/>
+												<input id='no_proj".$count."' class='radio_choice' type='radio' name='remove_proj' value='no'/>
 												<label for='no_proj".$count."'>No, mantieni</label>
 											</div>
 										</fieldset>
@@ -84,7 +84,7 @@
 									</form>
 								</div>
 							</div>
-							<form class='modify_proj_form' action='' method='post'>
+							<form class='modify_proj_form' action='DBConnection.php' method='post'>
 								<div class='project_info'>
 									<div class='project_img'>
 										<div class='current_proj_img' style='background-image:url(../../images/".$row['image'].")'></div>
@@ -119,6 +119,10 @@
 			}
 		}
 
+		public function remove_progetto($p) {
+			$sql = "DELETE FROM webproject.progetti WHERE id='$p'";
+			$result = $this->conn->query($sql);
+		}
 
 		//IMPIEGATI AZIENZA
 		public function get_impiegati_azienda() {
@@ -166,9 +170,10 @@
 						<input type='checkbox' id='modify".$count."' class='modify_control'/>
 						<label class='modify_btn' for='modify".$count."'></label>
 						<div class='modify_form_div'>
-							<form class='modify_form' action='' method='post'>
+							<form class='modify_form' action='DBConnection.php' method='post'>
 								<fieldset class='modify_personal_info'>
 									<legend>Informazioni personali</legend>
+									<input class='identity' type='text' name='id' value='".$row['id']."'>
 									<div>Nome:<input type='text' name='firstname' value='".$row['firstname']."' required/></div>
 									<div>Cognome:<input type='text' name='lastname' value='".$row['lastname']."' required/></div>
 									<div>Data di nascita:<input type='date' name='birth' value='".$row['birth']."'/></div>
@@ -196,13 +201,13 @@
 						<input type='checkbox' id='remove".$count."' class='remove_control'/>
 						<label class='remove_btn' for='remove".$count."'></label>
 						<div class='remove_form_div'>
-							<form class='remove_form' action='' method='post'>
+							<form class='remove_form' action='DBConnection.php' method='post'>
 								<fieldset class='remove_fieldset'>
 									<legend>Rimuovere definitivamente ".$row['firstname']." ".$row['lastname']." e tutti i suoi dati?</legend>
 									<div class='yes_no_div'>
-										<input id='yes".$count."' class='radio_choice' type='radio' name='remove' value='yes' checked/>
+										<input id='yes".$count."' class='radio_choice' type='radio' name='remove_imp' value='".$row['id']."' checked/>
 										<label for='yes".$count."'>Si, rimuovi</label>
-										<input id='no".$count."' class='radio_choice' type='radio' name='remove' value='no'/>
+										<input id='no".$count."' class='radio_choice' type='radio' name='remove_imp' value='no'/>
 										<label for='no".$count."'>No, mantieni</label>
 									</div>
 								</fieldset>
@@ -238,7 +243,19 @@
 				echo "<p>Nessun impiegato disponibile</p>";
 			}
 		}
+
+		public function remove_impiegato($imp) {
+			$sql = "DELETE FROM webproject.impiegati WHERE id='$imp'";
+			$result = $this->conn->query($sql);
+		}
 		
+		public function modify_impiegato() {
+			$id=$_POST['identity'];
+			$sql = "DELETE FROM webproject.impiegati WHERE id='$id'";
+			$result = $this->conn->query($sql);
+			// CONTINUA
+		}
+
 		// VALIDAZIONE CREDENZIALI
 		public function validate($user, $psw) {
 			$sql = "SELECT * FROM webproject.utenti WHERE username='$user'";
@@ -256,6 +273,7 @@
 		}
 	}
 
+	// VALIDAZIONE CREDENZIALI
 	if(isset($_POST['u'])) {
     	$conn=new DBConnection();
     	$num=$conn->validate($_POST['u'], $_POST['p']);
@@ -265,5 +283,34 @@
         	header('Location: login.php?error=0');
     	else if($num==1)
 			header('Location: login.php?error=1');
+	}
+
+	// RIMOZIONE PROGETTO
+	if(isset($_POST['remove_proj'])) {
+		$p=$_POST['remove_proj'];
+		if($p!='no') {
+			$conn=new DBConnection();
+			$conn->remove_progetto($p);
+		}
+		header('Location: admin.php');
+	}
+
+	// RIMOZIONE IMPIEGATO
+	if(isset($_POST['remove_imp'])) {
+		$imp=$_POST['remove_imp'];
+		if($imp!='no') {
+			$conn=new DBConnection();
+			$conn->remove_impiegato($imp);
+		}
+		header('Location: admin.php');
+	}
+
+	// MODIFICA PROGETTO
+
+	// MODIFICA IMPIEGATO
+	if(isset($_POST['identity'])) {
+		$conn=new DBConnection();
+		$conn->modify_impiegato();
+		header('Location: admin.php');
 	}
 ?>

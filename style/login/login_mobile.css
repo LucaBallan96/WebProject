@@ -71,3 +71,7 @@ button {
 button:hover, #back_link:hover {
     cursor: pointer;
 }
+.error {
+    width: 100%;
+    text-align: center;
+}
