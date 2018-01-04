@@ -57,7 +57,6 @@
 			}
 		}
 
-<<<<<<< HEAD
 		// PROGETTI ADMIN
 		public function get_progetti_admin() {
 			$sql = "SELECT DISTINCT * FROM webproject.progetti";
@@ -120,7 +119,6 @@
 			}
 		}
 
-=======
 
 		//IMPIEGATI AZIENZA
 		public function get_impiegati_azienda() {
@@ -154,7 +152,6 @@
 			
 		}
 		
->>>>>>> 6c7bb992fe12c4dce9e4cb753da01015a7f32dcd
 		// IMPIEGATI ADMIN
 		public function get_impiegati_admin() {
 			$sql = "SELECT DISTINCT * FROM webproject.impiegati";
