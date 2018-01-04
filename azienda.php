@@ -163,13 +163,24 @@
     </div>
     
 
-<!--IMPIEGATI-->
-<?php 
-    
-    include "DBConnection.php";
-    $conn=new DBConnection();    
-    $conn->get_impiegati();
 
-?>
+<!--IMPIEGATI-->
+
+
+<div id="container_impiegati" class="container">
+        <div id="impiegati" class="subtitle">Impiegati</div>
+        <div class="divisor"></div>
+        <div id="div_impiegati">
+            
+
+            <?php
+                include "DBConnection.php";
+                $conn=new DBConnection();
+                $conn->get_impiegati_azienda();
+            ?>
+            
+        </div>
+
+    </div>
     </body>
 </html>

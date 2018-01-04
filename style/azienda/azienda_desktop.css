@@ -108,3 +108,34 @@ span{
     height: 500px;
     
 }
+
+/*IMPIEGATI*/
+
+#div_impiegati{
+    width: 1024px;
+    margin: auto;
+}
+.div_impiegato{
+    width: 180px;
+    height: 250px;
+    float: left;
+    margin: 12px; 
+    font-size: 13px;
+    color: rgb(7, 7, 124);
+    overflow: hidden;
+}
+.img_impiegato{
+    height: 120px;
+    box-shadow: 5px 10px 18px #888888;
+    
+}
+.subsubtitle{
+    color: rgba(2, 44, 99, 0.888);
+    font-size: 20px;
+    padding-top: 40px;
+    padding-left: 30px;
+    clear: both;
+}
+.exception_impiegati{
+    clear: both;
+}
