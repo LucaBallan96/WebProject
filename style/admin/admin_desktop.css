@@ -34,6 +34,18 @@ body {
     top: 50%;
     transform: translate(0, -50%);
 }
+.nav_link:hover {
+    text-decoration: underline;
+    background-color: #008cff7a;
+}
+
+/* PARTI IN COMUNE */
+
+.container_est {
+    width: calc(100% - 130px);
+    display: table;
+    margin-left: 130px;
+}
 .header {
     width: calc(100% - 130px);
     margin-left: 130px;
@@ -42,18 +54,9 @@ body {
     text-align: center;
     clear: both;
 }
-.nav_link:hover {
-    text-decoration: underline;
-    background-color: #008cff7a;
-}
 
 /* IMPIEGATI */
 
-#container_imp {
-    width: calc(100% - 130px);
-    display: table;
-    margin-left: 130px;
-}
 #left_container, #right_container {
     width: calc(50% - 60px);
     float: left;
@@ -72,20 +75,6 @@ body {
     height: 250px;
     background-color: #0099ffa8;
 }
-.modify_btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60px;
-    height: 60px;
-    background-image: url("../../images/modify.png");
-    background-position: center;
-    background-size: 40px;
-    background-repeat: no-repeat;
-}
-.modify_btn:hover {
-    background-color: #008cff7a;
-}
 .imp_image {
     border: 1px solid #0099ffa8;
     border-bottom: none;
@@ -101,17 +90,20 @@ body {
     width: 60%;
     height: 100%;
 }
-.imp_name, .imp_role, .imp_birth {
+.imp_name, .imp_role, .imp_birth, .imp_mail {
     width: calc(100% - 60px);
-    height: 33.3%;
+    height: 25%;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
-.imp_name div, .imp_role div, .imp_birth div {
+.imp_name div, .imp_role div, .imp_birth div, .imp_mail div {
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
     padding-left: 1.5em;
+}
+.imp_mail div a {
+    color: white;
 }
 .more_info {
     border: 1px solid #0099ffa8;
@@ -122,7 +114,8 @@ body {
     font-size: 2em;
     text-align: center;
     background-color: #0099ffa8;  
-    margin-bottom: 30px;  
+    margin-bottom: 30px;
+    transition: 0.5s;
 }
 .more_info div {
     position: relative;
@@ -133,7 +126,7 @@ body {
     text-decoration: underline;
     background-color: #008cff7a;
 }
-.check_control {
+.check_control, .modify_control, .remove_control {
     display: none;
 }
 .magic {
@@ -143,12 +136,17 @@ body {
     background-color: #0099ffa8;
     transition: 0.5s;
 }
-.check_control:checked + label > .magic {
+.check_control:checked + label .magic {
     height: 150px;
     border-top: 1px solid #0099ffa8;
 }
 .check_control:checked + label .imp_more {
     font-size: 1.2em;
+}
+.check_control:checked + label .more_info {
+    height: 0;
+    font-size: 0;
+    border-top: none;
 }
 .imp_more {
     width: 100%;
@@ -163,3 +161,184 @@ body {
     transform: translate(0, -50%);
     padding-left: 1.5em;
 }
+
+/* FORM DI MODIFICA */
+
+.modify_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../images/modify_user.png");
+    background-position: center;
+    background-size: 50px;
+    background-repeat: no-repeat;
+}
+.modify_btn:hover {
+    background-color: #008cff7a;
+}
+.modify_form_div, .remove_form_div {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #0099ffa8;
+    transition: 0.5s;
+}
+.modify_control:checked ~ .modify_form_div {
+    left: 0;
+}
+.modify_control:checked + label {
+    position: fixed;
+    z-index: 2;
+    background-image: url("../../images/close.png");
+}
+.modify_form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 80%;
+    background-color: #a1d9ff;
+}
+.modify_personal_info, .modify_company_info {
+    border: none;
+    width: 50%;
+    height: calc(85% - 2em);
+    float: left;
+    color: #696969;
+    padding: 2.5em 2em;
+    margin-top: 2em;
+}
+.modify_personal_info div {
+    height: 12.5%;
+}
+.modify_personal_info input {
+    width: 150px;
+    float: right;
+}
+.file_select input {
+    width: 220px;
+}
+.modify_company_info div {
+    height: 10%;
+}
+.submit_reset_div {
+    width: 100%;
+    height: calc(15% - 2em);
+    clear: both;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.submit_btn, .reset_btn {
+    border: none;
+    outline: none;
+    padding: 1em;
+    font-size: 1em;
+    color: white;
+    background-color: #0099ffa8;
+}
+.reset_btn {
+    margin-left: 2em;
+}
+.submit_btn:hover, .reset_btn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: #0077ff; 
+}
+
+/* FORM DI RIMOZIONE */
+
+.remove_btn {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../images/remove_user.png");
+    background-position: center;
+    background-size: 50px;
+    background-repeat: no-repeat;
+}
+.remove_btn:hover {
+    background-color: #008cff7a;
+}
+.remove_control:checked ~ .remove_form_div {
+    left: 0;
+}
+.remove_control:checked + label {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-image: url("../../images/close.png");
+}
+.remove_form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 200px;
+    background-color: #a1d9ff;
+}
+.remove_fieldset {
+    border: none;
+    float: left;
+    width: 100%;
+    height: calc(100% - 2em);
+    margin-top: 2em;
+    padding: 3em;
+    color: #696969;
+    text-align: center;
+}
+.radio_choice {
+    display: none;
+}
+.yes_no_div {
+    width: 100%;
+    text-align: center;
+}
+.yes_no_div label {
+    float: center;
+    padding: 1em;
+    color: white;
+    background-color: #0099ffa8;
+    margin-right: 2em;
+}
+.yes_no_div label:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: #0077ff; 
+}
+.radio_choice:checked + label {
+    border: 2px solid white;
+    background-color: #0077ff;
+}
+.apply_btn {
+    border: none;
+    outline: none;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    padding: 1em;
+    color: white;
+    background-color: #0099ffa8;
+}
+.apply_btn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: #0077ff; 
+}
+
+/* PROGETTI */
+
+/* ARTICOLI */
+
+/* UTENTI */
+
+/* LAVORO */

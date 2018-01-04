@@ -13,6 +13,7 @@
 		<link rel="stylesheet" media="print" href="style/admin/admin_print.css">
 	</head>
 	<body>
+		<!-- NAVIGATION -->
 		<div id="nav">
 			<a title="Home" href="index.html" id="nav_home" class="nav_link"><div>Home</div></a>
 			<a title="Impiegati" href="#impiegati" id="nav_people" class="nav_link"><div>Impiegati</div></a>
@@ -21,160 +22,36 @@
 			<a title="Utenti" href="#utenti" id="nav_users" class="nav_link"><div>Utenti</div></a>
 			<a title="Lavoro" href="#lavoro" id="nav_work" class="nav_link"><div>Lavoro</div></a>
 		</div>
+
+		<!-- IMPIEGATI -->
 		<h1 id="impiegati" class="header">Impiegati e dirigenti d'azienda</h1>
-		<div id="container_imp">
-			<div id="left_container">
-				<div class="div_impiegato">
-					<a class="modify_btn" href=""></a>
-					<div class="imp_image" style="background-image:url('../../images/impiegato1.jpg')"></div>
-					<div class="imp_info">
-						<div class="imp_name"><div>Mario Rossi</div></div>
-						<div class="imp_birth"><div>01-01-1970</div></div>
-						<div class="imp_role"><div>Presidente</div></div>
-					</div>
-				</div>
-				<input type="checkbox" id="check1" class="check_control"/>
-				<label class="btn" for="check1">
-					<div class="magic">
-						<div class="imp_more"><div>48 anni</div></div>
-						<div class="imp_more"><div>Settore: direzione</div></div>
-						<div class="imp_more"><div>Impiegato dell'azienda dal 2002</div></div>		
-					</div>
-					<div class="more_info"><div>+</div></div>
-				</label>
-				<div class="div_impiegato">
-					<a class="modify_btn" href=""></a>
-					<div class="imp_image" style="background-image:url('../../images/impiegato2.jpg')"></div>
-					<div class="imp_info">
-						<div class="imp_name"><div></div></div>
-						<div class="imp_birth"><div></div></div>
-						<div class="imp_role"><div></div></div>
-					</div>
-				</div>
-				<input type="checkbox" id="check2" class="check_control"/>
-				<label class="btn" for="check2">
-					<div class="magic">
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>		
-					</div>
-					<div class="more_info"><div>+</div></div>
-				</label>
-				<div class="div_impiegato">
-					<a class="modify_btn" href=""></a>
-					<div class="imp_image" style="background-image:url('../../images/impiegato3.jpg')"></div>
-					<div class="imp_info">
-						<div class="imp_name"><div></div></div>
-						<div class="imp_birth"><div></div></div>
-						<div class="imp_role"><div></div></div>
-					</div>
-				</div>
-				<input type="checkbox" id="check3" class="check_control"/>
-				<label class="btn" for="check3">
-					<div class="magic">
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>		
-					</div>
-					<div class="more_info"><div>+</div></div>
-				</label>
-				<div class="div_impiegato">
-					<a class="modify_btn" href=""></a>
-					<div class="imp_image" style="background-image:url('../../images/impiegato4.jpg')"></div>
-					<div class="imp_info">
-						<div class="imp_name"><div></div></div>
-						<div class="imp_birth"><div></div></div>
-						<div class="imp_role"><div></div></div>
-					</div>
-				</div>
-				<input type="checkbox" id="check4" class="check_control"/>
-				<label class="btn" for="check4">
-					<div class="magic">
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>		
-					</div>
-					<div class="more_info"><div>+</div></div>
-				</label>
-			</div>
-			<div id="right_container">
-				<div class="div_impiegato">
-					<a class="modify_btn" href=""></a>
-					<div class="imp_image" style="background-image:url('../../images/impiegato5.jpg')"></div>
-					<div class="imp_info">
-						<div class="imp_name"><div></div></div>
-						<div class="imp_birth"><div></div></div>
-						<div class="imp_role"><div></div></div>
-					</div>
-				</div>
-				<input type="checkbox" id="check5" class="check_control"/>
-				<label class="btn" for="check5">
-					<div class="magic">
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>		
-					</div>
-					<div class="more_info"><div>+</div></div>
-				</label>
-				<div class="div_impiegato">
-					<a class="modify_btn" href=""></a>
-					<div class="imp_image" style="background-image:url('../../images/impiegato6.jpg')"></div>
-					<div class="imp_info">
-						<div class="imp_name"><div></div></div>
-						<div class="imp_birth"><div></div></div>
-						<div class="imp_role"><div></div></div>
-					</div>
-				</div>
-				<input type="checkbox" id="check6" class="check_control"/>
-				<label class="btn" for="check6">
-					<div class="magic">
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>		
-					</div>
-					<div class="more_info"><div>+</div></div>
-				</label>
-				<div class="div_impiegato">
-					<a class="modify_btn" href=""></a>
-					<div class="imp_image" style="background-image:url('../../images/impiegato7.jpg')"></div>
-					<div class="imp_info">
-						<div class="imp_name"><div></div></div>
-						<div class="imp_birth"><div></div></div>
-						<div class="imp_role"><div></div></div>
-					</div>
-				</div>
-				<input type="checkbox" id="check7" class="check_control"/>
-				<label class="btn" for="check7">
-					<div class="magic">
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>		
-					</div>
-					<div class="more_info"><div>+</div></div>
-				</label>
-				<div class="div_impiegato">
-					<a class="modify_btn" href=""></a>
-					<div class="imp_image" style="background-image:url('../../images/impiegato8.jpg')"></div>
-					<div class="imp_info">
-						<div class="imp_name"><div></div></div>
-						<div class="imp_birth"><div></div></div>
-						<div class="imp_role"><div></div></div>
-					</div>
-				</div>
-				<input type="checkbox" id="check8" class="check_control"/>
-				<label class="btn" for="check8">
-					<div class="magic">
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>
-						<div class="imp_more"><div></div></div>		
-					</div>
-					<div class="more_info"><div>+</div></div>
-				</label>
-			</div>
+		<div class="container_est">
+			<?php include "DBConnection.php";
+            	$conn=new DBConnection();
+            	$conn->get_impiegati();
+        	?>
 		</div>
+
+		<!-- PROGETTI -->
 		<h1 id="progetti" class="header">Progetti in cui si impegna l'azienda</h1>
+		<div class="container_est">
+			<input id='project_select1' class='pro_select' type='radio'/>
+			<label for='project_select1'>Progetto1</label>
+		</div>
+
+		<!-- ARTICOLI -->
 		<h1 id="articoli" class="header">Articoli e news</h1>
+		<div class="container_est">
+		</div>
+
+		<!-- UTENTI -->
 		<h1 id="utenti" class="header">Utenti del sito</h1>
+		<div class="container_est">
+		</div>
+
+		<!-- LAVORO -->
 		<h1 id="lavoro" class="header">Offerte e domande di lavoro</h1>
+		<div class="container_est">
+		</div>
     </body>
 </html>
