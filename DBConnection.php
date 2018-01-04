@@ -58,7 +58,7 @@
 		}
 
 		// IMPIEGATI ADMIN
-		public function get_impiegati() {
+		public function get_impiegati_admin() {
 			$sql = "SELECT DISTINCT * FROM webproject.impiegati";
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {

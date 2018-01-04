@@ -28,15 +28,48 @@
 		<div class="container_est">
 			<?php include "DBConnection.php";
             	$conn=new DBConnection();
-            	$conn->get_impiegati();
+            	$conn->get_impiegati_admin();
         	?>
 		</div>
 
 		<!-- PROGETTI -->
 		<h1 id="progetti" class="header">Progetti in cui si impegna l'azienda</h1>
 		<div class="container_est">
-			<input id='project_select1' class='pro_select' type='radio'/>
-			<label for='project_select1'>Progetto1</label>
+			<input id='project_select1' class='pro_select' type='radio' name='pro_select'/>
+			<label class='project_label' for='project_select1'>
+				<div class='project_title'>Progetto1</div>
+				<div class='project_info'>
+					<div class='project_img'></div>
+					<div class='project_data'>
+						<div>Stato:</div><div>In corso</div>
+						<div>Committente:</div><div>Privato</div>
+						<div>Tipologia:</div><div>Edilizia Civile</div>
+						<div>Luogo:</div><div>Volpago del Montello (TV)</div>
+						<div>Direttore dei lavori:</div><div>Arch. Riccardo Serafin</div>
+					</div>
+					<div class='project_description'>Ambarabacci ci coccò tre civette sul comò che facevano l'amore con la figlia del dottore, il dottore si ammalò ambarabacci ci coccò. Testo casuale per riempire lo spazio della descrizione in modo esaustivo ed osservare l'effetto del comando overflow: scroll sul contenitore del testo appena scritto.</div>
+				</div>
+			</label>
+			<input id='project_select2' class='pro_select' type='radio' name='pro_select'/>
+			<label class='project_label' for='project_select2'>
+				<div class='project_title'>Progetto1</div>
+				<div class='project_info'></div>
+			</label>
+			<input id='project_select3' class='pro_select' type='radio' name='pro_select'/>
+			<label class='project_label' for='project_select3'>
+				<div class='project_title'>Progetto1</div>
+				<div class='project_info'></div>
+			</label>
+			<input id='project_select4' class='pro_select' type='radio' name='pro_select'/>
+			<label class='project_label' for='project_select4'>
+				<div class='project_title'>Progetto1</div>
+				<div class='project_info'></div>
+			</label>
+			<input id='project_select5' class='pro_select' type='radio' name='pro_select'/>
+			<label class='project_label' for='project_select5'>
+				<div class='project_title'>Progetto1</div>
+				<div class='project_info'></div>
+			</label>
 		</div>
 
 		<!-- ARTICOLI -->
