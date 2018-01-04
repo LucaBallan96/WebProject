@@ -1,4 +1,4 @@
-@import url("../navbar_desktop.css");
+@import url("../navbar_mobile.css");
 #menu_bt1 {
     background-color: #008cff7a;
 }
@@ -11,7 +11,7 @@
     padding-bottom: 40px;
     color: rgba(0, 73, 169, 0.888);
     text-align: center;
-    font-size: 36px;
+    font-size: 32px;
     width: 90%;
     margin: auto;
     
@@ -27,7 +27,7 @@
 
 .subtitle{
     color: rgba(0, 73, 169, 0.888);
-    font-size: 24px;
+    font-size: 20px;
     padding-top: 60px;
     padding-left: 40px;
     clear: both;
@@ -43,9 +43,10 @@ a{
     width: 50%;
     text-align: justify;  
     float: left;
+    font-size: 14px;
 }
 .text{
-    width: 480px;
+    width: 340px;
     margin: auto;
 }
 
@@ -79,22 +80,21 @@ span{
 #container_img_sedi{
     width: 50%;
     height: 460px;
-   
     float: left;
     text-align: center;
     
 }
 #map{
-    margin-top: 20px;
-    width:500px;
-    height:360px; 
+    margin-top: 100px;
+    width:360px;
+    height:400px; 
 }
 
 /*PERSONE*/
 
 #img_persone{
     
-    width:500px;
+    width:360px;
     box-shadow: 5px 10px 18px #888888;
     
 }
@@ -105,6 +105,7 @@ span{
     text-align: center;
 }
 #organigramma{
+    width: 360px;
     height: 500px;
     
 }
@@ -112,14 +113,17 @@ span{
 /*IMPIEGATI*/
 
 #div_impiegati{
-    width: 1024px;
+    width: 720px;
     margin: auto;
 }
 .div_impiegato{
     width: 180px;
     height: 250px;
     float: left;
-    margin: 12px; 
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 30px;
+    margin-right: 30px; 
     font-size: 13px;
     color: rgb(7, 7, 124);
     overflow: hidden;
@@ -155,11 +159,7 @@ span{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    font-size: 14px;
+    font-size: 12px;
     color: rgb(181, 183, 197);
     display: table;
 }
-
-
-
-
