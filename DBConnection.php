@@ -57,6 +57,7 @@
 			}
 		}
 
+<<<<<<< HEAD
 		// PROGETTI ADMIN
 		public function get_progetti_admin() {
 			$sql = "SELECT DISTINCT * FROM webproject.progetti";
@@ -119,6 +120,41 @@
 			}
 		}
 
+=======
+
+		//IMPIEGATI AZIENZA
+		public function get_impiegati_azienda() {
+			$branches=array('Direzione','Ufficio','Relazioni pubbliche','Progettazione','Cantiere','Magazzino');
+			for($i=0; $i<count($branches); $i++) {
+			
+				$sql = "SELECT DISTINCT * FROM webproject.impiegati WHERE impiegati.branch='".$branches[$i]."'" ;
+				$result = $this->conn->query($sql);
+				if($result->num_rows > 0){
+					echo "<div class='subsubtitle'>".$branches[$i]."</div>  
+					<div class='divisor'></div>";
+					while($row=$result->fetch_assoc()){
+						echo "<div class='div_impiegato'>
+						<img class='img_impiegato' src='images/".$row['image']."'/></br></br>
+						Nome - ".$row['firstname']."</br> 
+						Cognome - ".$row['lastname']."</br>
+						Ruolo - ".$row['role']."</br>
+						Data di nascita - ".$row['birth']."</br>
+						Età - ".$row['age']."</br>
+						Inizio - ".$row['begin']."</br>
+						</div>";
+					
+					}
+				}
+				else{
+					echo "<div class='subsubtitle'>".$branches[$i]."</div>  
+						<div class='divisor'></div>
+						<p class='exception_impiegati'>Nessun impiegato in ".$branches[$i]."</p>";
+				}
+			}
+			
+		}
+		
+>>>>>>> 6c7bb992fe12c4dce9e4cb753da01015a7f32dcd
 		// IMPIEGATI ADMIN
 		public function get_impiegati_admin() {
 			$sql = "SELECT DISTINCT * FROM webproject.impiegati";
