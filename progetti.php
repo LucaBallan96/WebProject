@@ -28,9 +28,9 @@
             <div class="dropdown">
                 <button id="menu_bt1" class="drop_button" onclick="display_content(this)">Azienda</button>
                 <div id="content_menu_bt1" class="drop_content">
-                    <a href="azienda.php"><pre>Storia&#9&#9&gt</pre></a>
-                    <a href="azienda.php"><pre>Sedi&#9&#9&#9&gt</pre></a>
-                    <a href="azienda.php"><pre>Persone&#9&#9&gt</pre></a>
+                    <a href="azienda.php#storia"><pre>Storia&#9&#9&gt</pre></a>
+                    <a href="azienda.php#sedi"><pre>Sedi&#9&#9&#9&gt</pre></a>
+                    <a href="azienda.php#persone"><pre>Persone&#9&#9&gt</pre></a>
                 </div>
             </div>
             <div class="dropdown">
@@ -43,13 +43,13 @@
             <div class="dropdown">
                 <button id="menu_bt3" class="drop_button" onclick="display_content(this)">Iniziative</button>
                 <div id="content_menu_bt3" class="drop_content">
-                    <a href="iniziative.php"><pre>Sponsor&#9&#9&#9&gt</pre></a>
-                    <a href="iniziative.php"><pre>Stampa&#9&#9&#9&gt</pre></a>
-                    <a href="iniziative.php"><pre>Lavora con Noi&#9&gt</pre></a>
+                    <a href="iniziative.php"><pre>Sponsor&#9&#9&gt</pre></a>
+                    <a href="iniziative.php"><pre>Stampa&#9&#9&gt</pre></a>
                 </div>	
-            </div>
+			</div>
+			<a href="lavoro.php" id="work">Lavora con noi</a>
             <a href="#div_container_contatti" id="contacts">Contatti</a>
-            <a href="login.php?compilato=0" id="admin">Area Privata</a>
+            <a href="login.php" id="admin">Area Privata</a>
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
         <div id="navbar_bottom_padding"></div>

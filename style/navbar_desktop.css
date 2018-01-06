@@ -27,7 +27,7 @@
 	width: 100%;
 	padding: 0.8em;
 }
-.dropdown, #contacts {
+.dropdown, #contacts, #work {
 	float: left;
 }
 .drop_button {
@@ -50,7 +50,7 @@
 	display: block;
 	background-color: #008cff7a;
 }
-#contacts, #admin {
+#contacts, #work, #admin {
 	padding: 1em 1.5em;
 	text-decoration: none;
 	color: white;
@@ -68,7 +68,7 @@
 .dropdown:hover .drop_button {
 	background-color: #008cff7a;
 }
-#admin:hover, #contacts:hover {
+#work:hover, #contacts:hover, #admin:hover {
 	background-color: #008cff7a;
 	cursor: pointer;
 }

@@ -30,6 +30,7 @@
 	width: 100%;
 	height: 100%;
 	background-color: #00bbffcb;
+	overflow-y: scroll;
 }
 #home_link {
 	display: block;
@@ -41,7 +42,7 @@
 	width: 100%;
 	padding: 0.8em;
 }
-.dropdown, #contacts {
+.dropdown, #contacts, #work {
 	display: block;
 }
 .drop_button {
@@ -61,15 +62,16 @@
 	text-decoration: none;
 	display: block;
 }
-#contacts, #admin {
+#contacts, #work, #admin {
 	padding: 1em 1.5em;
 	text-decoration: none;
 	color: black;
 	font-size: 1em;
 }
 #admin {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
+	right: 0;
 }
 #close {
 	position: absolute;
