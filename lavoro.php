@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
+	<head>
 		<title>Costruzioni Bordignon S.r.l.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
 		<meta name="description" content="Costruzioni Bordignon S.r.l., con oltre tre generazioni di storia alle spalle, opera nel settore edile residenziale, industriale, pubblico, nei restauri e nelle infrastrutture mirando ed ottenendo sempre grande apprezzamento dai suoi Clienti, grazie alla sua esperienza, dedizione e continua innovazione">
 		<meta name="keywords" content="Edilizia, settore edile, Treviso, Costruzioni Bordignon">
 		<meta name="author" content="Luca Ballan, Giovanni Calore">
-		<link rel="stylesheet" media="screen and (min-width:1025px)" href="style/iniziative/iniziative_desktop.css">
-		<link rel="stylesheet" media="screen and (max-width:1024px) and (min-width:721px)" href="style/iniziative/iniziative_tablet.css">	
-		<link rel="stylesheet" media="screen and (max-width:720px)" href="style/iniziative/iniziative_mobile.css">	
-		<link rel="stylesheet" media="print" href="style/iniziative/iniziative_print.css">
+		<link rel="stylesheet" media="screen and (min-width:1025px)" href="style/lavoro/lavoro_desktop.css">
+		<link rel="stylesheet" media="screen and (max-width:1024px) and (min-width:721px)" href="style/lavoro/lavoro_tablet.css">
+		<link rel="stylesheet" media="screen and (max-width:720px)" href="style/lavoro/lavoro_mobile.css">
+		<link rel="stylesheet" media="print" href="style/lavoro/lavoro_print.css">
 	</head>
 	<body>
-		<!--SCRIPT-->
+        <!--SCRIPT-->
 		<script type="text/javascript" src="script/menuScript.js"></script>
 
 		<!-- NAVIGATION -->
@@ -52,5 +52,7 @@
             <a href="login.php" id="admin">Area Privata</a>
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
-    </body>
+
+        
+	</body>
 </html>

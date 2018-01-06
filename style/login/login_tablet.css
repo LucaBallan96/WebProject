@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+	padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+body {
+    background-image: url("../../images/sfondo_login.jpg");
+    background-size: 1800px;
+    background-repeat: no-repeat;
+}
+#back_link {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    text-decoration: none;
+    padding: 1em;
+    color: white;
+    background-color: #0084ff;
+}
+form {
+    margin-top: 5em;
+    width: 100%;
+}
+#container {
+    position: relative;
+    left: 50%;
+    width: 720px;
+    height: 400px;
+    transform: translate(-50%, 0);
+}
+#div_img {
+    width: 50%;
+    height: inherit;
+    float: left;
+    padding-top: 4em;
+    text-align: center;
+}
+#div_data {
+    width: 50%;
+    height: inherit;
+    float: left;
+    padding-top: 4em;
+}
+.data {
+    padding: 1em 2em;
+}
+input {
+    padding: 0.2em;
+}
+#div_buttons {
+    width: 100%;
+    margin-top: 1em;
+    text-align: center;
+}
+button {
+    border: none;
+    outline: none;
+    padding: 1em;
+    color: white;
+    background-color: #0084ff;
+}
+#cancel_btn {
+    margin-left: 1em;
+}
+button:hover, #back_link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.error {
+    width: 100%;
+    text-align: center;
+}
