@@ -29,7 +29,6 @@ body {
     text-decoration: none;
 }
 .nav_link div {
-    border: 1ps solid orange;
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
@@ -74,6 +73,7 @@ body {
     width: 100%;
     height: 250px;
     background-color: #0099ffa8;
+    overflow: hidden;
 }
 .imp_image {
     border: 1px solid #0099ffa8;
@@ -125,8 +125,9 @@ body {
 .more_info:hover {
     text-decoration: underline;
     background-color: #008cff7a;
+    cursor: pointer;
 }
-.check_control, .modify_control, .remove_control {
+.check_control, #new_imp_control, #new_proj_control, .modify_control, .remove_control {
     display: none;
 }
 .magic {
@@ -162,6 +163,39 @@ body {
     padding-left: 1.5em;
 }
 
+/* FORM DI INSERIMENTO */
+
+#new_imp_btn, #new_proj_btn {
+    margin-top: 1em;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background-position: center;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-color: #0099ffa8;
+}
+#new_imp_btn {
+    margin-left: 170px;
+    background-image: url("../../images/add_user.png");
+}
+#new_proj_btn {
+    margin-left: 10px;
+    background-image: url("../../images/add_proj.png");
+}
+#new_imp_control:checked ~ #new_imp_form_div, #new_proj_control:checked ~ #new_proj_form_div {
+    left: 0;
+}
+#new_imp_control:checked + label, #new_proj_control:checked + label {
+    position: fixed;
+    top: 0;
+    left: initial;
+    right: 0;
+    margin-top: 0;
+    z-index: 2;
+    background-image: url("../../images/close.png");
+}
+
 /* FORM DI MODIFICA */
 
 .modify_btn {
@@ -175,10 +209,11 @@ body {
     background-size: 50px;
     background-repeat: no-repeat;
 }
-.modify_btn:hover {
+.modify_btn:hover, #new_imp_btn:hover, #new_proj_btn:hover {
     background-color: #008cff7a;
+    cursor: pointer;
 }
-.modify_form_div, .remove_form_div {
+.modify_form_div, .remove_form_div, #new_imp_form_div, #new_proj_form_div {
     position: fixed;
     top: 0;
     left: -100%;
@@ -197,7 +232,7 @@ body {
     z-index: 2;
     background-image: url("../../images/close.png");
 }
-.modify_form {
+.modify_form, #new_imp_form, #new_proj_form {
     position: relative;
     top: 50%;
     left: 50%;
@@ -209,7 +244,7 @@ body {
 .identity {
     display: none;
 }
-.modify_personal_info, .modify_company_info {
+.modify_personal_info, .modify_company_info, #new_imp_personal_info, #new_imp_company_info {
     border: none;
     width: 50%;
     height: calc(85% - 2em);
@@ -218,17 +253,17 @@ body {
     padding: 2.5em 2em;
     margin-top: 2em;
 }
-.modify_personal_info div {
+.modify_personal_info div, #new_imp_personal_info div {
     height: 12.5%;
 }
-.modify_personal_info input {
+.modify_personal_info input, #new_imp_personal_info input {
     width: 150px;
     float: right;
 }
 .file_select input {
     width: 220px;
 }
-.modify_company_info div {
+.modify_company_info div, #new_imp_company_info div {
     height: 10%;
 }
 .submit_reset_div {
@@ -270,6 +305,7 @@ body {
 }
 .remove_btn:hover {
     background-color: #008cff7a;
+    cursor: pointer;
 }
 .remove_control:checked ~ .remove_form_div {
     left: 0;
@@ -313,7 +349,7 @@ body {
     background-color: #0099ffa8;
     margin-right: 2em;
 }
-.yes_no_div label:hover {
+.yes_no_div label:hover, .apply_btn:hover {
     cursor: pointer;
     text-decoration: underline;
     background-color: #0077ff; 
@@ -331,11 +367,6 @@ body {
     padding: 1em;
     color: white;
     background-color: #0099ffa8;
-}
-.apply_btn:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    background-color: #0077ff; 
 }
 
 /* PROGETTI */
@@ -357,7 +388,7 @@ body {
 .project_title:hover {
     cursor: pointer;
     text-decoration: underline;
-    background-color: #2ba0ff; 
+    background-color: #2ba0ff;
 }
 .modify_proj_form {
     width: 100%;
@@ -383,7 +414,7 @@ body {
 .pro_select:checked + label div .remove_proj_btn {
     display: block;
 }
-.project_img, .project_data, .project_description {
+.project_img, .project_data, .new_proj_data, .new_proj_description {
     height: calc(100% - 2em);
     float: left;
     margin: 1em;
@@ -418,14 +449,19 @@ body {
     width: 40%;
     padding: 0.4em;
 }
-.project_data div label {
+.project_data div label, .new_proj_data div label {
     float: right;
     padding-left: 0.5em;
 }
 .project_description {
     width: calc(25% - 2em);
+    height: calc(100% - 2em);
+    float: left;
+    resize: none;
+    margin: 1em;
+    color: #696969;
     line-height: 1.5em;
-    overflow-y: scroll;
+    font-size: 0.9em;
 }
 .remove_proj_btn {
     display: none;
@@ -440,8 +476,35 @@ body {
     background-repeat: no-repeat;
 }
 .remove_proj_btn:hover {
+    cursor: pointer;
     border: 2px solid white;
 }
+.new_proj_data {
+    width: calc(60% - 2em);
+}
+.new_proj_data div {
+    width: 100%;
+    height: 14.2%;
+    padding: 0.5em;
+}
+.new_proj_description {
+    width: calc(40% - 2em);
+}
+.new_proj_desc {
+    width: 100%;
+    height: calc(100% - 5em);
+    margin-top: 2em;
+    resize: none;
+    color: #696969;
+    line-height: 1.5em;
+}
+.new_proj_data div input[type="text"], .new_proj_image {
+    float: right;
+    width: 50%;
+    padding: 0.4em;
+}
+
+/* FORM DI INSERIMENTO */
 
 /* ARTICOLI */
 

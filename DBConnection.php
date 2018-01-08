@@ -6,7 +6,7 @@
 			$this->conn = new mysqli("localhost:3306", "root", "tecweb2017");
 			// Check connection
 			if ($this->conn->connect_error) {
-				die("Connection failed: " . $this->conn->connect_error);
+				die("Connection failed: ".$this->conn->connect_error);
 			}
 		}
 		function __destruct() {
@@ -70,7 +70,7 @@
 								<input type='checkbox' id='removeproj".$count."' class='remove_control'/>
 								<label class='remove_proj_btn' for='removeproj".$count."'></label>
 								<div class='remove_form_div'>
-									<form class='remove_form' action='DBConnection.php' method='post'>
+									<form class='remove_form' action='form_control.php' method='post'>
 										<fieldset class='remove_fieldset'>
 											<legend>Rimuovere definitivamente il progetto ".$row['name']." e tutti i suoi dati?</legend>
 											<div class='yes_no_div'>
@@ -84,11 +84,14 @@
 									</form>
 								</div>
 							</div>
-							<form class='modify_proj_form' action='DBConnection.php' method='post'>
+							<form id='mp".$count."' class='modify_proj_form' action='form_control.php' method='post'>
+								<input class='identity' type='text' name='modify_proj' value='".$row['id']."'/>
+								<input class='identity' type='text' name='name' value='".$row['name']."'/>
+								<input class='identity' type='text' name='old_image' value='".$row['image']."'/>
 								<div class='project_info'>
 									<div class='project_img'>
 										<div class='current_proj_img' style='background-image:url(../../images/".$row['image'].")'></div>
-										<div class='change_proj_img'>Cambia: <input type='file' name='file' accept='.jpg, .jpeg, .png'/></div>
+										<div class='change_proj_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png'/></div>
 									</div>
 									<div class='project_data'>
 										<div>Stato:";
@@ -103,7 +106,7 @@
 										<div>Luogo:<input type='text' name='location' value='".$row['location']."'/></div>
 										<div>Direttore dei lavori:<input type='text' name='director' value='".$row['director']."'/></div>
 									</div>
-									<div class='project_description'>".$row['description']."</div>
+									<textarea class='project_description' name='description' form='mp".$count."'>".$row['description']."</textarea>
 								</div>
 								<div class='proj_form_btns'>
 									<input class='submit_btn' type='submit' value='Salva modifiche'/>
@@ -119,8 +122,48 @@
 			}
 		}
 
-		public function remove_progetto($p) {
-			$sql = "DELETE FROM webproject.progetti WHERE id='$p'";
+		public function remove_progetto($proj) {
+			$sql = "DELETE FROM webproject.progetti WHERE id='$proj'";
+			$result = $this->conn->query($sql);
+		}
+		
+		public function modify_progetto() {
+			$id=$_POST['modify_proj'];
+			$sql = "DELETE FROM webproject.progetti WHERE id='$id'";
+			$result = $this->conn->query($sql);
+			$this->insert_progetto();
+		}
+
+		public function insert_progetto() {
+			$na=$_POST['name'];
+			$st=$_POST['status'];
+			$cl=$_POST['client'];
+			$ty=$_POST['type'];
+			$lo=$_POST['location'];
+			$di=$_POST['director'];
+			$de=$_POST['description'];
+			$im=$_POST['image'];
+			if($im=='') { // non avviene in new_proj perché è required
+				if(isset($_POST['old_image']))
+					$im=$_POST['old_image'];
+			}
+			if(isset($_POST['modify_proj'])) // quando avviene una modifica di un impiegato esistente
+				$id=$_POST['modify_proj'];
+			else { // quando avviene l'inserimento di un nuovo impiegato
+				$i=1;
+				$found=false;
+				while(!$found) {
+					$sql = "SELECT id FROM webproject.progetti WHERE id='$i'";
+					$result = $this->conn->query($sql);
+					if($result->num_rows > 0)
+						$i++;
+					else {
+						$id=$i;
+						$found=true;
+					}
+				}
+			}
+			$sql = "INSERT INTO webproject.progetti VALUES ('$id','$im','$na','$st','$cl','$ty','$lo','$di','$de')";
 			$result = $this->conn->query($sql);
 		}
 
@@ -170,16 +213,17 @@
 						<input type='checkbox' id='modify".$count."' class='modify_control'/>
 						<label class='modify_btn' for='modify".$count."'></label>
 						<div class='modify_form_div'>
-							<form class='modify_form' action='DBConnection.php' method='post'>
+							<form class='modify_form' action='form_control.php' method='post'>
 								<fieldset class='modify_personal_info'>
 									<legend>Informazioni personali</legend>
-									<input class='identity' type='text' name='id' value='".$row['id']."'>
+									<input class='identity' type='text' name='modify_imp' value='".$row['id']."'/>
+									<input class='identity' type='text' name='old_image' value='".$row['image']."'/>
 									<div>Nome:<input type='text' name='firstname' value='".$row['firstname']."' required/></div>
 									<div>Cognome:<input type='text' name='lastname' value='".$row['lastname']."' required/></div>
 									<div>Data di nascita:<input type='date' name='birth' value='".$row['birth']."'/></div>
-									<div>Età<input type='number' name='age' value='".$row['age']."' min='18' max='99'/></div>
-									<div>e-mail<input type='email' value='".$row['mail']."' name='mail'/></div>
-									<div class='file_select'>Foto:<input type='file' name='image'/></div>
+									<div>Età:<input type='number' name='age' value='".$row['age']."' min='18' max='99'/></div>
+									<div>e-mail:<input type='email' value='".$row['mail']."' name='mail'/></div>
+									<div class='file_select'>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png'/></div>
 									<div>Settore:<input type='text' name='branch' value='".$row['branch']."'/></div>
 									<div>Anno di inizio:<input type='number' name='begin' value='".$row['begin']."' min='1900' max='2018'/></div>
 								</fieldset>
@@ -201,7 +245,7 @@
 						<input type='checkbox' id='remove".$count."' class='remove_control'/>
 						<label class='remove_btn' for='remove".$count."'></label>
 						<div class='remove_form_div'>
-							<form class='remove_form' action='DBConnection.php' method='post'>
+							<form class='remove_form' action='form_control.php' method='post'>
 								<fieldset class='remove_fieldset'>
 									<legend>Rimuovere definitivamente ".$row['firstname']." ".$row['lastname']." e tutti i suoi dati?</legend>
 									<div class='yes_no_div'>
@@ -250,17 +294,53 @@
 		}
 		
 		public function modify_impiegato() {
-			$id=$_POST['identity'];
+			$id=$_POST['modify_imp'];
 			$sql = "DELETE FROM webproject.impiegati WHERE id='$id'";
 			$result = $this->conn->query($sql);
-			// CONTINUA
+			$this->insert_impiegato();
+		}
+
+		public function insert_impiegato() {
+			$fn=$_POST['firstname'];
+			$ln=$_POST['lastname'];
+			$ro=$_POST['role'];
+			$bi=$_POST['birth'];
+			$ag=$_POST['age'];
+			$ma=$_POST['mail'];
+			$br=$_POST['branch'];
+			$be=$_POST['begin'];
+			$im=$_POST['image'];
+			if($im=='') {
+				if(isset($_POST['old_image']))
+					$im=$_POST['old_image'];
+				else
+					$im='default_user.jpg';
+			}
+			if(isset($_POST['modify_imp'])) // quando avviene una modifica di un impiegato esistente
+				$id=$_POST['modify_imp'];
+			else { // quando avviene l'inserimento di un nuovo impiegato
+				$i=1;
+				$found=false;
+				while(!$found) {
+					$sql = "SELECT id FROM webproject.impiegati WHERE id='$i'";
+					$result = $this->conn->query($sql);
+					if($result->num_rows > 0)
+						$i++;
+					else {
+						$id=$i;
+						$found=true;
+					}
+				}
+			}
+			$sql = "INSERT INTO webproject.impiegati VALUES ('$id','$fn','$ln','$ro','$bi','$ag','$ma','$br','$be','$im')";
+			$result = $this->conn->query($sql);
 		}
 
 		// VALIDAZIONE CREDENZIALI
 		public function validate($user, $psw) {
 			$sql = "SELECT * FROM webproject.utenti WHERE username='$user'";
 			$result = $this->conn->query($sql);
-			if ($result->num_rows > 0) {
+			if($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
 				if($row['password']==$psw) {
 					if($row['role']=='normal')
@@ -273,44 +353,4 @@
 		}
 	}
 
-	// VALIDAZIONE CREDENZIALI
-	if(isset($_POST['u'])) {
-    	$conn=new DBConnection();
-    	$num=$conn->validate($_POST['u'], $_POST['p']);
-    	if($num==2)
-        	header('Location: admin.php');
-    	else if($num==0)
-        	header('Location: login.php?error=0');
-    	else if($num==1)
-			header('Location: login.php?error=1');
-	}
-
-	// RIMOZIONE PROGETTO
-	if(isset($_POST['remove_proj'])) {
-		$p=$_POST['remove_proj'];
-		if($p!='no') {
-			$conn=new DBConnection();
-			$conn->remove_progetto($p);
-		}
-		header('Location: admin.php');
-	}
-
-	// RIMOZIONE IMPIEGATO
-	if(isset($_POST['remove_imp'])) {
-		$imp=$_POST['remove_imp'];
-		if($imp!='no') {
-			$conn=new DBConnection();
-			$conn->remove_impiegato($imp);
-		}
-		header('Location: admin.php');
-	}
-
-	// MODIFICA PROGETTO
-
-	// MODIFICA IMPIEGATO
-	if(isset($_POST['identity'])) {
-		$conn=new DBConnection();
-		$conn->modify_impiegato();
-		header('Location: admin.php');
-	}
 ?>

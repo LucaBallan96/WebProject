@@ -16,11 +16,79 @@
 		<!-- NAVIGATION -->
 		<div id="nav">
 			<a title="Home" href="index.html" id="nav_home" class="nav_link"><div>Home</div></a>
-			<a title="Impiegati" href="#impiegati" id="nav_people" class="nav_link"><div>Impiegati</div></a>
+			<a title="Impiegati dell'azienda" href="#impiegati" id="nav_people" class="nav_link"><div>Impiegati</div></a>
 			<a title="Progetti" href="#progetti" id="nav_projects" class="nav_link"><div>Progetti</div></a>
-			<a title="Articoli" href="#articoli" id="nav_articles" class="nav_link"><div>Articoli</div></a>
-			<a title="Utenti" href="#utenti" id="nav_users" class="nav_link"><div>Utenti</div></a>
-			<a title="Lavoro" href="#lavoro" id="nav_work" class="nav_link"><div>Lavoro</div></a>
+			<a title="Articoli di stampa" href="#articoli" id="nav_articles" class="nav_link"><div>Articoli</div></a>
+			<a title="Utenti del sito" href="#utenti" id="nav_users" class="nav_link"><div>Utenti</div></a>
+			<a title="Proposte di lavoro" href="#lavoro" id="nav_work" class="nav_link"><div>Lavoro</div></a>
+		</div>
+
+		<!-- NUOVO IMPIEGATO -->
+		<input type='checkbox' id='new_imp_control'/>
+		<label id='new_imp_btn' title='Inserisci un nuovo impiegato' for='new_imp_control'></label>
+		<div id='new_imp_form_div'>
+			<form id='new_imp_form' action='form_control.php' method='post'>
+				<fieldset id='new_imp_personal_info'>
+					<legend>Informazioni personali</legend>
+					<input class='identity' type='text' name='new_imp' value='new_imp'/>
+					<div>Nome:<input type='text' name='firstname' required/></div>
+					<div>Cognome:<input type='text' name='lastname' required/></div>
+					<div>Data di nascita:<input type='date' name='birth'/></div>
+					<div>Età:<input type='number' name='age' min='18' max='99'/></div>
+					<div>e-mail:<input type='email' name='mail'/></div>
+					<div>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png'/></div>
+					<div>Settore:<input type='text' name='branch'/></div>
+					<div>Anno di inizio:<input type='number' name='begin' min='1900' max='2018'/></div>
+				</fieldset>
+				<fieldset id='new_imp_company_info'>
+					<legend>Ruolo nell'azienda:</legend>
+					<div><label><input type='radio' name='role' value='Presidente' checked/>Presidente</label></div>
+					<div><label><input type='radio' name='role' value='Vicepresidente'/>Vicepresidente</label></div>
+					<div><label><input type='radio' name='role' value='Segretario'/>Segretario</label></div>
+					<div><label><input type='radio' name='role' value='Ingegnere'/>Ingegnere</label></div>
+					<div><label><input type='radio' name='role' value='Architetto'/>Architetto</label></div>
+					<div><label><input type='radio' name='role' value='Geometra'/>Geometra</label></div>
+					<div><label><input type='radio' name='role' value='Progettista'/>Progettista</label></div>
+					<div><label><input type='radio' name='role' value='Muratore'/>Muratore</label></div>
+					<div><label><input type='radio' name='role' value='Carpentiere'/>Carpentiere</label></div>
+					<div><label><input type='radio' name='role' value='Magazziniere'/>Magazziniere</label></div>
+				</fieldset>
+				<div class='submit_reset_div'>
+					<input class='submit_btn' type='submit' value='Salva impiegato'/>
+					<input class='reset_btn' type='reset' value='Reset'/>
+				</div>
+			</form>
+		</div>
+
+		<!-- NUOVO PROGETTO -->
+		<input type='checkbox' id='new_proj_control'/>
+		<label id='new_proj_btn' title='Inserisci un nuovo progetto' for='new_proj_control'></label>
+		<div id='new_proj_form_div'>
+			<form id='new_proj_form' action='form_control.php' method='post'>
+				<div class='project_info'>
+					<div class='new_proj_data'>
+						<input class='identity' type='text' name='new_proj' value='new_proj'/>
+						<div>Nome:<input type='text' name='name' required/></div>
+						<div>Immagine:<input class='new_proj_image' type='file' name='image' accept='.jpg, .jpeg, .png' required/></div>
+						<div>Stato:
+							<label><input type='radio' name='status' value='In corso' checked/> In corso</label>
+							<label><input type='radio' name='status' value='Terminato'/> Terminato</label>
+						</div>
+						<div>Committente:<input type='text' name='client'/></div>
+						<div>Tipologia:<input type='text' name='type'/></div>
+						<div>Luogo:<input type='text' name='location'/></div>
+						<div>Direttore dei lavori:<input type='text' name='director'/></div>
+					</div>
+					<div class='new_proj_description'>
+						Descrizione:</br>
+						<textarea class='new_proj_desc' name='description' form='new_proj_form'></textarea>
+					</div>
+				</div>
+				<div class='proj_form_btns'>
+					<input class='submit_btn' type='submit' value='Salva progetto'/>
+					<input class='reset_btn' type='reset' value='Reset'/>
+				</div>
+			</form>
 		</div>
 
 		<!-- IMPIEGATI -->

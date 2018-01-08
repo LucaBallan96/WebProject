@@ -14,7 +14,7 @@
 	</head>
 	<body>
         <a id="back_link" href="index.html">Indietro</a>
-        <form action="DBConnection.php" method="post">
+        <form action="form_control.php" method="post">
             <div id="container">
                 <div id="div_img">
                     <img src="images/login.png" id="user_img">

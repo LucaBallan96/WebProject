@@ -73,6 +73,7 @@ body {
     width: 100%;
     height: 150px;
     background-color: #0099ffa8;
+    overflow: hidden;
 }
 .imp_image {
     border: 1px solid #0099ffa8;
