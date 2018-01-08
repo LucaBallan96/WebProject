@@ -56,6 +56,7 @@
 						<div id='div_desc'>".$row['description']."</div>";
 			}
 		}
+
 		//OFFERTE DI LAVORO
 		public function get_offer(){
 			$sql = "SELECT DISTINCT * FROM webproject.offerte";
@@ -64,51 +65,45 @@
 				$count=1;
 				while($row=$result->fetch_assoc()){
 					echo "<input id='of".$count."' type='checkbox' class='pro_select' />
-					<label class='label_offer' for='of".$count."'>
-								<div class='div_img_offer'><img class='img_offer'src='images/".$row['image']."'></div>
-								<div class='div_information'>
-									<div class='text'>
+						<label class='label_offer' for='of".$count."'>
+							<div class='div_img_offer'><img class='img_offer'src='images/".$row['image']."'></div>
+							<div class='div_information'>
+								<div class='text'>
 									".$row['role']." - ".$row['branch']." - ".$row['contract']."</br></br>
 									".$row['message']."		
-									</div>
 								</div>
-			
-								  
-								<div class='form_offer'>
+							</div>
+							<div class='form_offer'>
 								<form id='f".$count."' action='form_control.php' method='post'>
-								<div class='div_container_form'>
-								<div class='general_informations'>
-									Nome: <input class='in_form'type='text' name='firstname'><br></br>
-									Cognome: <input class='in_form' type='text' name='lastName'><br><br>
-									
-									<div class='div_genre'>
-									Genre: 
-									<div class='container_radio'>
-										<input type='radio' name='gender' value='male'> Male &nbsp&nbsp&nbsp
-										<input type='radio' name='gender' value='female'> Female&nbsp&nbsp&nbsp</div>
-									</div>
-									<br>Birthday: <input class='in_form'type='date' name='bday'><br></br>
-									Mail: <input class='in_form'type='text' name='mail'><br></br>
-									Curriculum: <input class='in_form' type='file' name='file'></br></br>
-									
-								</div>
-								&nbsp&nbsp&nbspMessaggio:</br></br>
-								<textarea rows='11'class='textmessage' name='textmessage'form='f".$count."'> </textarea>
-								<input class='submit'type='submit' value='Submit'>  
-									</div>
-									
-									</form>
-								
-								</div>  	
-					</label>
-					
-					<div class='divisor'></div>";
-				$count=$count+1;
+									<div class='div_container_form'>
+										<div class='general_informations'>
+											Nome: <input class='in_form' type='text' name='firstname'><br></br>
+											Cognome: <input class='in_form' type='text' name='lastName'><br><br>
+											<div class='div_genre'>
+												Genre: 
+												<div class='container_radio'>
+													<input type='radio' name='gender' value='male'> Male &nbsp&nbsp&nbsp
+													<input type='radio' name='gender' value='female'> Female&nbsp&nbsp&nbsp
+												</div>
+											</div>
+											<br>Birthday: <input class='in_form' type='date' name='bday'><br></br>
+											Mail: <input class='in_form' type='text' name='mail'><br></br>
+											Curriculum: <input class='in_form' type='file' name='file'></br></br>
+										</div>
+										&nbsp&nbsp&nbspMessaggio:</br></br>
+										<textarea rows='11' class='textmessage' name='textmessage' form='f".$count."'> </textarea>
+										<input class='submit' type='submit' value='Submit'>  
+									</div>	
+								</form>
+							</div>  	
+						</label>
+						<div class='divisor'></div>";
+					$count=$count+1;
 				}
 			}
 			else{
 				echo "<div class='divisor'></div>
-					<p class='exception_offer'>Nessun offerta disponibile </p>
+					<p class='exception_offer'>Nessun offerta disponibile</p>
 					<div class='divisor'></div>";
 			}
 		}
@@ -172,8 +167,8 @@
 						</label>";
 					$count++;
 				}
-				$result->free();
-			} else {
+			}
+			else {
 				echo "<p>Nessun progetto disponibile</p>";
 			}
 		}
@@ -337,7 +332,6 @@
 						$right=$right.$stringa;
 					$count++;
 				}
-				$result->free();
 				echo "<div id='left_container'>".$left."</div><div id='right_container'>".$right."</div>";
 			} else {
 				echo "<p>Nessun impiegato disponibile</p>";
