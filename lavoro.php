@@ -53,6 +53,20 @@
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
 
+        <!--TITLE-->
+        <h1>Lavora con Noi</h1>
+
+        <div class="divisor"></div>
         
+       
+
+        
+
+
+        <?php
+               include "DBConnection.php";
+                $conn=new DBConnection();
+                $conn->get_offer();
+        ?>
 	</body>
 </html>
