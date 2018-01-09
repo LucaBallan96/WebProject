@@ -15,7 +15,7 @@
 		<meta name="description" content="Costruzioni Bordignon S.r.l., con oltre tre generazioni di storia alle spalle, opera nel settore edile residenziale, industriale, pubblico, nei restauri e nelle infrastrutture mirando ed ottenendo sempre grande apprezzamento dai suoi Clienti, grazie alla sua esperienza, dedizione e continua innovazione">
 		<meta name="keywords" content="Edilizia, settore edile, Treviso, Costruzioni Bordignon">
 		<meta name="author" content="Luca Ballan, Giovanni Calore">
-		<link rel="stylesheet" media="screen and (min-width:1025px)" href="style/lavoro/lavoro_deskto.css">
+		<link rel="stylesheet" media="screen and (min-width:1025px)" href="style/lavoro/lavoro_desktop.css">
 		<link rel="stylesheet" media="screen and (max-width:1024px) and (min-width:721px)" href="style/lavoro/lavoro_tablet.css">
 		<link rel="stylesheet" media="screen and (max-width:720px)" href="style/lavoro/lavoro_mobile.css">
 		<link rel="stylesheet" media="print" href="style/lavoro/lavoro_print.css">
@@ -57,14 +57,15 @@
 			</div>
 			<a href="lavoro.php" id="work">Lavora con noi</a>
             <a href="#div_container_contatti" id="contacts">Contatti</a>
-            <?php
+			<?php
 				if(!isset($_SESSION['username']))
 					echo "<a href='login.php' id='login'>Login</a>";
 				else {
-					echo "<a href='logout.php' id='login'>Logout</a>";
+					echo "<a href='logout.php' id='login'>Logout</a>
+						<a href='info_utente.php' id='user'>".$_SESSION['username']."</a>";
 				}
 				if(isset($_SESSION['admin']))
-					echo "<a href='admin.php' id='admin'>Area Privata</a>";
+					echo "<a title='Area privata' href='admin.php' id='admin'>Area privata</a>";
 			?>
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>

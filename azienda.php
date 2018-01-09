@@ -54,14 +54,15 @@
             </div>
             <a href="lavoro.php" id="work">Lavora con noi</a>
             <a href="#div_container_contatti" id="contacts">Contatti</a>
-            <?php
+			<?php
 				if(!isset($_SESSION['username']))
 					echo "<a href='login.php' id='login'>Login</a>";
 				else {
-					echo "<a href='logout.php' id='login'>Logout</a>";
+					echo "<a href='logout.php' id='login'>Logout</a>
+						<a href='info_utente.php' id='user'>".$_SESSION['username']."</a>";
 				}
 				if(isset($_SESSION['admin']))
-					echo "<a href='admin.php' id='admin'>Area Privata</a>";
+					echo "<a title='Area privata' href='admin.php' id='admin'>Area privata</a>";
 			?>
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>

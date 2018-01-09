@@ -1,3 +1,11 @@
+<?php
+    include 'DBConnection.php';
+    $conn=new DBConnection();
+
+    if(!isset($_SESSION['username']))
+    header('Location: login.php');
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -48,19 +56,23 @@
                 </div>	
 			</div>
 			<a href="lavoro.php" id="work">Lavora con noi</a>
-            <a href="#div_container_contatti" id="contacts">Contatti</a>
-            <a href="login.php" id="admin">Area Privata</a>
+			<a href="#div_container_contatti" id="contacts">Contatti</a>
+			<?php
+				if(!isset($_SESSION['username']))
+					echo "<a href='login.php' id='login'>Login</a>";
+				else {
+					echo "<a href='logout.php' id='login'>Logout</a>
+						<a href='info_utente.php' id='user'>".$_SESSION['username']."</a>";
+				}
+				if(isset($_SESSION['admin']))
+					echo "<a title='Area privata' href='admin.php' id='admin'>Area privata</a>";
+			?>
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
 
 
-
-
         <?php
-               include "DBConnection.php";
-                $conn=new DBConnection();
-                $conn->get_prenotation();
-                
+            $conn->get_prenotation();
         ?>
 	</body>
 </html>
