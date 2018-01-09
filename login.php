@@ -21,13 +21,13 @@
                 </div>
                 <div id="div_data">
                     <div class="data"><b>Username</b>
-                        <input type="text" placeholder="Enter Username" name="u" required>
+                        <input type="text" placeholder="Inserisci username" name="u" autofocus required>
                     </div>
                     <div class="data"><b>Password</b>
-                        <input type="password" placeholder="Enter Password" name="p" required>
+                        <input type="password" placeholder="Inserisci password" name="p" required>
                     </div>
                     <div class="data">
-                        Forgot <a href="">password</a>?
+                        Non hai ancora un <a href="register.php">account</a>?
                     </div>
                     <div id="div_buttons">
                         <button type="submit">Login</button>

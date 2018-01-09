@@ -200,9 +200,9 @@
 				if(isset($_POST['old_image']))
 					$im=$_POST['old_image'];
 			}
-			if(isset($_POST['modify_proj'])) // quando avviene una modifica di un impiegato esistente
+			if(isset($_POST['modify_proj'])) // quando avviene una modifica di un progetto esistente
 				$id=$_POST['modify_proj'];
-			else { // quando avviene l'inserimento di un nuovo impiegato
+			else { // quando avviene l'inserimento di un nuovo progetto
 				$i=1;
 				$found=false;
 				while(!$found) {
@@ -275,7 +275,7 @@
 									<div>Cognome:<input type='text' name='lastname' value='".$row['lastname']."' required/></div>
 									<div>Data di nascita:<input type='date' name='birth' value='".$row['birth']."'/></div>
 									<div>Età:<input type='number' name='age' value='".$row['age']."' min='18' max='99'/></div>
-									<div>e-mail:<input type='email' value='".$row['mail']."' name='mail'/></div>
+									<div>E-mail:<input type='email' value='".$row['mail']."' name='mail'/></div>
 									<div class='file_select'>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png'/></div>
 									<div>Settore:<input type='text' name='branch' value='".$row['branch']."'/></div>
 									<div>Anno di inizio:<input type='number' name='begin' value='".$row['begin']."' min='1900' max='2018'/></div>
@@ -402,6 +402,28 @@
 				}
 			}
 			return 0;
+		}
+
+		// NUOVO UTENTE
+		public function insert_user() {
+			$us=$_POST['new_user'];
+			$pa=$_POST['password'];
+			$re=$_POST['rep_password'];
+			$ma=$_POST['mail'];
+			$ro='normal';
+			if($pa!=$re)
+				return 1;
+			else {
+				$sql = "SELECT * FROM webproject.utenti WHERE username='$us'";
+				$result = $this->conn->query($sql);
+				if($result->num_rows > 0)
+					return 2;
+				else {
+					$sql = "INSERT INTO webproject.utenti VALUES ('$us','$pa','$ma','$ro')";
+					$result = $this->conn->query($sql);
+					return 0;
+				}
+			}
 		}
 	}
 

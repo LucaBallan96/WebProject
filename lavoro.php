@@ -1,6 +1,9 @@
 <?php
-    include 'DBConnection.php';
-    $conn=new DBConnection();
+	include 'DBConnection.php';
+	$conn=new DBConnection();
+
+	if(!isset($_SESSION['username']))
+		header('Location: login.php');
 ?>
 
 <!DOCTYPE html>

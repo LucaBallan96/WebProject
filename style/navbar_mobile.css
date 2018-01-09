@@ -52,6 +52,10 @@
 	background-color: inherit;
 	color: #000000;
 	font-size: 1em;
+	text-decoration: underline;
+}
+.drop_button:hover, #close:hover {
+	cursor: pointer;
 }
 .drop_content {
 	display: none;	
@@ -62,13 +66,12 @@
 	text-decoration: none;
 	display: block;
 }
-#contacts, #work, #admin, #login {
+#contacts, #work, #admin, #login, #user {
 	padding: 1em 1.5em;
-	text-decoration: none;
-	color: black;
+	color: #000000;
 	font-size: 1em;
 }
-#admin, #login {
+#admin, #login, #user {
 	display: block;
 }
 #close {

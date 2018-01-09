@@ -16,6 +16,20 @@
 		}
 	}
 
+	// NUOVO UTENTE
+	if(isset($_POST['new_user'])) {
+		$num=$conn->insert_user();
+		if($num==1)
+			header('Location: register.php?error=1');
+		else if($num==2)
+			header('Location: register.php?error=2');
+		else {
+			session_start();
+			$_SESSION['username']=$_POST['new_user'];
+			header('Location: index.php');
+		}
+	}
+
 	// RIMOZIONE PROGETTO
 	if(isset($_POST['remove_proj'])) {
 		$proj=$_POST['remove_proj'];
