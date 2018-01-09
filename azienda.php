@@ -1,3 +1,8 @@
+<?php
+    include 'DBConnection.php';
+    $conn=new DBConnection();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,7 +29,7 @@
         </button>
 
         <div id="navbar">
-            <a id="home_link" href="index.html"><img id="logo" src="images/logo.png"></a>
+            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png"></a>
             <div class="dropdown">
                 <button id="menu_bt1" class="drop_button" onclick="display_content(this)">Azienda</button>
                 <div id="content_menu_bt1" class="drop_content">
@@ -49,7 +54,15 @@
             </div>
             <a href="lavoro.php" id="work">Lavora con noi</a>
             <a href="#div_container_contatti" id="contacts">Contatti</a>
-            <a href="login.php" id="admin">Area Privata</a>
+            <?php
+				if(!isset($_SESSION['username']))
+					echo "<a href='login.php' id='login'>Login</a>";
+				else {
+					echo "<a href='logout.php' id='login'>Logout</a>";
+				}
+				if(isset($_SESSION['admin']))
+					echo "<a href='admin.php' id='admin'>Area Privata</a>";
+			?>
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
 
@@ -66,7 +79,7 @@
         <div id="storia"class="subtitle">Storia</div>
         <div class="divisor"></div>
         <div id="text_storia" class="text_general">
-            <div class="text">La <a href="index.html">Costruzioni Bordignon S.r.l.</a> nasce nel 1998, sulle orme della tradizione iniziata nei primi anni del 1900 dal nonno degli attuali titolari, e proseguita poi per mano del padre degli stessi, fino all’avvicendamento generazionale. 
+            <div class="text">La <a href="index.php">Costruzioni Bordignon S.r.l.</a> nasce nel 1998, sulle orme della tradizione iniziata nei primi anni del 1900 dal nonno degli attuali titolari, e proseguita poi per mano del padre degli stessi, fino all’avvicendamento generazionale. 
         </br></br>Nel corso di tre generazioni l’azienda si è continuamente distinta per la professionalità dimostrata, puntando sempre sulla qualità delle opere fornite, nel rispetto delle condizioni e dei tempi stabiliti. Grazie all’impegno di attrezzature e macchinari altamente specializzati, e al supporto di uno staff tecnico specializzato, è in grado di offrire un servizio che le permette di primeggiare nel settore. La <a href="https://it.wikipedia.org/wiki/Norme_della_serie_ISO_9000" target="_blanck">certificazione di qualità ISO</a>, l'<a href="https://it.wikipedia.org/wiki/Societ%C3%A0_organismi_di_attestazione" class="link_generico" target="_black">attestazione SOA</a> e
 			l'<a href="https://it.wikipedia.org/wiki/OHSAS_18001" class="link_generico" target="_blanck">attestazione OHSAS</a> sono la conferma dell’impegno profuso al raggiungimento di livelli costruttivi all’avanguardia, che consentono di realizzare opere che vanno dai grandi complessi residenziali ed industriali, ai piccoli lavori civili che tuttavia contribuiscono ad accrescere l’esperienza, fondamentale per un continuo miglioramento professionale. 
         </br></br>La continua qualificazione e l’incremento dell’organico permettono inoltre di rendere l’azienda sempre più flessibile ed attenta alle esigenze, ai particolari e agli standard richiesti dalla committenza al giorno d’oggi. 
@@ -153,7 +166,7 @@
             Dott.ssa CARRARO Cristina – Sindaco supplente</br>
             Dott.ssa MISCIATTELLI Alessandra – Sindaco Supplente</br>
         </br></br>
-        <a href="index.html">Costruzioni Bordignon S.r.l.</a> ha inoltre le seguenti partecipazioni societarie:</br></br>
+        <a href="index.php">Costruzioni Bordignon S.r.l.</a> ha inoltre le seguenti partecipazioni societarie:</br></br>
             Bordignon Service Srl con sede a Volpago del Montello (TV) – Quota capitale partecipato 100%</br>
             Immobiliare Amalia Srl con sede a Volpago del Montello (TV)- Quota capitale partecipato 100%</br>
             B.G.P. General Bau Srl con sede a Bressanone (BZ) – Quota capitale partecipato 100%</br></br>
@@ -175,8 +188,6 @@
             
 
             <?php
-                include "DBConnection.php";
-                $conn=new DBConnection();
                 $conn->get_impiegati_azienda();
             ?>
             

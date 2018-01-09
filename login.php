@@ -13,7 +13,7 @@
 		<link rel="stylesheet" media="print" href="style/login/login_print.css">
 	</head>
 	<body>
-        <a id="back_link" href="index.html">Indietro</a>
+        <a id="back_link" href="index.php">Indietro</a>
         <form action="form_control.php" method="post">
             <div id="container">
                 <div id="div_img">
@@ -38,10 +38,7 @@
         </form>
         <?php
             if(isset($_GET['error'])) {
-                if($_GET['error']==0)
-                    echo "<p class='error'><b>Errore nelle credenziali, riprovare</b></p>";
-                if($_GET['error']==1)
-                    echo "<p class='error'><b>L'utente non ha i permessi necessari per accedere come amministratore!</b></p>";
+                echo "<p class='error'><b>Errore nelle credenziali, riprovare</b></p>";
             }
         ?>
     </body>

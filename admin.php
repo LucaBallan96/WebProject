@@ -1,3 +1,15 @@
+<?php 
+	include 'DBConnection.php';
+	$conn=new DBConnection();
+
+	if(!isset($_SESSION['admin'])) {
+		if(isset($_SESSION['username']))
+			header('Location: index.php');
+		else
+			header('Location: login.php');
+	}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,7 +27,7 @@
 	<body>
 		<!-- NAVIGATION -->
 		<div id="nav">
-			<a title="Home" href="index.html" id="nav_home" class="nav_link"><div>Home</div></a>
+			<a title="Home" href="index.php" id="nav_home" class="nav_link"><div>Home</div></a>
 			<a title="Impiegati dell'azienda" href="#impiegati" id="nav_people" class="nav_link"><div>Impiegati</div></a>
 			<a title="Progetti" href="#progetti" id="nav_projects" class="nav_link"><div>Progetti</div></a>
 			<a title="Articoli di stampa" href="#articoli" id="nav_articles" class="nav_link"><div>Articoli</div></a>
@@ -27,7 +39,7 @@
 		<input type='checkbox' id='new_imp_control'/>
 		<label id='new_imp_btn' title='Inserisci un nuovo impiegato' for='new_imp_control'></label>
 		<div id='new_imp_form_div'>
-			<form id='new_imp_form' action='form_control.php' method='post'>
+			<form id='new_imp_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 				<fieldset id='new_imp_personal_info'>
 					<legend>Informazioni personali</legend>
 					<input class='identity' type='text' name='new_imp' value='new_imp'/>
@@ -94,8 +106,7 @@
 		<!-- IMPIEGATI -->
 		<h1 id="impiegati" class="header">Impiegati e dirigenti d'azienda</h1>
 		<div class="container_est">
-			<?php include "DBConnection.php";
-            	$conn=new DBConnection();
+			<?php
             	$conn->get_impiegati_admin();
         	?>
 		</div>

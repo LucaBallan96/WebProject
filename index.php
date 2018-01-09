@@ -1,3 +1,7 @@
+<?php
+	include 'DBConnection.php';
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,7 +28,7 @@
         </button>
 
         <div id="navbar">
-            <a id="home_link" href="index.html"><img id="logo" src="images/logo.png"></a>
+            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png"></a>
             <div class="dropdown">
                 <button id="menu_bt1" class="drop_button" onclick="display_content(this)">Azienda</button>
                 <div id="content_menu_bt1" class="drop_content">
@@ -48,8 +52,16 @@
                 </div>	
 			</div>
 			<a href="lavoro.php" id="work">Lavora con noi</a>
-            <a href="#div_container_contatti" id="contacts">Contatti</a>
-			<a href="login.php" id="admin">Area Privata</a>
+			<a href="#div_container_contatti" id="contacts">Contatti</a>
+			<?php
+				if(!isset($_SESSION['username']))
+					echo "<a href='login.php' id='login'>Login</a>";
+				else {
+					echo "<a href='logout.php' id='login'>Logout</a>";
+				}
+				if(isset($_SESSION['admin']))
+					echo "<a href='admin.php' id='admin'>Area Privata</a>";
+			?>
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
 	
@@ -164,7 +176,7 @@
 		</a>
 		<h1 id="h1_storia">LA NOSTRA STORIA</h1>
 		<div id="div_text_storia">
-			La <a href="index.html" class="link_generico">Costruzioni Bordignon s.r.l.</a> nasce nel 1998, sulle orme della tradizione iniziata nei primi anni del 1900 da nonno degli attuali titolari 
+			La <a href="index.php" class="link_generico">Costruzioni Bordignon s.r.l.</a> nasce nel 1998, sulle orme della tradizione iniziata nei primi anni del 1900 da nonno degli attuali titolari 
 			e proseguita poi per mano del padre degli stessi, fino all'avvicendamento generazionale.</br></br></br></br>
 			Nel corso di <i>tre generazioni</i> l'azienda si è continuamente distinta per la professionalità dimostrata, puntanto sempre sulla qualità delle opere fornite, nel rispetto delle condizioni e dei tempi stabiliti.
 			Grazie all'impegno di attrezzature e macchinari altamente specializzati e al supporto di uno staff tecnico specializzato, sa offrire un servizio che le permette di primeggiare nel settore.

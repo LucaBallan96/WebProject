@@ -1,4 +1,6 @@
 <?php
+	session_start();
+
 	class DBConnection {
 		private $conn;
 		public function __construct(){ 

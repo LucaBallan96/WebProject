@@ -1,3 +1,8 @@
+<?php
+    include 'DBConnection.php';
+    $conn=new DBConnection();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,7 +29,7 @@
         </button>
 
         <div id="navbar">
-            <a id="home_link" href="index.html"><img id="logo" src="images/logo.png"></a>
+            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png"></a>
             <div class="dropdown">
                 <button id="menu_bt1" class="drop_button" onclick="display_content(this)">Azienda</button>
                 <div id="content_menu_bt1" class="drop_content">
@@ -49,7 +54,15 @@
 			</div>
 			<a href="lavoro.php" id="work">Lavora con noi</a>
             <a href="#div_container_contatti" id="contacts">Contatti</a>
-            <a href="login.php" id="admin">Area Privata</a>
+            <?php
+				if(!isset($_SESSION['username']))
+					echo "<a href='login.php' id='login'>Login</a>";
+				else {
+					echo "<a href='logout.php' id='login'>Logout</a>";
+				}
+				if(isset($_SESSION['admin']))
+					echo "<a href='admin.php' id='admin'>Area Privata</a>";
+			?>
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
         <div id="navbar_bottom_padding"></div>
@@ -58,8 +71,7 @@
         <button id="list_view" class="view">Lista</button>
 
 		<!-- PROGETTI -->
-        <?php include "DBConnection.php";
-            $conn=new DBConnection();
+        <?php
             $conn->get_progetti();
         ?>
 	</body>
