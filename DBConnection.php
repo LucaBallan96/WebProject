@@ -59,10 +59,11 @@
 			}
 		}
 
-		//OFFERTE DI LAVORO
-		public function get_offer(){
-			$sql = "SELECT DISTINCT * FROM webproject.offerte";
+		//PRENOTAZIONI
+		public function get_prenotation(){
+			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id = ANY (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='giovanni')";
 			$result = $this->conn->query($sql);
+			echo"<h1>Prenotazioni Effettuate</h1>";
 			if($result->num_rows > 0){
 				$count=1;
 				while($row=$result->fetch_assoc()){
@@ -75,12 +76,68 @@
 									".$row['message']."		
 								</div>
 							</div>
+							
+								
+						</label>
+						<div class='divisor'></div>";
+					$count=$count+1;
+				}
+			}
+			else{
+				echo "
+					<p class='exception_offer' align='center'>Nessun offerta disponibile</p>
+					<div class='divisor'></div>";
+			}
+		}
+
+		//OFFERTE DI LAVORO
+		public function get_offer(){
+			
+			$sql="SELECT COUNT(idOffer) FROM webproject.form_offerte WHERE user='giovanni'";
+			$result = $this->conn->query($sql);
+			$row = $result->fetch_assoc();
+			echo "<div id='container_prenotazioni'>
+			Benvenuto Giovanni</br></br>
+			Hai già prenotato ".$row['COUNT(idOffer)']." offerte</br></br>
+			<a href='prenotazioni.php'>Vedi prenotazioni</a>
+			</div>
+			
+			<h1>Lavora con Noi</h1>
+	
+			<div class='divisor'></div>";
+
+			
+			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id != ALL (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='user')";
+			$result = $this->conn->query($sql);
+			if($result->num_rows > 0){
+				$count=0;
+				while($row=$result->fetch_assoc()){
+
+					$sql2="SELECT* FROM webproject.date_offerte WHERE idOffer='".$row['id']."'";
+					$result2= $this->conn->query($sql2);
+					$dates=array();
+					while($row2=$result2->fetch_assoc()){
+						$dates[]=$row2['date'];
+					}
+
+					
+
+					echo "<input id='of".$count."' type='checkbox' class='pro_select' />
+						<label class='label_offer' for='of".$count."'>
+							<div class='div_img_offer'><img class='img_offer'src='images/".$row['image']."'></div>
+							<div class='div_information'>
+								<div class='text'>
+									".$row['role']." - ".$row['branch']." - ".$row['contract']."</br></br>
+									".$row['message']."		
+								</div>
+							</div>
 							<div class='form_offer'>
 								<form id='f".$count."' action='form_control.php' method='post'>
+									<input class='identity' type='text' name='id' value='".$row['id']."'/>
 									<div class='div_container_form'>
 										<div class='general_informations'>
 											Nome: <input class='in_form' type='text' name='firstname'><br></br>
-											Cognome: <input class='in_form' type='text' name='lastName'><br><br>
+											Cognome: <input class='in_form' type='text' name='lastname'><br><br>
 											<div class='div_genre'>
 												Genre: 
 												<div class='container_radio'>
@@ -90,11 +147,15 @@
 											</div>
 											<br>Birthday: <input class='in_form' type='date' name='bday'><br></br>
 											Mail: <input class='in_form' type='text' name='mail'><br></br>
-											Curriculum: <input class='in_form' type='file' name='file'></br></br>
+											Data colloquio: <select class='date_input' name='mail' form='f".$count."'>";
+											for($j=0; $j<count($dates); $j++)
+												echo"<option value='".$j."'>".$dates[$j]."</option>";
+
+											echo"</select><br></br>
 										</div>
 										&nbsp&nbsp&nbspMessaggio:</br></br>
 										<textarea rows='11' class='textmessage' name='textmessage' form='f".$count."'> </textarea>
-										<input class='submit' type='submit' value='Submit'>  
+										<input class='submit' type='submit' value='Submit' name='candidate'>  
 									</div>	
 								</form>
 							</div>  	
@@ -104,12 +165,31 @@
 				}
 			}
 			else{
-				echo "<div class='divisor'></div>
-					<p class='exception_offer'>Nessun offerta disponibile</p>
+				echo "
+					<p class='exception_offer' align='center'>Nessun offerta disponibile</p>
 					<div class='divisor'></div>";
 			}
 		}
 
+		//INSERIMENTO CANDIDATI
+		public function insert_candidate(){
+			
+						$idOffer=$_POST['id'];
+						$firstname=$_POST['firstname'];
+						$lastname=$_POST['lastname'];
+						$genre=$_POST['gender'];
+						$bday=$_POST['bday'];
+						$mail=$_POST['mail'];
+						$file=$_POST['file'];
+						$textmessage=$_POST['textmessage'];
+						
+						
+			
+						$sql = "INSERT INTO webproject.form_offerte VALUES ('giovanni','$idOffer','$firstname','$lastname','$bday','$mail','$genre','$message')";
+						$result = $this->conn->query($sql);
+			
+					}
+					
 		// PROGETTI ADMIN
 		public function get_progetti_admin() {
 			$sql = "SELECT DISTINCT * FROM webproject.progetti";
