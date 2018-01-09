@@ -1,11 +1,3 @@
-<?php
-	include 'DBConnection.php';
-	$conn=new DBConnection();
-
-	if(!isset($_SESSION['username']))
-		header('Location: login.php');
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,10 +7,10 @@
 		<meta name="description" content="Costruzioni Bordignon S.r.l., con oltre tre generazioni di storia alle spalle, opera nel settore edile residenziale, industriale, pubblico, nei restauri e nelle infrastrutture mirando ed ottenendo sempre grande apprezzamento dai suoi Clienti, grazie alla sua esperienza, dedizione e continua innovazione">
 		<meta name="keywords" content="Edilizia, settore edile, Treviso, Costruzioni Bordignon">
 		<meta name="author" content="Luca Ballan, Giovanni Calore">
-		<link rel="stylesheet" media="screen and (min-width:1025px)" href="style/lavoro/lavoro_deskto.css">
-		<link rel="stylesheet" media="screen and (max-width:1024px) and (min-width:721px)" href="style/lavoro/lavoro_tablet.css">
-		<link rel="stylesheet" media="screen and (max-width:720px)" href="style/lavoro/lavoro_mobile.css">
-		<link rel="stylesheet" media="print" href="style/lavoro/lavoro_print.css">
+		<link rel="stylesheet" media="screen and (min-width:1025px)" href="style/prenotazioni/prenotazioni_desktop.css">
+		<link rel="stylesheet" media="screen and (max-width:1024px) and (min-width:721px)" href="style/prenotazioni/prenotazioni_tablet.css">
+		<link rel="stylesheet" media="screen and (max-width:720px)" href="style/prenotazioni/prenotazioni_mobile.css">
+		<link rel="stylesheet" media="print" href="style/prenotazioni/prenotazioni_print.css">
 	</head>
 	<body>
         <!--SCRIPT-->
@@ -32,7 +24,7 @@
         </button>
 
         <div id="navbar">
-            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png"></a>
+            <a id="home_link" href="index.html"><img id="logo" src="images/logo.png"></a>
             <div class="dropdown">
                 <button id="menu_bt1" class="drop_button" onclick="display_content(this)">Azienda</button>
                 <div id="content_menu_bt1" class="drop_content">
@@ -57,22 +49,18 @@
 			</div>
 			<a href="lavoro.php" id="work">Lavora con noi</a>
             <a href="#div_container_contatti" id="contacts">Contatti</a>
-            <?php
-				if(!isset($_SESSION['username']))
-					echo "<a href='login.php' id='login'>Login</a>";
-				else {
-					echo "<a href='logout.php' id='login'>Logout</a>";
-				}
-				if(isset($_SESSION['admin']))
-					echo "<a href='admin.php' id='admin'>Area Privata</a>";
-			?>
+            <a href="login.php" id="admin">Area Privata</a>
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
 
-        
+
+
 
         <?php
-            $conn->get_offer();
+               include "DBConnection.php";
+                $conn=new DBConnection();
+                $conn->get_prenotation();
+                
         ?>
 	</body>
 </html>
