@@ -12,6 +12,7 @@
 			$_SESSION['username']=$_POST['u'];
 			if($num==2)
 				$_SESSION['admin']='admin';
+			$conn->set_accesses();
 			header('Location: index.php');
 		}
 	}
@@ -19,15 +20,35 @@
 	// NUOVO UTENTE
 	if(isset($_POST['new_user'])) {
 		$num=$conn->insert_user();
-		if($num==1)
-			header('Location: register.php?error=1');
-		else if($num==2)
-			header('Location: register.php?error=2');
+		if($num!=0)
+			header('Location: register.php?error='.$num);
 		else {
 			session_start();
 			$_SESSION['username']=$_POST['new_user'];
 			header('Location: index.php');
 		}
+	}
+	
+	// MODIFICA UTENTE
+	if(isset($_POST['modify_user'])) {
+		$num=$conn->modify_user();
+		if($num!=0)
+			header('Location: info_utente.php?error='.$num);
+		else {
+			session_start();
+			$_SESSION['username']=$_POST['username'];
+			header('Location: info_utente.php');
+		}
+	}
+
+	// RIMOZIONE UTENTE
+	if(isset($_POST['remove_user'])) {
+		if($_POST['remove_user']=='yes') {
+			$conn->remove_user($_SESSION['username']);
+			header('Location: logout.php');
+		}
+		else
+			header('Location: info_utente.php');
 	}
 
 	// RIMOZIONE PROGETTO

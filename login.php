@@ -1,3 +1,11 @@
+<?php
+	include 'DBConnection.php';
+	$conn=new DBConnection();
+
+	if(isset($_SESSION['username'])) // se è già stato effettuato il login
+		header('Location: index.php');
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

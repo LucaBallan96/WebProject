@@ -484,6 +484,92 @@
 			return 0;
 		}
 
+		public function set_accesses() {
+			$user=$_SESSION['username'];
+			$sql = "SELECT * FROM webproject.utenti WHERE username='$user'";
+			$result = $this->conn->query($sql);
+			$row = $result->fetch_assoc();
+			$ac=$row['accesses']+1;
+			$sql = "UPDATE webproject.utenti SET accesses='$ac' WHERE username='$user'";
+			$result = $this->conn->query($sql);
+		}
+
+		// INFO UTENTE
+		public function get_user_info() {
+			$user=$_SESSION['username'];
+			$sql = "SELECT * FROM webproject.utenti WHERE username='$user'";
+			$result = $this->conn->query($sql);
+			$row = $result->fetch_assoc();
+			echo "<fieldset id='user_data'>
+					<div class='data_input'>Numero di accessi a questo sito: ".$row['accesses']."</div>
+					<label class='data_input'>Username: <input type='text' name='username' placeholder='Inserisci username' value='".$row['username']."' autofocus required/></label>
+					<input id='change_password_checkbox' type='checkbox' name='change_password'/>
+					<label class='data_input' id='change_password_label' for='change_password_checkbox'>Cambia password</label>
+					<div id='change_div'>
+						<label class='data_input'>Vecchia password: <input type='text' name='old_password' placeholder='Inserisci la password corrente'/></label>
+						<label class='data_input'>Nuova password: <input type='password' name='new_password' placeholder='Inserisci la nuova password'/></label>
+						<label class='data_input'>Conferma password: <input type='password' name='rep_new_password' placeholder='Ripeti la nuova password'/></label>
+					</div>
+					<label class='data_input'>E-mail: <input type='email' name='mail' placeholder='Inserisci e-mail' value='".$row['mail']."' required/></label>
+				</fieldset>
+				<div id='div_buttons'>
+					<input class='btns' name='modify_user' type='submit' value='Salva modifiche'/>
+					<input class='btns' type='reset' id='cancel_btn' value='Annulla modifiche'/>
+				</div>";
+		}
+
+		// RIMOZIONE UTENTE
+		public function remove_user($username) {
+			$sql = "DELETE FROM webproject.utenti WHERE username='$username'";
+			$result = $this->conn->query($sql);
+			$sql = "DELETE FROM webproject.form_offerte WHERE user='$username'";
+			$result = $this->conn->query($sql);
+		}
+
+		// MODIFICA UTENTE
+		public function modify_user() {
+			$us=$_POST['username'];
+			$op=$_POST['old_password'];
+			$np=$_POST['new_password'];
+			$rp=$_POST['rep_new_password'];
+			$ma=$_POST['mail'];
+
+			$username=$_SESSION['username'];
+			$sql = "SELECT * FROM webproject.utenti WHERE username='$username'";
+			$result = $this->conn->query($sql);
+			$row = $result->fetch_assoc();
+			$ro=$row['role'];
+			$ac=$row['accesses'];
+			if(isset($_POST['change_password'])) { // cambio password on
+				if($op=='' || $np=='' || $rp=='') {
+					return 1; // campi dati nulli
+				}
+				else if($np!=$rp) {
+					return 2; // nuova password e conferma password non coincidono
+				}
+				else if($op!=$row['password']) {
+					return 3; // vecchia password è errata
+				}
+			}
+			else { // cambio password off
+				$np=$row['password'];
+			}
+			if($us!=$username) { // modificato nome utente
+				$sql = "SELECT * FROM webproject.utenti WHERE username='$us'";
+				$result = $this->conn->query($sql);
+				if($result->num_rows > 0) {
+					return 4; // nome utente non disponibile
+				}
+			}
+			$sql = "DELETE FROM webproject.utenti WHERE username='$username'";
+			$result = $this->conn->query($sql);
+			$sql = "INSERT INTO webproject.utenti VALUES ('$us','$np','$ma','$ro','$ac')";
+			$result = $this->conn->query($sql);
+			$sql = "UPDATE webproject.form_offerte SET user='$us' WHERE user='$username'";
+			$result = $this->conn->query($sql);
+			return 0;
+		}
+
 		// NUOVO UTENTE
 		public function insert_user() {
 			$us=$_POST['new_user'];
@@ -499,7 +585,7 @@
 				if($result->num_rows > 0)
 					return 2;
 				else {
-					$sql = "INSERT INTO webproject.utenti VALUES ('$us','$pa','$ma','$ro')";
+					$sql = "INSERT INTO webproject.utenti VALUES ('$us','$pa','$ma','$ro','1')";
 					$result = $this->conn->query($sql);
 					return 0;
 				}

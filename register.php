@@ -1,3 +1,11 @@
+<?php
+	include 'DBConnection.php';
+	$conn=new DBConnection();
+
+	if(isset($_SESSION['username'])) // se è già stato effettuato il login
+		header('Location: index.php');
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,7 +18,7 @@
 		<link rel="stylesheet" media="screen and (min-width:1025px)" href="style/register/register_desktop.css">
 		<link rel="stylesheet" media="screen and (max-width:1024px) and (min-width:721px)" href="style/register/register_tablet.css">	
 		<link rel="stylesheet" media="screen and (max-width:720px)" href="style/register/register_mobile.css">	
-		<link rel="stylesheet" media="print" href="style//register_print.css">
+		<link rel="stylesheet" media="print" href="style/register/register_print.css">
 	</head>
 	<body>
         <a id="back_link" href="index.php">Indietro</a>
