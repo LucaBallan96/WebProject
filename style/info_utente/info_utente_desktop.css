@@ -11,8 +11,8 @@ body {
     background-repeat: no-repeat;
 }
 .header {
-    margin: 4em 2em 1em;
-    width: calc(100% - 4em);
+    margin: 4em 5em 1em;
+    width: calc(100% - 10em);
     border-bottom: 1px solid white;
     padding: 1em;
     color: white;
@@ -114,7 +114,7 @@ form {
     transition: 0.5s;
 }
 .remove_btn {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     width: 60px;
@@ -132,7 +132,6 @@ form {
     left: 0;
 }
 .remove_control:checked + label {
-    position: fixed;
     z-index: 2;
     background-image: url("../../images/close.png");
 }

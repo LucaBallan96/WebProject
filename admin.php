@@ -35,6 +35,18 @@
 			<a title="Proposte di lavoro" href="#lavoro" id="nav_work" class="nav_link"><div>Lavoro</div></a>
 		</div>
 
+		<!-- TMP ERROR -->
+		<?php
+            if(isset($_GET['error'])) {
+                if($_GET['error']==4) {
+                    echo "<div id='tmp_error'>
+							<div id='error_image'></div>
+							<div id='error_text'>Nome utente non disponibile, modifica annullata</div>
+						</div>";
+				}
+            }
+		?>
+
 		<!-- NUOVO IMPIEGATO -->
 		<input type='checkbox' id='new_imp_control'/>
 		<label id='new_imp_btn' title='Inserisci un nuovo impiegato' for='new_imp_control'></label>
@@ -126,7 +138,10 @@
 
 		<!-- UTENTI -->
 		<h1 id="utenti" class="header">Utenti del sito</h1>
-		<div class="container_est">
+		<div id="container_est_users" class="container_est">
+			<?php
+				$conn->get_utenti_admin();
+			?>
 		</div>
 
 		<!-- LAVORO -->

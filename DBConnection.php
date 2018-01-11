@@ -518,6 +518,42 @@
 				</div>";
 		}
 
+		// INFO UTENTE ADMIN
+		public function get_utenti_admin() {
+			$sql = "SELECT * FROM webproject.utenti WHERE role='normal'";
+			$result = $this->conn->query($sql);
+			if ($result->num_rows > 0) {
+				$count=1;
+				while($row = $result->fetch_assoc()) {
+					echo "<div class='user_div'>
+							<div class='user_data'>".$row['username']."</div>
+							<div class='user_data'>P: ".$row['password']."</div>
+							<div class='user_data'>Numero accessi al sito: ".$row['accesses']."</div>
+							<a class='user_data' href='mailto:".$row['mail']."'>".$row['mail']."</a>
+							<input id='mod_u_checkbox".$count."' class='mod_u_control' type='checkbox'/>
+							<label for='mod_u_checkbox".$count."' class='mod_u_label'></label>
+							<form class='mod_u_form' action='form_control.php' method='post'>
+								<input type='text' class='identity' name='old_user' value='".$row['username']."'/>
+								<input type='text' class='identity' name='old_accesses' value='".$row['accesses']."'/>
+								<input type='text' class='mod_u_form_data' name='admin_mod_user' placeholder='Username' value='".$row['username']."' required/>
+								<input type='text' class='mod_u_form_data' name='admin_mod_u_pass' placeholder='Password' value='".$row['password']."' required/>
+								<input type='text' class='mod_u_form_data' name='admin_mod_u_mail' placeholder='E-mail' value='".$row['mail']."' required/>
+								<input type='submit' class='mod_u_form_btn' value='Salva'/>
+								<input type='reset' class='mod_u_form_btn' value='Annulla'/>
+							</form>
+							<input id='rem_u_checkbox".$count."' class='rem_u_control' type='checkbox'/>
+							<label for='rem_u_checkbox".$count."' class='rem_u_label'></label>
+							<form class='rem_u_form' action='form_control.php' method='post'>
+								<div>Vuoi eliminare definitivamente questo account?</div>
+								<input type='text' class='identity' name='admin_rem_user' value='".$row['username']."'/>
+								<input type='submit' class='mod_u_form_btn' value='Elimina'/>
+							</form>
+						</div>";
+					$count++;
+				}
+			}
+		}
+
 		// RIMOZIONE UTENTE
 		public function remove_user($username) {
 			$sql = "DELETE FROM webproject.utenti WHERE username='$username'";
@@ -528,31 +564,41 @@
 
 		// MODIFICA UTENTE
 		public function modify_user() {
-			$us=$_POST['username'];
-			$op=$_POST['old_password'];
-			$np=$_POST['new_password'];
-			$rp=$_POST['rep_new_password'];
-			$ma=$_POST['mail'];
+			if(isset($_POST['modify_user'])) { // funzione invocata da utente
+				$us=$_POST['username'];
+				$op=$_POST['old_password'];
+				$np=$_POST['new_password'];
+				$rp=$_POST['rep_new_password'];
+				$ma=$_POST['mail'];
 
-			$username=$_SESSION['username'];
-			$sql = "SELECT * FROM webproject.utenti WHERE username='$username'";
-			$result = $this->conn->query($sql);
-			$row = $result->fetch_assoc();
-			$ro=$row['role'];
-			$ac=$row['accesses'];
-			if(isset($_POST['change_password'])) { // cambio password on
-				if($op=='' || $np=='' || $rp=='') {
-					return 1; // campi dati nulli
+				$username=$_SESSION['username'];
+				$sql = "SELECT * FROM webproject.utenti WHERE username='$username'";
+				$result = $this->conn->query($sql);
+				$row = $result->fetch_assoc();
+				$ro=$row['role'];
+				$ac=$row['accesses'];
+				if(isset($_POST['change_password'])) { // cambio password on
+					if($op=='' || $np=='' || $rp=='') {
+						return 1; // campi dati nulli
+					}
+					else if($np!=$rp) {
+						return 2; // nuova password e conferma password non coincidono
+					}
+					else if($op!=$row['password']) {
+						return 3; // vecchia password è errata
+					}
 				}
-				else if($np!=$rp) {
-					return 2; // nuova password e conferma password non coincidono
-				}
-				else if($op!=$row['password']) {
-					return 3; // vecchia password è errata
+				else { // cambio password off
+					$np=$row['password'];
 				}
 			}
-			else { // cambio password off
-				$np=$row['password'];
+			else { // funzione invocata da admin
+				$us=$_POST['admin_mod_user'];
+				$np=$_POST['admin_mod_u_pass'];
+				$ma=$_POST['admin_mod_u_mail'];
+				$ro='normal';
+				$ac=$_POST['old_accesses'];
+				$username=$_POST['old_user'];
 			}
 			if($us!=$username) { // modificato nome utente
 				$sql = "SELECT * FROM webproject.utenti WHERE username='$us'";

@@ -53,6 +53,44 @@ body {
     text-align: center;
     clear: both;
 }
+#tmp_error {
+    position: fixed;
+    top: 2em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 400px;
+    height: 60px;
+    background-color: #0077ff;
+    z-index: 2;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fade 1s 2s 1 forwards;
+}
+@keyframes fade {
+    0% {opacity: 1;}
+    100% {
+        opacity: 0;
+        top: -60px;
+    }
+}
+#error_image {
+    width: 60px;
+    height: 60px;
+    float: left;
+    background-image: url('../../images/warning.png');
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+}
+#error_text {
+    position: relative;
+    top: 50%;
+    width: calc(100% - 60px);
+    float: left;
+    color: white;
+    transform: translate(0, -50%);
+}
 
 /* IMPIEGATI */
 
@@ -506,10 +544,115 @@ body {
     padding: 0.4em;
 }
 
-/* FORM DI INSERIMENTO */
-
 /* ARTICOLI */
+
+
 
 /* UTENTI */
 
+#container_est_users {
+    width: calc(100% - 190px);
+    margin-left: 150px;
+    margin-right: 40px;
+}
+.user_div {
+    position: relative;
+    margin: 0 0 20px 20px;
+    width: calc(25% - 20px);
+    height: 200px;
+    float: left;
+    background-color: #0099ffa8;
+    color: white;
+    overflow: hidden;
+}
+.user_data {
+    display: block;
+    padding: 0.8em;
+    height: 25%;
+    overflow: hidden;
+}
+.user_div div.user_data:first-of-type {
+    font-variant-caps: all-petite-caps;
+}
+.user_div a:hover{
+    color: white;
+}
+.mod_u_control, .rem_u_control {
+    display: none;
+}
+.mod_u_label, .rem_u_label {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    transition: top 0.5s;
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+}
+.mod_u_label {
+    top: -100px;
+    background-image: url("../../images/modify_user.png");
+}
+.rem_u_label {
+    top: -50px;
+    background-image: url("../../images/remove_user.png");
+}
+.mod_u_label:hover, .rem_u_label:hover {
+    cursor: pointer;
+    background-color: #008cff7a;
+}
+.user_div:hover .mod_u_label {
+    top: 0;
+    height: 50px;
+}
+.user_div:hover .rem_u_label {
+    top: 50px;
+}
+.mod_u_form, .rem_u_form {
+    position: absolute;
+    top: 0;
+    background-color: #83cdff;
+    width: 100%;
+    height: 0;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.mod_u_control:checked + label ~ .mod_u_form, .rem_u_control:checked + label ~ .rem_u_form {
+    height: 200px;
+}
+.mod_u_control:checked + .mod_u_label {
+    top: 0;
+    z-index: 1;
+    background-image: url("../../images/close.png");
+}
+.mod_u_control:checked ~ .rem_u_label {
+    z-index: -1;
+}
+.rem_u_control:checked + .rem_u_label {
+    top: 0;
+    z-index: 1;
+    background-image: url("../../images/close.png");
+}
+.mod_u_form_data {
+    width: calc(100% - 70px);
+    margin: 10px;
+}
+.mod_u_form_btn {
+    border: none;
+    outline: none;
+    padding: 0.7em;
+    margin: 10px 0 0 20px;
+    background-color: #008cff;
+    color: white;
+}
+.mod_u_form_btn:hover {
+    text-decoration: underline;
+}
+.rem_u_form div {
+    padding: 3em 1em 1em;
+    text-align: center;
+}
+
 /* LAVORO */
+

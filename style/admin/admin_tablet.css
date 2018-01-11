@@ -275,6 +275,7 @@ body {
 }
 .remove_btn:hover {
     background-color: #008cff7a;
+    cursor: pointer;
 }
 .remove_control:checked ~ .remove_form_div {
     left: 0;
@@ -318,7 +319,7 @@ body {
     background-color: #0099ffa8;
     margin-right: 2em;
 }
-.yes_no_div label:hover {
+.yes_no_div label:hover, .apply_btn:hover {
     cursor: pointer;
     text-decoration: underline;
     background-color: #0077ff; 
@@ -336,11 +337,6 @@ body {
     padding: 1em;
     color: white;
     background-color: #0099ffa8;
-}
-.apply_btn:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    background-color: #0077ff; 
 }
 
 /* PROGETTI */

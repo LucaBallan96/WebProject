@@ -41,6 +41,15 @@
 		}
 	}
 
+	// MODIFICA UTENTE ADMIN
+	if(isset($_POST['admin_mod_user'])) {
+		$num=$conn->modify_user();
+		if($num!=0)
+			header('Location: admin.php?error='.$num);
+		else
+			header('Location: admin.php#utenti');
+	}
+
 	// RIMOZIONE UTENTE
 	if(isset($_POST['remove_user'])) {
 		if($_POST['remove_user']=='yes') {
@@ -49,6 +58,12 @@
 		}
 		else
 			header('Location: info_utente.php');
+	}
+
+	// RIMOZIONE UTENTE ADMIN
+	if(isset($_POST['admin_rem_user'])) {
+		$conn->remove_user($_POST['admin_rem_user']);
+		header('Location: admin.php#utenti');
 	}
 
 	// RIMOZIONE PROGETTO

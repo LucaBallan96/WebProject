@@ -31,7 +31,7 @@
                 <label class="data_input">E-mail: <input type="email" placeholder="Inserisci e-mail" name="mail" required/></label>
             </fieldset>
             <div id="div_buttons">
-                <input class="btns" type="submit" value="Login"/>
+                <input class="btns" type="submit" value="Crea account"/>
                 <input class="btns" type="reset" id="cancel_btn" value="Cancel"/>
             </div>
         </form>

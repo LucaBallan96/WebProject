@@ -326,7 +326,7 @@ body {
     background-color: #0099ffa8;
     margin-bottom: 1.5em;
 }
-.yes_no_div label:hover {
+.yes_no_div label:hover, .apply_btn:hover {
     cursor: pointer;
     text-decoration: underline;
     background-color: #0077ff; 
@@ -344,11 +344,6 @@ body {
     padding: 1em;
     color: white;
     background-color: #0099ffa8;
-}
-.apply_btn:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    background-color: #0077ff; 
 }
 
 /* PROGETTI */
