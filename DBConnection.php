@@ -101,7 +101,7 @@
 			$row = $result->fetch_assoc();
 			echo "<div id='container_prenotazioni'>
 			Benvenuto ".$_SESSION['username']."</br></br>
-			Hai già prenotato ".$row['COUNT(idOffer)']." offerte</br></br>
+			Offerte prenotate - ".$row['COUNT(idOffer)']." </br></br>
 			<a href='prenotazioni.php'>Vedi prenotazioni</a>
 			</div>
 			
@@ -127,13 +127,15 @@
 
 					echo "<input id='of".$count."' type='checkbox' class='pro_select' />
 						<label class='label_offer' for='of".$count."'>
-							<div class='div_img_offer'><img class='img_offer'src='images/".$row['image']."'></div>
+						
+						<div class='div_img_offer'><img class='img_offer'src='images/".$row['image']."'></div>
 							<div class='div_information'>
 								<div class='text'>
 									".$row['role']." - ".$row['branch']." - ".$row['contract']."</br></br>
 									".$row['message']."		
 								</div>
 							</div>
+							
 							</label>
 
 
