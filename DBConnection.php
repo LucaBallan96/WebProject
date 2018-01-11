@@ -61,20 +61,23 @@
 
 		//PRENOTAZIONI
 		public function get_prenotation(){
-			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id = ANY (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='giovanni')";
+			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id = ANY (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$_SESSION['username']."')";
+	
 			$result = $this->conn->query($sql);
 			echo"<h1>Prenotazioni Effettuate</h1>";
 			if($result->num_rows > 0){
 				$count=1;
 				while($row=$result->fetch_assoc()){
+					
 					echo "<input id='of".$count."' type='checkbox' class='pro_select' />
 						<label class='label_offer' for='of".$count."'>
 							<div class='div_img_offer'><img class='img_offer'src='images/".$row['image']."'></div>
 							<div class='div_information'>
 								<div class='text'>
 									".$row['role']." - ".$row['branch']." - ".$row['contract']."</br></br>
-									".$row['message']."		
-								</div>
+									".$row['message']."	</br></br>
+									Data colloquio - ".$row['date']."
+									</div>
 							</div>
 							
 								
@@ -93,11 +96,11 @@
 		//OFFERTE DI LAVORO
 		public function get_offer(){
 			
-			$sql="SELECT COUNT(idOffer) FROM webproject.form_offerte WHERE user='giovanni'";
+			$sql="SELECT COUNT(idOffer) FROM webproject.form_offerte WHERE user='".$_SESSION['username']."'";
 			$result = $this->conn->query($sql);
 			$row = $result->fetch_assoc();
 			echo "<div id='container_prenotazioni'>
-			Benvenuto Giovanni</br></br>
+			Benvenuto ".$_SESSION['username']."</br></br>
 			Hai già prenotato ".$row['COUNT(idOffer)']." offerte</br></br>
 			<a href='prenotazioni.php'>Vedi prenotazioni</a>
 			</div>
@@ -105,15 +108,15 @@
 			<h1>Lavora con Noi</h1>
 	
 			<div class='divisor'></div>";
-
+			$user=$_SESSION['username'];
 			
-			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id != ALL (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='user')";
+			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id != ALL ((SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$user."') UNION (SELECT idOffer FROM webproject.date_offerte  WHERE date_offerte.idOffer NOT IN (SELECT idOffer FROM webproject.date_offerte  WHERE date_offerte.jobs!='0')))";
 			$result = $this->conn->query($sql);
 			if($result->num_rows > 0){
 				$count=0;
 				while($row=$result->fetch_assoc()){
 
-					$sql2="SELECT* FROM webproject.date_offerte WHERE idOffer='".$row['id']."'";
+					$sql2="SELECT* FROM webproject.date_offerte WHERE idOffer='".$row['id']."'and jobs >0";
 					$result2= $this->conn->query($sql2);
 					$dates=array();
 					while($row2=$result2->fetch_assoc()){
@@ -131,35 +134,46 @@
 									".$row['message']."		
 								</div>
 							</div>
-							<div class='form_offer'>
-								<form id='f".$count."' action='form_control.php' method='post'>
-									<input class='identity' type='text' name='id' value='".$row['id']."'/>
-									<div class='div_container_form'>
-										<div class='general_informations'>
-											Nome: <input class='in_form' type='text' name='firstname'><br></br>
-											Cognome: <input class='in_form' type='text' name='lastname'><br><br>
-											<div class='div_genre'>
-												Genre: 
-												<div class='container_radio'>
-													<input type='radio' name='gender' value='male'> Male &nbsp&nbsp&nbsp
-													<input type='radio' name='gender' value='female'> Female&nbsp&nbsp&nbsp
-												</div>
-											</div>
-											<br>Birthday: <input class='in_form' type='date' name='bday'><br></br>
-											Mail: <input class='in_form' type='text' name='mail'><br></br>
-											Data colloquio: <select class='date_input' name='mail' form='f".$count."'>";
-											for($j=0; $j<count($dates); $j++)
-												echo"<option value='".$j."'>".$dates[$j]."</option>";
+							</label>
 
-											echo"</select><br></br>
+
+
+
+							<div class='form_offer'>
+							<form id='f".$count."' action='form_control.php' method='post'>
+								<input class='identity' type='text' name='id' value='".$row['id']."'/>
+								<div class='div_container_form'>
+									<div class='general_informations'>
+										Nome: <input class='in_form' type='text' name='firstname'><br></br>
+										Cognome: <input class='in_form' type='text' name='lastname'><br><br>
+										<div class='div_genre'>
+											Genre: 
+											<div class='container_radio'>
+												<input type='radio' name='gender' value='male'> Male &nbsp&nbsp&nbsp
+												<input type='radio' name='gender' value='female'> Female&nbsp&nbsp&nbsp
+											</div>
 										</div>
-										&nbsp&nbsp&nbspMessaggio:</br></br>
-										<textarea rows='11' class='textmessage' name='textmessage' form='f".$count."'> </textarea>
-										<input class='submit' type='submit' value='Submit' name='candidate'>  
-									</div>	
-								</form>
-							</div>  	
-						</label>
+										<br>Birthday: <input class='in_form' type='date' name='bday'><br></br>
+										Mail: <input class='in_form' type='text' name='mail'><br></br>
+										Data colloquio: <select class='date_input' name='date' >";
+										for($j=0; $j<count($dates); $j++)
+											echo"<option value='".$dates[$j]."'>".$dates[$j]."</option>";
+	
+										echo"</select><br></br>
+									</div>
+									&nbsp&nbsp&nbspMessaggio:</br></br>
+									<textarea rows='11' class='textmessage' name='textmessage' form='f".$count."'> </textarea>
+									<input class='submit' type='submit' value='Submit' name='candidate'>  
+								</div>	
+							</form>
+						</div>  
+						
+
+
+							
+
+
+
 						<div class='divisor'></div>";
 					$count=$count+1;
 				}
@@ -182,11 +196,36 @@
 						$mail=$_POST['mail'];
 						$file=$_POST['file'];
 						$textmessage=$_POST['textmessage'];
+						$date=$_POST['date'];
+						$username=$_SESSION['username'];
+						
+						//update jobs con lucchetto per accessi concorrenti
+
+						$sql1="LOCK TABLES webproject.date_offerte";
+						$sql2="SELECT jobs FROM webproject.date_offerte WHERE idOffer='".$idOffer."' and date='".$date."'";
+						$sql3="UNLOCK TABLES";
+						$sql4="UPDATE webproject.date_offerte SET jobs=jobs-1 WHERE idOffer='".$idOffer."' and date='".$date."'";
+						$sql5 = "INSERT INTO webproject.form_offerte VALUES ('$username','$idOffer','$firstname','$lastname','$bday','$mail','$genre','$date','$textmessage')";
+						
+						$result1=$this->conn->query($sql1);
+						$result2=$this->conn->query($sql2);
+							
+						$row2=$result2->fetch_assoc();
+						
+						if($row2['jobs']>0){
+
+								$result4=$this->conn->query($sql4);//diminuisco jobs
+								$result5 = $this->conn->query($sql5);//inserisco candidato
+								$result3=$this->conn->query($sql3);//rilascio lucchetto
+								return true;
+							}
+						else{
+								$result3=$this->conn->query($sql3);//rilascio lucchetto
+								//eccezione jobs = 0
+								return false;
+							}
 						
 						
-			
-						$sql = "INSERT INTO webproject.form_offerte VALUES ('giovanni','$idOffer','$firstname','$lastname','$bday','$mail','$genre','$message')";
-						$result = $this->conn->query($sql);
 			
 					}
 					

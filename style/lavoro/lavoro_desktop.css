@@ -1,5 +1,5 @@
 @import url("../navbar_desktop.css");
-#menu_bt3 {
+#work {
     background-color: #008cff7a;
 }
 
@@ -11,7 +11,7 @@ h1{
     display: table;
     width: 800px;
     margin: auto;
-    
+
 }
 .divisor{
     display: block;
@@ -43,8 +43,8 @@ h1{
 
 
 input[type="checkbox"]{
-
     display: none;
+    
 }
 .form_offer {
     height: 0;
@@ -55,11 +55,12 @@ input[type="checkbox"]{
     overflow: hidden;
 
 }
-.pro_select:checked + label .form_offer{
+.pro_select:checked + label + .form_offer{
     height: 240px;
     background-color: #e1f5ff;
     opacity: 1;
 }
+
 
 .div_container_form{
     

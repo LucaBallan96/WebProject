@@ -1,6 +1,22 @@
-@import url("../navbar_desktop.css");
+* {
+    box-sizing: border-box;
+	padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
 #menu_bt3 {
     background-color: #008cff7a;
+}
+
+#back_link {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    text-decoration: none;
+    padding: 1em;
+    color: white;
+    background-color: #0084ff;
 }
 
 h1{
@@ -98,7 +114,9 @@ input[type="checkbox"]{
 .identity{
     display:none;
 }
-
+.select{
+    background-color: red;
+}
 /*PRENOTAZIONI*/
 
 #container_prenotazioni{
