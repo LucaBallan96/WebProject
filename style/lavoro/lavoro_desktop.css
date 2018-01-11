@@ -51,7 +51,9 @@ input[type="checkbox"]{
     opacity: 0;
     transition: 0.8s;
     width: 700px;
+    
     margin: auto;
+    margin-top: 15px;
     overflow: hidden;
     box-shadow: 5px 10px 18px #888888;
 
@@ -64,7 +66,7 @@ input[type="checkbox"]{
 }
 .pro_select:checked + label + .form_offer{
     height: 240px;
-    background-color: #e1f5ff;
+    background-color: rgb(243, 250, 255);
     opacity: 1;
 }
 
