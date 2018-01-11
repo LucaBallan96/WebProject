@@ -106,6 +106,17 @@
 	if(isset($_POST['new_imp'])) {
 		$conn->insert_impiegato();
 		header('Location: admin.php');
-    }
+	}
+	//INSERT CANDIDATO
+	if(isset($_POST['candidate'])) {
+		if($conn->insert_candidate()){
+			header('Location: lavoro.php');
+		}
+		else{
+			echo "<a id='back_link' href='lavoro.php'>Indietro</a>
+			offerta già prenotata e non più disponibile";}
+
+	}
+
 
 ?>
