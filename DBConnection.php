@@ -34,7 +34,7 @@
 						$terminati=$terminati.$stringa;
 				}
 				$result->free();
-				echo "<h1 id='header1'>PROGETTI IN CORSO</h1>".$incorso."<h1 id='header2'>PROGETTI TERMINATI</h1>".$terminati;
+				echo "<div id='header1'>Progetti In Corso</div>".$incorso."<div id='header2'>Progetti Terminati</div>".$terminati;
 			} else {
 				echo "<p>Nessun progetto disponibile</p>";
 			}
@@ -173,9 +173,9 @@
 			<a href='prenotazioni.php'>Vedi prenotazioni</a>
 			</div>
 			
-			<h1>Lavora con Noi</h1>
+			<div class='title'>Lavora con Noi</div>
 	
-			<div class='divisor'></div>";
+			";
 			$user=$_SESSION['username'];
 			
 			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id != ALL ((SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$user."') UNION (SELECT idOffer FROM webproject.date_offerte  WHERE date_offerte.idOffer NOT IN (SELECT idOffer FROM webproject.date_offerte  WHERE date_offerte.jobs!='0')))";
@@ -193,8 +193,11 @@
 
 					
 
-					echo "<input id='of".$count."' type='checkbox' class='pro_select' />
+					echo "
+					<div class='divisor'></div>
+					<input id='of".$count."' type='checkbox' class='pro_select' />
 						<label class='label_offer' for='of".$count."'>
+						
 						
 						<div class='div_img_offer'><img class='img_offer'src='images/".$row['image']."'></div>
 							<div class='div_information'>
@@ -244,7 +247,7 @@
 
 
 
-						<div class='divisor'></div>";
+						";
 					$count=$count+1;
 				}
 			}
