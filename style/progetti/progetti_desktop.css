@@ -5,36 +5,37 @@
     height: 7em;
 }
 .view {
+    position: absolute;
     border: none;
     outline: none;
     float: left;
-    margin-left: 2em;
     padding: 1em;
     font-size: 1em;
     color: white;
     background-color: #0099ffa8;
 }
+#grid_view {
+    left: 2em;
+}
+#list_view {
+    left: 8em;
+}
 .view:hover {
     cursor: pointer;
     text-decoration: underline;
 }
-#header1 {
-    padding-top: 80px;
-    padding-bottom: 40px;
-    color: rgba(0, 73, 169, 0.888);
+#incorso {
+    padding: 0em 2em 2em;
+    color: #0049a9e2;
     text-align: center;
     font-size: 36px;
-    width: 90%;
-    margin: auto;
 }
-#header2 {
-    padding-top: 80px;
-    padding-bottom: 40px;
-    color: rgba(0, 73, 169, 0.888);
+#terminati {
+    padding: 2em 2em;
+    color: #0049a9e2;
     text-align: center;
     font-size: 36px;
-    width: 90%;
-    margin: auto;
+    clear: both;
 }
 .project {
     position: relative;

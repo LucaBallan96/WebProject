@@ -34,7 +34,7 @@
 						$terminati=$terminati.$stringa;
 				}
 				$result->free();
-				echo "<div id='header1'>Progetti In Corso</div>".$incorso."<div id='header2'>Progetti Terminati</div>".$terminati;
+				echo "<div id='incorso'>Progetti In Corso</div>".$incorso."<div id='terminati'>Progetti Terminati</div>".$terminati;
 			} else {
 				echo "<p>Nessun progetto disponibile</p>";
 			}
@@ -59,7 +59,7 @@
 			}
 		}
 
-		//PRENOTAZIONI
+		// PRENOTAZIONI
 		public function get_prenotation(){
 			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id = ANY (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$_SESSION['username']."')";
 			
@@ -146,9 +146,7 @@
 							<div class='div_author'>Autore - ".$row['author']."</div>
 						</div>
 						
-						<div class='container_img'><img src='images/".$row['image']."'/></div>
-
-		
+						<div class='container_img'><img src='images/".$row['image']."'/></div>		
 					</div>";
 				}
 			}
@@ -258,7 +256,7 @@
 			}
 		}
 
-		//INSERIMENTO CANDIDATI
+		// INSERIMENTO CANDIDATI
 		public function insert_candidate(){
 			
 						$idOffer=$_POST['id'];
@@ -412,7 +410,7 @@
 			$result = $this->conn->query($sql);
 		}
 
-		//IMPIEGATI AZIENZA
+		// IMPIEGATI AZIENZA
 		public function get_impiegati_azienda() {
 			$branches=array('Direzione','Ufficio','Relazioni pubbliche','Progettazione','Cantiere','Magazzino');
 			for($i=0; $i<count($branches); $i++) {
@@ -649,7 +647,7 @@
 								<input type='text' class='identity' name='old_accesses' value='".$row['accesses']."'/>
 								<input type='text' class='mod_u_form_data' name='admin_mod_user' placeholder='Username' value='".$row['username']."' required/>
 								<input type='text' class='mod_u_form_data' name='admin_mod_u_pass' placeholder='Password' value='".$row['password']."' required/>
-								<input type='text' class='mod_u_form_data' name='admin_mod_u_mail' placeholder='E-mail' value='".$row['mail']."' required/>
+								<input type='email' class='mod_u_form_data' name='admin_mod_u_mail' placeholder='E-mail' value='".$row['mail']."' required/>
 								<input type='submit' class='mod_u_form_btn' value='Salva'/>
 								<input type='reset' class='mod_u_form_btn' value='Annulla'/>
 							</form>
