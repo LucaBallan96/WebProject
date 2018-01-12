@@ -133,7 +133,40 @@
 
 		<!-- ARTICOLI -->
 		<h1 id="articoli" class="header">Articoli e news</h1>
-		<div class="container_est">
+		<div id='container_est_articles' class="container_est">
+			<div class='article_div'>
+				<div class='article_image'></div>
+				<div class='article_info_div'>
+					<div class='article_info'>Data:<div>12-01-2018</div></div>
+					<div class='article_info'>Autore:<div>Luca Ballan</div></div>
+					<div class='article_info'>Stampa:<div>Il Gazzettino</div></div>
+					<div class='article_info'>Titolo:<div>Costruzioni Bordignon</div></div>
+					<div class='article_info'>Sottotitolo:<div>L'azienda di Volpago</div></div>
+				</div>
+				<div class='article_btns'>
+					<div class='modify_article_btn'></div>
+					<div class='remove_article_btn'></div>
+				</div>
+				<div class='article_text'>Testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo</div>
+			</div>
+			<div class='article_div'>
+				<div class='article_image'></div>
+				<div class='article_info'>Data:<div>12-01-2018</div></div>
+				<div class='article_info'>Autore:<div>Luca Ballan</div></div>
+				<div class='article_info'>Stampa:<div>Il Gazzettino</div></div>
+				<div class='article_info'>Titolo:<div>Costruzioni Bordignon</div></div>
+				<div class='article_info'>Sottotitolo:<div>L'azienda di Volpago</div></div>
+				<div class='article_text'></div>
+			</div>
+			<div class='article_div'>
+				<div class='article_image'></div>
+				<div class='article_info'>Data:<div>12-01-2018</div></div>
+				<div class='article_info'>Autore:<div>Luca Ballan</div></div>
+				<div class='article_info'>Stampa:<div>Il Gazzettino</div></div>
+				<div class='article_info'>Titolo:<div>Costruzioni Bordignon</div></div>
+				<div class='article_info'>Sottotitolo:<div>L'azienda di Volpago</div></div>
+				<div class='article_text'></div>
+			</div>
 		</div>
 
 		<!-- UTENTI -->

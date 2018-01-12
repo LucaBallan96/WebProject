@@ -41,15 +41,15 @@
                 <button id="menu_bt2" class="drop_button" onclick="display_content(this)">Progetti</button>
                 <div id="content_menu_bt2" class="drop_content">
                     <a href="progetti.php"><pre>In corso&#9&#9&gt</pre></a>
-                    <a href="progetti.php#header2"><pre>Terminati&#9&#9&gt</pre></a>
+                    <a href="progetti.php#terminati"><pre>Terminati&#9&#9&gt</pre></a>
                 </div>
             </div>
             <div class="dropdown">
                 <button id="menu_bt3" class="drop_button" onclick="display_content(this)">Iniziative</button>
                 <div id="content_menu_bt3" class="drop_content">
-                    <a href="iniziative.php"><pre>Sponsor&#9&#9&gt</pre></a>
-                    <a href="iniziative.php"><pre>Stampa&#9&#9&gt</pre></a>
-                </div>	
+					<a href="iniziative.php#stampa"><pre>Stampa&#9&#9&#9&gt</pre></a>
+                    <a href="iniziative.php#certificazioni"><pre>Certificazioni&#9&#9&gt</pre></a>
+                </div>
 			</div>
 			<a href="lavoro.php" id="work">Lavora con noi</a>
             <a href="#div_container_contatti" id="contacts">Contatti</a>

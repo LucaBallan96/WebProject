@@ -45,7 +45,7 @@
 	if(isset($_POST['admin_mod_user'])) {
 		$num=$conn->modify_user();
 		if($num!=0)
-			header('Location: admin.php?error='.$num);
+			header('Location: admin.php?error='.$num.'#utenti');
 		else
 			header('Location: admin.php#utenti');
 	}
@@ -107,6 +107,7 @@
 		$conn->insert_impiegato();
 		header('Location: admin.php');
 	}
+
 	//INSERT CANDIDATO
 	if(isset($_POST['candidate'])) {
 		if($conn->insert_candidate()){
@@ -115,7 +116,6 @@
 		else{
 			echo "<a id='back_link' href='lavoro.php'>Indietro</a>
 			offerta già prenotata e non più disponibile";}
-
 	}
 
 

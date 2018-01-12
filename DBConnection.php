@@ -34,7 +34,7 @@
 						$terminati=$terminati.$stringa;
 				}
 				$result->free();
-				echo "<h1 id='header1'>PROGETTI IN CORSO</h1>".$incorso."<h1 id='header2'>PROGETTI TERMINATI</h1>".$terminati;
+				echo "<h1 id='incorso'>PROGETTI IN CORSO</h1>".$incorso."<h1 id='terminati'>PROGETTI TERMINATI</h1>".$terminati;
 			} else {
 				echo "<p>Nessun progetto disponibile</p>";
 			}
@@ -59,7 +59,7 @@
 			}
 		}
 
-		//PRENOTAZIONI
+		// PRENOTAZIONI
 		public function get_prenotation(){
 			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id = ANY (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$_SESSION['username']."')";
 	
@@ -93,7 +93,7 @@
 			}
 		}
 
-		//OFFERTE DI LAVORO
+		// OFFERTE DI LAVORO
 		public function get_offer(){
 			
 			$sql="SELECT COUNT(idOffer) FROM webproject.form_offerte WHERE user='".$_SESSION['username']."'";
@@ -187,7 +187,7 @@
 			}
 		}
 
-		//INSERIMENTO CANDIDATI
+		// INSERIMENTO CANDIDATI
 		public function insert_candidate(){
 			
 						$idOffer=$_POST['id'];
@@ -341,7 +341,7 @@
 			$result = $this->conn->query($sql);
 		}
 
-		//IMPIEGATI AZIENZA
+		// IMPIEGATI AZIENZA
 		public function get_impiegati_azienda() {
 			$branches=array('Direzione','Ufficio','Relazioni pubbliche','Progettazione','Cantiere','Magazzino');
 			for($i=0; $i<count($branches); $i++) {
@@ -578,7 +578,7 @@
 								<input type='text' class='identity' name='old_accesses' value='".$row['accesses']."'/>
 								<input type='text' class='mod_u_form_data' name='admin_mod_user' placeholder='Username' value='".$row['username']."' required/>
 								<input type='text' class='mod_u_form_data' name='admin_mod_u_pass' placeholder='Password' value='".$row['password']."' required/>
-								<input type='text' class='mod_u_form_data' name='admin_mod_u_mail' placeholder='E-mail' value='".$row['mail']."' required/>
+								<input type='email' class='mod_u_form_data' name='admin_mod_u_mail' placeholder='E-mail' value='".$row['mail']."' required/>
 								<input type='submit' class='mod_u_form_btn' value='Salva'/>
 								<input type='reset' class='mod_u_form_btn' value='Annulla'/>
 							</form>
