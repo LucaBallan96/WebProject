@@ -62,7 +62,7 @@
 		//PRENOTAZIONI
 		public function get_prenotation(){
 			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id = ANY (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$_SESSION['username']."')";
-	
+			
 			$result = $this->conn->query($sql);
 			echo"<h1>Prenotazioni Effettuate</h1>";
 			if($result->num_rows > 0){
@@ -75,8 +75,13 @@
 							<div class='div_information'>
 								<div class='text'>
 									".$row['role']." - ".$row['branch']." - ".$row['contract']."</br></br>
-									".$row['message']."	</br></br>
-									Data colloquio - ".$row['date']."
+									".$row['message']."	</br></br>";
+									
+									$username=$_SESSION['username'];
+									$sql1="SELECT date FROM webproject.form_offerte WHERE idOffer='".$row['id']."'and user='".$username."'";
+									$result1=$this->conn->query($sql1);
+									$row1=$result1->fetch_assoc();
+									echo"Data colloquio - ".$row1['date']."
 									</div>
 							</div>
 							
@@ -92,7 +97,70 @@
 					<div class='divisor'></div>";
 			}
 		}
+		//ARTICOLI
 
+		public function get_articles(){
+			$sql="SELECT * FROM webproject.stampa";
+			$result = $this->conn->query($sql);
+			if($result->num_rows>0){
+				while($row=$result->fetch_assoc()){
+					echo "<a class='link' href='articolo.php?id=".$row['id']."'><div class='container_article'>
+					<div class='container_img'>
+					<img src='images/".$row['image']."'>
+					</div>
+		
+					<div class='container_text'>
+						<div class='text'>
+							".$row['title']."
+						</div>
+					</div>
+					
+			
+			</div>
+			</a>";
+				}
+			}
+			else{
+				echo "<h2>Nessun Articolo</h2>";
+			}
+		}
+
+		//ARTICOLO
+
+		public function get_article(){
+			$id=$_GET['id'];
+			$sql="SELECT * FROM webproject.stampa WHERE id='".$id."'";
+			$result = $this->conn->query($sql);
+			if($result->num_rows>0){
+				while($row=$result->fetch_assoc()){
+					echo "<div class='title'>".$row['title']."</div>
+					<div class='subtitle'>".$row['subtitle']."</div>
+					<div class='divisor'></div>
+					<div class='informations'>
+						Editore - ".$row['house']." &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp Data - ".$row['date']."
+					</div>
+					<div class='divisor'></div>
+					<div class='container_text_img'>
+						<div class='text'>
+							".$row['text']."
+							<div class='div_author'>Autore - ".$row['author']."</div>
+						</div>
+						
+						<div class='container_img'><img src='images/".$row['image']."'/></div>
+
+		
+					</div>";
+				}
+			}
+			else{
+				echo "<h2>Nessuna informazione trovata</h2>";
+			}
+
+
+
+
+			
+		}
 		//OFFERTE DI LAVORO
 		public function get_offer(){
 			

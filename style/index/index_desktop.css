@@ -234,8 +234,7 @@ hr{
     position: relative;
 
     float: left;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 33.33%;
     margin-top: 70px;
     font-size: 14px;
     color: rgb(98, 105, 146);
