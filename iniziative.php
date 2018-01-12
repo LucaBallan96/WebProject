@@ -76,7 +76,8 @@
             $conn->get_articles();
         ?>
         
-        
+        <!--CERTIFICAZIONI-->
+        <div class="title">Certificazioni</div>
      
               <!--CONTATTI-->
 
