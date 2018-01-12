@@ -12,9 +12,9 @@
 		<meta name="description" content="Costruzioni Bordignon S.r.l., con oltre tre generazioni di storia alle spalle, opera nel settore edile residenziale, industriale, pubblico, nei restauri e nelle infrastrutture mirando ed ottenendo sempre grande apprezzamento dai suoi Clienti, grazie alla sua esperienza, dedizione e continua innovazione">
 		<meta name="keywords" content="Edilizia, settore edile, Treviso, Costruzioni Bordignon">
 		<meta name="author" content="Luca Ballan, Giovanni Calore">
-		<link rel="stylesheet" media="screen and (min-width:1025px)" href="style/iniziative/iniziative_desktop.css">
-		<link rel="stylesheet" media="screen and (max-width:1024px) and (min-width:721px)" href="style/iniziative/iniziative_tablet.css">	
-		<link rel="stylesheet" media="screen and (max-width:720px)" href="style/iniziative/iniziative_mobile.css">	
+		<link rel="stylesheet" media="screen and (min-width:1025px)" href="style/articolo/articolo_desktop.css">
+		<link rel="stylesheet" media="screen and (max-width:1024px) and (min-width:721px)" href="style/articolo/articolo_tablet.css">	
+		<link rel="stylesheet" media="screen and (max-width:720px)" href="style/articolo/articolo_mobile.css">	
 		<link rel="stylesheet" media="print" href="style/iniziative/iniziative_print.css">
 	</head>
 	<body>
@@ -42,15 +42,15 @@
                 <button id="menu_bt2" class="drop_button" onclick="display_content(this)">Progetti</button>
                 <div id="content_menu_bt2" class="drop_content">
                     <a href="progetti.php"><pre>In corso&#9&#9&gt</pre></a>
-                    <a href="progetti.php#terminati"><pre>Terminati&#9&#9&gt</pre></a>
+                    <a href="progetti.php#header2"><pre>Terminati&#9&#9&gt</pre></a>
                 </div>
             </div>
             <div class="dropdown">
                 <button id="menu_bt3" class="drop_button" onclick="display_content(this)">Iniziative</button>
                 <div id="content_menu_bt3" class="drop_content">
-					<a href="iniziative.php#stampa"><pre>Stampa&#9&#9&#9&gt</pre></a>
-                    <a href="iniziative.php#certificazioni"><pre>Certificazioni&#9&#9&gt</pre></a>
-                </div>
+                    <a href="iniziative.php"><pre>Sponsor&#9&#9&gt</pre></a>
+                    <a href="iniziative.php"><pre>Stampa&#9&#9&gt</pre></a>
+                </div>	
 			</div>
 			<a href="lavoro.php" id="work">Lavora con noi</a>
             <a href="#div_container_contatti" id="contacts">Contatti</a>
@@ -65,20 +65,16 @@
 					echo "<a title='Area privata' href='admin.php' id='admin'>Area privata</a>";
 			?>
             <button id="close" onclick="close_navbar(this)">X</button>
-        </div>
+            </div>
 
-        <!--TITLE-->
-        <div class="title">Rassegna Stampa</div>
 
-        <!--LINK DINAMICI-->
 
-        <?php 
-            $conn->get_articles();
-        ?>
-        
-        
-     
-              <!--CONTATTI-->
+            <!--TITLE SUBTITLE-->
+            <?php
+            $conn->get_article();
+            ?>
+            
+            <!--CONTATTI-->
 
 
 	<div id="div_container_contatti">
@@ -129,6 +125,6 @@
 			@Copiright 2012-2017 &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspCostruzioni Bordignon S.r.l &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspC.F. e P.IVA 0334405269 
 		</div>
 	</div>
-
-    </body>
+            
+</body>
 </html>
