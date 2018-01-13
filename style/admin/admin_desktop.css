@@ -165,7 +165,7 @@ body {
     background-color: #008cff7a;
     cursor: pointer;
 }
-.check_control, #new_imp_control, #new_proj_control, .modify_control, .remove_control {
+.check_control, #new_imp_control, #new_proj_control, #new_art_control, .modify_control, .remove_control {
     display: none;
 }
 .magic {
@@ -203,7 +203,7 @@ body {
 
 /* FORM DI INSERIMENTO */
 
-#new_imp_btn, #new_proj_btn {
+#new_imp_btn, #new_proj_btn, #new_art_btn {
     margin-top: 1em;
     width: 60px;
     height: 60px;
@@ -221,10 +221,14 @@ body {
     margin-left: 10px;
     background-image: url("../../images/add_proj.png");
 }
-#new_imp_control:checked ~ #new_imp_form_div, #new_proj_control:checked ~ #new_proj_form_div {
+#new_art_btn {
+    margin-left: 10px;
+    background-image: url("../../images/add_article.png");
+}
+#new_imp_control:checked ~ #new_imp_form_div, #new_proj_control:checked ~ #new_proj_form_div, #new_art_control:checked ~ #new_art_form_div {
     left: 0;
 }
-#new_imp_control:checked + label, #new_proj_control:checked + label {
+#new_imp_control:checked + label, #new_proj_control:checked + label, #new_art_control:checked + label {
     position: fixed;
     top: 0;
     left: initial;
@@ -232,6 +236,9 @@ body {
     margin-top: 0;
     z-index: 2;
     background-image: url("../../images/close.png");
+}
+#new_imp_control:checked + label ~ #new_proj_btn {
+    margin-left: 170px;
 }
 
 /* FORM DI MODIFICA */
@@ -247,11 +254,11 @@ body {
     background-size: 50px;
     background-repeat: no-repeat;
 }
-.modify_btn:hover, #new_imp_btn:hover, #new_proj_btn:hover {
+.modify_btn:hover, #new_imp_btn:hover, #new_proj_btn:hover, #new_art_btn:hover {
     background-color: #008cff7a;
     cursor: pointer;
 }
-.modify_form_div, .remove_form_div, #new_imp_form_div, #new_proj_form_div {
+.modify_form_div, .remove_form_div, #new_imp_form_div, #new_proj_form_div, #new_art_form_div {
     position: fixed;
     top: 0;
     left: -100%;
@@ -270,7 +277,7 @@ body {
     z-index: 2;
     background-image: url("../../images/close.png");
 }
-.modify_form, #new_imp_form, #new_proj_form {
+.modify_form, #new_imp_form, #new_proj_form, #new_art_form {
     position: relative;
     top: 50%;
     left: 50%;
@@ -551,6 +558,7 @@ body {
     width: calc(100% - 170px);
 }
 .article_div {
+    position: relative;
     width: calc(33.3% - 40px);
     height: 600px;
     float: left;
@@ -560,12 +568,21 @@ body {
     color: white;
 }
 .article_image {
+    position: relative;
     width: 100%;
     height: 35%;
-    background-image: url('../../images/sede.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.change_art_img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #83cdff;
+    padding: 0.5em;
+    font-size: 0.8em;
 }
 .article_info_div {
     width: calc(100% - 60px);
@@ -580,16 +597,13 @@ body {
 .article_info div {
     float: right;
 }
-.article_btns {
+.modify_article_btn, .remove_article_btn {
+    display: block;
     width: 60px;
-    height: 30%;
-    float: left;
-}
-.article_btns div {
-    width: 100%;
     height: 50px;
+    float: left;
     background-position: center;
-    background-size: 40px;
+    background-size: 30px;
     background-repeat: no-repeat;
 }
 .modify_article_btn {
@@ -598,7 +612,7 @@ body {
 .remove_article_btn {
     background-image: url('../../images/remove.png');
 }
-.article_btns div:hover {
+.modify_article_btn:hover, .remove_article_btn:hover {
     background-color: #008cff7a;
     cursor: pointer;
 }
@@ -609,6 +623,133 @@ body {
     margin-bottom: 1em;
     overflow-y: scroll;
     line-height: 1.2em;
+}
+.article_text::-webkit-scrollbar {
+    display: none;
+}
+.mod_art_control, .rem_art_control {
+    display: none;
+}
+.mod_art_form, .rem_art_form {
+    position: absolute;
+    top: 0;
+    background-color: #83cdff;
+    color: black;
+    width: 100%;
+    height: 600px;
+    opacity: 0;
+    z-index: -1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.mod_art_control:checked + label ~ .mod_art_form, .rem_art_control:checked + label ~ .rem_art_form {
+    opacity: 1;
+    z-index: 0;
+}
+.mod_art_control:checked + .modify_article_btn {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    background-image: url("../../images/close.png");
+    background-size: 40px;
+}
+.rem_art_control:checked + .remove_article_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url("../../images/close.png");
+    background-size: 40px;
+}
+.article_info input {
+    float: right;
+    text-align: right;
+}
+.mod_art_form textarea {
+    width: calc(100% - 1em);
+    height: calc(35% - 1.5em);
+    font-size: 1em;
+    padding: 0;
+    margin: 0.5em 0.5em 1em;
+    resize: none;
+}
+.save_mod_art, .reset_mod_art {
+    border: none;
+    outline: none;
+    width: 60px;
+    height: 50px;
+    float: left;
+    color: blue;
+    background-color: transparent;
+}
+.save_mod_art {
+    margin-top: 50px;
+}
+.save_mod_art:hover, .reset_mod_art:hover {
+    background-color: #008cff7a;
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
+}
+.rem_art_form div {
+    padding: 12em 1em 2em;
+    text-align: center;
+}
+.rem_art_form_btn {
+    display: block;
+    border: none;
+    outline: none;
+    padding: 0.7em;
+    margin: auto;
+    background-color: #008cff;
+    color: white;
+}
+.new_art_data {
+    border: none;
+    width: 60%;
+    height: calc(100% - 100px - 1em);
+    margin-top: 1em;
+    padding: 4em 1em 1em 1.5em;
+    float: left;
+    color: #696969;
+}
+.new_art_info {
+    width: 100%;
+    height: 16%;
+}
+.new_art_info input {
+    float: right;
+    width: 150px;
+    padding: 0.3em;
+}
+.new_art_info input[type='file'] {
+    width: 230px;
+}
+.new_art_text_div {
+    width: calc(40% - 2em);
+    height: calc(100% - 100px - 2em);
+    float: left;
+    margin: 1em;
+    color: #696969;
+}
+.new_art_text {
+    width: 100%;
+    height: calc(100% - 3em);
+    margin: 2em 0 1em;
+    padding: 0.5em;
+    resize: none;
+    font-size: 1em;
+    line-height: 1.2em;
+}
+.new_art_text::-webkit-scrollbar {
+    display: none;
+}
+.new_art_btns {
+    width: 100%;
+    height: 100px;
+    clear: both;
+    text-align: center;
+    padding-top: 1em;
 }
 
 /* UTENTI */

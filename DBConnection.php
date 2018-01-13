@@ -1,3 +1,5 @@
+<script type="text/javascript" src="script/menuScript.js"></script>
+
 <?php
 	session_start();
 
@@ -307,7 +309,7 @@
 			if ($result->num_rows > 0) {
 				$count=1;
 				while($row = $result->fetch_assoc()) {
-					echo "<input id='project_select".$count."' class='pro_select' type='radio' name='pro_select'/>
+					echo "<input id='project_select".$count."' class='pro_select' type='radio' name='pro_select' onclick='uncheck_radio(this)'/>
 						<label class='project_label' for='project_select".$count."'>
 							<div class='project_title'>".$row['name']."
 								<input type='checkbox' id='removeproj".$count."' class='remove_control'/>
@@ -327,7 +329,7 @@
 									</form>
 								</div>
 							</div>
-							<form id='mp".$count."' class='modify_proj_form' action='form_control.php' method='post'>
+							<form id='project_select".$count."_form' class='modify_proj_form' action='form_control.php' method='post'>
 								<input class='identity' type='text' name='modify_proj' value='".$row['id']."'/>
 								<input class='identity' type='text' name='name' value='".$row['name']."'/>
 								<input class='identity' type='text' name='old_image' value='".$row['image']."'/>
@@ -349,7 +351,7 @@
 										<div>Luogo:<input type='text' name='location' value='".$row['location']."'/></div>
 										<div>Direttore dei lavori:<input type='text' name='director' value='".$row['director']."'/></div>
 									</div>
-									<textarea class='project_description' name='description' form='mp".$count."'>".$row['description']."</textarea>
+									<textarea class='project_description' name='description' form='project_select".$count."_form'>".$row['description']."</textarea>
 								</div>
 								<div class='proj_form_btns'>
 									<input class='submit_btn' type='submit' value='Salva modifiche'/>
@@ -525,9 +527,8 @@
 					$count++;
 				}
 				echo "<div id='left_container'>".$left."</div><div id='right_container'>".$right."</div>";
-			} else {
+			} else
 				echo "<p>Nessun impiegato disponibile</p>";
-			}
 		}
 
 		public function remove_impiegato($imp) {
@@ -575,6 +576,99 @@
 				}
 			}
 			$sql = "INSERT INTO webproject.impiegati VALUES ('$id','$fn','$ln','$ro','$bi','$ag','$ma','$br','$be','$im')";
+			$result = $this->conn->query($sql);
+		}
+
+		// ARTICOLI ADMIN
+		public function get_articoli_admin() {
+			$sql = "SELECT DISTINCT * FROM webproject.articoli";
+			$result = $this->conn->query($sql);
+			if ($result->num_rows > 0) {
+				$count=1;
+				while($row = $result->fetch_assoc()) {
+					echo "<div class='article_div'>
+							<div class='article_image' style='background-image:url(../../images/".$row['image'].")'></div>
+							<div class='article_info_div'>
+								<div class='article_info'>Data:<div>".$row['date']."</div></div>
+								<div class='article_info'>Autore:<div>".$row['author']."</div></div>
+								<div class='article_info'>Stampa:<div>".$row['house']."</div></div>
+								<div class='article_info'>Titolo:<div>".$row['title']."</div></div>
+								<div class='article_info'>Sottotitolo:<div>".$row['subtitle']."</div></div>
+							</div>
+							<input id='mod_art_checkbox".$count."' class='mod_art_control' type='checkbox'/>
+							<label for='mod_art_checkbox".$count."' class='modify_article_btn'></label>
+							<form id='mod_a".$count."' class='mod_art_form' action='form_control.php' method='post'>
+								<div class='article_image' style='background-image:url(../../images/".$row['image'].")'>
+									<div class='change_art_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png'/></div>
+								</div>
+								<div class='article_info_div'>
+									<div class='article_info'>Data:<input type='date' name='date' value='".$row['date']."' required/></div>
+									<div class='article_info'>Autore:<input type='text' name='author' placeholder='Autore' value='".$row['author']."' required/></div>
+									<div class='article_info'>Stampa:<input type='text' name='house' placeholder='Ente di stampa' value='".$row['house']."' required/></div>
+									<div class='article_info'>Titolo:<input type='text' name='title' placeholder='Titolo' value='".$row['title']."' required/></div>
+									<div class='article_info'>Sottotitolo:<input type='text' name='subtitle' placeholder='Sottotitolo' value='".$row['subtitle']."' required/></div>
+								</div>
+								<input class='identity' type='text' name='modify_article' value='".$row['id']."'/>
+								<input class='identity' type='text' name='old_image' value='".$row['image']."'/>
+								<input class='save_mod_art' type='submit' value='Salva'/>
+								<input class='reset_mod_art' type='reset' value='Reset'/>
+								<textarea class='article_text' name='text' form='mod_a".$count."'>".$row['text']."</textarea>
+							</form>
+							<input id='rem_art_checkbox".$count."' class='rem_art_control' type='checkbox'/>
+							<label for='rem_art_checkbox".$count."' class='remove_article_btn'></label>
+							<form class='rem_art_form' action='form_control.php' method='post'>
+								<div>Vuoi eliminare definitivamente questo articolo e tutte le informazioni in esso contenute?</div>
+								<input class='identity' type='text' name='remove_article' value='".$row['id']."'/>
+								<input type='submit' class='rem_art_form_btn' value='Elimina'/>
+							</form>
+							<div class='article_text'>".$row['text']."</div>
+						</div>";
+					$count++;
+				}
+			} else
+				echo "<p>Nessun articolo disponibile</p>";
+		}
+
+		public function remove_articolo($art) {
+			$sql = "DELETE FROM webproject.articoli WHERE id='$art'";
+			$result = $this->conn->query($sql);
+		}
+		
+		public function modify_articolo() {
+			$id=$_POST['modify_article'];
+			$sql = "DELETE FROM webproject.articoli WHERE id='$id'";
+			$result = $this->conn->query($sql);
+			$this->insert_articolo();
+		}
+
+		public function insert_articolo() {
+			$da=$_POST['date'];
+			$au=$_POST['author'];
+			$ho=$_POST['house'];
+			$ti=$_POST['title'];
+			$su=$_POST['subtitle'];
+			$te=$_POST['text'];
+			$im=$_POST['image'];
+			if($im=='') {
+				$im=$_POST['old_image']; // nell'inserimento di un nuovo articolo è required
+			}
+			if(isset($_POST['modify_article'])) // quando avviene una modifica di un articolo esistente
+				$id=$_POST['modify_article'];
+			else { // quando avviene l'inserimento di un nuovo articolo
+				$i=1;
+				$found=false;
+				while(!$found) {
+					$sql = "SELECT id FROM webproject.articoli WHERE id='$i'";
+					$result = $this->conn->query($sql);
+					if($result->num_rows > 0)
+						$i++;
+					else {
+						$id=$i;
+						$found=true;
+					}
+				}
+			}
+			$sql = "INSERT INTO webproject.articoli VALUES ('$id','$da','$au','$ho','$ti','$su','$te','$im')";
 			$result = $this->conn->query($sql);
 		}
 
@@ -661,7 +755,8 @@
 						</div>";
 					$count++;
 				}
-			}
+			} else
+				echo "<p>Nessun impiegato disponibile</p>";
 		}
 
 		// RIMOZIONE UTENTE

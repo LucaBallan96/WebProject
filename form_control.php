@@ -72,7 +72,7 @@
 		if($proj!='no') {
 			$conn->remove_progetto($proj);
 		}
-		header('Location: admin.php');
+		header('Location: admin.php#progetti');
 	}
 
 	// RIMOZIONE IMPIEGATO
@@ -81,31 +81,49 @@
 		if($imp!='no') {
 			$conn->remove_impiegato($imp);
 		}
-		header('Location: admin.php');
+		header('Location: admin.php#impiegati');
+	}
+
+	// RIMOZIONE ARTICOLO
+	if(isset($_POST['remove_article'])) {
+		$conn->remove_articolo($_POST['remove_article']);
+		header('Location: admin.php#articoli');
 	}
 
 	// MODIFICA PROGETTO
 	if(isset($_POST['modify_proj'])) {
 		$conn->modify_progetto();
-		header('Location: admin.php');
+		header('Location: admin.php#progetti');
 	}
 
 	// MODIFICA IMPIEGATO
 	if(isset($_POST['modify_imp'])) {
 		$conn->modify_impiegato();
-		header('Location: admin.php');
+		header('Location: admin.php#impiegati');
+	}
+
+	// MODIFICA ARTICOLO
+	if(isset($_POST['modify_article'])) {
+		$conn->modify_articolo();
+		header('Location: admin.php#articoli');
 	}
 
 	// NUOVO PROGETTO
 	if(isset($_POST['new_proj'])) {
 		$conn->insert_progetto();
-		header('Location: admin.php');
+		header('Location: admin.php#progetti');
 	}
 
 	// NUOVO IMPIEGATO
 	if(isset($_POST['new_imp'])) {
 		$conn->insert_impiegato();
-		header('Location: admin.php');
+		header('Location: admin.php#impiegati');
+	}
+
+	// NUOVO ARTICOLO
+	if(isset($_POST['new_art'])) {
+		$conn->insert_articolo();
+		header('Location: admin.php#articoli');
 	}
 
 	//INSERT CANDIDATO
