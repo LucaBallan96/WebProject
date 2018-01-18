@@ -140,6 +140,45 @@
 			</form>
 		</div>
 
+		<!-- NUOVA OFFERTA -->
+		<input type='checkbox' id='new_off_control'/>
+		<label id='new_off_btn' title='Inserisci una nuova offerta di lavoro' for='new_off_control'></label>
+		<div id='new_off_form_div'>
+			<form id='new_off_form' action='form_control.php' method='post'>
+				<input class='identity' type='text' name='new_off' value='new_off'/>
+				<fieldset class='new_off_data'>
+					<legend>Informazioni sull'offerta:</legend>
+					<div class='new_off_info'>Settore di impiego:<input type='text' name='branch' placeholder='Settore di impiego' required/></div>
+					<div class='new_off_info'>Ruolo professionale:
+						<select form='new_off_form' name='role' required/>
+  							<option value='Presidente'>Presidente</option>
+  							<option value='Vicepresidente'>Vicepresidente</option>
+  							<option value='Segretario'>Segretario</option>
+							<option value='Ingegnere'>Ingegnere</option>
+							<option value='Architetto'>Architetto</option>
+							<option value='Geometra'>Geometra</option>
+							<option value='Progettista'>Progettista</option>
+							<option value='Muratore'>Muratore</option>
+							<option value='Carpentiere'>Carpentiere</option>
+							<option value='Magazziniere'>Magazziniere</option>
+						</select>
+					</div>
+					<div class='new_off_info'>Tipo di contratto:<input type='text' name='contract' placeholder='Tipo di contratto' required/></div>
+					<div class='new_off_info'>Data 1° colloquio:<input type='date' name='date1'/></div>
+					<div class='new_off_info'>Data 2° colloquio:<input type='date' name='date2'/></div>
+					<div class='new_off_info'>Data 3° colloquio:<input type='date' name='date3'/></div>
+					<div class='new_off_info'>Data 4° colloquio:<input type='date' name='date4'/></div>
+				</fieldset>
+				<div class='new_off_mex_div'>
+					Descrizione:<textarea class='new_off_mex' form='new_off_form' name='message' placeholder='Inserisci il messaggio'></textarea>
+				</div>
+				<div class='new_off_btns'>
+					<input class='submit_btn' type='submit' value='Salva articolo'/>
+					<input class='reset_btn' type='reset' value='Reset'/>
+				</div>
+			</form>
+		</div>
+
 		<!-- IMPIEGATI -->
 		<h1 id="impiegati" class="header">Impiegati e dirigenti d'azienda</h1>
 		<div class="container_est">
@@ -173,8 +212,20 @@
 		</div>
 
 		<!-- LAVORO -->
-		<h1 id="lavoro" class="header">Offerte e domande di lavoro</h1>
+		<h1 id="lavoro" class="header">Offerte di lavoro e colloqui</h1>
 		<div class="container_est">
+			<div class='offer_div'>
+				<div class='mod_off_info'></div>
+				<div class='mod_off_dates'></div>
+				<div class='mod_off_mex'></div>
+				<div class='mod_off_btns'></div>				
+			</div>
+			<div class='offer_div'>
+			</div>
+			<div class='offer_div'>
+			</div>
+			<div class='offer_div'>
+			</div>
 		</div>
     </body>
 </html>

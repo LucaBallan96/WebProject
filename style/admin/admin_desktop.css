@@ -165,7 +165,7 @@ body {
     background-color: #008cff7a;
     cursor: pointer;
 }
-.check_control, #new_imp_control, #new_proj_control, #new_art_control, .modify_control, .remove_control {
+.check_control, #new_imp_control, #new_proj_control, #new_art_control, #new_off_control, .modify_control, .remove_control {
     display: none;
 }
 .magic {
@@ -203,7 +203,7 @@ body {
 
 /* FORM DI INSERIMENTO */
 
-#new_imp_btn, #new_proj_btn, #new_art_btn {
+#new_imp_btn, #new_proj_btn, #new_art_btn, #new_off_btn {
     margin-top: 1em;
     width: 60px;
     height: 60px;
@@ -225,10 +225,14 @@ body {
     margin-left: 10px;
     background-image: url("../../images/add_article.png");
 }
-#new_imp_control:checked ~ #new_imp_form_div, #new_proj_control:checked ~ #new_proj_form_div, #new_art_control:checked ~ #new_art_form_div {
+#new_off_btn {
+    margin-left: 10px;
+    background-image: url("../../images/add_offer.png");
+}
+#new_imp_control:checked ~ #new_imp_form_div, #new_proj_control:checked ~ #new_proj_form_div, #new_art_control:checked ~ #new_art_form_div, #new_off_control:checked ~ #new_off_form_div {
     left: 0;
 }
-#new_imp_control:checked + label, #new_proj_control:checked + label, #new_art_control:checked + label {
+#new_imp_control:checked + label, #new_proj_control:checked + label, #new_art_control:checked + label, #new_off_control:checked + label {
     position: fixed;
     top: 0;
     left: initial;
@@ -254,11 +258,11 @@ body {
     background-size: 50px;
     background-repeat: no-repeat;
 }
-.modify_btn:hover, #new_imp_btn:hover, #new_proj_btn:hover, #new_art_btn:hover {
+.modify_btn:hover, #new_imp_btn:hover, #new_proj_btn:hover, #new_art_btn:hover, #new_off_btn:hover {
     background-color: #008cff7a;
     cursor: pointer;
 }
-.modify_form_div, .remove_form_div, #new_imp_form_div, #new_proj_form_div, #new_art_form_div {
+.modify_form_div, .remove_form_div, #new_imp_form_div, #new_proj_form_div, #new_art_form_div, #new_off_form_div {
     position: fixed;
     top: 0;
     left: -100%;
@@ -277,7 +281,7 @@ body {
     z-index: 2;
     background-image: url("../../images/close.png");
 }
-.modify_form, #new_imp_form, #new_proj_form, #new_art_form {
+.modify_form, #new_imp_form, #new_proj_form, #new_art_form, #new_off_form {
     position: relative;
     top: 50%;
     left: 50%;
@@ -704,7 +708,7 @@ body {
     background-color: #008cff;
     color: white;
 }
-.new_art_data {
+.new_art_data, .new_off_data {
     border: none;
     width: 60%;
     height: calc(100% - 100px - 1em);
@@ -725,14 +729,14 @@ body {
 .new_art_info input[type='file'] {
     width: 230px;
 }
-.new_art_text_div {
+.new_art_text_div, .new_off_mex_div {
     width: calc(40% - 2em);
     height: calc(100% - 100px - 2em);
     float: left;
     margin: 1em;
     color: #696969;
 }
-.new_art_text {
+.new_art_text, .new_off_mex {
     width: 100%;
     height: calc(100% - 3em);
     margin: 2em 0 1em;
@@ -741,10 +745,10 @@ body {
     font-size: 1em;
     line-height: 1.2em;
 }
-.new_art_text::-webkit-scrollbar {
+.new_art_text::-webkit-scrollbar, .new_off_text::-webkit-scrollbar {
     display: none;
 }
-.new_art_btns {
+.new_art_btns, .new_off_btns {
     width: 100%;
     height: 100px;
     clear: both;
@@ -860,3 +864,34 @@ body {
 
 /* LAVORO */
 
+.offer_div {
+    border: 1px solid orangered;
+    width: 800px;
+    height: 250px;
+    margin: auto;
+    margin-bottom: 3em;
+    background-color: #0099ffa8; 
+}
+.mod_off_info, .mod_off_dates, .mod_off_mex {
+    border: 1px solid green;
+    width: calc(33.3% - 20px);
+    height: 100%;
+    float: left;
+}
+.mod_off_btns {
+    border: 1px solid green;
+    width: 60px;
+    height: 100%;
+    float: left;
+}
+
+
+.new_off_info {
+    width: 100%;
+    height: 14.2%;
+}
+.new_off_info input, .new_off_info select {
+    float: right;
+    width: 150px;
+    padding: 0.3em;
+}
