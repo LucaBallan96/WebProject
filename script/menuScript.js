@@ -9,6 +9,15 @@ window.addEventListener("resize", function() {
     }
 });
 
+// DATA CORRENTE PER RESTRIZIONI INPUT
+var today = new Date();
+var todayString = today.toISOString().substring(0, 10);
+document.getElementById("art_pub_date").max = todayString;
+var offerDates=document.getElementsByClassName('new_off_date');
+for(var i=0; i<offerDates.length; i++)
+    offerDates[i].min = todayString;
+
+// CAMBIO NAVBAR DESKTOP <-> TABLET/MOBILE
 function display_navbar(cm) {
     document.getElementById("navbar").style.left="0%";
     cm.style.display="none";
@@ -28,6 +37,7 @@ function display_content(dropbtn) {
     }
 }
 
+// UNCHECKABLE RADIO BUTTONS
 last='none';
 function uncheck_radio(rad) {
     if(rad.id==last) {

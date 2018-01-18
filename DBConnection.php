@@ -48,6 +48,7 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
+				$dateString = date("d-m-Y", strtotime($row['begin']));
 				echo "<h1 id='header'>".$row['name']."</h1>
 						<div id='div_image'><img src='images/".$row['image']."'></img></div>
 						<div id='div_specifiche'>
@@ -55,6 +56,7 @@
 							<div class='specifica'>Tipologia<p class='spec_data'>".$row['type']."</p></div><hr/>
 							<div class='specifica'>Località<p class='spec_data'>".$row['location']."</p></div><hr/>
 							<div class='specifica'>Direttore dei lavori<p class='spec_data'>".$row['director']."</p></div><hr/>
+							<div class='specifica'>Data di inizio<p class='spec_data'>".$dateString."</p></div><hr/>
 							<div class='specifica'>Stato<p class='spec_data'>".$row['status']."</p></div>
 						</div>
 						<div id='div_desc'>".$row['description']."</div>";
@@ -350,6 +352,7 @@
 										<div>Tipologia:<input type='text' name='type' value='".$row['type']."'/></div>
 										<div>Luogo:<input type='text' name='location' value='".$row['location']."'/></div>
 										<div>Direttore dei lavori:<input type='text' name='director' value='".$row['director']."'/></div>
+										<div>Data di inizio:<input type='date' name='begin' min='1900-01-01' max='2100-01-01' value='".$row['begin']."' required/></div>
 									</div>
 									<textarea class='project_description' name='description' form='project_select".$count."_form'>".$row['description']."</textarea>
 								</div>
@@ -386,6 +389,7 @@
 			$ty=$_POST['type'];
 			$lo=$_POST['location'];
 			$di=$_POST['director'];
+			$be=$_POST['begin'];
 			$de=$_POST['description'];
 			$im=$_POST['image'];
 			if($im=='') { // non avviene in new_proj perché è required
@@ -408,7 +412,7 @@
 					}
 				}
 			}
-			$sql = "INSERT INTO webproject.progetti VALUES ('$id','$im','$na','$st','$cl','$ty','$lo','$di','$de')";
+			$sql = "INSERT INTO webproject.progetti VALUES ('$id','$im','$na','$st','$cl','$ty','$lo','$di','$be','$de')";
 			$result = $this->conn->query($sql);
 		}
 
@@ -465,7 +469,7 @@
 									<input class='identity' type='text' name='old_image' value='".$row['image']."'/>
 									<div>Nome:<input type='text' name='firstname' value='".$row['firstname']."' required/></div>
 									<div>Cognome:<input type='text' name='lastname' value='".$row['lastname']."' required/></div>
-									<div>Data di nascita:<input type='date' name='birth' value='".$row['birth']."'/></div>
+									<div>Data di nascita:<input type='date' name='birth' min='1900-01-01' max='2000-01-01' value='".$row['birth']."'/></div>
 									<div>Età:<input type='number' name='age' value='".$row['age']."' min='18' max='99'/></div>
 									<div>E-mail:<input type='email' value='".$row['mail']."' name='mail'/></div>
 									<div class='file_select'>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png'/></div>
@@ -602,7 +606,7 @@
 									<div class='change_art_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png'/></div>
 								</div>
 								<div class='article_info_div'>
-									<div class='article_info'>Data:<input type='date' name='date' value='".$row['date']."' required/></div>
+									<div class='article_info'>Data:<input type='date' min='1900-01-01' max='".date('Y-m-d')."' name='date' value='".$row['date']."' required/></div>
 									<div class='article_info'>Autore:<input type='text' name='author' placeholder='Autore' value='".$row['author']."' required/></div>
 									<div class='article_info'>Stampa:<input type='text' name='house' placeholder='Ente di stampa' value='".$row['house']."' required/></div>
 									<div class='article_info'>Titolo:<input type='text' name='title' placeholder='Titolo' value='".$row['title']."' required/></div>

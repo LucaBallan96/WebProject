@@ -25,6 +25,7 @@
 		<link rel="stylesheet" media="print" href="style/admin/admin_print.css">
 	</head>
 	<body>
+
 		<!-- NAVIGATION -->
 		<div id="nav">
 			<a title="Home" href="index.php" id="nav_home" class="nav_link"><div>Home</div></a>
@@ -57,7 +58,7 @@
 					<input class='identity' type='text' name='new_imp' value='new_imp'/>
 					<div>Nome:<input type='text' name='firstname' required/></div>
 					<div>Cognome:<input type='text' name='lastname' required/></div>
-					<div>Data di nascita:<input type='date' name='birth'/></div>
+					<div>Data di nascita:<input type='date' min='1900-01-01' max='2000-01-01' name='birth'/></div>
 					<div>Età:<input type='number' name='age' min='18' max='99'/></div>
 					<div>e-mail:<input type='email' name='mail'/></div>
 					<div>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png'/></div>
@@ -102,6 +103,7 @@
 						<div>Tipologia:<input type='text' name='type'/></div>
 						<div>Luogo:<input type='text' name='location'/></div>
 						<div>Direttore dei lavori:<input type='text' name='director'/></div>
+						<div>Data di inizio:<input type='date' name='begin' min='1900-01-01' max='2100-01-01' required/></div>
 					</div>
 					<div class='new_proj_description'>
 						Descrizione:</br>
@@ -123,7 +125,7 @@
 				<input class='identity' type='text' name='new_art' value='new_art'/>
 				<fieldset class='new_art_data'>
 					<legend>Informazioni sull'articolo:</legend>
-					<div class='new_art_info'>Data di pubblicazione:<input type='date' name='date' required/></div>
+					<div class='new_art_info'>Data di pubblicazione:<input id='art_pub_date' type='date' name='date' min='1900-01-01' required/></div>
 					<div class='new_art_info'>Autore:<input type='text' name='author' placeholder='Autore' required/></div>
 					<div class='new_art_info'>Ente di stampa:<input type='text' name='house' placeholder='Ente di stampa' required/></div>
 					<div class='new_art_info'>Titolo:<input type='text' name='title' placeholder='Titolo' required/></div>
@@ -164,10 +166,10 @@
 						</select>
 					</div>
 					<div class='new_off_info'>Tipo di contratto:<input type='text' name='contract' placeholder='Tipo di contratto' required/></div>
-					<div class='new_off_info'>Data 1° colloquio:<input type='date' name='date1'/></div>
-					<div class='new_off_info'>Data 2° colloquio:<input type='date' name='date2'/></div>
-					<div class='new_off_info'>Data 3° colloquio:<input type='date' name='date3'/></div>
-					<div class='new_off_info'>Data 4° colloquio:<input type='date' name='date4'/></div>
+					<div class='new_off_info'>Data 1° colloquio:<input class='new_off_date' type='date' name='date1' min='' max='2100-01-01'/></div>
+					<div class='new_off_info'>Data 2° colloquio:<input class='new_off_date' type='date' name='date2' min='' max='2100-01-01'/></div>
+					<div class='new_off_info'>Data 3° colloquio:<input class='new_off_date' type='date' name='date3' min='' max='2100-01-01'/></div>
+					<div class='new_off_info'>Data 4° colloquio:<input class='new_off_date' type='date' name='date4' min='' max='2100-01-01'/></div>
 				</fieldset>
 				<div class='new_off_mex_div'>
 					Descrizione:<textarea class='new_off_mex' form='new_off_form' name='message' placeholder='Inserisci il messaggio'></textarea>
@@ -227,5 +229,8 @@
 			<div class='offer_div'>
 			</div>
 		</div>
+
+		<!--SCRIPT-->
+		<script type="text/javascript" src="script/menuScript.js"></script>
     </body>
 </html>

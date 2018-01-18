@@ -1,21 +1,5 @@
 @import url("../navbar_desktop.css");
 
-/*
-#prova {
-    height: 50px;
-    width: 200px;
-    border: 1px solid orange;
-}
-#text {
-    text-align: center;
-    position: relative;
-    top: 50%;
-    font-size: 20px;
-    border: 1px solid green;
-    transform: translateY(-50%);
-}
-*/
-
 #header {
     padding: 3.5em 2em 2em;
     color: #0077ff;
