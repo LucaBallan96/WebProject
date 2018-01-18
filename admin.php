@@ -115,6 +115,70 @@
 			</form>
 		</div>
 
+		<!-- NUOVO ARTICOLO -->
+		<input type='checkbox' id='new_art_control'/>
+		<label id='new_art_btn' title='Inserisci un nuovo articolo' for='new_art_control'></label>
+		<div id='new_art_form_div'>
+			<form id='new_art_form' action='form_control.php' method='post'>
+				<input class='identity' type='text' name='new_art' value='new_art'/>
+				<fieldset class='new_art_data'>
+					<legend>Informazioni sull'articolo:</legend>
+					<div class='new_art_info'>Data di pubblicazione:<input type='date' name='date' required/></div>
+					<div class='new_art_info'>Autore:<input type='text' name='author' placeholder='Autore' required/></div>
+					<div class='new_art_info'>Ente di stampa:<input type='text' name='house' placeholder='Ente di stampa' required/></div>
+					<div class='new_art_info'>Titolo:<input type='text' name='title' placeholder='Titolo' required/></div>
+					<div class='new_art_info'>Sottotitolo:<input type='text' name='subtitle' placeholder='Sottotitolo' required/></div>
+					<div class='new_art_info'>Immagine: <input type='file' name='image' accept='.jpg, .jpeg, .png'/ required></div>
+				</fieldset>
+				<div class='new_art_text_div'>
+					Descrizione:<textarea class='new_art_text' form='new_art_form' name='text' placeholder='Inserisci il testo'></textarea>
+				</div>
+				<div class='new_art_btns'>
+					<input class='submit_btn' type='submit' value='Salva articolo'/>
+					<input class='reset_btn' type='reset' value='Reset'/>
+				</div>
+			</form>
+		</div>
+
+		<!-- NUOVA OFFERTA -->
+		<input type='checkbox' id='new_off_control'/>
+		<label id='new_off_btn' title='Inserisci una nuova offerta di lavoro' for='new_off_control'></label>
+		<div id='new_off_form_div'>
+			<form id='new_off_form' action='form_control.php' method='post'>
+				<input class='identity' type='text' name='new_off' value='new_off'/>
+				<fieldset class='new_off_data'>
+					<legend>Informazioni sull'offerta:</legend>
+					<div class='new_off_info'>Settore di impiego:<input type='text' name='branch' placeholder='Settore di impiego' required/></div>
+					<div class='new_off_info'>Ruolo professionale:
+						<select form='new_off_form' name='role' required/>
+  							<option value='Presidente'>Presidente</option>
+  							<option value='Vicepresidente'>Vicepresidente</option>
+  							<option value='Segretario'>Segretario</option>
+							<option value='Ingegnere'>Ingegnere</option>
+							<option value='Architetto'>Architetto</option>
+							<option value='Geometra'>Geometra</option>
+							<option value='Progettista'>Progettista</option>
+							<option value='Muratore'>Muratore</option>
+							<option value='Carpentiere'>Carpentiere</option>
+							<option value='Magazziniere'>Magazziniere</option>
+						</select>
+					</div>
+					<div class='new_off_info'>Tipo di contratto:<input type='text' name='contract' placeholder='Tipo di contratto' required/></div>
+					<div class='new_off_info'>Data 1° colloquio:<input type='date' name='date1'/></div>
+					<div class='new_off_info'>Data 2° colloquio:<input type='date' name='date2'/></div>
+					<div class='new_off_info'>Data 3° colloquio:<input type='date' name='date3'/></div>
+					<div class='new_off_info'>Data 4° colloquio:<input type='date' name='date4'/></div>
+				</fieldset>
+				<div class='new_off_mex_div'>
+					Descrizione:<textarea class='new_off_mex' form='new_off_form' name='message' placeholder='Inserisci il messaggio'></textarea>
+				</div>
+				<div class='new_off_btns'>
+					<input class='submit_btn' type='submit' value='Salva articolo'/>
+					<input class='reset_btn' type='reset' value='Reset'/>
+				</div>
+			</form>
+		</div>
+
 		<!-- IMPIEGATI -->
 		<h1 id="impiegati" class="header">Impiegati e dirigenti d'azienda</h1>
 		<div class="container_est">
@@ -134,39 +198,9 @@
 		<!-- ARTICOLI -->
 		<h1 id="articoli" class="header">Articoli e news</h1>
 		<div id='container_est_articles' class="container_est">
-			<div class='article_div'>
-				<div class='article_image'></div>
-				<div class='article_info_div'>
-					<div class='article_info'>Data:<div>12-01-2018</div></div>
-					<div class='article_info'>Autore:<div>Luca Ballan</div></div>
-					<div class='article_info'>Stampa:<div>Il Gazzettino</div></div>
-					<div class='article_info'>Titolo:<div>Costruzioni Bordignon</div></div>
-					<div class='article_info'>Sottotitolo:<div>L'azienda di Volpago</div></div>
-				</div>
-				<div class='article_btns'>
-					<div class='modify_article_btn'></div>
-					<div class='remove_article_btn'></div>
-				</div>
-				<div class='article_text'>Testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo testo dell'articolo</div>
-			</div>
-			<div class='article_div'>
-				<div class='article_image'></div>
-				<div class='article_info'>Data:<div>12-01-2018</div></div>
-				<div class='article_info'>Autore:<div>Luca Ballan</div></div>
-				<div class='article_info'>Stampa:<div>Il Gazzettino</div></div>
-				<div class='article_info'>Titolo:<div>Costruzioni Bordignon</div></div>
-				<div class='article_info'>Sottotitolo:<div>L'azienda di Volpago</div></div>
-				<div class='article_text'></div>
-			</div>
-			<div class='article_div'>
-				<div class='article_image'></div>
-				<div class='article_info'>Data:<div>12-01-2018</div></div>
-				<div class='article_info'>Autore:<div>Luca Ballan</div></div>
-				<div class='article_info'>Stampa:<div>Il Gazzettino</div></div>
-				<div class='article_info'>Titolo:<div>Costruzioni Bordignon</div></div>
-				<div class='article_info'>Sottotitolo:<div>L'azienda di Volpago</div></div>
-				<div class='article_text'></div>
-			</div>
+			<?php
+				$conn->get_articoli_admin();
+			?>
 		</div>
 
 		<!-- UTENTI -->
@@ -178,8 +212,20 @@
 		</div>
 
 		<!-- LAVORO -->
-		<h1 id="lavoro" class="header">Offerte e domande di lavoro</h1>
+		<h1 id="lavoro" class="header">Offerte di lavoro e colloqui</h1>
 		<div class="container_est">
+			<div class='offer_div'>
+				<div class='mod_off_info'></div>
+				<div class='mod_off_dates'></div>
+				<div class='mod_off_mex'></div>
+				<div class='mod_off_btns'></div>				
+			</div>
+			<div class='offer_div'>
+			</div>
+			<div class='offer_div'>
+			</div>
+			<div class='offer_div'>
+			</div>
 		</div>
     </body>
 </html>

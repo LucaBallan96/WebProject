@@ -27,3 +27,13 @@ function display_content(dropbtn) {
         dropbtn.id += "_open";
     }
 }
+
+last='none';
+function uncheck_radio(rad) {
+    if(rad.id==last) {
+        rad.checked=false;
+        window.last='none';
+    }
+    else
+        last=rad.id;
+}
