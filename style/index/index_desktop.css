@@ -66,6 +66,7 @@
     height: calc(100% - 40px);
     overflow: hidden;
 }
+
 .div_container_img img{
     transition: .8s ease;
 
@@ -74,6 +75,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+#img_offer{
+    transition: .8s ease;
+    
+        position: absolute;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
 }
 .div_overlay{
     position: relative;
@@ -86,7 +96,7 @@
     opacity: 1;
 } 
 .div_group:hover .div_container_img img{
-    opacity: 0.3;
+    opacity: 0.1;
     height: 105%;
 } 
 .div_group:hover .title_div{

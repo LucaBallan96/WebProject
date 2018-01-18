@@ -136,5 +136,12 @@
 			offerta già prenotata e non più disponibile";}
 	}
 
+	//RIMOZIONE PRENOTAZIONE
+	if(isset($_POST['remove_off'])) {
+		$idOffer=$_POST['idOffer'];
+		$conn->remove_prenotation($idOffer);
+		header('Location: prenotazioni.php');
+	}
+
 
 ?>

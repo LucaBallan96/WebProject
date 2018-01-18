@@ -1,5 +1,6 @@
 <?php
 	include 'DBConnection.php';
+	$conn=new DBConnection();
 ?>
 
 <!DOCTYPE html>
@@ -80,44 +81,18 @@
 
 
 	<div id="div_container_three">
-	<a href="#"id="div_two" class="div_group">
-		<div id="div_title_two" class="div_title_group">
-			<div class="title_div">Ultimo Articolo</div>
-		</div>
-		<div class="div_container_img">
-			<img src="images/home2.jpg"/>
-			<div class="div_overlay">
-				<div class="div_text_inside_group">Aggiornamento dinamico in php</div>
-			</div>
-		</div>
+	<?php
+		$conn->get_last_article();
+	?>
 
-	</a>
+	<?php
+		$conn->get_last_project();
+	?>
 
-	<a href="#"id="div_three" class="div_group">
-		<div id="div_title_three"class="div_title_group">
-				<div class="title_div">Ultimo Progetto</div>
-		</div>
-		<div class="div_container_img">
-			<img src="images/home2.jpg"/>
-			<div class="div_overlay">
-			
-				<div class="div_text_inside_group">Aggiornamento dinamico in php</div>
-			</div>
-		</div>
-		
-	</a>
-
-	<a href="#"id="div_four" class="div_group">
-		<div id="div_title_four"class="div_title_group">
-				<div class="title_div">Lavora con Noi</div>
-		</div>
-		<div class="div_container_img">
-			<img src="images/home2.jpg"/>
-			<div class="div_overlay">
-				<div class="div_text_inside_group">Aggiornamento dinamico in php</div>
-			</div>
-		</div>
-	</a>
+	<?php
+		$conn->get_last_offer();
+	?>
+	
 	</div>
 
 
@@ -181,7 +156,7 @@
 			e proseguita poi per mano del padre degli stessi, fino all'avvicendamento generazionale.</br></br></br></br>
 			Nel corso di <i>tre generazioni</i> l'azienda si è continuamente distinta per la professionalità dimostrata, puntanto sempre sulla qualità delle opere fornite, nel rispetto delle condizioni e dei tempi stabiliti.
 			Grazie all'impegno di attrezzature e macchinari altamente specializzati e al supporto di uno staff tecnico specializzato, sa offrire un servizio che le permette di primeggiare nel settore.
-			La <a href="https://it.wikipedia.org/wiki/Norme_della_serie_ISO_9000" class="link_generico" target="_blanck">certificazione di qualità ISO</a>, l'<a href="https://it.wikipedia.org/wiki/Societ%C3%A0_organismi_di_attestazione" class="link_generico" target="_black">attestazione SOA</a> e
+			La <a href="https://it.wikipedia.org/wiki/Norme_della_serie_ISO_9000" class="link_generico" target="_blanck">certificazione di qualità ISO</a>, l'<a href="https://it.wikipedia.org/wiki/Societ%C3%A0_organismi_di_attestazione" class="link_generico" target="_blanck">attestazione SOA</a> e
 			l'<a href="https://it.wikipedia.org/wiki/OHSAS_18001" class="link_generico" target="_blanck">attestazione OHSAS</a> sono la conferma dell'impegno profuso al raggiungimento di livelli costruttivi all'avanguardia, che consentono di realizzare opere che vanno dai grandi complessi residenziali e industriali, ai
 			piccoli lavori civili che tuttavia contribuiscono ad accrescere l'esperienza, fondamentale per un continuo miglioramento professionale.</br></br></br></br>
 			La continua <i>qualificazione</i> e l'<i>incremento dell'organico </i>permettono inoltre di rendere l'azienda sempre più <i>flessibile e attenta </i> alle esigenze, ai particolari e agli standard richiesti dalla committenza. 
