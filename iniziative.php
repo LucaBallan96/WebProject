@@ -78,6 +78,41 @@
         
         <!--CERTIFICAZIONI-->
         <div class="title">Certificazioni</div>
+		<div class="container_certificazioni">
+				<div id="text_certificazioni"><div id="text_c">Puntualità, professionalità e qualità sono i segni di riconoscimento che <a href="index.php" class="link_generico">Costruzioni Bordignon s.r.l.</a> si è guadagnata nel corso degli anni distinguendosi sempre, grazie soprattutto ai continui investimenti in tecnologia, attrezzatura, ricerca e sviluppo e al supporto di uno staff tecnico interno specializzato e in continuo aggiornamento.</br></br>
+Con tali competenze l’azienda si immette nel mercato con grande autorità, conquistando un posto di rilievo nel settore. Al fine di soddisfare tutte le esigenze, <a href="index.php" class="link_generico">Costruzioni Bordignon s.r.l.</a> ha selezionato i settori di attività onde garantire al cliente qualunque servizio in modo autonomo e senza vincoli da terzi, ottenendo così il controllo diretto ed assoluto della qualità fornita ed una maggiore flessibilità d’intervento.</br></br>
+Sulla base degli insegnamenti e del know now di <a href="index.php" class="link_generico">Costruzioni Bordignon s.r.l.</a>, nasce nel 2013 B.G.P. GENERAL BAU Srl per garantire la stessa competenza, professionalità e vicinanza anche nell’esecuzione di opere site nell’area Altoatesina.</br></br>
+Conferma dell’alto standard qualitativo e professionale con cui le aziende si presentano nel mercato sono le certificazioni del sistema di qualità rispondente alle norme <a href="https://www.uni.com/" class="link_generico" target="_blanck">UNI EN ISO</a> 9001:2008, le Certificazioni <a href="https://it.wikipedia.org/wiki/Societ%C3%A0_organismi_di_attestazione" class="link_generico" target="_blanck">SOA</a> e la certificazione<a href="https://it.wikipedia.org/wiki/OHSAS_18001" class="link_generico" target="_blanck"> OHSAS</a> 18001, implementazione del Sistema di Gestione per la Salute e Sicurezza sul Lavoro ottenuta nel 2012.</div></div>
+
+				<div id="image_certificazioni"></div>
+
+				<div id="storia"class="subtitle">Certificazioni Costruzioni Bordignon S.r.l.</div>
+				<div class="divisor"></div>
+				<div id="container_img_cb">
+					<div class="cont_img_cert"><a class="a_img"href="images/iso.jpeg"><img class="img_certification"src="images/iso.jpeg" title="iso"/></a></div>
+					<div class="cont_img_cert"><a class="a_img"href="images/ohsas.jpeg"><img class="img_certification"src="images/ohsas.jpeg"title="ohsas"/></a></div>
+					<div class="cont_img_cert"><a class="a_img"href="images/soa.jpeg"><img class="img_certification"src="images/soa.jpeg"title="soa"/></a></div>
+				</div>
+				<div id="cont_cert"><div id="text_cert">UNI EN ISO 9001:2015 – Sistema di gestione per la qualità – Certificato n° FM591568</br></br>
+OHSAS 18001:2007 – Sistema di gestione per la salute e la sicurezza  – Certificato n° OHS 591569</br></br>
+ATTESTAZIONE SOA – Certificato n° 48249/10/00</br></br>
+<div id="storia"class="subtitle">Categorie SOA</div>
+				<div class="divisor"></div>
+OG1 Edifici civili e industriali. – Classifica VIII°</br></br>
+OG2 Restauro e manutenzione dei beni immobili. – Classifica III° Bis</br></br>
+OG3 Strade, autostrade, ponti, viadotti, ferrovie, metropolitane. – Classifica V°</br></br>
+OG6 Acquedotti, gasdotti, oleodotti, opere di irrigazione e di evacuazione. – Classifica V°</br></br>
+OG8 Opere fluviali, di difesa, di sistemazione idraulica e di bonifica. – Classifica II°</br></br>
+OG11 Impianti tecnologici. – Classifica I°</br></br>
+OS6 Finiture di opere generali in materiali lignei, plastici, metallici e vetrosi. – Classifica V°</br></br>
+OS7 Finitura di opere generali di natura edile. – Classifica II°</br></br>
+OS8 Opere di impermeabilizzazione. – Classifica II°</br></br>
+OS23 Demolizioni di opere. – Classifica I°</br></br>
+OS28 Impianti termici e di condizionamento. – Classifica II°</br></br>
+OS30 Impianti interni elettrici, telefonici, radiotelefonici e televisivi. – Classifica III°</br></br></div></div>
+			
+		
+		</div>
      
               <!--CONTATTI-->
 

@@ -26,7 +26,10 @@ h2{
     transition: 0.7s;
     transition: 1s ease;
 }
-
+.link_generico{
+    
+    color: rgb(8, 8, 136);
+}
 .container_img{
     width: 250px;
     height: 200px;
@@ -56,6 +59,78 @@ h2{
     width: 1000px;
     margin: auto;
    
+}
+/*CERTIFICAZIONI*/
+#text_certificazioni{
+    width: 50%;
+    padding: 20px;
+    color:rgb(98, 105, 146);
+    float: left;
+}
+#text_c{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+}
+#image_certificazioni{
+    background-image: url("../../images/sicurezza.jpeg");
+    background-attachment: fixed;
+    background-size: 150%; 
+    background-position-y: 50%;
+    float: left;
+    width: 50%;
+    height: 440px;
+}
+.subtitle{
+    color: rgba(0, 73, 169, 0.888);
+    font-size: 24px;
+    padding-top: 60px;
+    padding-left: 40px;
+    clear: both;
+    
+}
+.divisor{
+    
+    padding-top: 40px;
+    margin-left: 40px; 
+    margin-right: 40px; 
+    border-top: 1px solid  #008cff3d;
+   
+}
+#container_img_cb{
+    
+    width: 30%;
+    height: 800px;
+    float: left;
+    text-align: center;
+}
+.cont_img_cert{
+    width: 100%;
+    text-align: right;
+    padding-right: 40px;
+}
+.img_certification{
+    height: 200px;
+    margin-bottom: 20px; 
+    transition: 0.8s;
+    
+}
+#cont_cert{
+    float: left;
+    width: 70%;
+}
+#text_cert{
+    display: table;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color:rgb(98, 105, 146);
+    font-size: 14px;
+}
+.img_certification:hover{
+    box-shadow: 5px 10px 18px #888888;
+    
 }
 
 /*CONTATTI*/

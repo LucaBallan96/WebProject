@@ -39,7 +39,86 @@
 				echo "<p>Nessun progetto disponibile</p>";
 			}
 		}
+		// ULTIMO ARTICOLO
+		public function get_last_article() {
+			$sql = "SELECT * FROM webproject.stampa ORDER BY date DESC";
+			$result = $this->conn->query($sql);
+			if ($result->num_rows > 0) {
+				$row = $result->fetch_assoc();
+				echo "<a href='articolo.php?id=".$row['id']."'id='div_two' class='div_group'>
+				<div id='div_title_two' class='div_title_group'>
+					<div class='title_div'>Ultimo Articolo</div>
+				</div>
+				<div class='div_container_img'>
+					<img src='images/".$row['image']."'/>
+					<div class='div_overlay'>
+						<div class='div_text_inside_group'>".$row[title]."</div>
+					</div>
+				</div>
+		
+			</a>";
+			}
+		}
+		// ULTIMO PROGETTO
+		public function get_last_project() {
+			$sql = "SELECT * FROM webproject.progetti ORDER BY date_begin DESC";
+			$result = $this->conn->query($sql);
+			if ($result->num_rows > 0) {
+				$row = $result->fetch_assoc();
+				echo "<a href='info_progetto.php?numero=".$row['id']."'id='div_three' class='div_group'>
+				<div id='div_title_three'class='div_title_group'>
+						<div class='title_div'>Ultimo Progetto</div>
+				</div>
+				<div class='div_container_img'>
+					<img src='images/".$row['image']."'/>
+					<div class='div_overlay'>
+					
+						<div class='div_text_inside_group'>".$row['name']."</div>
+					</div>
+				</div>
+				
+			</a>";
+			}
+		}
+		// ULTIMA OFFERTA
+		public function get_last_offer() {
 
+			if(isset($_SESSION['username']))
+				$username=$_SESSION['username'];
+			else $username="";
+
+			//query random 
+			$sql = "SELECT * FROM webproject.offerte WHERE offerte.id != ALL (SELECT idOffer FROM webproject.form_offerte WHERE user='".$username."') ORDER BY RAND() LIMIT 1;";
+			$result = $this->conn->query($sql);
+			if ($result->num_rows > 0) {
+				$row = $result->fetch_assoc();
+				echo "<a href='lavoro.php#".$row['id']."'id='div_four' class='div_group'>
+				<div id='div_title_four'class='div_title_group'>
+						<div class='title_div'>Offerte</div>
+				</div>
+				<div  class='div_container_img'>
+					<img id='img_offer' src='images/".$row['image']."'/>
+					<div class='div_overlay'>
+						<div class='div_text_inside_group'>".$row['branch']."</br></br>".$row['role']."</br></br>".$row['contract']."</div>
+					</div>
+				</div>
+			</a>";
+			}
+			else{
+				echo "<a href='#'id='div_four' class='div_group'>
+				<div id='div_title_four'class='div_title_group'>
+						<div class='title_div'>Sedi</div>
+				</div>
+				<div class='div_container_img'>
+					<img src='images/sede.png'/>
+					<div class='div_overlay'>
+						<div class='div_text_inside_group'>Scopri dove siamo</div>
+					</div>
+				</div>
+			</a>";
+
+			}
+		}
 		// INFO PROGETTO
 		public function get_info_progetto($progetto) {
 			$sql = "SELECT * FROM webproject.progetti WHERE id='$progetto'";
@@ -58,7 +137,7 @@
 						<div id='div_desc'>".$row['description']."</div>";
 			}
 		}
-
+		
 		// PRENOTAZIONI
 		public function get_prenotation(){
 			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id = ANY (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$_SESSION['username']."')";
@@ -83,19 +162,33 @@
 									$row1=$result1->fetch_assoc();
 									echo"Data colloquio - ".$row1['date']."
 									</div>
+									
 							</div>
 							
-								
+							<form action='form_control.php' method='post'>
+							<input id='subsub' type='submit' value='Rimuovi' name='remove_off'> 
+							<input class='identity' type='text' name='idOffer' value='".$row['id']."'/>
+						</form>
 						</label>
+
+						
+						
 						<div class='divisor'></div>";
 					$count=$count+1;
 				}
 			}
 			else{
 				echo "
-					<p class='exception_offer' align='center'>Nessun offerta disponibile</p>
+					<p class='exception_offer' align='center'>Nessun offerta prenotata</p>
 					<div class='divisor'></div>";
 			}
+		}
+		//RIMOZIONE PRENOTAZIONE
+		public function remove_prenotation($idOffer){
+			$user=$_SESSION['username'];
+			$sql = "DELETE FROM webproject.form_offerte WHERE user='$user'and idOffer='$idOffer'";
+			$result = $this->conn->query($sql);
+			
 		}
 		//ARTICOLI
 
@@ -193,8 +286,8 @@
 
 					echo "
 					<div class='divisor'></div>
-					<input id='of".$count."' type='checkbox' class='pro_select' />
-						<label class='label_offer' for='of".$count."'>
+					<input id='".$row['id']."' type='checkbox' class='pro_select' />
+						<label class='label_offer' for='".$row['id']."'>
 						
 						
 						<div class='div_img_offer'><img class='img_offer'src='images/".$row['image']."'></div>
