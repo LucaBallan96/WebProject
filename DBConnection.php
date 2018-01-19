@@ -43,7 +43,7 @@
 		}
 		// ULTIMO ARTICOLO
 		public function get_last_article() {
-			$sql = "SELECT * FROM webproject.stampa ORDER BY date DESC";
+			$sql = "SELECT * FROM webproject.articoli ORDER BY date DESC";
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
@@ -54,7 +54,7 @@
 				<div class='div_container_img'>
 					<img src='images/".$row['image']."'/>
 					<div class='div_overlay'>
-						<div class='div_text_inside_group'>".$row[title]."</div>
+						<div class='div_text_inside_group'>".$row['title']."</div>
 					</div>
 				</div>
 		
@@ -63,7 +63,7 @@
 		}
 		// ULTIMO PROGETTO
 		public function get_last_project() {
-			$sql = "SELECT * FROM webproject.progetti ORDER BY date_begin DESC";
+			$sql = "SELECT * FROM webproject.progetti ORDER BY begin DESC";
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
@@ -99,7 +99,7 @@
 						<div class='title_div'>Offerte</div>
 				</div>
 				<div  class='div_container_img'>
-					<img id='img_offer' src='images/".$row['image']."'/>
+					<img id='img_offer' src='images/".$row['role'].".png'/>
 					<div class='div_overlay'>
 						<div class='div_text_inside_group'>".$row['branch']."</br></br>".$row['role']."</br></br>".$row['contract']."</div>
 					</div>
@@ -107,9 +107,9 @@
 			</a>";
 			}
 			else{
-				echo "<a href='#'id='div_four' class='div_group'>
+				echo "<a href='azienda.php'id='div_four' class='div_group'>
 				<div id='div_title_four'class='div_title_group'>
-						<div class='title_div'>Sedi</div>
+						<div class='title_div'>Azienda</div>
 				</div>
 				<div class='div_container_img'>
 					<img src='images/sede.png'/>
@@ -154,7 +154,7 @@
 					
 					echo "<input id='of".$count."' type='checkbox' class='pro_select' />
 						<label class='label_offer' for='of".$count."'>
-							<div class='div_img_offer'><img class='img_offer'src='images/".$row['image']."'></div>
+							<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png'></div>
 							<div class='div_information'>
 								<div class='text'>
 									".$row['role']." - ".$row['branch']." - ".$row['contract']."</br></br>
@@ -197,7 +197,7 @@
 		//ARTICOLI
 
 		public function get_articles(){
-			$sql="SELECT * FROM webproject.stampa";
+			$sql="SELECT * FROM webproject.articoli";
 			$result = $this->conn->query($sql);
 			if($result->num_rows>0){
 				while($row=$result->fetch_assoc()){
@@ -226,7 +226,7 @@
 
 		public function get_article(){
 			$id=$_GET['id'];
-			$sql="SELECT * FROM webproject.stampa WHERE id='".$id."'";
+			$sql="SELECT * FROM webproject.articoli WHERE id='".$id."'";
 			$result = $this->conn->query($sql);
 			if($result->num_rows>0){
 				while($row=$result->fetch_assoc()){
@@ -237,13 +237,15 @@
 						Editore - ".$row['house']." &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp Data - ".$row['date']."
 					</div>
 					<div class='divisor'></div>
+						
 					<div class='container_text_img'>
+					<div class='container_img'><img src='images/".$row['image']."'/></div>
 						<div class='text'>
 							".$row['text']."
 							<div class='div_author'>Autore - ".$row['author']."</div>
 						</div>
 						
-						<div class='container_img'><img src='images/".$row['image']."'/></div>		
+							
 					</div>";
 				}
 			}
@@ -294,7 +296,7 @@
 						<label class='label_offer' for='".$row['id']."'>
 						
 						
-						<div class='div_img_offer'><img class='img_offer'src='images/".$row['image']."'></div>
+						<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png'></div>
 							<div class='div_information'>
 								<div class='text'>
 									".$row['role']." - ".$row['branch']." - ".$row['contract']."</br></br>
