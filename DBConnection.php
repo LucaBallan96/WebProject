@@ -1,5 +1,3 @@
-<script type="text/javascript" src="script/menuScript.js"></script>
-
 <?php
 	session_start();
 
@@ -767,6 +765,71 @@
 			}
 			$sql = "INSERT INTO webproject.articoli VALUES ('$id','$da','$au','$ho','$ti','$su','$te','$im')";
 			$result = $this->conn->query($sql);
+		}
+
+		// OFFERTE ADMIN
+		public function get_offerte_admin() {
+			$sql = "SELECT DISTINCT * FROM webproject.offerte";
+			$result = $this->conn->query($sql);
+			if ($result->num_rows > 0) {
+				$count=1;
+				while($row = $result->fetch_assoc()) {
+					echo "";
+					$count++;
+				}
+			} else
+				echo "<p>Nessuna offerta disponibile</p>";
+		}
+
+		public function remove_offerta($off) {
+			$sql = "DELETE FROM webproject.offerte WHERE id='$off'";
+			$result = $this->conn->query($sql);
+		}
+		
+		public function modify_offerta() {
+			$id=$_POST['modify_offer'];
+			$sql = "DELETE FROM webproject.offerte WHERE id='$id'";
+			$result = $this->conn->query($sql);
+			$sql = "DELETE FROM webproject.date_offerte WHERE id='$id'";
+			$result = $this->conn->query($sql);
+			$this->insert_offerta();
+		}
+
+		public function insert_offerta() {
+			$br=$_POST['branch'];
+			$ro=$_POST['role'];
+			$co=$_POST['contract'];
+			$me=$_POST['message'];
+			$d1=$_POST['date1'];
+			$d2=$_POST['date2'];
+			$d3=$_POST['date3'];
+			$d4=$_POST['date4'];
+			if(isset($_POST['modify_offer'])) // quando avviene una modifica di un'offerta esistente
+				$id=$_POST['modify_offer'];
+			else { // quando avviene l'inserimento di una nuova offerta
+				$i=1;
+				$found=false;
+				while(!$found) {
+					$sql = "SELECT id FROM webproject.offerte WHERE id='$i'";
+					$result = $this->conn->query($sql);
+					if($result->num_rows > 0)
+						$i++;
+					else {
+						$id=$i;
+						$found=true;
+					}
+				}
+			}
+			$sql = "INSERT INTO webproject.offerte VALUES ('$id','$br','$ro','$co','$me')";
+			$result = $this->conn->query($sql);
+			for($i=1; $i<5; $i++) {
+				$d='date'.$i;
+				$di=$_POST[$d];
+				if($di!='') {
+					$sql = "INSERT INTO webproject.date_offerte VALUES ('$id','$di','2')";
+					$result = $this->conn->query($sql);
+				}
+			}
 		}
 
 		// VALIDAZIONE CREDENZIALI

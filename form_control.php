@@ -90,6 +90,12 @@
 		header('Location: admin.php#articoli');
 	}
 
+	// RIMOZIONE OFFERTA
+	if(isset($_POST['remove_offer'])) {
+		$conn->remove_offerta($_POST['remove_offer']);
+		header('Location: admin.php#offerte');
+	}
+
 	// MODIFICA PROGETTO
 	if(isset($_POST['modify_proj'])) {
 		$conn->modify_progetto();
@@ -106,6 +112,12 @@
 	if(isset($_POST['modify_article'])) {
 		$conn->modify_articolo();
 		header('Location: admin.php#articoli');
+	}
+
+	// MODIFICA OFFERTA
+	if(isset($_POST['modify_offer'])) {
+		$conn->modify_offerta();
+		header('Location: admin.php#offerte');
 	}
 
 	// NUOVO PROGETTO
@@ -126,7 +138,13 @@
 		header('Location: admin.php#articoli');
 	}
 
-	//INSERT CANDIDATO
+	// NUOVA OFFERTA
+	if(isset($_POST['new_off'])) {
+		$conn->insert_offerta();
+		header('Location: admin.php#offerte');
+	}
+
+	// INSERT CANDIDATO
 	if(isset($_POST['candidate'])) {
 		if($conn->insert_candidate()){
 			header('Location: lavoro.php');
@@ -136,12 +154,11 @@
 			offerta già prenotata e non più disponibile";}
 	}
 
-	//RIMOZIONE PRENOTAZIONE
+	// RIMOZIONE PRENOTAZIONE
 	if(isset($_POST['remove_off'])) {
 		$idOffer=$_POST['idOffer'];
 		$conn->remove_prenotation($idOffer);
 		header('Location: prenotazioni.php');
 	}
-
 
 ?>

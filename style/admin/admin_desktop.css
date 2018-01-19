@@ -868,26 +868,77 @@ body {
 
 /* LAVORO */
 
-.offer_div {
-    border: 1px solid orangered;
+.mod_off_form {
     width: 800px;
     height: 250px;
     margin: auto;
     margin-bottom: 3em;
-    background-color: #0099ffa8; 
+    background-color: #0099ffa8;
+    color: white;
 }
 .mod_off_info, .mod_off_dates, .mod_off_mex {
-    border: 1px solid green;
-    width: calc(33.3% - 20px);
+    border: none;
+    width: calc(33.3% - 33px);
     height: 100%;
     float: left;
 }
-.mod_off_btns {
-    border: 1px solid green;
-    width: 60px;
-    height: 100%;
-    float: left;
+.mod_off_info {
+    border-right: 1px solid white;
 }
+.mod_off_mex {
+    border-left: 1px solid white;
+    padding: 0.5em 2em 1em 2em;
+}
+.mod_off_data {
+    height: 33.3%;
+    padding: 0.5em 1em;
+}
+.mod_off_data input, .mod_off_data select {
+    display: block;
+    margin-top: 0.8em;
+    width: 80%;
+    padding: 0.3em;
+    color: #696969;
+}
+.mod_off_dates legend {
+    height: 2.5em;
+    padding: 0.5em 1.5em;
+}
+.mod_off_dates div {
+    height: calc(25% - 0.625em);
+    padding: 0.5em 2em 0.5 2em;
+}
+.mod_off_date {
+    float: right;
+    color: #696969;
+}
+.mod_off_text {
+    width: 100%;
+    height: 85%;
+    margin-top: 1em;
+    resize: none;
+    color: #696969;
+}
+.mod_off_btn {
+    border: none;
+    outline: none;
+    width: 79px;
+    height: calc(33% - 20px);
+    margin: 10px;
+    float: left;
+    background-color: #83cdff;
+    color: blue;
+    font-size: 1em;
+}
+.mod_off_btn:hover {
+    background-color: #008cff7a;
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+
+
+
 
 
 .new_off_info {
