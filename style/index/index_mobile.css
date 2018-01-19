@@ -12,9 +12,10 @@
 
 
 #div_one{
-    position: relative;
+ 
     width: 100%;
     height: 400px;
+    background-color: rgb(241, 245, 250);
 }
 #img_logo{
     position: relative;
@@ -29,20 +30,30 @@
     width: 100%;
     height: 845px;
     margin: auto;
+    overflow: hidden;
 }
 .div_group{
-    
-    float: left;
-    margin: 15px;
-    height: 250px;
-    width: 90%;
+    display: table;
+    margin: auto;
+    margin-top: 20px;
+    height: 240px;
+    width: 80%;
     text-decoration: none;
+    transition: 0.8s ease;
+    border: 1px solid rgb(172, 212, 245);
+    box-shadow: 2px 5px 5px #888888;
 }
+.div_group:hover{
+    box-shadow: 5px 10px 18px #888888;
+    
+}
+
 .div_title_group{
     background-color: #0099ffa8;
     position: relative;
     height: 40px;
     width: 100%;
+    margin: auto;
    
 }
 .title_div{
@@ -57,16 +68,21 @@
 .div_container_img{
     position: relative;
     width: 100%;
-    height: calc(100% - 40px);
+    height: 200px;
     overflow: hidden;
+    margin: auto;
 }
+
 .div_container_img img{
     transition: .8s ease;
     position: absolute;
-    width: 110%;
+    width: 105%;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+#img_offer{
+    width: 200px;
 }
 .div_overlay{
     position: relative;
@@ -75,12 +91,13 @@
     width: 100%;
     height: calc(100% - 40px);
 }
+
 .div_group:hover .div_overlay{
     opacity: 1;
 } 
 .div_group:hover .div_container_img img{
     opacity: 0.3;
-    width: 105%;
+    width: 100%;
 } 
 .div_group:hover .title_div{
     text-decoration: underline;
@@ -110,6 +127,7 @@
     background-size: 300%;
     width: 100%;
     height: 250px;
+    clear: both;
 }
 #div_slogan{
     width: 100%;

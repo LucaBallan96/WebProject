@@ -147,10 +147,10 @@
 				</div>
 	<div id="div_storia">
 		
-		<a href="#" id="div_button_storia" >
+		<a href="azienda.php#storia" id="div_button_storia" >
 			<div class="title_div">Scopri di più</div> 
 		</a>
-		<h1 id="h1_storia">LA NOSTRA STORIA</h1>
+		<div id="h1_storia">La Nostra Storia</div>
 		<div id="div_text_storia">
 			La <a href="index.php" class="link_generico">Costruzioni Bordignon s.r.l.</a> nasce nel 1998, sulle orme della tradizione iniziata nei primi anni del 1900 da nonno degli attuali titolari 
 			e proseguita poi per mano del padre degli stessi, fino all'avvicendamento generazionale.</br></br></br></br>
