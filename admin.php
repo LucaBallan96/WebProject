@@ -93,24 +93,24 @@
 				<div class='project_info'>
 					<div class='new_proj_data'>
 						<input class='identity' type='text' name='new_proj' value='new_proj'/>
-						<div>Nome:<input type='text' name='name' required/></div>
+						<div>Nome:<input type='text' name='name' placeholder='Nome' required/></div>
 						<div>Immagine:<input class='new_proj_image' type='file' name='image' accept='.jpg, .jpeg, .png' required/></div>
 						<div>Stato:
 							<label><input type='radio' name='status' value='In corso' checked/> In corso</label>
 							<label><input type='radio' name='status' value='Terminato'/> Terminato</label>
 						</div>
-						<div>Committente:<input type='text' name='client'/></div>
-						<div>Tipologia:<input type='text' name='type'/></div>
-						<div>Luogo:<input type='text' name='location'/></div>
-						<div>Direttore dei lavori:<input type='text' name='director'/></div>
+						<div>Committente:<input type='text' name='client' placeholder='Committente'/></div>
+						<div>Tipologia:<input type='text' name='type' placeholder='Tipo di opera'/></div>
+						<div>Luogo:<input type='text' name='location' placeholder='Paese o città'/></div>
+						<div>Direttore dei lavori:<input type='text' name='director' placeholder='Direttore'/></div>
 						<div>Data di inizio:<input type='date' name='begin' min='1900-01-01' max='2100-01-01' required/></div>
 					</div>
 					<div class='new_proj_description'>
 						Descrizione:</br>
-						<textarea class='new_proj_desc' name='description' form='new_proj_form'></textarea>
+						<textarea class='new_proj_desc' name='description' form='new_proj_form' placeholder='Descrizione del progetto'></textarea>
 					</div>
 				</div>
-				<div class='proj_form_btns'>
+				<div class='new_proj_btns'>
 					<input class='submit_btn' type='submit' value='Salva progetto'/>
 					<input class='reset_btn' type='reset' value='Reset'/>
 				</div>

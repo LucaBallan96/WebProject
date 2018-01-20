@@ -458,7 +458,7 @@
 										<div>Direttore dei lavori:<input type='text' name='director' value='".$row['director']."'/></div>
 										<div>Data di inizio:<input type='date' name='begin' min='1900-01-01' max='2100-01-01' value='".$row['begin']."' required/></div>
 									</div>
-									<textarea class='project_description' name='description' form='project_select".$count."_form'>".$row['description']."</textarea>
+									<textarea class='project_description' name='description' form='project_select".$count."_form' placeholder='Descrizione del progetto'>".$row['description']."</textarea>
 								</div>
 								<div class='proj_form_btns'>
 									<input class='submit_btn' type='submit' value='Salva modifiche'/>

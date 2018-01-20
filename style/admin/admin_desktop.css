@@ -549,6 +549,7 @@ body {
     width: 100%;
     height: calc(100% - 5em);
     margin-top: 2em;
+    padding: 0.5em;
     resize: none;
     color: #696969;
     line-height: 1.5em;
@@ -914,7 +915,7 @@ body {
 }
 .mod_off_dates div {
     height: calc(25% - 0.625em);
-    padding: 0.5em 2em 0.5em 2em;
+    padding: 0.5em 2em;
 }
 .mod_off_date {
     float: right;
@@ -943,18 +944,17 @@ body {
     position: absolute;
     right: 0;
     top: 50%;
-    text-align: center;
 }
 .cand_off_btn {
     position: absolute;
     right: 0;
     top: 75%;
-    text-align: center;
 }
 .rem_off_btn div, .cand_off_btn div {
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
+    text-align: center;
 }
 .mod_off_btn:hover, .rem_off_btn:hover, .rem_off_form_btn:hover, .cand_off_btn:hover {
     background-color: #008cff7a;
