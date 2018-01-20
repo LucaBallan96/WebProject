@@ -61,7 +61,7 @@ body {
     width: 400px;
     height: 60px;
     background-color: #0077ff;
-    z-index: 2;
+    z-index: 4;
     text-align: center;
     border-radius: 10px;
     overflow: hidden;
@@ -238,7 +238,7 @@ body {
     left: initial;
     right: 0;
     margin-top: 0;
-    z-index: 2;
+    z-index: 3;
     background-image: url("../../images/close.png");
 }
 #new_imp_control:checked + label ~ #new_proj_btn {
@@ -269,7 +269,7 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
     background-color: #0099ffa8;
     transition: 0.5s;
     overflow-y: scroll;
@@ -282,7 +282,7 @@ body {
 }
 .modify_control:checked + label {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     background-image: url("../../images/close.png");
 }
 .modify_form, #new_imp_form, #new_proj_form, #new_art_form, #new_off_form {
@@ -367,7 +367,7 @@ body {
 .remove_control:checked + label {
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     background-image: url("../../images/close.png");
 }
 .remove_form {
@@ -635,22 +635,22 @@ body {
 .article_text::-webkit-scrollbar {
     display: none;
 }
-.mod_art_control, .rem_art_control {
+.mod_art_control, .rem_art_control, .rem_off_control, .cand_off_control {
     display: none;
 }
-.mod_art_form, .rem_art_form {
+.mod_art_form, .rem_art_form, .rem_off_form, .cand_off_div {
     position: absolute;
     top: 0;
     background-color: #83cdff;
     color: black;
     width: 100%;
-    height: 600px;
+    height: 100%;
     opacity: 0;
     z-index: -1;
     overflow: hidden;
     transition: 0.5s;
 }
-.mod_art_control:checked + label ~ .mod_art_form, .rem_art_control:checked + label ~ .rem_art_form {
+.mod_art_control:checked + label ~ .mod_art_form, .rem_art_control:checked + label ~ .rem_art_form, .rem_off_control:checked + label ~ .rem_off_form, .cand_off_control:checked + label ~ .cand_off_div {
     opacity: 1;
     z-index: 0;
 }
@@ -668,6 +668,7 @@ body {
     z-index: 1;
     background-image: url("../../images/close.png");
     background-size: 40px;
+    font-size: 0;
 }
 .article_info input {
     float: right;
@@ -868,13 +869,20 @@ body {
 
 /* LAVORO */
 
-.mod_off_form {
+.offer_div {
+    border: 1px solid #0077ff;
+    position: relative;
     width: 800px;
-    height: 250px;
+    height: auto;
     margin: auto;
     margin-bottom: 3em;
     background-color: #0099ffa8;
+}
+.mod_off_form {
+    width: 100%;
+    height: 250px;
     color: white;
+    transition: 0.5s;
 }
 .mod_off_info, .mod_off_dates, .mod_off_mex {
     border: none;
@@ -906,7 +914,7 @@ body {
 }
 .mod_off_dates div {
     height: calc(25% - 0.625em);
-    padding: 0.5em 2em 0.5 2em;
+    padding: 0.5em 2em 0.5em 2em;
 }
 .mod_off_date {
     float: right;
@@ -915,32 +923,108 @@ body {
 .mod_off_text {
     width: 100%;
     height: 85%;
+    padding: 0.5em;
     margin-top: 1em;
     resize: none;
     color: #696969;
 }
-.mod_off_btn {
+.mod_off_btn, .rem_off_btn, .cand_off_btn {
     border: none;
     outline: none;
-    width: 79px;
-    height: calc(33% - 20px);
-    margin: 10px;
+    width: 89px;
+    height: calc(25% - 20px);
+    margin: 10px 10px 10px 0;
     float: left;
     background-color: #83cdff;
     color: blue;
-    font-size: 1em;
+    font-size: 0.9em;
 }
-.mod_off_btn:hover {
+.rem_off_btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    text-align: center;
+}
+.cand_off_btn {
+    position: absolute;
+    right: 0;
+    top: 75%;
+    text-align: center;
+}
+.rem_off_btn div, .cand_off_btn div {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.mod_off_btn:hover, .rem_off_btn:hover, .rem_off_form_btn:hover, .cand_off_btn:hover {
     background-color: #008cff7a;
     text-decoration: underline;
     cursor: pointer;
     color: white;
 }
-
-
-
-
-
+.rem_off_form div {
+    padding: 5em 0 3em;
+    text-align: center;
+}
+.rem_off_form_btn {
+    display: block;
+    border: none;
+    outline: none;
+    padding: 1em;
+    margin: auto;
+    background-color: #008cff;
+    color: white;
+}
+.rem_off_control:checked + .rem_off_btn, .cand_off_control:checked + .cand_off_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../images/close.png");
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    font-size: 0;
+}
+.rem_off_control:checked ~ .cand_off_btn {
+    z-index: -1;
+}
+.cand_off_control:checked ~ .mod_off_form {
+    height: 400px;
+}
+.cand_off_div {
+    overflow-y: scroll;
+}
+.cand_div {
+    width: 350px;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 33px;
+    float: left;
+    background-color: white;
+    border: 1px solid #0077ff;
+    overflow-y: scroll;
+}
+.cand_div::-webkit-scrollbar {
+    display: none;
+}
+.cand_personal_info, .cand_general_info {
+    height: 100%;
+    float: left;
+    color: #696969;
+}
+.cand_personal_info {
+    width: 40%;
+    padding: 0.5em;
+}
+.cand_general_info {
+    width: 60%;
+    padding: 0.5em 1em;
+    border-left: 1px solid #83cdff;
+}
 .new_off_info {
     width: 100%;
     height: 14.2%;

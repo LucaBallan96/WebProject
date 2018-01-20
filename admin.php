@@ -175,7 +175,7 @@
 					Descrizione:<textarea class='new_off_mex' form='new_off_form' name='message' placeholder='Inserisci il messaggio'></textarea>
 				</div>
 				<div class='new_off_btns'>
-					<input class='submit_btn' type='submit' value='Salva articolo'/>
+					<input class='submit_btn' type='submit' value='Salva offerta'/>
 					<input class='reset_btn' type='reset' value='Reset'/>
 				</div>
 			</form>
@@ -216,53 +216,9 @@
 		<!-- LAVORO -->
 		<h1 id="offerte" class="header">Offerte di lavoro e colloqui</h1>
 		<div class="container_est">
-			<form class='mod_off_form' action='form_control.php' method='post'>
-				<input class='identity' type='text' name='modify_offer' value='AAAAA'/>
-				<fieldset class='mod_off_info'>
-					<div class='mod_off_data'>Settore di impiego:<input type='text' name='branch' placeholder='Settore di impiego' value='AAAAA' required/></div>
-					<div class='mod_off_data'>Ruolo professionale:
-						<select form='mod_off_form' name='role' required/>
-  							<option value='Presidente'>Presidente</option>
-  							<option value='Vicepresidente'>Vicepresidente</option>
-  							<option value='Segretario'>Segretario</option>
-							<option value='Ingegnere'>Ingegnere</option>
-							<option value='Architetto' selected>Architetto</option>
-							<option value='Geometra'>Geometra</option>
-							<option value='Progettista'>Progettista</option>
-							<option value='Muratore'>Muratore</option>
-							<option value='Carpentiere'>Carpentiere</option>
-							<option value='Magazziniere'>Magazziniere</option>
-						</select>
-					</div>
-					<div class='mod_off_data'>Tipo di contratto:<input type='text' name='contract' placeholder='Tipo di contratto' value='AAAAA' required/></div>
-				</fieldset>
-				<fieldset class='mod_off_dates'>
-					<legend>Date colloqui:</legend>
-					<div>1°:<input class='mod_off_date' type='date' name='date1' min='' max='2100-01-01' value='2018-12-31'/></div>
-					<div>2°:<input class='mod_off_date' type='date' name='date2' min='' max='2100-01-01' value='2019-01-01'/></div>
-					<div>3°:<input class='mod_off_date' type='date' name='date3' min='' max='2100-01-01'/></div>
-					<div>4°:<input class='mod_off_date' type='date' name='date4' min='' max='2100-01-01'/></div>
-				</fieldset>
-				<div class='mod_off_mex'>
-					Descrizione:<textarea class='mod_off_text' form='mod_off_form' name='message' placeholder='Inserisci il messaggio' value='AAAAA'></textarea>
-				</div>
-				<input class='mod_off_btn' type='submit' value='Salva'/>
-				<input class='mod_off_btn' type='reset' value='Annulla'/>
-				
-				<input id='rem_off_checkbox1' class='rem_off_control' type='checkbox'/>
-				<label for='rem_off_checkbox1' class='mod_off_btn'>Elimina</label>
-				<form class='rem_off_form' action='form_control.php' method='post'>
-					<div>Vuoi eliminare definitivamente questa offerta, i colloqui e le relative prenotazioni degli utenti?</div>
-					<input class='identity' type='text' name='remove_offer' value='AAAAA'/>
-					<input type='submit' class='rem_off_form_btn' value='Elimina'/>
-				</form>
-			</form>
-			<div class='mod_off_form'>
-			</div>
-			<div class='mod_off_form'>
-			</div>
-			<div class='mod_off_form'>
-			</div>
+			<?php
+				$conn->get_offerte_admin();
+			?>
 		</div>
 
 		<!--SCRIPT-->

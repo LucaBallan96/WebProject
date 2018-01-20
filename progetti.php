@@ -68,8 +68,11 @@
         </div>
         <div id="navbar_bottom_padding"></div>
 
-        <button id="grid_view" class="view">Griglia</button>
-        <button id="list_view" class="view">Lista</button>
+        <input id="grid_control" class="view_control" type="radio" name="view_control" checked/>
+        <label id="grid_view" class="view" for="grid_control">Griglia</label>
+        <input id="list_control" class="view_control" type="radio" name="view_control"/>
+        <label id="list_view" class="view" for="list_control">Lista</label>
+        <label id="search_label">Cerca <input id="text_search" type="text" placeholder="filtra per nome o città" oninput="project_filter(this.value)"/></label>
 
 		<!-- PROGETTI -->
         <?php

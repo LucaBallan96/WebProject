@@ -1,3 +1,4 @@
+// RIDIMENSIONAMENTO PAGINA
 window.addEventListener("resize", function() {
     if(window.matchMedia("screen and (min-width:1025px)").matches) {
         document.getElementById("navbar").style.left="0%";
@@ -8,6 +9,28 @@ window.addEventListener("resize", function() {
         document.getElementById("compact_menu").style.display="block";
     }
 });
+
+// FILTRO PROGETTI
+function project_filter(str) {
+    projects=document.getElementsByClassName('grid_project');
+    for(i=0; i<projects.length; i++) {
+        names=projects[i].getElementsByClassName('grid_pr_name');
+        locs=projects[i].getElementsByClassName('grid_pr_location');
+        if(names[0].innerHTML.indexOf(str)+1 || locs[0].innerHTML.indexOf(str)+1)
+            projects[i].style.display="block";
+        else
+            projects[i].style.display="none";
+    }
+    projects=document.getElementsByClassName('list_project');
+    for(i=0; i<projects.length; i++) {
+        names=projects[i].getElementsByClassName('list_pr_name');
+        locs=projects[i].getElementsByClassName('list_pr_location');
+        if(names[0].innerHTML.indexOf(str)+1 || locs[0].innerHTML.indexOf(str)+1)
+            projects[i].style.display="block";
+        else
+            projects[i].style.display="none";
+    }
+}
 
 // DATA CORRENTE PER RESTRIZIONI INPUT
 var today = new Date();

@@ -22,19 +22,30 @@
 			if ($result->num_rows > 0) {
 				$incorso="";
 				$terminati="";
+				$incorso2="";
+				$terminati2="";
 				while($row = $result->fetch_assoc()) {
-					$stringa="<a href='info_progetto.php?numero=".$row['id']."' class='project'>
-							<img class='pr_image' src='images/".$row['image']."'/>
-							<div class='pr_name'><div>".$row['name']."</div></div>
+					$stringa="<a href='info_progetto.php?numero=".$row['id']."' class='grid_project'>
+							<img class='grid_pr_image' src='images/".$row['image']."'/>
+							<div class='grid_pr_name_div'><div class='grid_pr_name'>".$row['name']."</div></div>
+							<div class='grid_pr_location'>".$row['location']."</div>
 						</a>";
+					$stringa2="<div class='list_project'>
+							<div class='list_pr_image' style='background-image: url(images/".$row['image'].")'></div>
+							<a href='info_progetto.php?numero=".$row['id']."' class='list_pr_name_a'><div class='list_pr_name'>".$row['name']."</div><div class='list_pr_location'>".$row['location']."</div></a>
+						</div>";
 					if($row['status']=='In corso') {
 						$incorso=$incorso.$stringa;
+						$incorso2=$incorso2.$stringa2;
 					}
-					else if($row['status']=='Terminato')
+					else if($row['status']=='Terminato') {
 						$terminati=$terminati.$stringa;
+						$terminati2=$terminati2.$stringa2;
+					}
 				}
 				$result->free();
-				echo "<div id='incorso'>Progetti In Corso</div>".$incorso."<div id='terminati'>Progetti Terminati</div>".$terminati;
+				echo "<div id='container_grid'><div id='incorso'>Progetti In Corso</div>".$incorso."<div id='terminati'>Progetti Terminati</div>".$terminati."</div>";
+				echo "<div id='container_list'><div id='incorso2'>Progetti In Corso</div>".$incorso2."<div id='terminati2'>Progetti Terminati</div>".$terminati2."</div>";
 			} else {
 				echo "<p>Nessun progetto disponibile</p>";
 			}
@@ -775,8 +786,82 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$count=1;
+				$roles=array('Presidente','Vicepresidente','Segretario','Ingegnere','Architetto','Geometra','Progettista','Muratore','Carpentiere','Magazziniere');
 				while($row = $result->fetch_assoc()) {
-					echo "";
+					echo "<div class='offer_div'>
+							<input id='rem_off_checkbox".$count."' class='rem_off_control' type='checkbox'/>
+							<label for='rem_off_checkbox".$count."' class='rem_off_btn'><div>Elimina</div></label>
+							<form class='rem_off_form' action='form_control.php' method='post'>
+								<div>Vuoi eliminare definitivamente questa offerta, i colloqui e le relative prenotazioni degli utenti?</div>
+								<input class='identity' type='text' name='remove_offer' value='".$row['id']."'/>
+								<input type='submit' class='rem_off_form_btn' value='Elimina'/>
+							</form>
+							<input id='cand_off_checkbox".$count."' class='cand_off_control' type='checkbox'/>
+							<label for='cand_off_checkbox".$count."' class='cand_off_btn'><div>Candidature</div></label>
+							<div class='cand_off_div'>";
+					$idOffer=$row['id'];
+					$sql2 = "SELECT * FROM webproject.form_offerte WHERE idOffer='$idOffer'";
+					$result2 = $this->conn->query($sql2);
+					if ($result2->num_rows > 0) {
+						while($row2 = $result2->fetch_assoc()) {
+							$birthStr = date("d-m-Y", strtotime($row2['birth']));
+							$dateStr = date("d-m-Y", strtotime($row2['date']));
+							echo "<div class='cand_div'>
+									<div class='cand_personal_info'>
+										".$row2['firstname']." ".$row2['lastname']."<br/><br/>
+										".$row2['genre']."<br/><br/>
+										".$birthStr."<br/><br/>
+										".$row2['mail']."
+									</div>
+									<div class='cand_general_info'>
+										Prenotazione colloquio in data:<br/><br/>".$dateStr."<br/><br/>
+										'".$row2['message']."'
+									</div>
+								</div>";
+						}
+					}
+					else
+						echo "<p>Nessuna candidatura a questa offerta</p>";
+					echo	"</div>
+							<form id='mod_off_form".$count."' class='mod_off_form' action='form_control.php' method='post'>
+								<input class='identity' type='text' name='modify_offer' value='".$row['id']."'/>
+								<fieldset class='mod_off_info'>
+									<div class='mod_off_data'>Settore di impiego:<input type='text' name='branch' placeholder='Settore di impiego' value='".$row['branch']."' required/></div>
+									<div class='mod_off_data'>Ruolo professionale:
+									<select form='mod_off_form".$count."' name='role' required/>";
+					for($i=0; $i<count($roles); $i++) {
+						if($row['role']==$roles[$i])
+							echo "<option value='".$roles[$i]."' selected/> ".$roles[$i]."</option>";
+						else
+							echo "<option value='".$roles[$i]."'/> ".$roles[$i]."</option>";
+					}
+					echo 			"</select>
+									</div>
+									<div class='mod_off_data'>Tipo di contratto:<input type='text' name='contract' placeholder='Tipo di contratto' value='".$row['contract']."' required/></div>
+								</fieldset>
+								<fieldset class='mod_off_dates'>
+									<legend>Date colloqui:</legend>";
+					$sql1 = "SELECT * FROM webproject.date_offerte WHERE idOffer='$idOffer'";
+					$result1 = $this->conn->query($sql1);
+					$dateCount=1;
+					if ($result1->num_rows > 0) {
+						while($row1 = $result1->fetch_assoc()) {
+							echo "<div>".$dateCount."°:<input class='mod_off_date' type='date' name='date".$dateCount."' min='' max='2100-01-01' value='".$row1['date']."'/></div>";
+							$dateCount++;
+						}
+					}
+					while($dateCount<5) {
+						echo "<div>".$dateCount."°:<input class='mod_off_date' type='date' name='date".$dateCount."' min='' max='2100-01-01'/></div>";
+						$dateCount++;
+					}
+					echo 		"</fieldset>
+								<div class='mod_off_mex'>
+									Descrizione:<textarea class='mod_off_text' form='mod_off_form".$count."' name='message' placeholder='Inserisci il messaggio'>".$row['message']."</textarea>
+								</div>
+								<input class='mod_off_btn' type='submit' value='Salva'/>
+								<input class='mod_off_btn' type='reset' value='Annulla'/>
+							</form>
+						</div>";
 					$count++;
 				}
 			} else
@@ -786,14 +871,13 @@
 		public function remove_offerta($off) {
 			$sql = "DELETE FROM webproject.offerte WHERE id='$off'";
 			$result = $this->conn->query($sql);
+			$sql = "DELETE FROM webproject.date_offerte WHERE idOffer='$off'";
+			$result = $this->conn->query($sql);
 		}
 		
 		public function modify_offerta() {
 			$id=$_POST['modify_offer'];
-			$sql = "DELETE FROM webproject.offerte WHERE id='$id'";
-			$result = $this->conn->query($sql);
-			$sql = "DELETE FROM webproject.date_offerte WHERE id='$id'";
-			$result = $this->conn->query($sql);
+			$this->remove_offerta($id);
 			$this->insert_offerta();
 		}
 
