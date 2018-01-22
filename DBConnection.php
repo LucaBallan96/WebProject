@@ -156,7 +156,7 @@
 			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id = ANY (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$_SESSION['username']."')";
 			
 			$result = $this->conn->query($sql);
-			echo"<h1>Prenotazioni Effettuate</h1>";
+			echo"<div class='title' >Prenotazioni Effettuate</div>";
 			if($result->num_rows > 0){
 				$count=1;
 				while($row=$result->fetch_assoc()){
@@ -323,26 +323,26 @@
 								<input class='identity' type='text' name='id' value='".$row['id']."'/>
 								<div class='div_container_form'>
 									<div class='general_informations'>
-										Nome: <input class='in_form' type='text' name='firstname'><br></br>
-										Cognome: <input class='in_form' type='text' name='lastname'><br><br>
+									<label>Nome: <input class='in_form' type='text' name='firstname'></label><br></br>
+									<label>Cognome: <input class='in_form' type='text' name='lastname'></label><br><br>
 										<div class='div_genre'>
-											Genre: 
+											Genere: 
 											<div class='container_radio'>
-												<input type='radio' name='gender' value='male'> Male &nbsp&nbsp&nbsp
-												<input type='radio' name='gender' value='female'> Female&nbsp&nbsp&nbsp
+												<label><input type='radio' name='gender' value='male'> Uomo</label> &nbsp&nbsp&nbsp
+												<label><input type='radio' name='gender' value='female'> Donna</label>&nbsp&nbsp&nbsp
 											</div>
 										</div>
-										<br>Birthday: <input class='in_form' type='date' name='bday'><br></br>
-										Mail: <input class='in_form' type='text' name='mail'><br></br>
-										Data colloquio: <select class='date_input' name='date' >";
+										<label><br>Data di nascita: <input class='in_form' type='date' name='bday'></label><br></br>
+										<label>Mail: <input class='in_form' type='text' name='mail'></label><br></br>
+										<label>Data colloquio: <select class='date_input' name='date' >";
 										for($j=0; $j<count($dates); $j++)
 											echo"<option value='".$dates[$j]."'>".$dates[$j]."</option>";
 	
-										echo"</select><br></br>
+										echo"</select></label><br></br>
 									</div>
-									&nbsp&nbsp&nbspMessaggio:</br></br>
-									<textarea rows='11' class='textmessage' name='textmessage' form='f".$count."'> </textarea>
-									<input class='submit' type='submit' value='Submit' name='candidate'>  
+									&nbsp&nbsp&nbsp<label>Messaggio:</br></br>
+									<textarea rows='11' class='textmessage' name='textmessage' form='f".$count."'> </textarea></label>
+									<input class='submit' type='submit' value='Invia' name='candidate'>  
 								</div>	
 							</form>
 						</div>  

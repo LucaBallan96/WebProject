@@ -32,10 +32,14 @@
     height: 150px;
     padding: 15px;
     float: left;
+    overflow: hidden;
    
 }
+.date_input{
+    float: right;
+}
 .div_information{
-    height: 150px;
+    min-height: 150px;
     width: 80%;
     float: left;    
 }
