@@ -280,7 +280,7 @@
 			</div>
 			
 			<div class='title'>Lavora con Noi</div>
-	
+			<div id='container_filter'><label id='search_label'>Cerca : <input id='text_search' type='text' placeholder='filtra per ruolo, settore o contratto' oninput='offer_filter(this.value)'/></label></div>
 			";
 			$user=$_SESSION['username'];
 			
@@ -300,10 +300,10 @@
 					
 
 					echo "
-					<div class='divisor'></div>
+					
 					<input id='".$row['id']."' type='checkbox' class='pro_select' />
 						<label class='label_offer' for='".$row['id']."'>
-						
+						<div class='divisor'></div>
 						
 						<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png'></div>
 							<div class='div_information'>

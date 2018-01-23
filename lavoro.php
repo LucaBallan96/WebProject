@@ -70,7 +70,7 @@
             <button id="close" onclick="close_navbar(this)">X</button>
         </div>
 
-        
+       
 
         <?php
             $conn->get_offer();
