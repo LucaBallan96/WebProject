@@ -147,9 +147,7 @@
 				</div>
 	<div id="div_storia">
 		
-		<a href="azienda.php#storia" id="div_button_storia" >
-			<div class="title_div">Scopri di più</div> 
-		</a>
+		
 		<div id="h1_storia">La Nostra Storia</div>
 		<div id="div_text_storia">
 			La <a href="index.php" class="link_generico">Costruzioni Bordignon s.r.l.</a> nasce nel 1998, sulle orme della tradizione iniziata nei primi anni del 1900 da nonno degli attuali titolari 
@@ -160,7 +158,10 @@
 			l'<a href="https://it.wikipedia.org/wiki/OHSAS_18001" class="link_generico" target="_blanck">attestazione OHSAS</a> sono la conferma dell'impegno profuso al raggiungimento di livelli costruttivi all'avanguardia, che consentono di realizzare opere che vanno dai grandi complessi residenziali e industriali, ai
 			piccoli lavori civili che tuttavia contribuiscono ad accrescere l'esperienza, fondamentale per un continuo miglioramento professionale.</br></br></br></br>
 			La continua <i>qualificazione</i> e l'<i>incremento dell'organico </i>permettono inoltre di rendere l'azienda sempre più <i>flessibile e attenta </i> alle esigenze, ai particolari e agli standard richiesti dalla committenza. 
-	    </div>
+				<a href="azienda.php#storia" id="div_button_storia" >
+			<div id="div_scopri"><div id="title_scopri">Scopri di più</div></div> 
+		</a>
+		</div>
 		
 	</div>
 	

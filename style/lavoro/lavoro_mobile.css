@@ -76,6 +76,7 @@ input[type="checkbox"]{
     transition: 0.8s;
     width: 360px; 
     margin: auto;
+    margin-bottom: 15px;
     margin-top: 15px;
     overflow: hidden;
     box-shadow: 5px 10px 18px #888888;
@@ -166,48 +167,3 @@ input[type="checkbox"]{
     color: rgba(23, 76, 111, 0.851);
 }
 
-/*CONTATTI*/
-
-
-#div_container_contatti{
-    position: relative;
-    background-color: rgb(241, 245, 250);
-    width: 100%;
-    height: 540px;
-    padding-top: 1px;
-}
-
-
-.div_contatto{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 40px;
-    font-size: 13px;
-    color: rgb(98, 105, 146);
-    display: table;
-    text-align: center;
-}
-
-
-
-
-/* FOOT */
-
-
-#div_foot{
-    
-    width: 100%;
-    height: 60px;
-    background-color: rgb(1, 52, 110);
-}
-
-#div_text_foot{
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 10px;
-    color: rgb(181, 183, 197);
-    display: table;
-}
