@@ -529,7 +529,7 @@ body {
     display: none;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 0
     width: 70px;
     height: 50px;
     background-image: url("../../images/remove.png");
@@ -759,7 +759,7 @@ body {
 .new_art_text::-webkit-scrollbar, .new_off_text::-webkit-scrollbar {
     display: none;
 }
-.new_art_btns, .new_off_btns {
+.new_proj_btns, .new_art_btns, .new_off_btns {
     width: 100%;
     height: 100px;
     clear: both;

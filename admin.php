@@ -39,12 +39,16 @@
 		<!-- TMP ERROR -->
 		<?php
             if(isset($_GET['error'])) {
-                if($_GET['error']==4) {
-                    echo "<div id='tmp_error'>
-							<div id='error_image'></div>
-							<div id='error_text'>Nome utente non disponibile, modifica annullata</div>
-						</div>";
-				}
+                echo "<div id='tmp_error'>
+						<div id='error_image'></div>
+							<div id='error_text'>";
+				if($_GET['error']==4)
+					echo "Nome utente non disponibile, modifica annullata";
+				else if($_GET['error']==5)
+					echo "Errore nel caricamento dell'immagine";
+				else if($_GET['error']==6)
+					echo "Errore nella rimozione dell'immagine";
+				echo "</div></div>";
             }
 		?>
 
@@ -89,7 +93,7 @@
 		<input type='checkbox' id='new_proj_control'/>
 		<label id='new_proj_btn' title='Inserisci un nuovo progetto' for='new_proj_control'></label>
 		<div id='new_proj_form_div'>
-			<form id='new_proj_form' action='form_control.php' method='post'>
+			<form id='new_proj_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 				<div class='project_info'>
 					<div class='new_proj_data'>
 						<input class='identity' type='text' name='new_proj' value='new_proj'/>
@@ -121,7 +125,7 @@
 		<input type='checkbox' id='new_art_control'/>
 		<label id='new_art_btn' title='Inserisci un nuovo articolo' for='new_art_control'></label>
 		<div id='new_art_form_div'>
-			<form id='new_art_form' action='form_control.php' method='post'>
+			<form id='new_art_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 				<input class='identity' type='text' name='new_art' value='new_art'/>
 				<fieldset class='new_art_data'>
 					<legend>Informazioni sull'articolo:</legend>

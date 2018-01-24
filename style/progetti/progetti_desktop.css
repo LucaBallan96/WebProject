@@ -156,4 +156,6 @@
 .list_project:hover .list_pr_name_a div {
     text-decoration: underline;
 }
- 
+#div_container_contatti, #div_foot {
+    display: none;
+}
