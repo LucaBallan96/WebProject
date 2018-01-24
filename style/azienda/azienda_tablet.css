@@ -1,4 +1,4 @@
-@import url("../navbar_mobile.css");
+@import url("../navbar_tablet.css");
 #menu_bt1 {
     background-color: #008cff7a;
 }
@@ -113,12 +113,12 @@ span{
 /*IMPIEGATI*/
 
 #div_impiegati{
-    width: 720px;
+    width: 46em;
     margin: auto;
 }
 .div_impiegato{
     width: 180px;
-    height: 250px;
+    min-height: 250px;
     float: left;
     margin-top: 12px;
     margin-bottom: 12px;
@@ -143,23 +143,4 @@ span{
 .exception_impiegati{
     clear: both;
 }
-/* FOOT */
 
-
-#div_foot{
-    
-    width: 100%;
-    height: 60px;
-    background-color: rgb(1, 52, 110);
-    clear: both;
-}
-
-#div_text_foot{
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 12px;
-    color: rgb(181, 183, 197);
-    display: table;
-}

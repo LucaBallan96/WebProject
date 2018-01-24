@@ -195,5 +195,58 @@
         </div>
 
     </div>
+
+    <!--CONTATTI-->
+
+
+	<div id="div_container_contatti">
+	<div id="div_contatti">
+		<div id="div_bordignon" class="div_contatto">
+			<b>COSTRUZIONI BORDIGNON S.r.l</b></br></br>
+			Via Monte Grappa,21/A</br>
+			31040 Volpago del Montello(TV)</br>
+			Tel : 0423 620077</br>
+			Fax : 0423 620356</br></br>
+			Mail : <a href="mailto:giovannicalore96@gmail.com">giovannicalore96@gmail.com</a>
+		</div>
+
+		<div id="div_generalbau" class="div_contatto">
+			<b>B.G.P. GENERAL BAU S.r.l.</b></br></br>
+			Via S. Cassiano, 2</br>
+			39042 Bressanone (BZ)</br>
+			Tel : 0472 838669</br>
+			Fax : 0472 838669</br></br>
+			Mail : <a href="mailto:giovannicalore96@gmail.com">giovannicalore96@gmail.com</a>
+		</div>
+
+		<div id="div_service" class="div_contatto">
+			<b>BORDIGNON SERVICE S.r.l.</b></br></br>
+			Corso Mazzini, 61</br>
+			31044 Montebelluna (TV)</br>
+			Tel : 0423 604592</br>
+			Fax : 0423 247699</br></br>
+			Mail : <a href="mailto:giovannicalore96@gmail.com">giovannicalore96@gmail.com</a>
+		</div>
+	</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<!-- FOOT -->
+
+
+	<div id="div_foot">
+		<div id="div_text_foot">
+			@Copiright 2012-2017 &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspCostruzioni Bordignon S.r.l &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspC.F. e P.IVA 0334405269 
+		</div>
+	</div>
+
     </body>
 </html>

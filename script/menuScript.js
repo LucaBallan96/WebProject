@@ -16,7 +16,7 @@ function project_filter(str) {
     for(i=0; i<projects.length; i++) {
         names=projects[i].getElementsByClassName('grid_pr_name');
         locs=projects[i].getElementsByClassName('grid_pr_location');
-        if(names[0].innerHTML.indexOf(str)+1 || locs[0].innerHTML.indexOf(str)+1)
+        if(names[0].innerHTML.toLowerCase().indexOf(str.toLowerCase())+1 || locs[0].innerHTML.toLowerCase().indexOf(str.toLowerCase())+1)
             projects[i].style.display="block";
         else
             projects[i].style.display="none";
@@ -25,11 +25,24 @@ function project_filter(str) {
     for(i=0; i<projects.length; i++) {
         names=projects[i].getElementsByClassName('list_pr_name');
         locs=projects[i].getElementsByClassName('list_pr_location');
-        if(names[0].innerHTML.indexOf(str)+1 || locs[0].innerHTML.indexOf(str)+1)
+        if(names[0].innerHTML.toLowerCase().indexOf(str.toLowerCase())+1 || locs[0].innerHTML.toLowerCase().indexOf(str.toLowerCase())+1)
             projects[i].style.display="block";
         else
             projects[i].style.display="none";
     }
+}
+
+// FILTRO OFFERTE
+function offer_filter(str) {
+    offers=document.getElementsByClassName('label_offer');
+    for(i=0; i<offers.length; i++) {
+        texts=offers[i].getElementsByClassName('text');
+        if(texts[0].innerHTML.toLowerCase().indexOf(str.toLowerCase())+1)
+            offers[i].style.display="block";
+        else
+            offers[i].style.display="none";
+    }
+    
 }
 
 // DATA CORRENTE PER RESTRIZIONI INPUT

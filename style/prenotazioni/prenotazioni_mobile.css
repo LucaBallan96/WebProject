@@ -1,1 +1,132 @@
 @import url("../navbar_mobile.css");
+
+#back_link {
+    margin-top: 30px;
+    position: fixed;
+    left: 10px;
+    top: 20px;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    background-color: #0084ff;
+}
+.title{
+    padding-top: 60px;
+    padding-bottom: 40px;
+    color: rgba(0, 73, 169, 0.888);
+    text-align: center;
+    font-size: 28px;
+    width: 90%;
+    margin: auto;
+    
+}
+.label_offer{
+    display: table;
+    width: 380px;
+    margin: auto;
+    
+}
+.divisor{
+    display: block;
+    width: 350px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid  #008cff3d;
+   
+}
+.div_img_offer{
+    width: 20%;
+    min-height: 120px;
+    padding: 15px;
+    float: left;
+    overflow: hidden;
+   
+}
+.div_information{
+    min-height: 120px;
+    width: 80%;
+    float: left;    
+}
+.text{
+    font-size: 13px;
+}
+.img_offer{
+    width: 100%;
+}
+
+
+input[type="checkbox"]{
+
+    display: none;
+}
+.form_offer {
+    height: 0;
+    opacity: 0;
+    transition: 0.8s;
+    width: 700px;
+    margin: auto;
+    overflow: hidden;
+
+}
+.pro_select:checked + label .form_offer{
+    height: 240px;
+    background-color: #e1f5ff;
+    opacity: 1;
+}
+
+.div_container_form{
+    
+    width: 650px;
+    display: table;
+    font-size: 14px;
+    margin: auto;
+    margin-top: 10px;
+}
+.general_informations{
+    width: 300px;
+    float: left;
+
+}
+.in_form{
+    width: 180px;
+    float: right;
+}
+.container_radio{
+    float: right;
+}
+.div_genre{
+    width: 100%;
+
+    
+}
+.textmessage{
+    float: right;
+    resize:none;
+    width: 50%;
+}
+
+.identity{
+    display:none;
+}
+.select{
+    background-color: red;
+}
+/*PRENOTAZIONI*/
+
+#container_prenotazioni{
+    display: table;
+    border: 1px solid gray;
+    font-size: 14px;
+    position: absolute;
+    margin-top: 50px;
+    padding-left: 40px;
+}
+#subsub{
+    margin-top: 10px; 
+    width: 100px;
+    height: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+}

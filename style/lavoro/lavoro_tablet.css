@@ -1,1 +1,167 @@
-@import url("../navbar_mobile.css");
+@import url("../navbar_tablet.css");
+
+.title{
+    padding-top: 80px;
+    padding-bottom: 40px;
+    color: rgba(0, 73, 169, 0.888);
+    text-align: center;
+    font-size: 32px;
+    width: 90%;
+    margin: auto;
+    
+}
+.label_offer{
+    display: table;
+    width: 600px;
+    margin: auto;
+    transition: 1s;
+}
+#container_filter{
+    color: rgba(0, 73, 169, 0.888);
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+    padding-bottom: 40px; 
+}
+#text_search {
+    width: 250px;
+    border: 1px solid #0077ff;
+    padding: 0.3em;
+    color: #696969;
+    font-size: 1em;
+    background-color: #bfe6ff;
+}
+.divisor{
+    transition: 0.5s;
+    display: block;
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-top: 1px solid  #008cff3d;
+   
+}
+.div_img_offer{
+    width: 20%;
+    height: 120px;
+    padding: 15px;
+    float: left;
+    overflow: hidden;
+   
+}
+.date_input{
+    float: right;
+}
+.div_information{
+    min-height: 120px;
+    width: 80%;
+    float: left;    
+}
+.text{
+    font-size: 13px;
+}
+.img_offer{
+    width: 100%;
+}
+
+
+input[type="checkbox"]{
+    display: none;
+    
+}
+.form_offer {
+    height: 0;
+    opacity: 0;
+    transition: 0.8s;
+    width: 600px;
+    margin-bottom: 15px;
+    margin: auto;
+    margin-top: 15px;
+    overflow: hidden;
+    box-shadow: 5px 10px 18px #888888;
+
+}
+.label_offer:hover{
+    cursor: pointer;
+    background-color: rgb(243, 250, 255);
+    box-shadow: 5px 10px 18px #888888;
+    
+}
+.label_offer:hover .divisor{
+    display: block;
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-top: 1px solid  rgb(243, 250, 255);
+}
+.pro_select:checked + label + .form_offer{
+    height: 16em;
+    background-color: rgb(243, 250, 255);
+    opacity: 1;
+}
+
+
+.div_container_form{
+    
+    width: 550px;
+    display: table;
+    font-size: 13px;
+    margin: auto;
+    margin-top: 10px;
+}
+.general_informations{
+    width: 200px;
+    float: left;
+
+}
+.in_form{
+    width: 180px;
+    float: right;
+}
+.container_radio{
+    float: right;
+}
+.div_genre{
+    width: 100%;
+
+    
+}
+.textmessage{
+    float: right;
+    resize:none;
+    width: 50%;
+}
+.submit{
+    width: 100px;
+    height: 24px;
+    font-size: 18px;
+    float: right;
+    clear: both;
+}
+.identity{
+    display:none;
+}
+
+/*PRENOTAZIONI*/
+
+#container_prenotazioni{
+    display: table;
+    
+    font-size: 13px;
+    position: fixed;
+    right: 0;
+    background-color: rgb(241, 245, 250);;
+    margin-top: 50px;
+    margin-right: 20px;
+    padding: 10px;
+    box-shadow: 5px 10px 18px #888888;
+
+}
+#container_prenotazioni a{
+    color: black;
+}
+#container_prenotazioni a:hover{
+    color: rgba(23, 76, 111, 0.851);
+}
+
