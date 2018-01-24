@@ -435,7 +435,7 @@
 									</form>
 								</div>
 							</div>
-							<form id='project_select".$count."_form' class='modify_proj_form' action='form_control.php' method='post'>
+							<form id='project_select".$count."_form' class='modify_proj_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 								<input class='identity' type='text' name='modify_proj' value='".$row['id']."'/>
 								<input class='identity' type='text' name='name' value='".$row['name']."'/>
 								<input class='identity' type='text' name='old_image' value='".$row['image']."'/>
@@ -475,18 +475,31 @@
 		}
 
 		public function remove_progetto($proj) {
+			$num=0;
+			$sql = "SELECT * FROM webproject.progetti WHERE id='$proj'";
+			$result = $this->conn->query($sql);
+			$row = $result->fetch_assoc();
+			$img = $row['image'];
+			$sql = "SELECT * FROM webproject.progetti WHERE image='$img'";
+			$result = $this->conn->query($sql);
+			if (!($result->num_rows>1)) {
+				if(!unlink('images/'.$img))
+					$num=6; // errore eliminazione immagine
+			}
 			$sql = "DELETE FROM webproject.progetti WHERE id='$proj'";
 			$result = $this->conn->query($sql);
+			return $num;
 		}
 		
 		public function modify_progetto() {
 			$id=$_POST['modify_proj'];
 			$sql = "DELETE FROM webproject.progetti WHERE id='$id'";
 			$result = $this->conn->query($sql);
-			$this->insert_progetto();
+			return $this->insert_progetto();
 		}
 
 		public function insert_progetto() {
+			$num=0;
 			$na=$_POST['name'];
 			$st=$_POST['status'];
 			$cl=$_POST['client'];
@@ -496,9 +509,33 @@
 			$be=$_POST['begin'];
 			$de=$_POST['description'];
 			$im=$_POST['image'];
-			if($im=='') { // non avviene in new_proj perché è required
-				if(isset($_POST['old_image']))
-					$im=$_POST['old_image'];
+			$im="";
+			$gia_pres=false;
+			if($_FILES['image']['name']=="") { // IMMAGINE NON SELEZIONATA
+				$im=$_POST['old_image']; // sta avvenendo modifica
+				$gia_pres=true;
+			}
+			else // IMMAGINE SELEZIONATA
+				$im=basename($_FILES['image']['name']);
+			if(isset($_POST['old_image']) && !($im==$_POST['old_image'])) { // MODIFICA && IMAGE DIVERSA
+				$old=$_POST['old_image'];
+				$sql = "SELECT * FROM webproject.progetti WHERE image='$old'";
+				$result = $this->conn->query($sql);
+				if (!($result->num_rows > 0)) {
+					if(!unlink('images/'.$old))
+						$num=6; // errore eliminazione immagine vecchia
+				}
+			}
+			$target_dir = 'images/';
+			$target_file = $target_dir.$im;
+			if (file_exists($target_file)) {
+				$gia_pres=true;
+			}
+			else if(!$gia_pres) { // caricamento nuova immagine
+				$uploaded=move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+				if(!$uploaded)
+					$num=5; // errore caricamento
+				chmod($target_file, 0777);
 			}
 			if(isset($_POST['modify_proj'])) // quando avviene una modifica di un progetto esistente
 				$id=$_POST['modify_proj'];
@@ -518,6 +555,7 @@
 			}
 			$sql = "INSERT INTO webproject.progetti VALUES ('$id','$im','$na','$st','$cl','$ty','$lo','$di','$be','$de')";
 			$result = $this->conn->query($sql);
+			return $num;
 		}
 
 		// IMPIEGATI AZIENZA
@@ -566,7 +604,7 @@
 						<input type='checkbox' id='modify".$count."' class='modify_control'/>
 						<label class='modify_btn' for='modify".$count."'></label>
 						<div class='modify_form_div'>
-							<form class='modify_form' action='form_control.php' method='post'>
+							<form class='modify_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 								<fieldset class='modify_personal_info'>
 									<legend>Informazioni personali</legend>
 									<input class='identity' type='text' name='modify_imp' value='".$row['id']."'/>
@@ -640,18 +678,31 @@
 		}
 
 		public function remove_impiegato($imp) {
+			$num=0;
+			$sql = "SELECT * FROM webproject.impiegati WHERE id='$imp'";
+			$result = $this->conn->query($sql);
+			$row = $result->fetch_assoc();
+			$img = $row['image'];
+			$sql = "SELECT * FROM webproject.impiegati WHERE image='$img'";
+			$result = $this->conn->query($sql);
+			if (!($result->num_rows>1) && $img!='default_user.png') {
+				if(!unlink('images/'.$img))
+					$num=6; // errore eliminazione immagine
+			}
 			$sql = "DELETE FROM webproject.impiegati WHERE id='$imp'";
 			$result = $this->conn->query($sql);
+			return $num;
 		}
 		
 		public function modify_impiegato() {
 			$id=$_POST['modify_imp'];
 			$sql = "DELETE FROM webproject.impiegati WHERE id='$id'";
 			$result = $this->conn->query($sql);
-			$this->insert_impiegato();
+			return $this->insert_impiegato();
 		}
 
 		public function insert_impiegato() {
+			$num=0;
 			$fn=$_POST['firstname'];
 			$ln=$_POST['lastname'];
 			$ro=$_POST['role'];
@@ -660,12 +711,36 @@
 			$ma=$_POST['mail'];
 			$br=$_POST['branch'];
 			$be=$_POST['begin'];
-			$im=$_POST['image'];
-			if($im=='') {
-				if(isset($_POST['old_image']))
+			$im="";
+			$gia_pres=false;
+			if($_FILES['image']['name']=="") { // IMMAGINE NON SELEZIONATA
+				if(isset($_POST['old_image'])) // se sta avvenendo modifica
 					$im=$_POST['old_image'];
-				else
-					$im='default_user.jpg';
+				else // se sta avvenendo nuovo inserimento
+					$im='default_user.png';
+				$gia_pres=true;
+			}
+			else // IMMAGINE SELEZIONATA
+				$im=basename($_FILES['image']['name']);
+			if(isset($_POST['old_image']) && !($im==$_POST['old_image'])) { // MODIFICA && IMAGE DIVERSA
+				$old=$_POST['old_image'];
+				$sql = "SELECT * FROM webproject.impiegati WHERE image='$old'";
+				$result = $this->conn->query($sql);
+				if (!($result->num_rows > 0) && $old!='default_user.png') {
+					if(!unlink('images/'.$old))
+						$num=6; // errore eliminazione immagine vecchia
+				}
+			}
+			$target_dir = 'images/';
+			$target_file = $target_dir.$im;
+			if (file_exists($target_file)) {
+				$gia_pres=true;
+			}
+			else if(!$gia_pres) { // caricamento nuova immagine
+				$uploaded=move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+				if(!$uploaded)
+					$num=5; // errore caricamento
+				chmod($target_file, 0777);
 			}
 			if(isset($_POST['modify_imp'])) // quando avviene una modifica di un impiegato esistente
 				$id=$_POST['modify_imp'];
@@ -685,6 +760,7 @@
 			}
 			$sql = "INSERT INTO webproject.impiegati VALUES ('$id','$fn','$ln','$ro','$bi','$ag','$ma','$br','$be','$im')";
 			$result = $this->conn->query($sql);
+			return $num;
 		}
 
 		// ARTICOLI ADMIN
@@ -738,27 +814,64 @@
 		}
 
 		public function remove_articolo($art) {
-			$sql = "DELETE FROM webproject.articoli WHERE id='$art'";
+			$num=0;
+			$sql = "SELECT * FROM webproject.articoli WHERE id='$art'";
 			$result = $this->conn->query($sql);
+			$row = $result->fetch_assoc();
+			$img = $row['image'];
+			$sql = "SELECT * FROM webproject.articoli WHERE image='$img'";
+			$result = $this->conn->query($sql);
+			if (!($result->num_rows>1)) {
+				if(!unlink('images/'.$img))
+					$num=6; // errore eliminazione immagine
+			}
+			$sql = "DELETE FROM webproject.articoli WHERE id='$imp'";
+			$result = $this->conn->query($sql);
+			return $num;
 		}
 		
 		public function modify_articolo() {
 			$id=$_POST['modify_article'];
 			$sql = "DELETE FROM webproject.articoli WHERE id='$id'";
 			$result = $this->conn->query($sql);
-			$this->insert_articolo();
+			return $this->insert_articolo();
 		}
 
 		public function insert_articolo() {
+			$num=0;
 			$da=$_POST['date'];
 			$au=$_POST['author'];
 			$ho=$_POST['house'];
 			$ti=$_POST['title'];
 			$su=$_POST['subtitle'];
 			$te=$_POST['text'];
-			$im=$_POST['image'];
-			if($im=='') {
-				$im=$_POST['old_image']; // nell'inserimento di un nuovo articolo è required
+			$im="";
+			$gia_pres=false;
+			if($_FILES['image']['name']=="") { // IMMAGINE NON SELEZIONATA
+				$im=$_POST['old_image']; // sta avvenendo modifica
+				$gia_pres=true;
+			}
+			else // IMMAGINE SELEZIONATA
+				$im=basename($_FILES['image']['name']);
+			if(isset($_POST['old_image']) && !($im==$_POST['old_image'])) { // MODIFICA && IMAGE DIVERSA
+				$old=$_POST['old_image'];
+				$sql = "SELECT * FROM webproject.articoli WHERE image='$old'";
+				$result = $this->conn->query($sql);
+				if (!($result->num_rows > 0)) {
+					if(!unlink('images/'.$old))
+						$num=6; // errore eliminazione immagine vecchia
+				}
+			}
+			$target_dir = 'images/';
+			$target_file = $target_dir.$im;
+			if (file_exists($target_file)) {
+				$gia_pres=true;
+			}
+			else if(!$gia_pres) { // caricamento nuova immagine
+				$uploaded=move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+				if(!$uploaded)
+					$num=5; // errore caricamento
+				chmod($target_file, 0777);
 			}
 			if(isset($_POST['modify_article'])) // quando avviene una modifica di un articolo esistente
 				$id=$_POST['modify_article'];
@@ -778,6 +891,7 @@
 			}
 			$sql = "INSERT INTO webproject.articoli VALUES ('$id','$da','$au','$ho','$ti','$su','$te','$im')";
 			$result = $this->conn->query($sql);
+			return $num;
 		}
 
 		// OFFERTE ADMIN

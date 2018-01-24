@@ -70,24 +70,38 @@
 	if(isset($_POST['remove_proj'])) {
 		$proj=$_POST['remove_proj'];
 		if($proj!='no') {
-			$conn->remove_progetto($proj);
+			$num=$conn->remove_progetto($proj);
+			if($num!=0)
+				header('Location: admin.php?error='.$num.'#progetti');
+			else
+				header('Location: admin.php#progetti');
 		}
-		header('Location: admin.php#progetti');
+		else
+			header('Location: admin.php#progetti');
 	}
 
 	// RIMOZIONE IMPIEGATO
 	if(isset($_POST['remove_imp'])) {
 		$imp=$_POST['remove_imp'];
 		if($imp!='no') {
-			$conn->remove_impiegato($imp);
+			$num=$conn->remove_impiegato($imp);
+			if($num!=0)
+				header('Location: admin.php?error='.$num.'#impiegati');
+			else
+				header('Location: admin.php#impiegati');
 		}
-		header('Location: admin.php#impiegati');
+		else
+			header('Location: admin.php#impiegati');
 	}
 
 	// RIMOZIONE ARTICOLO
 	if(isset($_POST['remove_article'])) {
-		$conn->remove_articolo($_POST['remove_article']);
-		header('Location: admin.php#articoli');
+		$art=$_POST['remove_article'];
+		$num=$conn->remove_articolo($art);
+		if($num!=0)
+			header('Location: admin.php?error='.$num.'#articoli');
+		else
+			header('Location: admin.php#articoli');
 	}
 
 	// RIMOZIONE OFFERTA
@@ -98,20 +112,29 @@
 
 	// MODIFICA PROGETTO
 	if(isset($_POST['modify_proj'])) {
-		$conn->modify_progetto();
-		header('Location: admin.php#progetti');
+		$num=$conn->modify_progetto();
+		if($num!=0)
+			header('Location: admin.php?error='.$num.'#progetti');
+		else
+			header('Location: admin.php#progetti');
 	}
 
 	// MODIFICA IMPIEGATO
 	if(isset($_POST['modify_imp'])) {
-		$conn->modify_impiegato();
-		header('Location: admin.php#impiegati');
+		$num=$conn->modify_impiegato();
+		if($num!=0)
+			header('Location: admin.php?error='.$num.'#impiegati');
+		else
+			header('Location: admin.php#impiegati');
 	}
 
 	// MODIFICA ARTICOLO
 	if(isset($_POST['modify_article'])) {
-		$conn->modify_articolo();
-		header('Location: admin.php#articoli');
+		$num=$conn->modify_articolo();
+		if($num!=0)
+			header('Location: admin.php?error='.$num.'#articoli');
+		else
+			header('Location: admin.php#articoli');
 	}
 
 	// MODIFICA OFFERTA
@@ -122,20 +145,29 @@
 
 	// NUOVO PROGETTO
 	if(isset($_POST['new_proj'])) {
-		$conn->insert_progetto();
-		header('Location: admin.php#progetti');
+		$num=$conn->insert_progetto();
+		if($num!=0)
+			header('Location: admin.php?error='.$num.'#progetti');
+		else
+			header('Location: admin.php#progetti');
 	}
 
 	// NUOVO IMPIEGATO
 	if(isset($_POST['new_imp'])) {
-		$conn->insert_impiegato();
-		header('Location: admin.php#impiegati');
+		$num=$conn->insert_impiegato();
+		if($num!=0)
+			header('Location: admin.php?error='.$num.'#impiegati');
+		else
+			header('Location: admin.php#impiegati');
 	}
 
 	// NUOVO ARTICOLO
 	if(isset($_POST['new_art'])) {
-		$conn->insert_articolo();
-		header('Location: admin.php#articoli');
+		$num=$conn->insert_articolo();
+		if($num!=0)
+			header('Location: admin.php?error='.$num.'#articoli');
+		else
+			header('Location: admin.php#articoli');
 	}
 
 	// NUOVA OFFERTA
