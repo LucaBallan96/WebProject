@@ -196,6 +196,9 @@ hr{
     color: rgb(98, 105, 146);
     
 }
+#div_button_storia{
+    text-decoration: none;
+}
 #div_img_storia{
     
     float: left;
@@ -225,10 +228,10 @@ hr{
     font-size: 20px;
 }
 
-#div_button_storia:hover .title_div{
+#div_button_storia:hover #title_scopri{
     text-decoration: underline;
-}
 
+}
 
 
 

@@ -46,7 +46,8 @@ a{
     font-size: 14px;
 }
 .text{
-    width: 340px;
+    width: 80%;
+    border: 1px solid gray;
     margin: auto;
 }
 

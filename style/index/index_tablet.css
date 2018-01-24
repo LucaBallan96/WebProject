@@ -186,6 +186,9 @@ hr{
     margin: auto;
     
 }
+#div_button_storia{
+    text-decoration: none;
+}
 #title_scopri{
     display: table;
     position: relative;
@@ -195,6 +198,7 @@ hr{
     color: white;
     font-size: 20px;
 }
+
 #div_container_storia{
     height: 900px;
     width: 100%;
@@ -219,10 +223,10 @@ hr{
  
 }
 
-#div_button_storia:hover .title_div{
+#div_button_storia:hover #title_scopri{
     text-decoration: underline;
-}
 
+}
 
 
 

@@ -66,7 +66,8 @@ float: left;
 position: relative;
 left: 50%;
 transform: translateX(-50%);
-width: 350px;
+width: 80%;
+text-align: justify;
 }
 #image_certificazioni{
 background-image: url("../../images/sicurezza.jpeg");
@@ -112,14 +113,14 @@ margin-bottom: 20px;
 transition: 0.8s;
 
 }
-#cont_cert{
-
+#cont_cert{    
 width: 100%;
 padding: 20px;
 }
 #text_cert{
 display: table;
 position: relative;
+
 left: 50%;
 transform: translateX(-50%);
 color:rgb(98, 105, 146);

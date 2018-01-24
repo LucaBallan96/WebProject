@@ -192,7 +192,7 @@
 			}
 			else{
 				echo "
-					<p class='exception_offer' align='center'>Nessun offerta prenotata</p>
+					<p class='exception_offer' align='center'>Nessun'offerta prenotata</p>
 					<div class='divisor'></div>";
 			}
 		}
@@ -322,7 +322,7 @@
 							<form id='f".$count."' action='form_control.php' method='post'>
 								<input class='identity' type='text' name='id' value='".$row['id']."'/>
 								<div class='div_container_form'>
-									<div class='general_informations'>
+									<div class='cont_general'><div class='general_informations'>
 									<label>Nome: <input class='in_form' type='text' name='firstname'></label><br></br>
 									<label>Cognome: <input class='in_form' type='text' name='lastname'></label><br><br>
 										<div class='div_genre'>
@@ -339,9 +339,10 @@
 											echo"<option value='".$dates[$j]."'>".$dates[$j]."</option>";
 	
 										echo"</select></label><br></br>
-									</div>
-									&nbsp&nbsp&nbsp<label>Messaggio:</br></br>
-									<textarea rows='11' class='textmessage' name='textmessage' form='f".$count."'> </textarea></label>
+										<label>Messaggio:</br></br>
+										<textarea class='texta'rows='11' class='textmessage' name='textmessage' form='f".$count."'> </textarea></label>
+									</div></div>
+									
 									<input class='submit' type='submit' value='Invia' name='candidate'>  
 								</div>	
 							</form>

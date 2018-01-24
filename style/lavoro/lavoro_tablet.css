@@ -96,7 +96,7 @@ input[type="checkbox"]{
     border-top: 1px solid  rgb(243, 250, 255);
 }
 .pro_select:checked + label + .form_offer{
-    height: 16em;
+    height: 27em;
     background-color: rgb(243, 250, 255);
     opacity: 1;
 }
@@ -111,13 +111,26 @@ input[type="checkbox"]{
     margin-top: 10px;
 }
 .general_informations{
-    width: 200px;
+    
+    width: 500px;
     float: left;
 
 }
+.cont_general{
+    display: table;
+    
+    margin: auto;
+}
+.texta{
+    width: 100%;
+    resize: none;
+    border: 1px solid rgb(218, 239, 255);
+}
 .in_form{
-    width: 180px;
+    width: 200px;
+    height: 20px;
     float: right;
+    border: 1px solid rgb(218, 239, 255);
 }
 .container_radio{
     float: right;
@@ -127,17 +140,14 @@ input[type="checkbox"]{
 
     
 }
-.textmessage{
-    float: right;
-    resize:none;
-    width: 50%;
-}
+
 .submit{
     width: 100px;
     height: 24px;
     font-size: 18px;
     float: right;
     clear: both;
+    cursor: pointer;
 }
 .identity{
     display:none;
