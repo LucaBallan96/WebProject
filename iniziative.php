@@ -67,16 +67,14 @@
 			?>
         </div>
 
-        <!--TITLE-->
-        <div class="title">Rassegna Stampa</div>
-
-        <!--ARTICOLI-->
+        <!--STAMPA-->
+        <div id="stampa" class="title">Rassegna Stampa</div>
         <?php 
             $conn->get_articles();
         ?>
         
         <!--CERTIFICAZIONI-->
-        <div class="title">Certificazioni</div>
+        <div id="certificazioni" class="title">Certificazioni</div>
 		<div class="container_certificazioni">
 			<div id="text_certificazioni">
 				<div id="text_c">
