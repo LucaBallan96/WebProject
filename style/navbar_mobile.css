@@ -8,20 +8,46 @@
 /* NAVIGATION */
 
 #compact_menu {  /* only mobile */
+	display: none;
+}
+#cm_label {
 	position: fixed;
 	z-index: 2;
 	width: 100%;
 	display: block;
-	border: none;
 	padding: 0.5em 0.8em;
-	background-color: #00bbffcb;
+	background-color: #0099ffa8;
 }
 .cm_line {
+	width: 30px;
+    height: 3px;
+    background-color: #0077ff;
+    margin: 7px 0;
+}
+#cm_label:hover {
+	cursor: pointer;
+}
+#cm_label:hover .cm_line {
 	background-color: white;
-	width: 25px;
-    height: 2px;
-    background-color: black;
-    margin: 6px 0;
+}
+#compact_menu:checked ~ #navbar {
+	left: 0;
+}
+#compact_menu:checked + label .cm_line {
+	display: none;
+}
+#compact_menu:checked + label {
+	z-index: 3;
+	top: 0.5em;
+	right: 0.5em;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	background-color: transparent;
+    background-image: url("../../images/close.png");
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
 }
 #navbar {
 	position: fixed;
@@ -29,8 +55,11 @@
 	left: -100%;
 	width: 100%;
 	height: 100%;
-	background-color: #00bbffcb;
+	background-color: #0099ffd5;
 	overflow-y: scroll;
+}
+#navbar::-webkit-scrollbar {
+	display: none;
 }
 #home_link {
 	display: block;
@@ -45,26 +74,24 @@
 .dropdown, #contacts, #work {
 	display: block;
 }
+.dropdown {
+	padding: 1em 0;
+}
 .drop_button {
 	padding: 1em 1.5em;
-	border: none;
-	outline: none;
-	background-color: inherit;
-	color: #000000;
-	font-size: 1em;
+	color: black;
 	text-decoration: underline;
+	background-color: transparent;
+	font-size: 1em;
 }
-.drop_button:hover, #close:hover {
-	cursor: pointer;
+.drop_button:hover {
+	color: white;
 }
 .drop_content {
 	display: none;	
 }
 .drop_content a{
-	padding: 1em 4em;
-	color: #000000;
-	text-decoration: none;
-	display: block;
+	display: none;
 }
 #contacts, #work, #admin, #login, #user {
 	padding: 1em 1.5em;
@@ -74,19 +101,11 @@
 #admin, #login, #user {
 	display: block;
 }
-#close {
-	position: absolute;
-	top: 0.5em;
-	right: 0.5em;
-	border: none;
-	outline: none;
-	color: black;
-	background-color: transparent;
-	font-size: 1.5em;
+#work:hover, #contacts:hover, #admin:hover, #login:hover, #user:hover {
+	color: white;
 }
 
 /*CONTATTI*/
-
 
 #div_container_contatti{
 	clear: both;
@@ -96,8 +115,6 @@
     height: 540px;
     padding-top: 1px;
 }
-
-
 .div_contatto{
     position: relative;
     left: 50%;
@@ -109,19 +126,13 @@
     text-align: center;
 }
 
-
-
-
 /* FOOT */
 
-
 #div_foot{
-    
     width: 100%;
     height: 60px;
     background-color: rgb(1, 52, 110);
 }
-
 #div_text_foot{
     position: relative;
     left: 50%;

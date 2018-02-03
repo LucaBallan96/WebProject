@@ -6,9 +6,7 @@
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 body {
-    background-image: url("../../images/sfondo_login.jpg");
-    background-size: 1800px;
-    background-repeat: no-repeat;
+    background-color: #9aceff;
 }
 .header {
     margin: 4em 2em 1em;
@@ -87,14 +85,18 @@ form {
     padding: 1em;
     color: white;
     font-size: 0.9em;
-    background-color: #0084ff;
+    text-decoration: underline;
+	background-color: #0099ffa8;
 }
 #cancel_btn {
     margin-left: 1em;
 }
-.btns:hover, #back_link:hover {
+.btns:hover {
     cursor: pointer;
-    text-decoration: underline;
+    background-color: #008cff7a;
+}
+#back_link:hover {
+    cursor: pointer;
 }
 .error {
     width: 100%;

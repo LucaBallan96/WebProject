@@ -35,7 +35,7 @@
                         <input type="password" placeholder="Inserisci password" name="p" required>
                     </div>
                     <div class="data">
-                        Non hai ancora un <a href="register.php">account</a>?
+                        Non hai ancora un account? <a href="register.php">Registrati</a>
                     </div>
                     <div id="div_buttons">
                         <button type="submit">Login</button>
