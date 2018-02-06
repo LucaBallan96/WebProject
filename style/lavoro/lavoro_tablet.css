@@ -66,8 +66,14 @@
 .img_offer{
     width: 100%;
 }
-
-
+input[type="date"]{
+    font-size: 14px;
+    height: 22px;
+}
+input[type="text"]{
+    font-size: 14px;
+    height: 22px;
+}
 input[type="checkbox"]{
     display: none;
     
@@ -80,7 +86,9 @@ input[type="checkbox"]{
     margin-bottom: 15px;
     margin: auto;
     margin-top: 15px;
+    margin-bottom: 20px;
     overflow: hidden;
+    padding: 1em;
     box-shadow: 5px 10px 18px #008cff3d;;
 
 }
@@ -99,7 +107,7 @@ input[type="checkbox"]{
     border-top: 1px solid  rgb(243, 250, 255);
 }
 .pro_select:checked + label + .form_offer{
-    height: 27em;
+    height: 41em;
     background-color: rgb(243, 250, 255);
     opacity: 1;
 }
@@ -145,12 +153,15 @@ input[type="checkbox"]{
 }
 
 .submit{
-    width: 100px;
-    height: 24px;
-    font-size: 18px;
+    margin-top: 1em;
+    font-size: 1em;
     float: right;
     clear: both;
     cursor: pointer;
+    border: none;
+    padding: 0.8em 1.2em;
+    color: white;
+    background-color: #0099ffa8;
 }
 .identity{
     display:none;
@@ -162,7 +173,7 @@ input[type="checkbox"]{
     display: table;
     
     font-size: 13px;
-    position: fixed;
+    float: right;
     right: 0;
     background-color: rgb(241, 245, 250);;
     margin-top: 50px;

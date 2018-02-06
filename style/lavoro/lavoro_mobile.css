@@ -37,11 +37,9 @@
 }
 .divisor{
     transition: 0.5s;
-    display: block;
-    width: 300px;
+    width: 100%;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 10px; 
     border-top: 1px solid  #008cff3d;
    
 }
@@ -67,8 +65,14 @@
 .img_offer{
     width: 100%;
 }
-
-
+input[type="date"]{
+    font-size: 14px;
+    height: 22px;
+}
+input[type="text"]{
+    font-size: 14px;
+    height: 22px;
+}
 input[type="checkbox"]{
     display: none;
     
@@ -79,8 +83,9 @@ input[type="checkbox"]{
     transition: 0.8s;
     width: 90%; 
     margin: auto;
-    margin-bottom: 15px;
     margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 1em;
     overflow: hidden;
     box-shadow: 5px 10px 18px #008cff3d;
 
@@ -99,7 +104,7 @@ input[type="checkbox"]{
     border-top: 1px solid  rgb(243, 250, 255);
 }
 .pro_select:checked + label + .form_offer{
-    height: 27em;
+    height: 33em;
     background-color: rgb(243, 250, 255);
     opacity: 1;
 }
@@ -107,7 +112,7 @@ input[type="checkbox"]{
 
 .div_container_form{
     
-    width: 80%;
+    width: 100%;
     display: table;
     font-size: 13px;
     margin: auto;
@@ -116,13 +121,14 @@ input[type="checkbox"]{
 }
 .general_informations{
     width: 100%;
-    float: left;
+    margin: auto;
 
 }
 .cont_general{
-    width: 80%;
+    width: 100%;
     display: table;
     margin: auto;
+    
 }
 .texta{
     width: 100%;
@@ -133,6 +139,7 @@ input[type="checkbox"]{
     width: 60%;
     height: 20px;
     float: right;
+    border: 1px solid rgb(218, 239, 255);
 }
 .container_radio{
     float: right;
@@ -149,13 +156,15 @@ input[type="checkbox"]{
     height: 100px;
 }
 .submit{
-    margin: 10px;
+    margin-top: 1em;
+    font-size: 1em;
     float: right;
-    height: 30px;
-    width: 80px;
     clear: both;
-    font-size: 16px;
     cursor: pointer;
+    border: none;
+    padding: 0.8em 1.2em;
+    color: white;
+    background-color: #0099ffa8;
 }
 .identity{
     display:none;

@@ -326,8 +326,9 @@
 								<input class='identity' type='text' name='id' value='".$row['id']."'/>
 								<div class='div_container_form'>
 									<div class='cont_general'><div class='general_informations'>
-									<label>Nome: <input class='in_form' type='text' name='firstname'></label><br></br>
-									<label>Cognome: <input class='in_form' type='text' name='lastname'></label><br><br>
+									<label>Nome: <input class='in_form' type='text' name='firstname'></label><div class='divisor'></div><br>
+									
+									<label>Cognome: <input class='in_form' type='text' name='lastname'></label><div class='divisor'></div><br>
 										<div class='div_genre'>
 											Genere: 
 											<div class='container_radio'>
@@ -335,18 +336,20 @@
 												<label><input type='radio' name='gender' value='female'> Donna</label>&nbsp&nbsp&nbsp
 											</div>
 										</div>
-										<label><br>Data di nascita: <input class='in_form' type='date' name='bday'></label><br></br>
-										<label>Mail: <input class='in_form' type='text' name='mail'></label><br></br>
+										<div class='divisor'></div>
+										<label><br>Data di nascita: <input class='in_form' type='date' name='bday' pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))'></label><div class='divisor'></div><br>
+										<label>Mail: <input class='in_form' type='text' name='mail'></label><div class='divisor'></div><br>
 										<label>Data colloquio: <select class='date_input' name='date' >";
 										for($j=0; $j<count($dates); $j++)
 											echo"<option value='".$dates[$j]."'>".$dates[$j]."</option>";
 	
-										echo"</select></label><br></br>
+										echo"</select></label><div class='divisor'></div><br>
 										<label>Messaggio:</br></br>
 										<textarea class='texta'rows='11' class='textmessage' name='textmessage' form='f".$count."'> </textarea></label>
+										<input class='submit' type='submit' value='Invia' name='candidate'>  
 									</div></div>
 									
-									<input class='submit' type='submit' value='Invia' name='candidate'>  
+									
 								</div>	
 							</form>
 						</div>  
