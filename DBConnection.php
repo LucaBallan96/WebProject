@@ -279,11 +279,11 @@
 			echo "<div id='container_prenotazioni'>
 			Benvenuto ".$_SESSION['username']."</br></br>
 			Offerte prenotate - ".$row['COUNT(idOffer)']." </br></br>
-			<a href='prenotazioni.php'>Vedi prenotazioni</a>
+			<a href='prenotazioni.php' title='vedi le offerte che hai prenotato'>Vedi prenotazioni</a>
 			</div>
 			
 			<div class='title'>Lavora con Noi</div>
-			<div id='container_filter'><label id='search_label'>Cerca : <input id='text_search' type='text' placeholder='filtra per ruolo, settore o contratto' oninput='offer_filter(this.value)'/></label></div>
+			<div id='container_filter' ><label id='search_label' title='filtra per ruolo, settore o contratto'>Cerca : <input id='text_search' type='text' placeholder='filtra per ruolo, settore o contratto' oninput='offer_filter(this.value)'/></label></div>
 			";
 			$user=$_SESSION['username'];
 			
@@ -305,7 +305,7 @@
 					echo "
 					
 					<input id='".$row['id']."' type='checkbox' class='pro_select' />
-						<label class='label_offer' for='".$row['id']."'>
+						<label class='label_offer' for='".$row['id']."'title='offerta di lavoro come ".$row['role']." nel settore ".$row['branch']."'>
 						
 						
 						<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png'></div>
@@ -326,27 +326,27 @@
 								<input class='identity' type='text' name='id' value='".$row['id']."'/>
 								<div class='div_container_form'>
 									<div class='cont_general'><div class='general_informations'>
-									<label>Nome: <input class='in_form' type='text' name='firstname'></label><div class='divisor'></div><br>
+									<label title='inserisci il tuo nome'>Nome: <input class='in_form' type='text' name='firstname' placeholder=' Nome'></label><div class='divisor'></div><br>
 									
-									<label>Cognome: <input class='in_form' type='text' name='lastname'></label><div class='divisor'></div><br>
+									<label title='inserisci il tuo cognome'>Cognome: <input class='in_form' type='text' name='lastname'placeholder=' Cognome'></label><div class='divisor'></div><br>
 										<div class='div_genre'>
 											Genere: 
 											<div class='container_radio'>
-												<label><input type='radio' name='gender' value='male'> Uomo</label> &nbsp&nbsp&nbsp
-												<label><input type='radio' name='gender' value='female'> Donna</label>&nbsp&nbsp&nbsp
+												<label title='selezione uomo'><input type='radio' name='gender' value='male'> Uomo</label> &nbsp&nbsp&nbsp
+												<label title='selezione donna'><input type='radio' name='gender' value='female'> Donna</label>&nbsp&nbsp&nbsp
 											</div>
 										</div>
 										<div class='divisor'></div>
-										<label><br>Data di nascita: <input class='in_form' type='date' name='bday' pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))'></label><div class='divisor'></div><br>
-										<label>Mail: <input class='in_form' type='text' name='mail'></label><div class='divisor'></div><br>
+										<label title='inserisci la tua data di nascita secondo il modello yyyy-mm-gg'><br>Data di nascita: <input class='in_form' type='date' name='bday' placeholder=' yyyy-mm-gg'pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))'></label><div class='divisor'></div><br>
+										<label title='inserisci la tua mail, ad esempio nomecognomeXY@gmail.com'>Mail: <input class='in_form' type='email' name='mail' placeholder=' nomecognomeXY@gmail.com'></label><div class='divisor'></div><br>
 										<label>Data colloquio: <select class='date_input' name='date' >";
 										for($j=0; $j<count($dates); $j++)
 											echo"<option value='".$dates[$j]."'>".$dates[$j]."</option>";
 	
 										echo"</select></label><div class='divisor'></div><br>
-										<label>Messaggio:</br></br>
-										<textarea class='texta'rows='11' class='textmessage' name='textmessage' form='f".$count."'> </textarea></label>
-										<input class='submit' type='submit' value='Invia' name='candidate'>  
+										<label title='inserisci un messaggio che descriva le tue qualità'>Messaggio:</br></br>
+										<textarea class='texta'rows='11' class='textmessage' name='textmessage'form='f".$count."'> </textarea></label>
+										<input class='submit' type='submit' value='Invia' name='candidate' title='invia il modulo'>  
 									</div></div>
 									
 									

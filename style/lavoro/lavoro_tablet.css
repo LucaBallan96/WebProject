@@ -70,6 +70,10 @@ input[type="date"]{
     font-size: 14px;
     height: 22px;
 }
+input[type="email"]{
+    font-size: 14px;
+    height: 22px;
+}
 input[type="text"]{
     font-size: 14px;
     height: 22px;
