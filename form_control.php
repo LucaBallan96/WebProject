@@ -189,7 +189,8 @@
 	// RIMOZIONE PRENOTAZIONE
 	if(isset($_POST['remove_off'])) {
 		$idOffer=$_POST['idOffer'];
-		$conn->remove_prenotation($idOffer);
+		$mydate=$_POST['mydate'];
+		$conn->remove_prenotation($idOffer,$mydate);
 		header('Location: prenotazioni.php');
 	}
 

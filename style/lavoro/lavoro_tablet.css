@@ -15,6 +15,9 @@
     width: 600px;
     margin: auto;
     transition: 1s;
+    padding: 10px;
+    border: 1px solid  #008cff3d;
+    box-shadow: 2px 2px 4px #008cff3d;
 }
 #container_filter{
     color: rgba(0, 73, 169, 0.888);
@@ -78,13 +81,13 @@ input[type="checkbox"]{
     margin: auto;
     margin-top: 15px;
     overflow: hidden;
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: 5px 10px 18px #008cff3d;;
 
 }
 .label_offer:hover{
     cursor: pointer;
     background-color: rgb(243, 250, 255);
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: 5px 10px 18px #0077d177;;
     
 }
 .label_offer:hover .divisor{
