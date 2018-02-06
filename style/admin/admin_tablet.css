@@ -5,11 +5,7 @@
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 body {
-    background-image: url("../../images/admin_background.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #f1f5fa;
 }
 
 /* NAVIGATION */
@@ -542,6 +538,8 @@ body {
     border: 2px solid white;
 }
 .new_proj_data {
+    border: none;
+    padding-top: 1.5em;
     width: calc(60% - 2em);
 }
 .new_proj_data div {

@@ -21,7 +21,7 @@
 		<link rel="stylesheet" media="print" href="style/info_utente/info_utente_print.css">
 	</head>
 	<body>
-        <a id="back_link" href="index.php">Indietro</a>
+        <a id="back_link" href="index.php" title="Torna alla pagina iniziale">Indietro</a>
         <h1 class="header"><?php echo $_SESSION['username']; ?> - Informazioni sul tuo account</h1>
         <form action="form_control.php" method="post">
             <?php
@@ -31,19 +31,19 @@
         <?php
             if(!isset($_SESSION['admin']))
                 echo "<input type='checkbox' id='remove' class='remove_control'/>
-                    <label title='Rimuovi questo account' class='remove_btn' for='remove'></label>
+                    <label class='remove_btn' for='remove' title='Rimuovi questo account'></label>
                     <div class='remove_form_div'>
                         <form class='remove_form' action='form_control.php' method='post'>
                             <fieldset class='remove_fieldset'>
                                 <legend>Rimuovere definitivamente l'utente ".$_SESSION['username']." e tutti i suoi dati?</legend>
                                 <div class='yes_no_div'>
                                     <input id='yes' class='radio_choice' type='radio' name='remove_user' value='yes' checked/>
-                                    <label for='yes'>Si, rimuovi</label>
+                                    <label for='yes' title='Rimuovi'>Si, rimuovi</label>
                                     <input id='no' class='radio_choice' type='radio' name='remove_user' value='no'/>
-                                    <label for='no'>No, mantieni</label>
+                                    <label for='no' title='Mantieni'>No, mantieni</label>
                                 </div>
                             </fieldset>
-                            <input class='apply_btn' type='submit' value='Applica'/>
+                            <input class='apply_btn' type='submit' value='Applica' title='Applica la scelta'/>
                         </form>
                     </div>";
         ?>

@@ -56,7 +56,7 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
-				echo "<a href='articolo.php?id=".$row['id']."'id='div_two' class='div_group'>
+				echo "<a href='articolo.php?id=".$row['id']."'id='div_two' class='div_group' title='Leggi l&#39articolo più recente'>
 				<div id='div_title_two' class='div_title_group'>
 					<div class='title_div'>Ultimo Articolo</div>
 				</div>
@@ -76,7 +76,7 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
-				echo "<a href='info_progetto.php?numero=".$row['id']."'id='div_three' class='div_group'>
+				echo "<a href='info_progetto.php?numero=".$row['id']."'id='div_three' class='div_group' title='Visualizza l&#39ultimo progetto iniziato'>
 				<div id='div_title_three'class='div_title_group'>
 						<div class='title_div'>Ultimo Progetto</div>
 				</div>
@@ -103,7 +103,7 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
-				echo "<a href='lavoro.php#".$row['id']."'id='div_four' class='div_group'>
+				echo "<a href='lavoro.php#".$row['id']."'id='div_four' class='div_group' title='Visualizza una o più offerte di lavoro'>
 				<div id='div_title_four'class='div_title_group'>
 						<div class='title_div'>Offerte</div>
 				</div>
@@ -136,7 +136,7 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
-				$dateString = date("d-m-Y", strtotime($row['begin']));
+				//$dateString = date("d-m-Y", strtotime($row['begin']));
 				echo "<h1 id='header'>".$row['name']."</h1>
 						<div id='div_image'><img src='images/".$row['image']."'></img></div>
 						<div id='div_specifiche'>
@@ -144,7 +144,7 @@
 							<div class='specifica'>Tipologia<p class='spec_data'>".$row['type']."</p></div><hr/>
 							<div class='specifica'>Località<p class='spec_data'>".$row['location']."</p></div><hr/>
 							<div class='specifica'>Direttore dei lavori<p class='spec_data'>".$row['director']."</p></div><hr/>
-							<div class='specifica'>Data di inizio<p class='spec_data'>".$dateString."</p></div><hr/>
+							<div class='specifica'>Data di inizio<p class='spec_data'>".$row['begin']."</p></div><hr/>
 							<div class='specifica'>Stato<p class='spec_data'>".$row['status']."</p></div>
 						</div>
 						<div id='div_desc'>".$row['description']."</div>";
@@ -501,14 +501,14 @@
 
 		public function insert_progetto() {
 			$num=0;
-			$na=$_POST['name'];
+			$na=htmlentities($_POST['name'], ENT_QUOTES);
 			$st=$_POST['status'];
-			$cl=$_POST['client'];
-			$ty=$_POST['type'];
-			$lo=$_POST['location'];
-			$di=$_POST['director'];
+			$cl=htmlentities($_POST['client'], ENT_QUOTES);
+			$ty=htmlentities($_POST['type'], ENT_QUOTES);
+			$lo=htmlentities($_POST['location'], ENT_QUOTES);
+			$di=htmlentities($_POST['director'], ENT_QUOTES);
 			$be=$_POST['begin'];
-			$de=$_POST['description'];
+			$de=htmlentities($_POST['description'], ENT_QUOTES);
 			$im=$_POST['image'];
 			$im="";
 			$gia_pres=false;
@@ -603,51 +603,51 @@
 				while($row = $result->fetch_assoc()) {
 					$stringa="<div class='div_impiegato'>
 						<input type='checkbox' id='modify".$count."' class='modify_control'/>
-						<label class='modify_btn' for='modify".$count."'></label>
+						<label class='modify_btn' for='modify".$count."' title='Apri o chiudi il form di modifica'></label>
 						<div class='modify_form_div'>
 							<form class='modify_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 								<fieldset class='modify_personal_info'>
 									<legend>Informazioni personali</legend>
 									<input class='identity' type='text' name='modify_imp' value='".$row['id']."'/>
 									<input class='identity' type='text' name='old_image' value='".$row['image']."'/>
-									<div>Nome:<input type='text' name='firstname' value='".$row['firstname']."' required/></div>
-									<div>Cognome:<input type='text' name='lastname' value='".$row['lastname']."' required/></div>
-									<div>Data di nascita:<input type='date' name='birth' min='1900-01-01' max='2000-01-01' value='".$row['birth']."'/></div>
-									<div>Età:<input type='number' name='age' value='".$row['age']."' min='18' max='99'/></div>
-									<div>E-mail:<input type='email' value='".$row['mail']."' name='mail'/></div>
-									<div class='file_select'>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png'/></div>
-									<div>Settore:<input type='text' name='branch' value='".$row['branch']."'/></div>
-									<div>Anno di inizio:<input type='number' name='begin' value='".$row['begin']."' min='1900' max='2018'/></div>
+									<div>Nome:<input type='text' name='firstname' value='".$row['firstname']."' placeholder='Nome' pattern='[a-zA-Z\s]{1,30}' title='Nome dell&#39impiegato: massimo 30 caratteri alfabetici' required/></div>
+									<div>Cognome:<input type='text' name='lastname' value='".$row['lastname']."' placeholder='Cognome' pattern='[a-zA-Z\s]{1,30}' title='Cognome dell&#39impiegato: massimo 30 caratteri alfabetici' required/></div>
+									<div>Data di nascita:<input type='date' name='birth' min='1900-01-01' max='2000-01-01' value='".$row['birth']."' title='Inserisci la data di nascita dell&#39impiegato'/></div>
+									<div>Età:<input type='number' name='age' value='".$row['age']."' min='18' max='99' placeholder='Età' title='Inserisci l&#39età dell&#39impiegato'/></div>
+									<div>E-mail:<input type='email' value='".$row['mail']."' name='mail' placeholder='E-mail' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}' title='E-mail dell&#39impiegato: il formato è quello standard. Sono accettati i simboli . + - _ e %'/></div>
+									<div class='file_select'>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png' title='Inserisci una foto dell&#39impiegato'/></div>
+									<div>Settore:<input type='text' name='branch' value='".$row['branch']."' placeholder='Settore di impiego' pattern='[a-zA-Z0-9\s]{1,30}' title='Settore dell&#39impiegato: massimo 30 caratteri alfanumerici'/></div>
+									<div>Anno di inizio:<input type='number' name='begin' value='".$row['begin']."' min='1900' max='2018' placeholder='Anno di inizio' title='Inserisci l&#39anno di inizio dell&#39impiegato'/></div>
 								</fieldset>
 								<fieldset class='modify_company_info'>
 									<legend>Ruolo nell'azienda:</legend>";
 					for($i=0; $i<count($roles); $i++) {
 						if($row['role']==$roles[$i])
-							$stringa=$stringa."<div><label><input type='radio' name='role' value='".$roles[$i]."' checked/> ".$roles[$i]."</label></div>";
+							$stringa=$stringa."<div><label title='".$roles[$i]."'><input type='radio' name='role' value='".$roles[$i]."' checked/> ".$roles[$i]."</label></div>";
 						else
-							$stringa=$stringa."<div><label><input type='radio' name='role' value='".$roles[$i]."'/> ".$roles[$i]."</label></div>";
+							$stringa=$stringa."<div><label title='".$roles[$i]."'><input type='radio' name='role' value='".$roles[$i]."'/> ".$roles[$i]."</label></div>";
 					}
 					$stringa=$stringa."</fieldset>
 								<div class='submit_reset_div'>
-									<input class='submit_btn' type='submit' value='Salva modifiche'/>
-									<input class='reset_btn' type='reset' value='Annulla modifiche'/>
+									<input class='submit_btn' type='submit' value='Salva modifiche' title='Salva i dati dell&#39impiegato'/>
+									<input class='reset_btn' type='reset' value='Annulla modifiche' title='Resetta i dati inseriti'/>
 								</div>
 							</form>
 						</div>
 						<input type='checkbox' id='remove".$count."' class='remove_control'/>
-						<label class='remove_btn' for='remove".$count."'></label>
+						<label class='remove_btn' for='remove".$count."' title='Apri o chiudi il form di rimozione'></label>
 						<div class='remove_form_div'>
 							<form class='remove_form' action='form_control.php' method='post'>
 								<fieldset class='remove_fieldset'>
 									<legend>Rimuovere definitivamente ".$row['firstname']." ".$row['lastname']." e tutti i suoi dati?</legend>
 									<div class='yes_no_div'>
 										<input id='yes".$count."' class='radio_choice' type='radio' name='remove_imp' value='".$row['id']."' checked/>
-										<label for='yes".$count."'>Si, rimuovi</label>
+										<label for='yes".$count."' title='Rimuovi'>Si, rimuovi</label>
 										<input id='no".$count."' class='radio_choice' type='radio' name='remove_imp' value='no'/>
-										<label for='no".$count."'>No, mantieni</label>
+										<label for='no".$count."' title='Mantieni'>No, mantieni</label>
 									</div>
 								</fieldset>
-								<input class='apply_btn' type='submit' value='Applica'/>
+								<input class='apply_btn' type='submit' value='Applica' title='Applica la scelta'/>
 							</form>
 						</div>
 						<div class='imp_image' style='background-image:url(../../images/".$row['image'].")'></div>
@@ -826,7 +826,7 @@
 				if(!unlink('images/'.$img))
 					$num=6; // errore eliminazione immagine
 			}
-			$sql = "DELETE FROM webproject.articoli WHERE id='$imp'";
+			$sql = "DELETE FROM webproject.articoli WHERE id='$art'";
 			$result = $this->conn->query($sql);
 			return $num;
 		}
@@ -841,11 +841,11 @@
 		public function insert_articolo() {
 			$num=0;
 			$da=$_POST['date'];
-			$au=$_POST['author'];
-			$ho=$_POST['house'];
-			$ti=$_POST['title'];
-			$su=$_POST['subtitle'];
-			$te=$_POST['text'];
+			$au=htmlentities($_POST['author'], ENT_QUOTES);
+			$ho=htmlentities($_POST['house'], ENT_QUOTES);
+			$ti=htmlentities($_POST['title'], ENT_QUOTES);
+			$su=htmlentities($_POST['subtitle'], ENT_QUOTES);
+			$te=htmlentities($_POST['text'], ENT_QUOTES);
 			$im="";
 			$gia_pres=false;
 			if($_FILES['image']['name']=="") { // IMMAGINE NON SELEZIONATA
@@ -919,17 +919,17 @@
 					$result2 = $this->conn->query($sql2);
 					if ($result2->num_rows > 0) {
 						while($row2 = $result2->fetch_assoc()) {
-							$birthStr = date("d-m-Y", strtotime($row2['birth']));
-							$dateStr = date("d-m-Y", strtotime($row2['date']));
+							//$birthStr = date("d-m-Y", strtotime($row2['birth']));
+							//$dateStr = date("d-m-Y", strtotime($row2['date']));
 							echo "<div class='cand_div'>
 									<div class='cand_personal_info'>
 										".$row2['firstname']." ".$row2['lastname']."<br/><br/>
 										".$row2['genre']."<br/><br/>
-										".$birthStr."<br/><br/>
+										".$row2['birth']."<br/><br/>
 										".$row2['mail']."
 									</div>
 									<div class='cand_general_info'>
-										Prenotazione colloquio in data:<br/><br/>".$dateStr."<br/><br/>
+										Prenotazione colloquio in data:<br/><br/>".$row2['date']."<br/><br/>
 										'".$row2['message']."'
 									</div>
 								</div>";
@@ -999,8 +999,8 @@
 		public function insert_offerta() {
 			$br=$_POST['branch'];
 			$ro=$_POST['role'];
-			$co=$_POST['contract'];
-			$me=$_POST['message'];
+			$co=htmlentities($_POST['contract'], ENT_QUOTES);
+			$me=htmlentities($_POST['message'], ENT_QUOTES);
 			$d1=$_POST['date1'];
 			$d2=$_POST['date2'];
 			$d3=$_POST['date3'];
@@ -1067,19 +1067,19 @@
 			$row = $result->fetch_assoc();
 			echo "<fieldset id='user_data'>
 					<div class='data_input'>Numero di accessi a questo sito: ".$row['accesses']."</div>
-					<label class='data_input'>Username: <input type='text' name='username' placeholder='Inserisci username' value='".$row['username']."' autofocus required/></label>
+					<label class='data_input'>Username: <input type='text' name='username' placeholder='Inserisci username' value='".$row['username']."' autofocus maxlength='30' pattern='([a-zA-Z])[a-zA-Z0-9._%@#+-]{5,}' title='Username: deve iniziare con una lettera e contenere almeno 6 caratteri. Sono accettati i simboli . + - _ % @ e #' required/></label>
 					<input id='change_password_checkbox' type='checkbox' name='change_password'/>
-					<label class='data_input' id='change_password_label' for='change_password_checkbox'>Cambia password</label>
+					<label class='data_input' id='change_password_label' for='change_password_checkbox' title='Modifica la password corrente'>Cambia password</label>
 					<div id='change_div'>
-						<label class='data_input'>Vecchia password: <input type='text' name='old_password' placeholder='Inserisci la password corrente'/></label>
-						<label class='data_input'>Nuova password: <input type='password' name='new_password' placeholder='Inserisci la nuova password'/></label>
-						<label class='data_input'>Conferma password: <input type='password' name='rep_new_password' placeholder='Ripeti la nuova password'/></label>
+						<label class='data_input'>Vecchia password: <input type='password' name='old_password' placeholder='Inserisci la password corrente' title='Inserisci la password corrente'/></label>
+						<label class='data_input'>Nuova password: <input type='password' name='new_password' placeholder='Inserisci la nuova password' maxlength='30' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9._%@#+-]{8,}' title='Nuova password: deve contenere almeno un numero, una lettera maiuscola ed una minuscola, e deve avere complessivamente almeno 8 caratteri. Sono accettati i simboli . + - _ % @ e #'/></label>
+						<label class='data_input'>Conferma password: <input type='password' name='rep_new_password' placeholder='Ripeti la nuova password' title='Inserisci nuovamente la nuova password'/></label>
 					</div>
-					<label class='data_input'>E-mail: <input type='email' name='mail' placeholder='Inserisci e-mail' value='".$row['mail']."' required/></label>
+					<label class='data_input'>E-mail: <input type='email' name='mail' placeholder='Inserisci e-mail' value='".$row['mail']."' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$' title='E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %' required/></label>
 				</fieldset>
 				<div id='div_buttons'>
-					<input class='btns' name='modify_user' type='submit' value='Salva modifiche'/>
-					<input class='btns' type='reset' id='cancel_btn' value='Annulla modifiche'/>
+					<input class='btns' name='modify_user' type='submit' value='Salva modifiche' title='Salva i dati dell&#39utente'/>
+					<input class='btns' type='reset' id='cancel_btn' value='Annulla modifiche' title='Resetta i dati inseriti'/>
 				</div>";
 		}
 
@@ -1117,7 +1117,7 @@
 					$count++;
 				}
 			} else
-				echo "<p>Nessun impiegato disponibile</p>";
+				echo "<p>Nessun utente disponibile</p>";
 		}
 
 		// RIMOZIONE UTENTE

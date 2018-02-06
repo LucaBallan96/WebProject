@@ -22,17 +22,17 @@
 	</head>
 	<body>
         <a id="back_link" href="login.php">Indietro</a>
-        <h1 class="header">REGISTRAZIONE NUOVO ACCOUNT</h1>
+        <h1 class="header">Registrazione nuovo account</h1>
         <form action="form_control.php" method="post">
             <fieldset id="user_data">
-                <label class="data_input">Username: <input type="text" placeholder="Inserisci username" name="new_user" autofocus required/></label>
-                <label class="data_input">Password: <input type="password" placeholder="Inserisci password" name="password" required/></label>
-                <label class="data_input">Ripeti password: <input type="password" placeholder="Ripeti password" name="rep_password" required/></label>
-                <label class="data_input">E-mail: <input type="email" placeholder="Inserisci e-mail" name="mail" required/></label>
+                <label class="data_input">Username: <input type="text" placeholder="Inserisci username" name="new_user" autofocus maxlength="30" pattern="([a-zA-Z])[a-zA-Z0-9._%@#+-]{5,}" title="Username: deve iniziare con una lettera e contenere almeno 6 caratteri. Sono accettati i simboli . + - _ % @ e #" required/></label>
+                <label class="data_input">Password: <input type="password" placeholder="Inserisci password" name="password" maxlength="30" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9._%@#+-]{8,}" title="Password: deve contenere almeno un numero, una lettera maiuscola ed una minuscola, e deve avere complessivamente almeno 8 caratteri. Sono accettati i simboli . + - _ % @ e #" required/></label>
+                <label class="data_input">Ripeti password: <input type="password" placeholder="Ripeti password" name="rep_password" title='Inserisci nuovamente la password' required/></label>
+                <label class="data_input">E-mail: <input type="email" placeholder="Inserisci e-mail" name="mail" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$" title="E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %" required/></label>
             </fieldset>
             <div id="div_buttons">
-                <input class="btns" type="submit" value="Crea account"/>
-                <input class="btns" type="reset" id="cancel_btn" value="Cancel"/>
+                <input class="btns" type="submit" value="Crea account" title='Salva i dati del nuovo account'/>
+                <input class="btns" type="reset" id="cancel_btn" value="Cancel" title='Resetta i dati inseriti'/>
             </div>
         </form>
         <?php

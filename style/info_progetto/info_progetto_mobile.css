@@ -1,5 +1,9 @@
 @import url("../navbar_mobile.css");
 
+#menu_bt2{
+    color: white;
+    text-decoration: none;
+}
 #header {
     padding: 4em 2em 2em;
     color: #0049a9e2;

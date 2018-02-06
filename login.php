@@ -21,7 +21,8 @@
 		<link rel="stylesheet" media="print" href="style/login/login_print.css">
 	</head>
 	<body>
-        <a id="back_link" href="index.php">Indietro</a>
+        <a id="back_link" href="index.php" title='Torna alla pagina iniziale'>Indietro</a>
+        <h1 class="header">Login</h1>
         <form action="form_control.php" method="post">
             <div id="container">
                 <div id="div_img">
@@ -29,17 +30,17 @@
                 </div>
                 <div id="div_data">
                     <div class="data"><b>Username</b>
-                        <input type="text" placeholder="Inserisci username" name="u" autofocus required>
+                        <input type="text" placeholder="Inserisci username" name="u" autofocus title='Inserisci il tuo nome utente' required>
                     </div>
                     <div class="data"><b>Password</b>
-                        <input type="password" placeholder="Inserisci password" name="p" required>
+                        <input type="password" placeholder="Inserisci password" name="p" title='Inserisci la password' required>
                     </div>
                     <div class="data">
-                        Non hai ancora un account? <a href="register.php">Registrati</a>
+                        Non hai ancora un account? <a href="register.php" title='Clicca per andare alla pagina di registrazione'>Registrati</a>
                     </div>
                     <div id="div_buttons">
-                        <button type="submit">Login</button>
-                        <button type="reset" id="cancel_btn">Cancel</button>
+                        <input type="submit" value="Login" title='Accedi con queste credenziali'/>
+                        <input type="reset" value="Cancella" id="cancel_btn" title='Resetta le credenziali inserite'/>
                     </div> 
                 </div>
             </div>

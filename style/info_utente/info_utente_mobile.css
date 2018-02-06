@@ -6,16 +6,15 @@
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 body {
-    background-color: #9aceff;
+    background-color: #f1f5fa;
 }
 .header {
     margin: 4em 2em 1em;
     width: calc(100% - 4em);
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #a1d9ff;
     padding: 1em;
-    color: white;
+    color: #0049a9e2;
     font-size: 1.2em;
-    font-variant-caps: all-small-caps;
 }
 #back_link {
     position: absolute;
@@ -55,7 +54,6 @@ form {
     color: blue;
 }
 #change_password_label:hover {
-    color: white;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -72,7 +70,6 @@ form {
     opacity: 1;
 }
 #change_password_checkbox:checked + label {
-    color: white;
     text-decoration: underline;
 }
 #div_buttons {

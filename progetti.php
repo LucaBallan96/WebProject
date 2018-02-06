@@ -23,47 +23,47 @@
 
 		<!-- NAVIGATION -->
 		<input id='compact_menu' type='checkbox'/>
-		<label id='cm_label' for='compact_menu'>
+		<label id='cm_label' for='compact_menu' title='Visualizza le opzioni del menu'>
 			<div class="cm_line"></div>
             <div class="cm_line"></div>
             <div class="cm_line"></div>
 		</label>
 
         <div id="navbar">
-            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png"></a>
+            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png" title="Vai alla pagina iniziale"></a>
             <div class="dropdown">
-                <a id="menu_bt1" class="drop_button" href="azienda.php">Azienda</a>
+                <a id="menu_bt1" class="drop_button" href="azienda.php" title="Visualizza le informazioni sull'azienda">Azienda</a>
                 <div id="content_menu_bt1" class="drop_content">
-                    <a href="azienda.php#storia"><pre>Storia&#9&#9&gt</pre></a>
-                    <a href="azienda.php#sedi"><pre>Sedi&#9&#9&#9&gt</pre></a>
-                    <a href="azienda.php#persone"><pre>Persone&#9&#9&gt</pre></a>
+                    <a href="azienda.php#storia" title="Leggi la storia dell'azienda"><pre>Storia&#9&#9&gt</pre></a>
+                    <a href="azienda.php#sedi" title="Visualizza le sedi in cui opera l'azienda"><pre>Sedi&#9&#9&#9&gt</pre></a>
+                    <a href="azienda.php#persone" title="Visualizza gli impiegati dell'azienda"><pre>Persone&#9&#9&gt</pre></a>
                 </div>
             </div>
             <div class="dropdown">
-                <a id="menu_bt2" class="drop_button" href="progetti.php">Progetti</a>
+                <a id="menu_bt2" class="drop_button" href="progetti.php" title="Visualizza i progetti in cui si impegna l'azienda">Progetti</a>
                 <div id="content_menu_bt2" class="drop_content">
-                    <a href="progetti.php"><pre>In corso&#9&#9&gt</pre></a>
-                    <a href="progetti.php#terminati"><pre>Terminati&#9&#9&gt</pre></a>
+                    <a href="progetti.php" title="Visualizza i progetti in corso"><pre>In corso&#9&#9&gt</pre></a>
+                    <a href="progetti.php#terminati" title="Visualizza i progetti terminati"><pre>Terminati&#9&#9&gt</pre></a>
                 </div>
             </div>
             <div class="dropdown">
-                <a id="menu_bt3" class="drop_button" href="iniziative.php">Iniziative</a>
+                <a id="menu_bt3" class="drop_button" href="iniziative.php" title="Visualizza gli articoli sull'azienda e le certificazioni ricevute">Iniziative</a>
                 <div id="content_menu_bt3" class="drop_content">
-					<a href="iniziative.php#stampa"><pre>Stampa&#9&#9&#9&gt</pre></a>
-                    <a href="iniziative.php#certificazioni"><pre>Certificazioni&#9&#9&gt</pre></a>
+					<a href="iniziative.php#stampa" title="Leggi gli articoli che trattano dell'azienda"><pre>Stampa&#9&#9&#9&gt</pre></a>
+                    <a href="iniziative.php#certificazioni" title="Visualizza le certificazioni"><pre>Certificazioni&#9&#9&gt</pre></a>
                 </div>
 			</div>
-			<a href="lavoro.php" id="work">Lavora con noi</a>
-			<a href="#div_container_contatti" id="contacts">Contatti</a>
+			<a href="lavoro.php" id="work" title="Visualizza le offerte di lavoro e fissa un colloquio con l'azienda">Lavora con noi</a>
+			<a href="#div_container_contatti" id="contacts" title="Visualizza i nostri contatti, potrai chiamarci o mandare una mail per ricevere ulteriori informazioni">Contatti</a>
 			<?php
 				if(!isset($_SESSION['username']))
-					echo "<a href='login.php' id='login'>Login</a>";
+					echo "<a href='login.php' id='login' title='Accedi con le tue credenziali oppure registrati se ancora non possiedi un account'>Login</a>";
 				else {
-					echo "<a href='logout.php' id='login'>Logout</a>
-						<a href='info_utente.php' id='user'>".$_SESSION['username']."</a>";
+					echo "<a href='logout.php' id='login' title='Effettua il logout dal sito'>Logout</a>
+						<a href='info_utente.php' id='user' title='Visualizza le informazioni relative al tuo account'>".$_SESSION['username']."</a>";
 				}
 				if(isset($_SESSION['admin']))
-					echo "<a title='Area privata' href='admin.php' id='admin'>Area privata</a>";
+					echo "<a href='admin.php' id='admin' title='Entra nell&#39area amministrativa del sito'>Area privata</a>";
 			?>
         </div>
         <div id="navbar_bottom_padding"></div>
@@ -79,7 +79,7 @@
             $conn->get_progetti();
         ?>
 
-        <!--CONTATTI-->
+		<!--CONTATTI-->
 		<div id="div_container_contatti">
 			<div id="div_contatti">
 				<div id="div_bordignon" class="div_contatto">
@@ -88,7 +88,7 @@
 					31040 Volpago del Montello(TV)</br>
 					Tel : 0423 620077</br>
 					Fax : 0423 620356</br></br>
-					Mail : <a href="mailto:giovannicalore96@gmail.com">giovannicalore96@gmail.com</a>
+					Mail : <a href="mailto:info@costruzionibordignon.it" title="Invia una mail a COSTRUZIONI BORDIGNON S.r.l.">giovannicalore96@gmail.com</a>
 				</div>
 				<div id="div_generalbau" class="div_contatto">
 					<b>B.G.P. GENERAL BAU S.r.l.</b></br></br>
@@ -96,7 +96,7 @@
 					39042 Bressanone (BZ)</br>
 					Tel : 0472 838669</br>
 					Fax : 0472 838669</br></br>
-					Mail : <a href="mailto:giovannicalore96@gmail.com">giovannicalore96@gmail.com</a>
+					Mail : <a href="mailto:info@bgpgeneralbau.com" title="Invia una mail a B.G.P. GENERAL BAU S.r.l.">giovannicalore96@gmail.com</a>
 				</div>
 				<div id="div_service" class="div_contatto">
 					<b>BORDIGNON SERVICE S.r.l.</b></br></br>
@@ -104,7 +104,7 @@
 					31044 Montebelluna (TV)</br>
 					Tel : 0423 604592</br>
 					Fax : 0423 247699</br></br>
-					Mail : <a href="mailto:giovannicalore96@gmail.com">giovannicalore96@gmail.com</a>
+					Mail : <a href="mailto:info@immobiliarebordignon.eu" title="Invia una mail a BORDIGNON SERVICE S.r.l.">giovannicalore96@gmail.com</a>
 				</div>
 			</div>
 		</div>

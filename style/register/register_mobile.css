@@ -6,17 +6,17 @@
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 body {
-    background-color: #9aceff;
+    background-color: #f1f5fa;
 }
 .header {
     width: 100%;
     padding: 4em 2em 2em;
-    color: white;
+    color: #0049a9e2;
     text-align: center;
     font-size: 1.5em;
 }
 #back_link {
-    position: fixed;
+    position: absolute;
     left: 20px;
     top: 20px;
     width: 60px;

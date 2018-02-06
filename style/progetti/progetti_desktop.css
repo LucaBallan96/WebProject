@@ -1,5 +1,8 @@
 @import url("../navbar_desktop.css");
 
+#menu_bt2{
+    background-color: #008cff7a;
+}
 #navbar_bottom_padding {
     width: 100%;
     height: 7em;
