@@ -128,10 +128,12 @@ span{
     font-size: 13px;
     color: rgb(7, 7, 124);
     overflow: hidden;
+    padding: 10px;
+    
 }
 .img_impiegato{
     height: 120px;
-    box-shadow: 5px 10px 18px #888888;
+    
     
 }
 .subsubtitle{
@@ -143,4 +145,10 @@ span{
 }
 .exception_impiegati{
     clear: both;
+}
+.spg{
+    color: rgb(98, 105, 146);
+}
+.spgr{
+    float: right;
 }

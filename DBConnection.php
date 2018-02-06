@@ -576,14 +576,14 @@
 					echo "<div class='subsubtitle'>".$branches[$i]."</div>  
 					<div class='divisor'></div>";
 					while($row=$result->fetch_assoc()){
-						echo "<div class='div_impiegato'>
+						echo "<div class='div_impiegato' title='".$row['role']." ".$row['firstname']." ".$row['lastname']."' >
 						<img class='img_impiegato' src='images/".$row['image']."'/></br></br>
-						Nome - ".$row['firstname']."</br> 
-						Cognome - ".$row['lastname']."</br>
-						Ruolo - ".$row['role']."</br>
-						Data di nascita - ".$row['birth']."</br>
-						Età - ".$row['age']."</br>
-						Inizio - ".$row['begin']."</br>
+						<span class='spg'>Nome  </span></br><span class='spgr'>".$row['firstname']."</span></br> 
+						<span class='spg'>Cognome  </span></br><span class='spgr'>".$row['lastname']."</span></br>
+						<span class='spg'>Ruolo  </span></br><span class='spgr'>".$row['role']."</span></br>
+						<span class='spg'>Data di nascita  </span></br><span class='spgr'>".$row['birth']."</span></br>
+						<span class='spg'>Età  </span></br><span class='spgr'>".$row['age']."</span></br>
+						<span class='spg'>Inizio  </span></br><span class='spgr'>".$row['begin']."</span></br>
 						</div>";
 					
 					}
