@@ -31,8 +31,7 @@
     display: block;
 }
 #container_grid, #container_list {
-    position: absolute;
-    top: 7em;
+    position: relative;
     width: 100%;
     height: auto;
     display: none;
@@ -155,7 +154,4 @@
 }
 .list_project:hover .list_pr_name_a div {
     text-decoration: underline;
-}
-#div_container_contatti, #div_foot {
-    display: none;
 }

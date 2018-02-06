@@ -6,14 +6,13 @@
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 body {
-    background-image: url("../../images/sfondo_login.jpg");
-    background-size: 1800px;
-    background-repeat: no-repeat;
+    background-color: #9aceff;
 }
 #back_link {
     position: fixed;
     left: 20px;
     top: 20px;
+    z-index: 1;
     width: 60px;
     height: 60px;
     font-size: 0;
@@ -62,13 +61,17 @@ button {
     outline: none;
     padding: 1em;
     color: white;
-    background-color: #0084ff;
+	background-color: #0099ffa8;
     text-decoration: underline;
 }
 #cancel_btn {
     margin-left: 1em;
 }
-button:hover, #back_link:hover {
+button:hover {
+    cursor: pointer;
+    background-color: #008cff7a;
+}
+#back_link:hover {
     cursor: pointer;
 }
 .error {

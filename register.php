@@ -21,7 +21,7 @@
 		<link rel="stylesheet" media="print" href="style/register/register_print.css">
 	</head>
 	<body>
-        <a id="back_link" href="index.php">Indietro</a>
+        <a id="back_link" href="login.php">Indietro</a>
         <h1 class="header">REGISTRAZIONE NUOVO ACCOUNT</h1>
         <form action="form_control.php" method="post">
             <fieldset id="user_data">

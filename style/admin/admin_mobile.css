@@ -1069,7 +1069,7 @@ new_proj_btns, .new_art_btns, .new_off_btns {
         background-position: center;
         background-repeat: no-repeat;
     }
-    .container_est, #container_est_articles, #container_est_users {
+    .header, .container_est, #container_est_articles, #container_est_users {
         width: 100%;
         margin: 0;
     }
