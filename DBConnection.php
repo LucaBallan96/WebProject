@@ -213,7 +213,7 @@
 			$result = $this->conn->query($sql);
 			if($result->num_rows>0){
 				while($row=$result->fetch_assoc()){
-					echo "<a class='link' href='articolo.php?id=".$row['id']."'><div class='container_article'>
+					echo "<a class='link' href='articolo.php?id=".$row['id']."' title='".$row['title']."'><div class='container_article'>
 					<div class='container_img'>
 					<img src='images/".$row['image']."'>
 					</div>
@@ -257,7 +257,7 @@
 							<div class='div_author'>Autore - ".$row['author']."</div>
 						</div>
 						
-							
+						
 					</div>";
 				}
 			}

@@ -78,19 +78,19 @@
 		<div class="container_certificazioni">
 			<div id="text_certificazioni">
 				<div id="text_c">
-					Puntualità, professionalità e qualità sono i segni di riconoscimento che <a href="index.php" class="link_generico">Costruzioni Bordignon s.r.l.</a> si è guadagnata nel corso degli anni distinguendosi sempre, grazie soprattutto ai continui investimenti in tecnologia, attrezzatura, ricerca e sviluppo e al supporto di uno staff tecnico interno specializzato e in continuo aggiornamento.</br></br>
-					Con tali competenze l’azienda si immette nel mercato con grande autorità, conquistando un posto di rilievo nel settore. Al fine di soddisfare tutte le esigenze, <a href="index.php" class="link_generico">Costruzioni Bordignon s.r.l.</a> ha selezionato i settori di attività onde garantire al cliente qualunque servizio in modo autonomo e senza vincoli da terzi, ottenendo così il controllo diretto ed assoluto della qualità fornita ed una maggiore flessibilità d’intervento.</br></br>
-					Sulla base degli insegnamenti e del know now di <a href="index.php" class="link_generico">Costruzioni Bordignon s.r.l.</a>, nasce nel 2013 B.G.P. GENERAL BAU Srl per garantire la stessa competenza, professionalità e vicinanza anche nell’esecuzione di opere site nell’area Altoatesina.</br></br>
-					Conferma dell’alto standard qualitativo e professionale con cui le aziende si presentano nel mercato sono le certificazioni del sistema di qualità rispondente alle norme <a href="https://www.uni.com/" class="link_generico" target="_blanck">UNI EN ISO</a> 9001:2008, le Certificazioni <a href="https://it.wikipedia.org/wiki/Societ%C3%A0_organismi_di_attestazione" class="link_generico" target="_blanck">SOA</a> e la certificazione<a href="https://it.wikipedia.org/wiki/OHSAS_18001" class="link_generico" target="_blanck"> OHSAS</a> 18001, implementazione del Sistema di Gestione per la Salute e Sicurezza sul Lavoro ottenuta nel 2012.
+					Puntualità, professionalità e qualità sono i segni di riconoscimento che <a href="index.php" class="link_generico" title="home sito web azienda Costruioni Bordignon S.r.l.">Costruzioni Bordignon s.r.l.</a> si è guadagnata nel corso degli anni distinguendosi sempre, grazie soprattutto ai continui investimenti in tecnologia, attrezzatura, ricerca e sviluppo e al supporto di uno staff tecnico interno specializzato e in continuo aggiornamento.</br></br>
+					Con tali competenze l’azienda si immette nel mercato con grande autorità, conquistando un posto di rilievo nel settore. Al fine di soddisfare tutte le esigenze, <a href="index.php" class="link_generico" title="home sito web azienda Costruioni Bordignon S.r.l.">Costruzioni Bordignon s.r.l.</a> ha selezionato i settori di attività onde garantire al cliente qualunque servizio in modo autonomo e senza vincoli da terzi, ottenendo così il controllo diretto ed assoluto della qualità fornita ed una maggiore flessibilità d’intervento.</br></br>
+					Sulla base degli insegnamenti e del know now di <a href="index.php" class="link_generico" title=" home sito web azienda Costruioni Bordignon S.r.l.">Costruzioni Bordignon s.r.l.</a>, nasce nel 2013 <a href="azienda.php#sedi" class="link_generico"title="sedi Costruzioni Bordignon S.r.l.">B.G.P General Bau S.r.l.</a> per garantire la stessa competenza, professionalità e vicinanza anche nell’esecuzione di opere site nell’area Altoatesina.</br></br>
+					Conferma dell’alto standard qualitativo e professionale con cui le aziende si presentano nel mercato sono le certificazioni del sistema di qualità rispondente alle norme <a href="https://www.uni.com/" class="link_generico" target="_blanck" title="sito ufficiale UNI">UNI EN ISO</a> 9001:2008, le Certificazioni <a href="https://it.wikipedia.org/wiki/Societ%C3%A0_organismi_di_attestazione" class="link_generico" target="_blanck" title="certificazione SOA wikipedia">SOA</a> e la certificazione<a href="https://it.wikipedia.org/wiki/OHSAS_18001" class="link_generico" target="_blanck" title="certificazione OHSAS wikipedia"> OHSAS</a> 18001, implementazione del Sistema di Gestione per la Salute e Sicurezza sul Lavoro ottenuta nel 2012.
 				</div>
 			</div>
 			<div id="image_certificazioni"></div>
 			<div id="storia" class="subtitle">Certificazioni Costruzioni Bordignon S.r.l.</div>
 			<div class="divisor"></div>
 			<div id="container_img_cb">
-				<div class="cont_img_cert"><a class="a_img" href="images/iso.jpeg"><img class="img_certification" src="images/iso.jpeg" title="iso"/></a></div>
-				<div class="cont_img_cert"><a class="a_img" href="images/ohsas.jpeg"><img class="img_certification" src="images/ohsas.jpeg" title="ohsas"/></a></div>
-				<div class="cont_img_cert"><a class="a_img" href="images/soa.jpeg"><img class="img_certification" src="images/soa.jpeg" title="soa"/></a></div>
+				<div class="cont_img_cert"><a class="a_img" href="images/iso.jpeg" ><img class="img_certification" src="images/iso.jpeg" title=" certificazione iso"/></a></div>
+				<div class="cont_img_cert"><a class="a_img" href="images/ohsas.jpeg" ><img class="img_certification" src="images/ohsas.jpeg" title="certificazione ohsas"/></a></div>
+				<div class="cont_img_cert"><a class="a_img" href="images/soa.jpeg" ><img class="img_certification" src="images/soa.jpeg" title="certificazione soa"/></a></div>
 			</div>
 			<div id="cont_cert">
 				<div id="text_cert">

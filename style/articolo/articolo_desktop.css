@@ -3,6 +3,17 @@
     background-color: #008cff7a;
 }
 
+#back_link {
+    margin-top: 50px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    text-decoration: none;
+    padding: 1em;
+    color: white;
+    background-color: #0084ff;
+}
+
 .title{
     padding-top: 80px;
     padding-bottom: 40px;
@@ -38,24 +49,24 @@
    
 }
 .container_text_img{
-    width: 100%;
     display: table;
-    
+    padding: 10px;
     
 }
+
 .text{
     float: left;
-    width: 50%;
+    width: 58%;
     padding: 20px;
     color: rgb(98, 105, 146);
-
+    
     
 }
 .container_img{
     float: left;
     width: 42%;
     padding: 20px;
-
+    
 }
 .container_img img{
     width: 100%;
