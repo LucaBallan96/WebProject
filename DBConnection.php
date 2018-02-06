@@ -173,7 +173,7 @@
 									$sql1="SELECT date FROM webproject.form_offerte WHERE idOffer='".$row['id']."'and user='".$username."'";
 									$result1=$this->conn->query($sql1);
 									$row1=$result1->fetch_assoc();
-									echo"Data colloquio - ".$row1['date']."
+									echo"Data colloquio:  ".$row1['date']."
 									</div>
 									
 							</div>
@@ -181,6 +181,7 @@
 							<form action='form_control.php' method='post'>
 							<input id='subsub' type='submit' value='Rimuovi' name='remove_off'> 
 							<input class='identity' type='text' name='idOffer' value='".$row['id']."'/>
+							<input class='identity' type='text' name='mydate' value='".$row1['date']."'/>
 						</form>
 						</label>
 
@@ -197,11 +198,13 @@
 			}
 		}
 		//RIMOZIONE PRENOTAZIONE
-		public function remove_prenotation($idOffer){
+		public function remove_prenotation($idOffer,$mydate){
 			$user=$_SESSION['username'];
 			$sql = "DELETE FROM webproject.form_offerte WHERE user='$user'and idOffer='$idOffer'";
-			$result = $this->conn->query($sql);
+			$sql1= "UPDATE webproject.date_offerte SET jobs=jobs+1 WHERE idOffer='$idOffer' and date='$mydate'";
 			
+			$result = $this->conn->query($sql);
+			$result1 = $this->conn->query($sql1);
 		}
 		//ARTICOLI
 
@@ -284,7 +287,7 @@
 			";
 			$user=$_SESSION['username'];
 			
-			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id != ALL ((SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$user."') UNION (SELECT idOffer FROM webproject.date_offerte  WHERE date_offerte.idOffer NOT IN (SELECT idOffer FROM webproject.date_offerte  WHERE date_offerte.jobs!='0')))";
+			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id != ALL ((SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$user."') UNION (SELECT idOffer FROM webproject.date_offerte  WHERE date_offerte.idOffer NOT IN (SELECT idOffer FROM webproject.date_offerte  WHERE date_offerte.jobs!='0')) UNION (SELECT id FROM webproject.offerte WHERE offerte.id NOT IN (SELECT idOffer FROM webproject.date_offerte)))";
 			$result = $this->conn->query($sql);
 			if($result->num_rows > 0){
 				$count=0;
@@ -303,7 +306,7 @@
 					
 					<input id='".$row['id']."' type='checkbox' class='pro_select' />
 						<label class='label_offer' for='".$row['id']."'>
-						<div class='divisor'></div>
+						
 						
 						<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png'></div>
 							<div class='div_information'>

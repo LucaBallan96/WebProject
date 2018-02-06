@@ -119,7 +119,7 @@ input[type="checkbox"]{
     display: table;
     border: 1px solid gray;
     font-size: 14px;
-    position: absolute;
+    float: right;
     margin-top: 50px;
     padding-left: 40px;
 }

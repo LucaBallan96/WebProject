@@ -26,7 +26,7 @@ function offer_filter(str) {
     for(i=0; i<offers.length; i++) {
         texts=offers[i].getElementsByClassName('text');
         if(texts[0].innerHTML.toLowerCase().indexOf(str.toLowerCase())+1)
-            offers[i].style.display="block";
+            offers[i].style.display="table";
         else
             offers[i].style.display="none";
     }

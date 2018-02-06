@@ -6,7 +6,7 @@
     
     color: rgba(0, 73, 169, 0.888);
     text-align: left;
-    font-size: 32px;
+    font-size: 28px;
     width: 90%;
     margin: auto;
     
@@ -16,6 +16,9 @@
     width: 90%;
     margin: auto;
     transition: 1s;
+    padding: 10px;
+    border: 1px solid  #008cff3d;
+    box-shadow: 2px 2px 4px #008cff3d;
 }
 #container_filter{
     color: rgba(0, 73, 169, 0.888);
@@ -79,13 +82,13 @@ input[type="checkbox"]{
     margin-bottom: 15px;
     margin-top: 15px;
     overflow: hidden;
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: 5px 10px 18px #008cff3d;
 
 }
 .label_offer:hover{
     cursor: pointer;
     background-color: rgb(243, 250, 255);
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: 5px 10px 18px #0077d177;
 }
 .label_offer:hover .divisor{
     display: block;
@@ -161,7 +164,7 @@ input[type="checkbox"]{
 /*PRENOTAZIONI*/
 
 #container_prenotazioni{
-    position: absolute;
+    float: right;
     font-size: 13px; 
     background-color: rgb(241, 245, 250);;
     margin-top:50px; 
