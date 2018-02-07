@@ -45,9 +45,9 @@
 				if($_GET['error']==4)
 					echo "Nome utente non disponibile, modifica annullata";
 				else if($_GET['error']==5)
-					echo "Errore nel caricamento dell'immagine";
+					echo "Errore nel caricamento dell&#39immagine";
 				else if($_GET['error']==6)
-					echo "Errore nella rimozione dell'immagine";
+					echo "Errore nella rimozione dell&#39immagine";
 				echo "</div></div>";
             }
 		?>
@@ -60,14 +60,14 @@
 				<fieldset id='new_imp_personal_info'>
 					<legend>Informazioni personali</legend>
 					<input class='identity' type='text' name='new_imp' value='new_imp'/>
-					<div>Nome:<input type='text' name='firstname' placeholder="Nome" pattern="[a-zA-Z\s]{1,30}" title="Nome dell'impiegato: massimo 30 caratteri alfabetici" required/></div>
-					<div>Cognome:<input type='text' name='lastname' placeholder="Cognome" pattern="[a-zA-Z\s]{1,30}" title="Cognome dell'impiegato: massimo 30 caratteri alfabetici" required/></div>
-					<div>Data di nascita:<input type='date' name='birth' min='1900-01-01' max='2000-01-01' title="Inserisci la data di nascita dell'impiegato"/></div>
-					<div>Età:<input type='number' name='age' min='18' max='99' placeholder="Età" title="Inserisci l'età dell'impiegato"/></div>
-					<div>E-mail:<input type='email' name='mail' placeholder="E-mail" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}" title="E-mail dell'impiegato: il formato è quello standard. Sono accettati i simboli . + - _ e %"/></div>
-					<div>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png' title="Inserisci una foto dell'impiegato"/></div>
-					<div>Settore:<input type='text' name='branch' placeholder="Settore di impiego" pattern="[a-zA-Z0-9\s]{1,30}" title="Settore dell'impiegato: massimo 30 caratteri alfanumerici"/></div>
-					<div>Anno di inizio:<input type='number' name='begin' min='1900' max='2018' placeholder="Anno di inizio" title="Inserisci l'anno di inizio dell'impiegato"/></div>
+					<div>Nome:<input type='text' name='firstname' placeholder="Nome" pattern="[a-zA-Z\s]{1,30}" title="Nome dell&#39impiegato: massimo 30 caratteri alfabetici" required/></div>
+					<div>Cognome:<input type='text' name='lastname' placeholder="Cognome" pattern="[a-zA-Z\s]{1,30}" title="Cognome dell&#39impiegato: massimo 30 caratteri alfabetici" required/></div>
+					<div>Data di nascita:<input type='date' name='birth' min='1900-01-01' max='2000-01-01' title="Inserisci la data di nascita dell&#39impiegato"/></div>
+					<div>Età:<input type='number' name='age' min='18' max='99' placeholder="Età" title="Inserisci l&#39età dell&#39impiegato"/></div>
+					<div>E-mail:<input type='email' name='mail' placeholder="E-mail" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$" title="E-mail dell&#39impiegato: il formato è quello standard. Sono accettati i simboli . + - _ e %"/></div>
+					<div>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png' title="Inserisci una foto dell&#39impiegato"/></div>
+					<div>Settore:<input type='text' name='branch' placeholder="Settore di impiego" pattern="[a-zA-Z0-9\s]{1,30}" title="Settore dell&#39impiegato: massimo 30 caratteri alfanumerici"/></div>
+					<div>Anno di inizio:<input type='number' name='begin' min='1900' max='2018' placeholder="Anno di inizio" title="Inserisci l&#39anno di inizio dell&#39impiegato"/></div>
 				</fieldset>
 				<fieldset id='new_imp_company_info'>
 					<legend>Ruolo nell'azienda:</legend>
@@ -83,7 +83,7 @@
 					<div><label title="Magazziniere"><input type='radio' name='role' value='Magazziniere'/>Magazziniere</label></div>
 				</fieldset>
 				<div class='submit_reset_div'>
-					<input class='submit_btn' type='submit' value='Salva impiegato' title="Salva i dati dell'impiegato"/>
+					<input class='submit_btn' type='submit' value='Salva impiegato' title="Salva i dati dell&#39impiegato"/>
 					<input class='reset_btn' type='reset' value='Reset' title="Resetta i dati inseriti"/>
 				</div>
 			</form>
@@ -101,8 +101,8 @@
 						<div>Nome:<input type='text' name='name' placeholder='Nome' pattern=".{1,50}" title="Nome del progetto: massimo 50 caratteri" required/></div>
 						<div>Immagine:<input class='new_proj_image' type='file' name='image' accept='.jpg, .jpeg, .png' title="Inserisci una immagine per il progetto" required/></div>
 						<div>Stato:
-							<label><input type='radio' name='status' value='In corso' title="Progetto in corso" checked/> In corso</label>
-							<label><input type='radio' name='status' value='Terminato' title="Progetto terminato"/> Terminato</label>
+							<label title="Progetto in corso"><input type='radio' name='status' value='In corso' checked/> In corso</label>
+							<label title="Progetto terminato"><input type='radio' name='status' value='Terminato'/> Terminato</label>
 						</div>
 						<div>Committente:<input type='text' name='client' placeholder='Committente' pattern=".{1,50}" title="Committente del progetto: massimo 50 caratteri"/></div>
 						<div>Tipologia:<input type='text' name='type' placeholder='Tipo di opera' pattern=".{1,30}" title="Tipologia del progetto: massimo 30 caratteri"/></div>

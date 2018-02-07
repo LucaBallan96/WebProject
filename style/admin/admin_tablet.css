@@ -128,7 +128,7 @@ body {
     width: calc(100% - 40px);
     height: 25%;
     color: white;
-    font-size: 1em;
+    font-size: 0.8em;
 }
 .imp_name div, .imp_role div, .imp_birth div, .imp_mail div {
     position: relative;
@@ -137,6 +137,9 @@ body {
     padding-left: 1em;
 }
 .imp_mail div a {
+    color: blue;
+}
+.imp_mail div a:hover {
     color: white;
 }
 .more_info {

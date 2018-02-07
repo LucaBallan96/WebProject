@@ -25,12 +25,12 @@
 				$incorso2="";
 				$terminati2="";
 				while($row = $result->fetch_assoc()) {
-					$stringa="<a href='info_progetto.php?numero=".$row['id']."' class='grid_project'>
+					$stringa="<a href='info_progetto.php?numero=".$row['id']."' class='grid_project' title='Visualizza le informazioni sul progetto ".$row['name']."'>
 							<img class='grid_pr_image' src='images/".$row['image']."'/>
 							<div class='grid_pr_name_div'><div class='grid_pr_name'>".$row['name']."</div></div>
 							<div class='grid_pr_location'>".$row['location']."</div>
 						</a>";
-					$stringa2="<div class='list_project'>
+					$stringa2="<div class='list_project' title='Visualizza le informazioni sul progetto ".$row['name']."'>
 							<div class='list_pr_image' style='background-image: url(images/".$row['image'].")'></div>
 							<a href='info_progetto.php?numero=".$row['id']."' class='list_pr_name_a'><div class='list_pr_name'>".$row['name']."</div><div class='list_pr_location'>".$row['location']."</div></a>
 						</div>";
@@ -56,7 +56,7 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
-				echo "<a href='articolo.php?id=".$row['id']."'id='div_two' class='div_group' title='Leggi l&#39articolo più recente'>
+				echo "<a href='articolo.php?id=".$row['id']."' id='div_two' class='div_group' title='Leggi l&#39articolo più recente'>
 				<div id='div_title_two' class='div_title_group'>
 					<div class='title_div'>Ultimo Articolo</div>
 				</div>
@@ -77,7 +77,7 @@
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
 				echo "<a href='info_progetto.php?numero=".$row['id']."'id='div_three' class='div_group' title='Visualizza l&#39ultimo progetto iniziato'>
-				<div id='div_title_three'class='div_title_group'>
+				<div id='div_title_three' class='div_title_group'>
 						<div class='title_div'>Ultimo Progetto</div>
 				</div>
 				<div class='div_container_img'>
@@ -116,8 +116,8 @@
 			</a>";
 			}
 			else{
-				echo "<a href='azienda.php'id='div_four' class='div_group'>
-				<div id='div_title_four'class='div_title_group'>
+				echo "<a href='azienda.php' id='div_four' class='div_group'>
+				<div id='div_title_four' class='div_title_group'>
 						<div class='title_div'>Azienda</div>
 				</div>
 				<div class='div_container_img'>
@@ -138,7 +138,7 @@
 				$row = $result->fetch_assoc();
 				//$dateString = date("d-m-Y", strtotime($row['begin']));
 				echo "<h1 id='header'>".$row['name']."</h1>
-						<div id='div_image'><img src='images/".$row['image']."'></img></div>
+						<div id='div_image' title='".$row['image']."'><img src='images/".$row['image']."'></img></div>
 						<div id='div_specifiche'>
 							<div class='specifica'>Committente<p class='spec_data'>".$row['client']."</p></div><hr/>
 							<div class='specifica'>Tipologia<p class='spec_data'>".$row['type']."</p></div><hr/>
@@ -156,7 +156,7 @@
 			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id = ANY (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$_SESSION['username']."')";
 			
 			$result = $this->conn->query($sql);
-			echo"<div class='title' >Prenotazioni Effettuate</div>";
+			echo"<div class='title'>Prenotazioni Effettuate</div>";
 			if($result->num_rows > 0){
 				$count=1;
 				while($row=$result->fetch_assoc()){
@@ -170,7 +170,7 @@
 									".$row['message']."	</br></br>";
 									
 									$username=$_SESSION['username'];
-									$sql1="SELECT date FROM webproject.form_offerte WHERE idOffer='".$row['id']."'and user='".$username."'";
+									$sql1="SELECT date FROM webproject.form_offerte WHERE idOffer='".$row['id']."' and user='".$username."'";
 									$result1=$this->conn->query($sql1);
 									$row1=$result1->fetch_assoc();
 									echo"Data colloquio:  ".$row1['date']."
@@ -192,8 +192,7 @@
 				}
 			}
 			else{
-				echo "
-					<p class='exception_offer' align='center'>Nessun'offerta prenotata</p>
+				echo "<p class='exception_offer' align='center'>Nessun'offerta prenotata</p>
 					<div class='divisor'></div>";
 			}
 		}
@@ -339,9 +338,9 @@
 										<label>Mail: <input class='in_form' type='text' name='mail'></label><br></br>
 										<label>Data colloquio: <select class='date_input' name='date' >";
 										for($j=0; $j<count($dates); $j++)
-											echo"<option value='".$dates[$j]."'>".$dates[$j]."</option>";
+											echo "<option value='".$dates[$j]."'>".$dates[$j]."</option>";
 	
-										echo"</select></label><br></br>
+										echo "</select></label><br></br>
 										<label>Messaggio:</br></br>
 										<textarea class='texta'rows='11' class='textmessage' name='textmessage' form='f".$count."'> </textarea></label>
 									</div></div>
@@ -349,21 +348,12 @@
 									<input class='submit' type='submit' value='Invia' name='candidate'>  
 								</div>	
 							</form>
-						</div>  
-						
-
-
-							
-
-
-
-						";
+						</div>";
 					$count=$count+1;
 				}
 			}
 			else{
-				echo "
-					<p class='exception_offer' align='center'>Nessun offerta disponibile</p>
+				echo "<p class='exception_offer' align='center'>Nessun offerta disponibile</p>
 					<div class='divisor'></div>";
 			}
 		}
@@ -420,22 +410,22 @@
 				$count=1;
 				while($row = $result->fetch_assoc()) {
 					echo "<input id='project_select".$count."' class='pro_select' type='radio' name='pro_select' onclick='uncheck_radio(this)'/>
-						<label class='project_label' for='project_select".$count."'>
+						<label class='project_label' for='project_select".$count."' title='Visualizza e modifica i dati del progetto ".$row['name']."'>
 							<div class='project_title'>".$row['name']."
 								<input type='checkbox' id='removeproj".$count."' class='remove_control'/>
-								<label class='remove_proj_btn' for='removeproj".$count."'></label>
+								<label class='remove_proj_btn' for='removeproj".$count."' title='Apri o chiudi il form di rimozione'></label>
 								<div class='remove_form_div'>
 									<form class='remove_form' action='form_control.php' method='post'>
 										<fieldset class='remove_fieldset'>
 											<legend>Rimuovere definitivamente il progetto ".$row['name']." e tutti i suoi dati?</legend>
 											<div class='yes_no_div'>
 												<input id='yes_proj".$count."' class='radio_choice' type='radio' name='remove_proj' value='".$row['id']."' checked/>
-												<label for='yes_proj".$count."'>Si, rimuovi</label>
+												<label for='yes_proj".$count."' title='Rimuovi'>Si, rimuovi</label>
 												<input id='no_proj".$count."' class='radio_choice' type='radio' name='remove_proj' value='no'/>
-												<label for='no_proj".$count."'>No, mantieni</label>
+												<label for='no_proj".$count."' title='Mantieni'>No, mantieni</label>
 											</div>
 										</fieldset>
-										<input class='apply_btn' type='submit' value='Applica'/>
+										<input class='apply_btn' type='submit' value='Applica' title='Applica la scelta'/>
 									</form>
 								</div>
 							</div>
@@ -446,27 +436,27 @@
 								<div class='project_info'>
 									<div class='project_img'>
 										<div class='current_proj_img' style='background-image:url(../../images/".$row['image'].")'></div>
-										<div class='change_proj_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png'/></div>
+										<div class='change_proj_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png' title='Inserisci una nuova foto per il progetto'/></div>
 									</div>
 									<div class='project_data'>
 										<div>Stato:";
 					if($row['status']=='In corso')
-						echo				"<label><input type='radio' name='status' value='In corso' checked/> In corso</label>
-											<label><input type='radio' name='status' value='Terminato'/> Terminato</label>";
-					else echo				"<label><input type='radio' name='status' value='In corso'/> In corso</label>
-											<label><input type='radio' name='status' value='Terminato' checked/> Terminato</label>";
+						echo				"<label title='Progetto in corso'><input type='radio' name='status' value='In corso' checked/> In corso</label>
+											<label title='Progetto terminato'><input type='radio' name='status' value='Terminato'/> Terminato</label>";
+					else echo				"<label title='Progetto in corso'><input type='radio' name='status' value='In corso'/> In corso</label>
+											<label title='Progetto terminato'><input type='radio' name='status' value='Terminato' checked/> Terminato</label>";
 					echo				"</div>
-										<div>Committente:<input type='text' name='client' value='".$row['client']."'/></div>
-										<div>Tipologia:<input type='text' name='type' value='".$row['type']."'/></div>
-										<div>Luogo:<input type='text' name='location' value='".$row['location']."'/></div>
-										<div>Direttore dei lavori:<input type='text' name='director' value='".$row['director']."'/></div>
-										<div>Data di inizio:<input type='date' name='begin' min='1900-01-01' max='2100-01-01' value='".$row['begin']."' required/></div>
+										<div>Committente:<input type='text' name='client' value='".$row['client']."' placeholder='Committente' pattern='.{1,50}' title='Committente del progetto: massimo 50 caratteri'/></div>
+										<div>Tipologia:<input type='text' name='type' value='".$row['type']."' placeholder='Tipo di opera' pattern='.{1,30}' title='Tipologia del progetto: massimo 30 caratteri'/></div>
+										<div>Luogo:<input type='text' name='location' value='".$row['location']."' placeholder='Paese o città' pattern='.{1,30}' title='Località del progetto: massimo 30 caratteri'/></div>
+										<div>Direttore dei lavori:<input type='text' name='director' value='".$row['director']."' placeholder='Direttore' pattern='.{1,30}' title='Direttore dei lavori: massimo 30 caratteri'/></div>
+										<div>Data di inizio:<input type='date' name='begin' min='1900-01-01' max='2100-01-01' value='".$row['begin']."' title='Data di inizio del progetto' required/></div>
 									</div>
-									<textarea class='project_description' name='description' form='project_select".$count."_form' placeholder='Descrizione del progetto'>".$row['description']."</textarea>
+									<textarea class='project_description' name='description' form='project_select".$count."_form' placeholder='Descrizione del progetto' maxlength='1000' title='Inserisci la descrizione del progetto'>".$row['description']."</textarea>
 								</div>
 								<div class='proj_form_btns'>
-									<input class='submit_btn' type='submit' value='Salva modifiche'/>
-									<input class='reset_btn' type='reset' value='Annulla modifiche'/>
+									<input class='submit_btn' type='submit' value='Salva modifiche' title='Salva i dati del progetto'/>
+									<input class='reset_btn' type='reset' value='Annulla modifiche' title='Resetta i dati inseriti'/>
 								</div>
 							</form>
 						</label>";
@@ -617,13 +607,13 @@
 									<div>Cognome:<input type='text' name='lastname' value='".$row['lastname']."' placeholder='Cognome' pattern='[a-zA-Z\s]{1,30}' title='Cognome dell&#39impiegato: massimo 30 caratteri alfabetici' required/></div>
 									<div>Data di nascita:<input type='date' name='birth' min='1900-01-01' max='2000-01-01' value='".$row['birth']."' title='Inserisci la data di nascita dell&#39impiegato'/></div>
 									<div>Età:<input type='number' name='age' value='".$row['age']."' min='18' max='99' placeholder='Età' title='Inserisci l&#39età dell&#39impiegato'/></div>
-									<div>E-mail:<input type='email' value='".$row['mail']."' name='mail' placeholder='E-mail' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}' title='E-mail dell&#39impiegato: il formato è quello standard. Sono accettati i simboli . + - _ e %'/></div>
+									<div>E-mail:<input type='email' value='".$row['mail']."' name='mail' placeholder='E-mail' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$' title='E-mail dell&#39impiegato: il formato è quello standard. Sono accettati i simboli . + - _ e %'/></div>
 									<div class='file_select'>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png' title='Inserisci una foto dell&#39impiegato'/></div>
 									<div>Settore:<input type='text' name='branch' value='".$row['branch']."' placeholder='Settore di impiego' pattern='[a-zA-Z0-9\s]{1,30}' title='Settore dell&#39impiegato: massimo 30 caratteri alfanumerici'/></div>
 									<div>Anno di inizio:<input type='number' name='begin' value='".$row['begin']."' min='1900' max='2018' placeholder='Anno di inizio' title='Inserisci l&#39anno di inizio dell&#39impiegato'/></div>
 								</fieldset>
 								<fieldset class='modify_company_info'>
-									<legend>Ruolo nell'azienda:</legend>";
+									<legend>Ruolo nell&#39azienda:</legend>";
 					for($i=0; $i<count($roles); $i++) {
 						if($row['role']==$roles[$i])
 							$stringa=$stringa."<div><label title='".$roles[$i]."'><input type='radio' name='role' value='".$roles[$i]."' checked/> ".$roles[$i]."</label></div>";
@@ -658,15 +648,15 @@
 							<div class='imp_name'><div>".$row['firstname']." ".$row['lastname']."</div></div>
 							<div class='imp_birth'><div>".$row['birth']."</div></div>
 							<div class='imp_role'><div>".$row['role']."</div></div>
-							<div class='imp_mail'><div><a href='mailto:".$row['mail']."'>".$row['mail']."</a></div></div>
+							<div class='imp_mail'><div><a href='mailto:".$row['mail']."' title='Invia una mail a ".$row['firstname']." ".$row['lastname']."'>".$row['mail']."</a></div></div>
 						</div>
 					</div>
 					<input type='checkbox' id='check".$count."' class='check_control'/>
-					<label class='btn' for='check".$count."'>
+					<label class='btn' for='check".$count."' title='Visualizza ulteriori informazioni'>
 						<div class='magic'>
 							<div class='imp_more'><div>".$row['age']." anni</div></div>
 							<div class='imp_more'><div>Settore: ".$row['branch']."</div></div>
-							<div class='imp_more'><div>Impiegato dell'azienda dal ".$row['begin']."</div></div>		
+							<div class='imp_more'><div>Impiegato dell&#39azienda dal ".$row['begin']."</div></div>		
 						</div>
 						<div class='more_info'><div>+</div></div>
 					</label>";
@@ -775,7 +765,7 @@
 				$count=1;
 				while($row = $result->fetch_assoc()) {
 					echo "<div class='article_div'>
-							<div class='article_image' style='background-image:url(../../images/".$row['image'].")'></div>
+							<div class='article_image' style='background-image:url(../../images/".$row['image'].")' title='".$row['image']."'></div>
 							<div class='article_info_div'>
 								<div class='article_info'>Data:<div>".$row['date']."</div></div>
 								<div class='article_info'>Autore:<div>".$row['author']."</div></div>
@@ -784,30 +774,30 @@
 								<div class='article_info'>Sottotitolo:<div>".$row['subtitle']."</div></div>
 							</div>
 							<input id='mod_art_checkbox".$count."' class='mod_art_control' type='checkbox'/>
-							<label for='mod_art_checkbox".$count."' class='modify_article_btn'></label>
+							<label for='mod_art_checkbox".$count."' class='modify_article_btn' title='Apri o chiudi il form di modifica'></label>
 							<form id='mod_a".$count."' class='mod_art_form' action='form_control.php' method='post'>
 								<div class='article_image' style='background-image:url(../../images/".$row['image'].")'>
-									<div class='change_art_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png'/></div>
+									<div class='change_art_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png' title='Inserisci una nuova immagine per l&#39articolo'/></div>
 								</div>
 								<div class='article_info_div'>
-									<div class='article_info'>Data:<input type='date' min='1900-01-01' max='".date('Y-m-d')."' name='date' value='".$row['date']."' required/></div>
-									<div class='article_info'>Autore:<input type='text' name='author' placeholder='Autore' value='".$row['author']."' required/></div>
-									<div class='article_info'>Stampa:<input type='text' name='house' placeholder='Ente di stampa' value='".$row['house']."' required/></div>
-									<div class='article_info'>Titolo:<input type='text' name='title' placeholder='Titolo' value='".$row['title']."' required/></div>
-									<div class='article_info'>Sottotitolo:<input type='text' name='subtitle' placeholder='Sottotitolo' value='".$row['subtitle']."' required/></div>
+									<div class='article_info'>Data:<input type='date' min='1900-01-01' max='".date('Y-m-d')."' name='date' value='".$row['date']."' title='Inserisci la data di pubblicazione dell&#39articolo' required/></div>
+									<div class='article_info'>Autore:<input type='text' name='author' value='".$row['author']."' placeholder='Autore' pattern='.{1,30}' title='Autore dell&#39articolo: massimo 30 caratteri' required/></div>
+									<div class='article_info'>Stampa:<input type='text' name='house' value='".$row['house']."' placeholder='Ente di stampa' pattern='.{1,30}' title='Ente di stampa: massimo 30 caratteri' required/></div>
+									<div class='article_info'>Titolo:<input type='text' name='title' value='".$row['title']."' placeholder='Titolo' maxlength='50' title='Inserisci un titolo per l&#39articolo' required/></div>
+									<div class='article_info'>Sottotitolo:<input type='text' name='subtitle' placeholder='Sottotitolo' value='".$row['subtitle']."' placeholder='Sottotitolo' maxlength='100' title='Inserisci un sottotitolo per l&#39articolo' required/></div>
 								</div>
 								<input class='identity' type='text' name='modify_article' value='".$row['id']."'/>
 								<input class='identity' type='text' name='old_image' value='".$row['image']."'/>
-								<input class='save_mod_art' type='submit' value='Salva'/>
-								<input class='reset_mod_art' type='reset' value='Reset'/>
-								<textarea class='article_text' name='text' form='mod_a".$count."'>".$row['text']."</textarea>
+								<input class='save_mod_art' type='submit' value='Salva' title='Salva i dati dell&#39articolo'/>
+								<input class='reset_mod_art' type='reset' value='Reset' title='Resetta i dati inseriti'/>
+								<textarea class='article_text' name='text' form='mod_a".$count."' placeholder='Inserisci il testo' maxlength='2000' title='Inserisci il testo dell&#39articolo'>".$row['text']."</textarea>
 							</form>
 							<input id='rem_art_checkbox".$count."' class='rem_art_control' type='checkbox'/>
-							<label for='rem_art_checkbox".$count."' class='remove_article_btn'></label>
+							<label for='rem_art_checkbox".$count."' class='remove_article_btn' title='Apri o chiudi il form di rimozione'></label>
 							<form class='rem_art_form' action='form_control.php' method='post'>
 								<div>Vuoi eliminare definitivamente questo articolo e tutte le informazioni in esso contenute?</div>
 								<input class='identity' type='text' name='remove_article' value='".$row['id']."'/>
-								<input type='submit' class='rem_art_form_btn' value='Elimina'/>
+								<input type='submit' class='rem_art_form_btn' value='Elimina' title='Elimina l&#39articolo'/>
 							</form>
 							<div class='article_text'>".$row['text']."</div>
 						</div>";
@@ -908,14 +898,14 @@
 				while($row = $result->fetch_assoc()) {
 					echo "<div class='offer_div'>
 							<input id='rem_off_checkbox".$count."' class='rem_off_control' type='checkbox'/>
-							<label for='rem_off_checkbox".$count."' class='rem_off_btn'><div>Elimina</div></label>
+							<label for='rem_off_checkbox".$count."' class='rem_off_btn' title='Apri o chiudi il form di rimozione'><div>Elimina</div></label>
 							<form class='rem_off_form' action='form_control.php' method='post'>
 								<div>Vuoi eliminare definitivamente questa offerta, i colloqui e le relative prenotazioni degli utenti?</div>
 								<input class='identity' type='text' name='remove_offer' value='".$row['id']."'/>
 								<input type='submit' class='rem_off_form_btn' value='Elimina'/>
 							</form>
 							<input id='cand_off_checkbox".$count."' class='cand_off_control' type='checkbox'/>
-							<label for='cand_off_checkbox".$count."' class='cand_off_btn'><div>Candidature</div></label>
+							<label for='cand_off_checkbox".$count."' class='cand_off_btn' title='Apri o chiudi l&#39elenco delle prenotazioni'><div>Candidature</div></label>
 							<div class='cand_off_div'>";
 					$idOffer=$row['id'];
 					$sql2 = "SELECT * FROM webproject.form_offerte WHERE idOffer='$idOffer'";
@@ -944,18 +934,18 @@
 							<form id='mod_off_form".$count."' class='mod_off_form' action='form_control.php' method='post'>
 								<input class='identity' type='text' name='modify_offer' value='".$row['id']."'/>
 								<fieldset class='mod_off_info'>
-									<div class='mod_off_data'>Settore di impiego:<input type='text' name='branch' placeholder='Settore di impiego' value='".$row['branch']."' required/></div>
+									<div class='mod_off_data'>Settore di impiego:<input type='text' name='branch' placeholder='Settore di impiego' value='".$row['branch']."' pattern='[a-zA-Z0-9\s]{1,30}' title='Settore di impiego: massimo 30 caratteri alfanumerici' required/></div>
 									<div class='mod_off_data'>Ruolo professionale:
-									<select form='mod_off_form".$count."' name='role' required/>";
+									<select form='mod_off_form".$count."' name='role' title='Seleziona il ruolo professionale' required/>";
 					for($i=0; $i<count($roles); $i++) {
 						if($row['role']==$roles[$i])
-							echo "<option value='".$roles[$i]."' selected/> ".$roles[$i]."</option>";
+							echo "<option value='".$roles[$i]."' title='".$roles[$i]."' selected/> ".$roles[$i]."</option>";
 						else
-							echo "<option value='".$roles[$i]."'/> ".$roles[$i]."</option>";
+							echo "<option value='".$roles[$i]."' title='".$roles[$i]."'/> ".$roles[$i]."</option>";
 					}
 					echo 			"</select>
 									</div>
-									<div class='mod_off_data'>Tipo di contratto:<input type='text' name='contract' placeholder='Tipo di contratto' value='".$row['contract']."' required/></div>
+									<div class='mod_off_data'>Tipo di contratto:<input type='text' name='contract' placeholder='Tipo di contratto' value='".$row['contract']."' pattern='.{1,30}' title='Tipo di contratto: massimo 30 caratteri' required/></div>
 								</fieldset>
 								<fieldset class='mod_off_dates'>
 									<legend>Date colloqui:</legend>";
@@ -964,20 +954,20 @@
 					$dateCount=1;
 					if ($result1->num_rows > 0) {
 						while($row1 = $result1->fetch_assoc()) {
-							echo "<div>".$dateCount."°:<input class='mod_off_date' type='date' name='date".$dateCount."' min='' max='2100-01-01' value='".$row1['date']."'/></div>";
+							echo "<div>".$dateCount."°:<input class='mod_off_date' type='date' name='date".$dateCount."' min='".date('Y-m-d')."' max='2100-01-01' value='".$row1['date']."' title='Seleziona la data del ".$dateCount."° colloquio'/></div>";
 							$dateCount++;
 						}
 					}
 					while($dateCount<5) {
-						echo "<div>".$dateCount."°:<input class='mod_off_date' type='date' name='date".$dateCount."' min='' max='2100-01-01'/></div>";
+						echo "<div>".$dateCount."°:<input class='mod_off_date' type='date' name='date".$dateCount."' min='".date('Y-m-d')."' max='2100-01-01' title='Seleziona la data del ".$dateCount."° colloquio'/></div>";
 						$dateCount++;
 					}
 					echo 		"</fieldset>
 								<div class='mod_off_mex'>
-									Descrizione:<textarea class='mod_off_text' form='mod_off_form".$count."' name='message' placeholder='Inserisci il messaggio'>".$row['message']."</textarea>
+									Descrizione:<textarea class='mod_off_text' form='mod_off_form".$count."' name='message' placeholder='Inserisci il messaggio' maxlength='1000' title='Inserisci il messaggio'>".$row['message']."</textarea>
 								</div>
-								<input class='mod_off_btn' type='submit' value='Salva'/>
-								<input class='mod_off_btn' type='reset' value='Annulla'/>
+								<input class='mod_off_btn' type='submit' value='Salva' title='Salva i dati dell&#39offerta'/>
+								<input class='mod_off_btn' type='reset' value='Annulla' title='Resetta i dati inseriti'/>
 							</form>
 						</div>";
 					$count++;
@@ -991,10 +981,47 @@
 			$result = $this->conn->query($sql);
 			$sql = "DELETE FROM webproject.date_offerte WHERE idOffer='$off'";
 			$result = $this->conn->query($sql);
+			if(!isset($_POST['modify_offer'])) {
+				$sql = "SELECT * FROM webproject.form_offerte WHERE idOffer='$off'";
+				$result = $this->conn->query($sql);
+				if ($result->num_rows > 0) {
+					while($row = $result->fetch_assoc()) {
+						$user=$row['user'];
+						$date=$row['date'];
+
+						$sql1="SELECT MAX(id) FROM webproject.messaggi";
+						$result1 = $this->conn->query($sql1);
+						$row1 = $result1->fetch_assoc();
+						$newid=$row1['MAX(id)']+1;
+
+						$mex='Attenzione: la prenotazione per il colloquio in data '.$date.' è stata rimossa';
+						$sql1 = "INSERT INTO webproject.messaggi VALUES ('$newid','$user','$off','$mex')";
+						$result1 = $this->conn->query($sql1);
+					}
+				}
+				$sql = "DELETE FROM webproject.form_offerte WHERE idOffer='$off'";
+				$result = $this->conn->query($sql);
+			}
 		}
 		
+		private $old_br;
+		private $old_ro;
+		private $old_co;
+		private $old_me;
+
 		public function modify_offerta() {
 			$id=$_POST['modify_offer'];
+
+			// salvo i vecchi valori per leggerli in insert_offerta
+			$sql = "SELECT * FROM webproject.offerte WHERE id='$id'";
+			$result = $this->conn->query($sql);
+			$row = $result->fetch_assoc();
+			global $old_br; global $old_ro; global $old_co; global $old_me;
+			$old_br=$row['branch'];
+			$old_ro=$row['role'];
+			$old_co=html_entity_decode($row['contract'], ENT_QUOTES);
+			$old_me=html_entity_decode($row['message'], ENT_QUOTES);
+
 			$this->remove_offerta($id);
 			$this->insert_offerta();
 		}
@@ -1008,8 +1035,44 @@
 			$d2=$_POST['date2'];
 			$d3=$_POST['date3'];
 			$d4=$_POST['date4'];
-			if(isset($_POST['modify_offer'])) // quando avviene una modifica di un'offerta esistente
-				$id=$_POST['modify_offer'];
+			if(isset($_POST['modify_offer'])) { // quando avviene una modifica di un'offerta esistente
+				$id=$_POST['modify_offer'];				
+
+				$sql = "SELECT * FROM webproject.form_offerte WHERE idOffer='$id'";
+				$result = $this->conn->query($sql);
+				// per ogni prenotazione che ha subito delle modifiche
+				if ($result->num_rows > 0) {
+					while($row = $result->fetch_assoc()) {
+						$user=$row['user'];
+						$date=$row['date'];
+						// messaggio al rispettivo utente
+
+						$sql1="SELECT MAX(id) FROM webproject.messaggi";
+						$result1 = $this->conn->query($sql1);
+						$row1 = $result1->fetch_assoc();
+						$newid=$row1['MAX(id)'];
+
+						global $old_br; global $old_ro; global $old_co; global $old_me;
+						if($br!=$old_br || $ro!=$old_ro || $co!=$old_co || $me!=$old_me) {
+							$newid=$newid+1;
+							$mex='Attenzione: la prenotazione per il colloquio in data '.$date.' ha subito delle modifiche';
+							$sql1 = "INSERT INTO webproject.messaggi VALUES ('$newid','$user','$id','$mex')";
+							$result1 = $this->conn->query($sql1);
+						}
+						// prenotazione che ha una data non più valida
+						if($date!=$d1 && $date!=$d2 && $date!=$d3 && $date!=$d4) {
+							// messaggio al rispettivo utente
+							$newid=$newid+1;
+							$mex='Attenzione: la prenotazione per il colloquio in data '.$date.' è stata rimossa';
+							$sql1 = "INSERT INTO webproject.messaggi VALUES ('$newid','$user','$id','$mex')";
+							$result1 = $this->conn->query($sql1);
+							// elimino tale prenotazione
+							$sql1 = "DELETE FROM webproject.form_offerte WHERE user='$user' and idOffer='$id'";
+							$result1 = $this->conn->query($sql1);
+						}
+					}
+				}
+			}
 			else { // quando avviene l'inserimento di una nuova offerta
 				$i=1;
 				$found=false;
@@ -1097,24 +1160,24 @@
 							<div class='user_data'>".$row['username']."</div>
 							<div class='user_data'>P: ".$row['password']."</div>
 							<div class='user_data'>Numero accessi al sito: ".$row['accesses']."</div>
-							<a class='user_data' href='mailto:".$row['mail']."'>".$row['mail']."</a>
+							<a class='user_data' href='mailto:".$row['mail']."' title='Invia una mail a ".$row['username']."'>".$row['mail']."</a>
 							<input id='mod_u_checkbox".$count."' class='mod_u_control' type='checkbox'/>
-							<label for='mod_u_checkbox".$count."' class='mod_u_label'></label>
+							<label for='mod_u_checkbox".$count."' class='mod_u_label' title='Apri o chiudi il form di modifica'></label>
 							<form class='mod_u_form' action='form_control.php' method='post'>
 								<input type='text' class='identity' name='old_user' value='".$row['username']."'/>
 								<input type='text' class='identity' name='old_accesses' value='".$row['accesses']."'/>
-								<input type='text' class='mod_u_form_data' name='admin_mod_user' placeholder='Username' value='".$row['username']."' required/>
-								<input type='text' class='mod_u_form_data' name='admin_mod_u_pass' placeholder='Password' value='".$row['password']."' required/>
-								<input type='email' class='mod_u_form_data' name='admin_mod_u_mail' placeholder='E-mail' value='".$row['mail']."' required/>
-								<input type='submit' class='mod_u_form_btn' value='Salva'/>
-								<input type='reset' class='mod_u_form_btn' value='Annulla'/>
+								<input type='text' class='mod_u_form_data' name='admin_mod_user' placeholder='Username' value='".$row['username']."' maxlength='30' pattern='([a-zA-Z])[a-zA-Z0-9._%@#+-]{5,}' title='Username: deve iniziare con una lettera e contenere almeno 6 caratteri. Sono accettati i simboli . + - _ % @ e #' required/>
+								<input type='text' class='mod_u_form_data' name='admin_mod_u_pass' placeholder='Password' value='".$row['password']."' maxlength='30' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9._%@#+-]{8,}' title='Password: deve contenere almeno un numero, una lettera maiuscola ed una minuscola, e deve avere complessivamente almeno 8 caratteri. Sono accettati i simboli . + - _ % @ e #' required/>
+								<input type='email' class='mod_u_form_data' name='admin_mod_u_mail' placeholder='E-mail' value='".$row['mail']."' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$' title='E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %' required/>
+								<input type='submit' class='mod_u_form_btn' value='Salva' title='Salva i dati dell&#39utente'/>
+								<input type='reset' class='mod_u_form_btn' value='Annulla' title='Resetta i dati inseriti'/>
 							</form>
 							<input id='rem_u_checkbox".$count."' class='rem_u_control' type='checkbox'/>
-							<label for='rem_u_checkbox".$count."' class='rem_u_label'></label>
+							<label for='rem_u_checkbox".$count."' class='rem_u_label' title='Apri o chiudi il form di rimozione'></label>
 							<form class='rem_u_form' action='form_control.php' method='post'>
 								<div>Vuoi eliminare definitivamente questo account?</div>
 								<input type='text' class='identity' name='admin_rem_user' value='".$row['username']."'/>
-								<input type='submit' class='mod_u_form_btn' value='Elimina'/>
+								<input type='submit' class='mod_u_form_btn' value='Elimina' title='Elimina l&#39utente'/>
 							</form>
 						</div>";
 					$count++;

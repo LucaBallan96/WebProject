@@ -74,7 +74,7 @@
 #user {
 	background-color: #0066ff;
 	font-weight: bold;
-	font-variant-caps: all-small-caps;
+	text-transform: uppercase;
 }
 .dropdown:hover .drop_button {
 	background-color: #008cff7a;

@@ -69,10 +69,10 @@
         <div id="navbar_bottom_padding"></div>
 
         <input id="grid_control" class="view_control" type="radio" name="view_control" checked/>
-        <label id="grid_view" class="view" for="grid_control">Griglia</label>
+        <label id="grid_view" class="view" for="grid_control" title="Visualizza i progetti come griglia">Griglia</label>
         <input id="list_control" class="view_control" type="radio" name="view_control"/>
-        <label id="list_view" class="view" for="list_control">Lista</label>
-        <label id="search_label">Cerca <input id="text_search" type="text" placeholder="filtra per nome o città" oninput="project_filter(this.value)"/></label>
+        <label id="list_view" class="view" for="list_control" title="Visualizza i progetti come elenco">Lista</label>
+        <label id="search_label">Cerca <input id="text_search" type="text" placeholder="filtra per nome o città" oninput="project_filter(this.value)" title="Inserisci un testo per filtrare i progetti secondo il nome o la località"/></label>
 
 		<!-- PROGETTI -->
         <?php
@@ -88,7 +88,7 @@
 					31040 Volpago del Montello(TV)</br>
 					Tel : 0423 620077</br>
 					Fax : 0423 620356</br></br>
-					Mail : <a href="mailto:info@costruzionibordignon.it" title="Invia una mail a COSTRUZIONI BORDIGNON S.r.l.">giovannicalore96@gmail.com</a>
+					Mail : <a href="mailto:info@costruzionibordignon.it" title="Invia una mail a COSTRUZIONI BORDIGNON S.r.l.">info@costruzionibordignon.it</a>
 				</div>
 				<div id="div_generalbau" class="div_contatto">
 					<b>B.G.P. GENERAL BAU S.r.l.</b></br></br>
@@ -96,7 +96,7 @@
 					39042 Bressanone (BZ)</br>
 					Tel : 0472 838669</br>
 					Fax : 0472 838669</br></br>
-					Mail : <a href="mailto:info@bgpgeneralbau.com" title="Invia una mail a B.G.P. GENERAL BAU S.r.l.">giovannicalore96@gmail.com</a>
+					Mail : <a href="mailto:info@bgpgeneralbau.com" title="Invia una mail a B.G.P. GENERAL BAU S.r.l.">info@bgpgeneralbau.com</a>
 				</div>
 				<div id="div_service" class="div_contatto">
 					<b>BORDIGNON SERVICE S.r.l.</b></br></br>
@@ -104,7 +104,7 @@
 					31044 Montebelluna (TV)</br>
 					Tel : 0423 604592</br>
 					Fax : 0423 247699</br></br>
-					Mail : <a href="mailto:info@immobiliarebordignon.eu" title="Invia una mail a BORDIGNON SERVICE S.r.l.">giovannicalore96@gmail.com</a>
+					Mail : <a href="mailto:info@immobiliarebordignon.eu" title="Invia una mail a BORDIGNON SERVICE S.r.l.">info@immobiliarebordignon.eu</a>
 				</div>
 			</div>
 		</div>

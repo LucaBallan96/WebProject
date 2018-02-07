@@ -137,6 +137,10 @@ body {
     padding-left: 1.5em;
 }
 .imp_mail div a {
+    font-size: 0.8em;
+    color: blue;
+}
+.imp_mail div a:hover {
     color: white;
 }
 .more_info {
