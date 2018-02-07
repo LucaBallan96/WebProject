@@ -68,6 +68,7 @@
         </div>
 
 		<!--TITLE SUBTITLE-->
+		<a id="back_link" href="iniziative.php">Iniziative</a>
         <?php
             $conn->get_article();
         ?>

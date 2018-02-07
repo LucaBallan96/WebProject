@@ -87,9 +87,9 @@
 		<div id="div_slogan">
 			<div id="div_text_slogan">
 				<div id="div_text_slogan1">
-					<i>Oltre due generazioni di </br> costruttori edili. </br></br>
+					<em>Oltre due generazioni di </br> costruttori edili. </br></br>
 					La terza generazione siamo noi,</br>
-					la quarta è nata e sta crescendo.</i></br>
+					la quarta è nata e sta crescendo.</em></br>
 					<hr>
 				</div>
 				<div id="div_text_slogan2">
@@ -108,16 +108,16 @@
 			<div id="div_storia">
 				<div id="h1_storia">La Nostra Storia</div>
 				<div id="div_text_storia">
-					La <a href="index.php" class="link_generico">Costruzioni Bordignon s.r.l.</a> nasce nel 1998, sulle orme della tradizione iniziata nei primi anni del 1900 da nonno degli attuali titolari 
+					La <a href="index.php" class="link_generico" title="sito web azienda Costruioni Bordignon S.r.l.">Costruzioni Bordignon s.r.l.</a> nasce nel 1998, sulle orme della tradizione iniziata nei primi anni del 1900 da nonno degli attuali titolari 
 					e proseguita poi per mano del padre degli stessi, fino all'avvicendamento generazionale.</br></br></br></br>
-					Nel corso di <i>tre generazioni</i> l'azienda si è continuamente distinta per la professionalità dimostrata, puntanto sempre sulla qualità delle opere fornite, nel rispetto delle condizioni e dei tempi stabiliti.
+					Nel corso di <em>tre generazioni</em> l'azienda si è continuamente distinta per la professionalità dimostrata, puntanto sempre sulla qualità delle opere fornite, nel rispetto delle condizioni e dei tempi stabiliti.
 					Grazie all'impegno di attrezzature e macchinari altamente specializzati e al supporto di uno staff tecnico specializzato, sa offrire un servizio che le permette di primeggiare nel settore.
-					La <a href="https://it.wikipedia.org/wiki/Norme_della_serie_ISO_9000" class="link_generico" target="_blanck">certificazione di qualità ISO</a>, l'<a href="https://it.wikipedia.org/wiki/Societ%C3%A0_organismi_di_attestazione" class="link_generico" target="_blanck">attestazione SOA</a> e
-					l'<a href="https://it.wikipedia.org/wiki/OHSAS_18001" class="link_generico" target="_blanck">attestazione OHSAS</a> sono la conferma dell'impegno profuso al raggiungimento di livelli costruttivi all'avanguardia, che consentono di realizzare opere che vanno dai grandi complessi residenziali e industriali, ai
+					La <a href="https://it.wikipedia.org/wiki/Norme_della_serie_ISO_9000" class="link_generico" target="_blanck" title="certificazione ISO wikipedia">certificazione di qualità ISO</a>, l'<a href="https://it.wikipedia.org/wiki/Societ%C3%A0_organismi_di_attestazione" class="link_generico" target="_blanck" title="certificazione SOA wikipedia">attestazione SOA</a> e
+					l'<a href="https://it.wikipedia.org/wiki/OHSAS_18001" class="link_generico" target="_blanck" title="certificazione OHSAS wikipedia">attestazione OHSAS</a> sono la conferma dell'impegno profuso al raggiungimento di livelli costruttivi all'avanguardia, che consentono di realizzare opere che vanno dai grandi complessi residenziali e industriali, ai
 					piccoli lavori civili che tuttavia contribuiscono ad accrescere l'esperienza, fondamentale per un continuo miglioramento professionale.</br></br></br></br>
-					La continua <i>qualificazione</i> e l'<i>incremento dell'organico </i>permettono inoltre di rendere l'azienda sempre più <i>flessibile e attenta </i> alle esigenze, ai particolari e agli standard richiesti dalla committenza. 
+					La continua <em>qualificazione</em> e l'<em>incremento dell'organico </em>permettono inoltre di rendere l'azienda sempre più <em>flessibile e attenta </em> alle esigenze, ai particolari e agli standard richiesti dalla committenza. 
 					<a href="azienda.php#storia" id="div_button_storia" >
-						<div id="div_scopri"><div id="title_scopri">Scopri di più</div></div> 
+						<div id="div_scopri"><div id="title_scopri" title="storia azienda Costruzioni Bordignon S.r.l.">Scopri di più</div></div> 
 					</a>
 				</div>
 			</div>

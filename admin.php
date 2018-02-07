@@ -62,7 +62,7 @@
 					<input class='identity' type='text' name='new_imp' value='new_imp'/>
 					<div>Nome:<input type='text' name='firstname' placeholder="Nome" pattern="[a-zA-Z\s]{1,30}" title="Nome dell&#39impiegato: massimo 30 caratteri alfabetici" required/></div>
 					<div>Cognome:<input type='text' name='lastname' placeholder="Cognome" pattern="[a-zA-Z\s]{1,30}" title="Cognome dell&#39impiegato: massimo 30 caratteri alfabetici" required/></div>
-					<div>Data di nascita:<input type='date' name='birth' min='1900-01-01' max='2000-01-01' title="Inserisci la data di nascita dell&#39impiegato"/></div>
+					<div>Data di nascita:<input type='date' name='birth' placeholder='yyyy-mm-gg' min='1900-01-01' max='2000-01-01' pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))' title="Inserisci la data di nascita dell&#39impiegato; il formato è yyyy-mm-dd"/></div>
 					<div>Età:<input type='number' name='age' min='18' max='99' placeholder="Età" title="Inserisci l&#39età dell&#39impiegato"/></div>
 					<div>E-mail:<input type='email' name='mail' placeholder="E-mail" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$" title="E-mail dell&#39impiegato: il formato è quello standard. Sono accettati i simboli . + - _ e %"/></div>
 					<div>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png' title="Inserisci una foto dell&#39impiegato"/></div>

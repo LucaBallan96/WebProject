@@ -1,8 +1,18 @@
 @import url("../navbar_mobile.css");
 
-
+#back_link {
+    
+        float: left;
+        margin-left: 20px;
+        margin-top: 70px;
+        text-decoration: none;
+        padding: 10px;
+        color: white;
+        background-color: #0084ff;
+    
+    }
 .title{
-    padding-top: 80px;
+    clear: both;
     padding-bottom: 40px;
     color: rgba(0, 73, 169, 0.888);
     text-align: center;

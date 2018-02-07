@@ -212,7 +212,7 @@
 			$result = $this->conn->query($sql);
 			if($result->num_rows>0){
 				while($row=$result->fetch_assoc()){
-					echo "<a class='link' href='articolo.php?id=".$row['id']."'><div class='container_article'>
+					echo "<a class='link' href='articolo.php?id=".$row['id']."' title='".$row['title']."'><div class='container_article'>
 					<div class='container_img'>
 					<img src='images/".$row['image']."'>
 					</div>
@@ -256,7 +256,7 @@
 							<div class='div_author'>Autore - ".$row['author']."</div>
 						</div>
 						
-							
+						
 					</div>";
 				}
 			}
@@ -278,11 +278,11 @@
 			echo "<div id='container_prenotazioni'>
 			Benvenuto ".$_SESSION['username']."</br></br>
 			Offerte prenotate - ".$row['COUNT(idOffer)']." </br></br>
-			<a href='prenotazioni.php'>Vedi prenotazioni</a>
+			<a href='prenotazioni.php' title='vedi le offerte che hai prenotato'>Vedi prenotazioni</a>
 			</div>
 			
 			<div class='title'>Lavora con Noi</div>
-			<div id='container_filter'><label id='search_label'>Cerca : <input id='text_search' type='text' placeholder='filtra per ruolo, settore o contratto' oninput='offer_filter(this.value)'/></label></div>
+			<div id='container_filter' ><label id='search_label' title='filtra per ruolo, settore o contratto'>Cerca : <input id='text_search' type='text' placeholder='filtra per ruolo, settore o contratto' oninput='offer_filter(this.value)'/></label></div>
 			";
 			$user=$_SESSION['username'];
 			
@@ -304,7 +304,7 @@
 					echo "
 					
 					<input id='".$row['id']."' type='checkbox' class='pro_select' />
-						<label class='label_offer' for='".$row['id']."'>
+						<label class='label_offer' for='".$row['id']."'title='offerta di lavoro come ".$row['role']." nel settore ".$row['branch']."'>
 						
 						
 						<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png'></div>
@@ -325,27 +325,29 @@
 								<input class='identity' type='text' name='id' value='".$row['id']."'/>
 								<div class='div_container_form'>
 									<div class='cont_general'><div class='general_informations'>
-									<label>Nome: <input class='in_form' type='text' name='firstname'></label><br></br>
-									<label>Cognome: <input class='in_form' type='text' name='lastname'></label><br><br>
+									<label>Nome: <input class='in_form' type='text' name='firstname' placeholder=' Nome' pattern='[a-zA-Z\s]{1,30}' title='Inserisci il tuo nome' required></label><div class='divisor'></div><br>
+									<label>Cognome: <input class='in_form' type='text' name='lastname' placeholder=' Cognome' pattern='[a-zA-Z\s]{1,30}' title='Inserisci il tuo cognome' required></label><div class='divisor'></div><br>
 										<div class='div_genre'>
 											Genere: 
 											<div class='container_radio'>
-												<label><input type='radio' name='gender' value='male'> Uomo</label> &nbsp&nbsp&nbsp
-												<label><input type='radio' name='gender' value='female'> Donna</label>&nbsp&nbsp&nbsp
+												<label title='Uomo'><input type='radio' name='gender' value='male'> Uomo</label> &nbsp&nbsp&nbsp
+												<label title='Donna'><input type='radio' name='gender' value='female'> Donna</label>&nbsp&nbsp&nbsp
 											</div>
 										</div>
-										<label><br>Data di nascita: <input class='in_form' type='date' name='bday'></label><br></br>
-										<label>Mail: <input class='in_form' type='text' name='mail'></label><br></br>
-										<label>Data colloquio: <select class='date_input' name='date' >";
+										<div class='divisor'></div>
+										<label><br>Data di nascita: <input class='in_form' type='date' name='bday' placeholder=' yyyy-mm-gg' min='1900-01-01' max='2000-01-01' pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))' title='Inserisci la data di nascita: il formato è yyyy-mm-gg' required></label><div class='divisor'></div><br>
+										<label>E-Mail: <input class='in_form' type='email' name='mail' placeholder=' E-mail' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$'' title='E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %' required></label><div class='divisor'></div><br>
+										<label>Data colloquio: <select class='date_input' name='date' title='Seleziona la data per un colloquio tra quelle disponibili'>";
 										for($j=0; $j<count($dates); $j++)
 											echo "<option value='".$dates[$j]."'>".$dates[$j]."</option>";
 	
-										echo "</select></label><br></br>
+										echo "</select></label><div class='divisor'></div><br>
 										<label>Messaggio:</br></br>
-										<textarea class='texta'rows='11' class='textmessage' name='textmessage' form='f".$count."'> </textarea></label>
+										<textarea class='texta' rows='11' class='textmessage' name='textmessage' form='f".$count."' placeholder='Inserisci un messaggio' maxlength='1000' title='Inserisci un messaggio che descriva le tue qualità'> </textarea></label>
+										<input class='submit' type='submit' value='Invia' name='candidate' title='Invia il modulo'>  
 									</div></div>
 									
-									<input class='submit' type='submit' value='Invia' name='candidate'>  
+									
 								</div>	
 							</form>
 						</div>";
@@ -353,7 +355,7 @@
 				}
 			}
 			else{
-				echo "<p class='exception_offer' align='center'>Nessun offerta disponibile</p>
+				echo "<p class='exception_offer' align='center'>Nessuna offerta disponibile</p>
 					<div class='divisor'></div>";
 			}
 		}
@@ -563,14 +565,14 @@
 					echo "<div class='subsubtitle'>".$branches[$i]."</div>  
 					<div class='divisor'></div>";
 					while($row=$result->fetch_assoc()){
-						echo "<div class='div_impiegato'>
+						echo "<div class='div_impiegato' title='".$row['role']." ".$row['firstname']." ".$row['lastname']."' >
 						<img class='img_impiegato' src='images/".$row['image']."'/></br></br>
-						Nome - ".$row['firstname']."</br> 
-						Cognome - ".$row['lastname']."</br>
-						Ruolo - ".$row['role']."</br>
-						Data di nascita - ".$row['birth']."</br>
-						Età - ".$row['age']."</br>
-						Inizio - ".$row['begin']."</br>
+						<span class='spg'>Nome  </span></br><span class='spgr'>".$row['firstname']."</span></br> 
+						<span class='spg'>Cognome  </span></br><span class='spgr'>".$row['lastname']."</span></br>
+						<span class='spg'>Ruolo  </span></br><span class='spgr'>".$row['role']."</span></br>
+						<span class='spg'>Data di nascita  </span></br><span class='spgr'>".$row['birth']."</span></br>
+						<span class='spg'>Età  </span></br><span class='spgr'>".$row['age']."</span></br>
+						<span class='spg'>Inizio  </span></br><span class='spgr'>".$row['begin']."</span></br>
 						</div>";
 					
 					}

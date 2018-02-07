@@ -39,12 +39,10 @@
 }
 .divisor{
     transition: 0.5s;
-    width: 800px;
-    
+    width: 100%;
     margin: auto;
-    
-    height: 100%;
-    border: 1px solid  #008cff3d;
+    margin-top: 10px; 
+    border-top: 1px solid  #008cff3d;
    
 }
 .div_img_offer{
@@ -69,20 +67,32 @@
 .img_offer{
     width: 100%;
 }
-
-
+input[type="email"]{
+    font-size: 14px;
+    height: 22px;
+}
+input[type="date"]{
+    font-size: 14px;
+    height: 22px;
+}
+input[type="text"]{
+    font-size: 14px;
+    height: 22px;
+}
 input[type="checkbox"]{
     display: none;
     
 }
 .form_offer {
+    
     height: 0;
     opacity: 0;
     transition: 0.8s;
     width: 700px;
     margin: auto;
+    padding: 1em;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     overflow: hidden;
     box-shadow: 5px 10px 18px #008cff3d;
 
@@ -99,11 +109,11 @@ input[type="checkbox"]{
     width: 800px;
     margin: auto;
     
-    
+    height: 100%;
     border: 1px solid  rgb(243, 250, 255);
 }
 .pro_select:checked + label + .form_offer{
-    height: 28em;
+    height: 34em;
     background-color: rgb(243, 250, 255);
     opacity: 1;
 }
@@ -119,13 +129,14 @@ input[type="checkbox"]{
 }
 .general_informations{
     
-    width: 500px;
-    float: left;
+    width: 100%;
+    margin: auto
 
 }
 .cont_general{
-    display: table;
     
+    display: table;
+    width: 100%;
     margin: auto;
 }
 .texta{
@@ -149,12 +160,15 @@ input[type="checkbox"]{
 }
 
 .submit{
-    width: 100px;
-    height: 24px;
-    font-size: 18px;
+    margin-top: 1em;
+    font-size: 1em;
     float: right;
     clear: both;
     cursor: pointer;
+    border: none;
+    padding: 0.8em 1.2em;
+    color: white;
+    background-color: #0099ffa8;
 }
 .identity{
     display:none;
