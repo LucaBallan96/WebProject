@@ -1,4 +1,96 @@
 @import url("../navbar_tablet.css");
+.nascosto{
+    display: none;
+}
+
+/*MESSAGES*/
+
+input[type="checkbox"]{
+    display: none;
+}
+.cont_both{
+    z-index: 1;
+    
+}
+.div_close{
+    z-index: 1;
+    position: fixed;
+    background-color: rgb(134, 189, 247);
+    color: white;
+    right: 1em;
+    margin-top: 60px;
+    height: 40px;
+    width: 1.2em;
+    text-align: center;
+    cursor: pointer;
+}
+.div_close_2{
+    z-index: 1;
+    position: fixed;
+    background-color: rgb(134, 189, 247);
+    color: white;
+    right: 1em;
+    margin-top: 110px;
+    height: 40px;
+    width: 1.2em;
+    text-align: center;
+    cursor: pointer;
+}
+.label_close{
+    transition: 1s ease;
+}
+
+.textc{
+   
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.cont_message{
+    z-index: 1;
+    margin-top: 60px; 
+    position: fixed;
+    background-color: rgb(134, 189, 247);
+    color: white;
+    right: 2.2em;
+    transition: 1s ease;
+    height: 40px;
+    padding: 10px;
+}
+.cont_message_2{
+    z-index: 1;
+    margin-top: 110px; 
+    position: fixed;
+    background-color: rgb(134, 189, 247);
+    color: white;
+    right: 2.2em;
+    transition: 1s ease;
+    height: 40px;
+    padding: 10px;
+}
+.div_close:hover{
+    color: rgba(48, 89, 138, 0.611);
+    cursor: pointer;
+}
+.div_close_2:hover{
+    color: rgba(48, 89, 138, 0.611);
+    cursor: pointer;
+}
+.pro_close:checked + label + .cont_message{
+    opacity: 0;
+    visibility: hidden;
+}
+.pro_close:checked + label + .cont_message_2{
+    opacity: 0;
+    visibility: hidden;
+}
+.pro_close:checked +label{
+    opacity: 0;
+    visibility: hidden;
+}
+
 
 
 

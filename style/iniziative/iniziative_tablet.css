@@ -1,7 +1,9 @@
 @import url("../navbar_tablet.css");
 
 
-
+.nascosto{
+    display: none;
+}
 .title{
         padding-top: 50px;
         padding-bottom: 40px;

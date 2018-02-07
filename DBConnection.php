@@ -150,9 +150,49 @@
 						<div id='div_desc'>".$row['description']."</div>";
 			}
 		}
-		
+		//MESSAGGI
+		public function get_messages(){
+			$username=$_SESSION['username'];
+			$sql="SELECT message FROM webproject.messaggi WHERE user='".$username."'";
+			$result=$this->conn->query($sql);
+			if($result->num_rows >0){
+				$count=0;
+				while($row=$result->fetch_assoc()){
+					
+					$a=$row['message'];
+					if(strpos($a,'modifiche')!==false){
+						echo "<input id='".$count."' type='checkbox' class='pro_close' />
+						<label class='label_close' for='".$count."'>
+							<div class='div_close' title='chiudi notifica'>&nbspx&nbsp
+							</div>
+						</label>
+						<div class='cont_message'>
+							<div class='textc'>
+								".$row['message']."		
+							</div>
+						
+						</div>";
+					}
+					elseif(strpos($a,'rimossa')!==false){
+						echo "<input id='".$count."' type='checkbox' class='pro_close' />
+						<label class='label_close' for='".$count."'>
+							<div class='div_close_2' title='chiudi notifica'>&nbspx&nbsp
+							</div>
+						</label>
+						<div class='cont_message_2'>
+							<div class='textc'>
+							".$row['message']."
+								</div>
+							
+						</div>";
+					}
+					$count=$count+1;
+				}
+			}
+		}
 		// PRENOTAZIONI
 		public function get_prenotation(){
+
 			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id = ANY (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$_SESSION['username']."')";
 			
 			$result = $this->conn->query($sql);
@@ -179,7 +219,7 @@
 							</div>
 							
 							<form action='form_control.php' method='post'>
-							<input id='subsub' type='submit' value='Rimuovi' name='remove_off'> 
+							<input id='subsub' type='submit' value='Rimuovi' title='rimuovi questa offerta dalle prenotazioni' name='remove_off'> 
 							<input class='identity' type='text' name='idOffer' value='".$row['id']."'/>
 							<input class='identity' type='text' name='mydate' value='".$row1['date']."'/>
 						</form>
@@ -326,19 +366,19 @@
 								<input class='identity' type='text' name='id' value='".$row['id']."'/>
 								<div class='div_container_form'>
 									<div class='cont_general'><div class='general_informations'>
-									<label title='inserisci il tuo nome'>Nome: <input class='in_form' type='text' name='firstname' placeholder=' Nome'></label><div class='divisor'></div><br>
+									<label title='inserisci il tuo nome'>Nome: <input class='in_form' type='text' name='firstname' placeholder=' Nome' required></label><div class='divisor'></div><br>
 									
-									<label title='inserisci il tuo cognome'>Cognome: <input class='in_form' type='text' name='lastname'placeholder=' Cognome'></label><div class='divisor'></div><br>
+									<label title='inserisci il tuo cognome'>Cognome: <input class='in_form' type='text' name='lastname'placeholder=' Cognome' required></label><div class='divisor'></div><br>
 										<div class='div_genre'>
 											Genere: 
 											<div class='container_radio'>
-												<label title='selezione uomo'><input type='radio' name='gender' value='male'> Uomo</label> &nbsp&nbsp&nbsp
+												<label title='selezione uomo'><input type='radio' name='gender' value='male' checked> Uomo</label> &nbsp&nbsp&nbsp
 												<label title='selezione donna'><input type='radio' name='gender' value='female'> Donna</label>&nbsp&nbsp&nbsp
 											</div>
 										</div>
 										<div class='divisor'></div>
-										<label title='inserisci la tua data di nascita secondo il modello yyyy-mm-gg'><br>Data di nascita: <input class='in_form' type='date' name='bday' placeholder=' yyyy-mm-gg'pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))'></label><div class='divisor'></div><br>
-										<label title='inserisci la tua mail, ad esempio nomecognomeXY@gmail.com'>Mail: <input class='in_form' type='email' name='mail' placeholder=' nomecognomeXY@gmail.com'></label><div class='divisor'></div><br>
+										<label title='inserisci la tua data di nascita secondo il modello yyyy-mm-gg'><br>Data di nascita: <input class='in_form' type='date' name='bday' required placeholder=' yyyy-mm-gg'pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))'></label><div class='divisor'></div><br>
+										<label title='inserisci la tua mail, ad esempio nomecognomeXY@gmail.com'>Mail: <input class='in_form' type='email' name='mail' required placeholder=' nomecognomeXY@gmail.com'></label><div class='divisor'></div><br>
 										<label>Data colloquio: <select class='date_input' name='date' >";
 										for($j=0; $j<count($dates); $j++)
 											echo"<option value='".$dates[$j]."'>".$dates[$j]."</option>";

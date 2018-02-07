@@ -70,7 +70,7 @@
 			?>
         </div>
         
-        <a id="back_link" href="lavoro.php">Offerte</a>
+        <a id="back_link" href="lavoro.php" title="offerte di lavoro">Offerte</a>
 		
 		<!--PRENOTAZIONI-->
         <?php

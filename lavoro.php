@@ -69,7 +69,7 @@
 					echo "<a title='Area privata' href='admin.php' id='admin'>Area privata</a>";
 			?>
         </div>
-
+		<div class="nascosto">Ti trovi in: Home > Lavoro</div>
 		<!--OFFERTE-->
         <?php
             $conn->get_offer();
