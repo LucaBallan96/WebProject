@@ -66,7 +66,7 @@
 					echo "<a href='admin.php' id='admin' title='Entra nell&#39area amministrativa del sito'>Area privata</a>";
 			?>
         </div>
-
+		<div class="nascosto">Ti trovi in: Home > Iniziative</div>
         <!--STAMPA-->
         <div id="stampa" class="title">Rassegna Stampa</div>
         <?php 

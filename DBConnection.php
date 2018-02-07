@@ -150,9 +150,49 @@
 						<div id='div_desc'>".$row['description']."</div>";
 			}
 		}
-		
+		//MESSAGGI
+		public function get_messages(){
+			$username=$_SESSION['username'];
+			$sql="SELECT message FROM webproject.messaggi WHERE user='".$username."'";
+			$result=$this->conn->query($sql);
+			if($result->num_rows >0){
+				$count=0;
+				while($row=$result->fetch_assoc()){
+					
+					$a=$row['message'];
+					if(strpos($a,'modifiche')!==false){
+						echo "<input id='".$count."' type='checkbox' class='pro_close' />
+						<label class='label_close' for='".$count."'>
+							<div class='div_close' title='chiudi notifica'>&nbspx&nbsp
+							</div>
+						</label>
+						<div class='cont_message'>
+							<div class='textc'>
+								".$row['message']."		
+							</div>
+						
+						</div>";
+					}
+					elseif(strpos($a,'rimossa')!==false){
+						echo "<input id='".$count."' type='checkbox' class='pro_close' />
+						<label class='label_close' for='".$count."'>
+							<div class='div_close_2' title='chiudi notifica'>&nbspx&nbsp
+							</div>
+						</label>
+						<div class='cont_message_2'>
+							<div class='textc'>
+							".$row['message']."
+								</div>
+							
+						</div>";
+					}
+					$count=$count+1;
+				}
+			}
+		}
 		// PRENOTAZIONI
 		public function get_prenotation(){
+
 			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id = ANY (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$_SESSION['username']."')";
 			
 			$result = $this->conn->query($sql);
@@ -179,7 +219,7 @@
 							</div>
 							
 							<form action='form_control.php' method='post'>
-							<input id='subsub' type='submit' value='Rimuovi' name='remove_off'> 
+							<input id='subsub' type='submit' value='Rimuovi' title='rimuovi questa offerta dalle prenotazioni' name='remove_off'> 
 							<input class='identity' type='text' name='idOffer' value='".$row['id']."'/>
 							<input class='identity' type='text' name='mydate' value='".$row1['date']."'/>
 						</form>

@@ -1,4 +1,7 @@
 @import url("../navbar_mobile.css");
+.nascosto{
+    display: none;
+}
 .title{
     padding-top: 50px;
     padding-bottom: 40px;

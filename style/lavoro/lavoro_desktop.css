@@ -2,6 +2,9 @@
 #work {
     background-color: #008cff7a;
 }
+.nascosto{
+    display: none;
+}
 .title{
     padding-top: 80px;
     padding-bottom: 40px;

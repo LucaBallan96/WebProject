@@ -65,13 +65,30 @@
 				if(isset($_SESSION['admin']))
 					echo "<a href='admin.php' id='admin' title='Entra nell&#39area amministrativa del sito'>Area privata</a>";
 			?>
-        </div>
+		</div>
+		
+
+
+		<div class="nascosto">Ti trovi in: Home </div>
+	<!--MESSAGGI-->
 	
+
+	
+		<?php 
+			$conn->get_messages();
+		?>
+
+
+
+
+
+
+
 		<!--LOGO-->
 		<h1 id="div_one" title="Costruzioni Bordignon General Bau">
 			<img id="img_logo" src="images/logo_azzurro.png"/>
 		</h1>
-
+		
 		<!--AGGIORNAMENTI-->
 		<div id="div_container_three">
 			<?php

@@ -2,7 +2,9 @@
 #menu_bt1 {
     background-color: #008cff7a;
 }
-
+.nascosto{
+    display: none;
+}
 
 /*TITLE*/
 
