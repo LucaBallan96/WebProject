@@ -52,12 +52,13 @@ function uncheck_radio(rad) {
         last=rad.id;
 }
 
+alert("tetta");
 // TASTO INVIO SUGLI ELEMENTI
-document.addEventListener("keypress", keypres);
-function keypres(k) {
+document.addEventListener("keypress", keypress);
+function keypress(k) {
     if(k.keyCode==13) {
-        alert("tetta");
         var x=document.activeElement.id;
+        alert(x);
         document.getElementById(x).click();
     }
 }

@@ -362,26 +362,19 @@
 
 					
 
-					echo "
-					
-					<input id='".$row['id']."'  type='checkbox' class='pro_select' />
-						<label class='label_offer' tabindex='0' for='".$row['id']."'title='Offerta di lavoro come ".$row['role']." nel settore ".$row['branch']."'>
+					echo "<input id='".$row['id']."'  type='checkbox' class='pro_select' />
+						<label id='offer_label".$row['id']."' class='label_offer' tabindex='0' for='".$row['id']."' title='Offerta di lavoro come ".$row['role']." nel settore ".$row['branch']."'>
 						
-						
-						<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png' alt='immagine offerta come ".$row['role']."'></div>
+							<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png' alt='Immagine offerta di lavoro come ".$row['role']."'></div>
 							<div class='div_information'>
 								<div class='text'>
 									".$row['role']." - ".$row['branch']." - ".$row['contract']."</br></br>
 									".$row['message']."		
 								</div>
 							</div>
-							
-							</label>
-
-
-
-
-							<div class='form_offer'>
+						</label>
+						
+						<div class='form_offer'>
 							<form id='f".$count."' action='form_control.php' method='post'>
 								<input class='identity' type='text' name='id' value='".$row['id']."'/>
 								<div class='div_container_form'>

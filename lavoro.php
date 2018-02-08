@@ -23,9 +23,8 @@
 		<link rel="stylesheet" media="print" href="style/lavoro/lavoro_print.css">
 	</head>
 	<body>
-	
-        <!--SCRIPT-->
-		<script type="text/javascript"  src="script/menuScript.js"></script>
+		<!--SCRIPT-->
+		<script type="text/javascript" src="script/menuScript.js"></script>
 
 		<!-- NAVIGATION -->
 		<input id='compact_menu' type='checkbox'/>
