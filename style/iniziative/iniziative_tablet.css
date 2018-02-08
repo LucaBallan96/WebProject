@@ -5,6 +5,7 @@
     display: none;
 }
 .title{
+        font-weight: 100;
         padding-top: 50px;
         padding-bottom: 40px;
         color: rgba(0, 73, 169, 0.888);
@@ -15,18 +16,20 @@
         clear: both;
 }
 
-h2{
-    text-align: center;
+.cont_ex{
+    width: 33.3%;
+    float: left;
+
+
 }
 .container_article{
     position: relative;
     display: table;
-    float: left;
-    margin: 10px;
-    transition: 0.7s;
+    margin: auto;
     transition: 1s ease;
     border: 1px solid  #008cff3d;
     box-shadow: 2px 2px 4px #008cff3d;
+    margin-bottom: 20px;
 }
 .link_generico{
     
@@ -35,7 +38,6 @@ h2{
 .container_img{
     width: 200px;
     height: 150px;
-    
     overflow: hidden;
 }
 .container_text{
@@ -48,9 +50,9 @@ h2{
 }
 .text{
     font-size: 14px;
-    color: black;
+    color:rgb(98, 105, 146);
     width: 180px;
-    padding-top: 20px;
+    padding: 5px;
     margin: auto;
 }
 .link:hover .container_article{
@@ -86,6 +88,7 @@ h2{
     height: 600px;
 }
 .subtitle{
+    font-weight: 100;
     color: rgba(0, 73, 169, 0.888);
     font-size: 24px;
     padding-top: 60px;

@@ -32,7 +32,7 @@
 		</label>
 
         <div id="navbar">
-            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png" title="Vai alla pagina iniziale"></a>
+            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png" title="Vai alla pagina iniziale" alt="logo Costruzioni Bordignon S.r.l."></a>
             <div class="dropdown">
                 <a id="menu_bt1" class="drop_button" href="azienda.php" title="Visualizza le informazioni sull'azienda">Azienda</a>
                 <div id="content_menu_bt1" class="drop_content">
@@ -71,13 +71,13 @@
 		<div class="nascosto">Ti trovi in: Home > Iniziative</div>
 		
         <!--STAMPA-->
-        <div id="stampa" class="title">Rassegna Stampa</div>
+        <h1 id="stampa" class="title">Rassegna Stampa</h1>
         <?php 
             $conn->get_articles();
         ?>
         
         <!--CERTIFICAZIONI-->
-        <div id="certificazioni" class="title">Certificazioni</div>
+        <h1 id="certificazioni" class="title">Certificazioni</h1>
 		<div class="container_certificazioni">
 			<div id="text_certificazioni">
 				<div id="text_c">
@@ -88,19 +88,19 @@
 				</div>
 			</div>
 			<div id="image_certificazioni"></div>
-			<div id="storia" class="subtitle">Certificazioni Costruzioni Bordignon S.r.l.</div>
+			<h2 id="storia" class="subtitle">Certificazioni Costruzioni Bordignon S.r.l.</h2>
 			<div class="divisor"></div>
 			<div id="container_img_cb">
-				<div class="cont_img_cert"><a class="a_img" href="images/iso.jpeg" ><img class="img_certification" src="images/iso.jpeg" title=" certificazione iso"/></a></div>
-				<div class="cont_img_cert"><a class="a_img" href="images/ohsas.jpeg" ><img class="img_certification" src="images/ohsas.jpeg" title="certificazione ohsas"/></a></div>
-				<div class="cont_img_cert"><a class="a_img" href="images/soa.jpeg" ><img class="img_certification" src="images/soa.jpeg" title="certificazione soa"/></a></div>
+				<div class="cont_img_cert"><a class="a_img" href="images/iso.jpeg" ><img class="img_certification" src="images/iso.jpeg" title=" certificazione iso"/ alt="certificazione iso"></a></div>
+				<div class="cont_img_cert"><a class="a_img" href="images/ohsas.jpeg" ><img class="img_certification" src="images/ohsas.jpeg" title="certificazione ohsas" alt="certificazione ohsas"/></a></div>
+				<div class="cont_img_cert"><a class="a_img" href="images/soa.jpeg" ><img class="img_certification" src="images/soa.jpeg" title="certificazione soa" alt="certificazione soa"/></a></div>
 			</div>
 			<div id="cont_cert">
 				<div id="text_cert">
 					UNI EN ISO 9001:2015 – Sistema di gestione per la qualità – Certificato n° FM591568</br></br>
 					OHSAS 18001:2007 – Sistema di gestione per la salute e la sicurezza  – Certificato n° OHS 591569</br></br>
 					ATTESTAZIONE SOA – Certificato n° 48249/10/00</br></br>
-					<div id="storia" class="subtitle">Categorie SOA</div>
+					<h3 id="storia" class="subtitle">Categorie SOA</h3>
 					<div class="divisor"></div>
 					OG1 Edifici civili e industriali. – Classifica VIII°</br></br>
 					OG2 Restauro e manutenzione dei beni immobili. – Classifica III° Bis</br></br>

@@ -32,7 +32,7 @@
 		</label>
 
         <div id="navbar">
-            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png" title="Vai alla pagina iniziale"></a>
+            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png" title="Vai alla pagina iniziale" alt="logo Costruzioni Bordignon S.r.l."></a>
             <div class="dropdown">
                 <a id="menu_bt1" class="drop_button" href="azienda.php" title="Visualizza le informazioni sull'azienda">Azienda</a>
                 <div id="content_menu_bt1" class="drop_content">
@@ -79,7 +79,7 @@
 
 		<!--LOGO-->
 		<h1 id="div_one" title="Costruzioni Bordignon General Bau">
-			<img id="img_logo" src="images/logo_azzurro.png"/>
+			<img id="img_logo" src="images/logo_azzurro.png" alt="logo Costruzioni Bordignon S.r.l."/>
 		</h1>
 		
 		<!--AGGIORNAMENTI-->
@@ -116,7 +116,7 @@
 		<div id=div_container_storia>
 			<div id="div_img_storia"></div>
 			<div id="div_storia">
-				<div id="h1_storia">La Nostra Storia</div>
+				<h1 id="h1_storia">La Nostra Storia</h1>
 				<div id="div_text_storia">
 					La <a href="index.php" class="link_generico" title="sito web azienda Costruioni Bordignon S.r.l.">Costruzioni Bordignon s.r.l.</a> nasce nel 1998, sulle orme della tradizione iniziata nei primi anni del 1900 da nonno degli attuali titolari 
 					e proseguita poi per mano del padre degli stessi, fino all'avvicendamento generazionale.</br></br></br></br>

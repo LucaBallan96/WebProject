@@ -9,6 +9,7 @@
 /*TITLE*/
 
 #title{
+    font-weight: 100;
     padding-top: 80px;
     padding-bottom: 40px;
     color: rgba(0, 73, 169, 0.888);
@@ -28,6 +29,7 @@
 }
 
 .subtitle{
+    font-weight: 100;
     color: rgba(0, 73, 169, 0.888);
     font-size: 24px;
     padding-top: 60px;
@@ -133,6 +135,7 @@ span{
     
 }
 .subsubtitle{
+    font-weight: 100;
     color: rgba(2, 44, 99, 0.888);
     font-size: 20px;
     padding-top: 40px;

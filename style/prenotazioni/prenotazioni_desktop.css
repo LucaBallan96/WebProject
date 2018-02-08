@@ -1,7 +1,9 @@
 @import url("../navbar_desktop.css");
 
 
-
+.nascosto{
+    display: none;
+}
 #back_link {
     margin-top: 50px;
     position: absolute;
@@ -12,7 +14,11 @@
     color: white;
     background-color: #0084ff;
 }
+#back_link:hover{
+    text-decoration: underline;
+}
 .title{
+    font-weight: 100;
     padding-top: 80px;
     padding-bottom: 40px;
     color: rgba(0, 73, 169, 0.888);
@@ -85,9 +91,16 @@ input[type="checkbox"]{
     clear: both;
     cursor: pointer;
     border: none;
-    padding: 0.8em 1.2em;
+    padding: 0.8em 2.2em;
     color: white;
-    background-color: #0099ffa8;
-    
+    background-color: rgb(208, 234, 255);
+    background-image: url("../../images/remove.png");
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat; 
+    transition: 0.5s;
+}
+#subsub:hover {
+    background-color: rgb(160, 214, 255);
 }
 

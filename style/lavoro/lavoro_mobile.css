@@ -3,14 +3,15 @@
     display: none;
 }
 .title{
-    padding-top: 80px;
-    padding-bottom: 40px;
+    font-weight: 100;
+    padding-top: 60px;
+    padding-bottom: 20px;
     
     color: rgba(0, 73, 169, 0.888);
     text-align: left;
     font-size: 28px;
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    padding-left: 10px; 
     
 }
 .label_offer{
@@ -23,10 +24,11 @@
     box-shadow: 2px 2px 4px #008cff3d;
 }
 #container_filter{
+    padding-left: 10px;
     color: rgba(0, 73, 169, 0.888);
     font-size: 13px;    
     width: 100%;
-    text-align: center;
+    text-align: left;
     padding-bottom: 40px; 
 }
 #text_search {
@@ -110,7 +112,7 @@ input[type="checkbox"]{
     border-top: 1px solid  rgb(243, 250, 255);
 }
 .pro_select:checked + label + .form_offer{
-    height: 33em;
+    height: 35em;
     background-color: rgb(243, 250, 255);
     opacity: 1;
 }
@@ -182,8 +184,8 @@ input[type="checkbox"]{
     float: right;
     font-size: 13px; 
     background-color: rgb(241, 245, 250);;
-    margin-top:50px; 
-    margin-right: 20px;
+    margin-top:60px; 
+    margin-right: 10px;
     right: 0;
     padding: 10px;
     box-shadow: 5px 10px 18px #888888;

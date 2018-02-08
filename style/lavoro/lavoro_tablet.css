@@ -3,13 +3,14 @@
     display: none;
 }
 .title{
+    font-weight: 100;
     padding-top: 80px;
     padding-bottom: 40px;
     color: rgba(0, 73, 169, 0.888);
     text-align: center;
     font-size: 32px;
-    width: 90%;
-    margin: auto;
+    width: 100%;
+   
     
 }
 .label_offer{
@@ -113,7 +114,7 @@ input[type="checkbox"]{
     border-top: 1px solid  rgb(243, 250, 255);
 }
 .pro_select:checked + label + .form_offer{
-    height: 41em;
+    height: 43em;
     background-color: rgb(243, 250, 255);
     opacity: 1;
 }
@@ -176,13 +177,13 @@ input[type="checkbox"]{
 /*PRENOTAZIONI*/
 
 #container_prenotazioni{
-    display: table;
     
+    position: absolute;
     font-size: 13px;
     float: right;
     right: 0;
     background-color: rgb(241, 245, 250);;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-right: 20px;
     padding: 10px;
     box-shadow: 5px 10px 18px #888888;

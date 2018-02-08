@@ -1,5 +1,7 @@
 @import url("../navbar_tablet.css");
-
+.nascosto{
+    display: none;
+}
 #back_link {
     margin-top: 50px;
     position: absolute;
@@ -10,7 +12,11 @@
     color: white;
     background-color: #0084ff;
 }
+#back_link:hover{
+    text-decoration: underline;
+}
 .title{
+    font-weight: 100;
     padding-top: 80px;
     padding-bottom: 40px;
     color: rgba(0, 73, 169, 0.888);
@@ -20,7 +26,7 @@
     margin: auto;
 }
 .subtitle{
-
+    font-weight: 100;
     padding-bottom: 40px;
     color: rgba(0, 73, 169, 0.888);
     text-align: center;

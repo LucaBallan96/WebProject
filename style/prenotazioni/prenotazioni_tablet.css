@@ -1,5 +1,11 @@
 @import url("../navbar_tablet.css");
 
+.nascosto{
+    display: none;
+}
+#back_link:hover{
+    text-decoration: underline;
+}
 #back_link {
     margin-top: 50px;
     position: absolute;
@@ -11,6 +17,7 @@
     background-color: #0084ff;
 }
 .title{
+    font-weight: 100;
     padding-top: 80px;
     padding-bottom: 40px;
     color: rgba(0, 73, 169, 0.888);
@@ -28,7 +35,7 @@
 }
 .divisor{
     display: block;
-    width: 500px;
+    width: 600px;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -126,9 +133,21 @@ input[type="checkbox"]{
     padding-left: 40px;
 }
 #subsub{
-    margin-top: 10px; 
-    width: 100px;
-    font-size: 16px;
-    cursor: pointer;
+    
+    font-size: 1em;
     float: right;
+    clear: both;
+    cursor: pointer;
+    border: none;
+    padding: 0.6em 1.8em;
+    color: white;
+    background-color: rgb(208, 234, 255);
+    background-image: url("../../images/remove.png");
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat; 
+    transition: 0.5s;
+}
+#subsub:hover {
+    background-color: rgb(160, 214, 255);
 }
