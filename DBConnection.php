@@ -365,6 +365,7 @@
 					echo "
 					
 					<input id='".$row['id']."'  type='checkbox' class='pro_select' />
+					
 						<label class='label_offer' tabindex='0' for='".$row['id']."'title='Offerta di lavoro come ".$row['role']." nel settore ".$row['branch']."'>
 						
 						
@@ -377,7 +378,7 @@
 							</div>
 							
 							</label>
-
+						
 
 
 
