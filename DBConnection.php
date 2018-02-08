@@ -56,7 +56,7 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
-				echo "<a href='articolo.php?id=".$row['id']."' id='div_two' class='div_group' title='Leggi l&#39articolo più recente'>
+				echo "<div class='contprimo'><a href='articolo.php?id=".$row['id']."' id='div_two' class='div_group' title='Leggi l&#39articolo più recente'>
 				<div id='div_title_two' class='div_title_group'>
 					<div class='title_div'>Ultimo Articolo</div>
 				</div>
@@ -67,10 +67,10 @@
 					</div>
 				</div>
 		
-			</a>";
+			</a></div>";
 			}
 			else{
-				echo "<a href='azienda.php' title='Storia e sede della nostra azienda' id='div_four' class='div_group'>
+				echo "<div class='contprimo'><a href='azienda.php' title='Storia e sede della nostra azienda' id='div_four' class='div_group'>
 				<div id='div_title_four' class='div_title_group'>
 						<div class='title_div'>Azienda</div>
 				</div>
@@ -80,7 +80,7 @@
 						<div class='div_text_inside_group'>Scopri dove siamo</div>
 					</div>
 				</div>
-			</a>";}
+			</a></div>";}
 		}
 		// ULTIMO PROGETTO
 		public function get_last_project() {
@@ -88,7 +88,7 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
-				echo "<a href='info_progetto.php?numero=".$row['id']."'id='div_three' class='div_group' title='Visualizza l&#39ultimo progetto iniziato'>
+				echo "<div class='contprimo'><a href='info_progetto.php?numero=".$row['id']."'id='div_three' class='div_group' title='Visualizza l&#39ultimo progetto iniziato'>
 				<div id='div_title_three' class='div_title_group'>
 						<div class='title_div'>Ultimo Progetto</div>
 				</div>
@@ -100,9 +100,9 @@
 					</div>
 				</div>
 				
-			</a>";
+			</a></div>";
 			}else{
-				echo "<a href='azienda.php' title='Storia e sede della nostra azienda' id='div_four' class='div_group'>
+				echo "<div class='contprimo'><a href='azienda.php' title='Storia e sede della nostra azienda' id='div_four' class='div_group'>
 				<div id='div_title_four' class='div_title_group'>
 						<div class='title_div'>Azienda</div>
 				</div>
@@ -112,7 +112,7 @@
 						<div class='div_text_inside_group'>Scopri dove siamo</div>
 					</div>
 				</div>
-			</a>";}
+			</a></div>";}
 		}
 		// ULTIMA OFFERTA
 		public function get_last_offer() {
@@ -126,7 +126,7 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
-				echo "<a href='lavoro.php#".$row['id']."'id='div_four' class='div_group' title='Visualizza una o più offerte di lavoro'>
+				echo "<div class='contprimo'><a href='lavoro.php#".$row['id']."'id='div_four' class='div_group' title='Visualizza una o più offerte di lavoro'>
 				<div id='div_title_four'class='div_title_group'>
 						<div class='title_div'>Offerte</div>
 				</div>
@@ -136,10 +136,10 @@
 						<div class='div_text_inside_group'>".$row['branch']."</br></br>".$row['role']."</br></br>".$row['contract']."</div>
 					</div>
 				</div>
-			</a>";
+			</a></div>";
 			}
 			else{
-				echo "<a href='azienda.php' title='Storia e sede della nostra azienda' id='div_four' class='div_group'>
+				echo "<div class='contprimo'><a href='azienda.php' title='Storia e sede della nostra azienda' id='div_four' class='div_group'>
 				<div id='div_title_four' class='div_title_group'>
 						<div class='title_div'>Azienda</div>
 				</div>
@@ -149,7 +149,7 @@
 						<div class='div_text_inside_group'>Scopri dove siamo</div>
 					</div>
 				</div>
-			</a>";
+			</a></div>";
 
 			}
 		}

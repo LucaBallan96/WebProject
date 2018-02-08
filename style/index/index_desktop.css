@@ -110,11 +110,44 @@ input[type="checkbox"]{
 
 /*THREE DIV*/
 
+#cont_three{
+    margin: auto;
+    width: 800px;
+    height: 310px;
+    padding: 20px; 
+}
+.contprimo{
+    width: 33.3%;
+    float: left;
+    text-align: center;
+}
 
+.contgiu{
+    width: 100%;
+    
+}
+#giu_link{
+    clear: both;
+    padding: 5px;
+    width: 80px;
+    height: 60px;
+    text-align: center;
+    display: table;
+    margin: auto;
+    
+}
+#agiu img{
+    height: 100%;
+    transition: 0.5s;
 
-
-
-
+}
+#agiu{
+    height: 100%;
+    
+}
+#agiu:hover img{
+    height: 110%;
+}
 
 #div_one{
     
@@ -131,18 +164,10 @@ input[type="checkbox"]{
     transform: translate(-50%,-50%);
 
 }
-#div_container_three{
-    position: relative;
-    width: 842px;
-    height: 400px;
-    margin: auto;
-    
-    
-}
+
 .div_group{
-    position: relative;
-    float: left;
-    margin: 20px;
+    display: table;
+    margin: auto;
     height: 278px;
     width: 240px;
     text-decoration: none;

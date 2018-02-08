@@ -83,14 +83,16 @@
 		</h1>
 		
 		<!--AGGIORNAMENTI-->
-		<div id="div_container_three">
+		<div id="cont_three">
 			<?php
+				
 				$conn->get_last_article();
 				$conn->get_last_project();
 				$conn->get_last_offer();
 			?>
-			<div id="giu_link"><a id="agiu" href="#div_slogan" >Giù</a></div>
-		</div>
+			</div>
+			<div class="contgiu"><div id="giu_link"><a id="agiu" href="#div_slogan" ><img src="images/giu.png" title="esplora pagina" alt="esplora pagina"/></a></div></div>
+		
 		
 		<!--SLOGAN-->
 		<div id="div_container_img_slogan">

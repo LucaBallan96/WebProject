@@ -99,8 +99,44 @@ input[type="checkbox"]{
 
 
 
+#cont_three{
+    margin: auto;
+    width: 720px;
+    height: 310px;
+    padding: 20px; 
+}
+.contprimo{
+    width: 33.3%;
+    float: left;
 
+    text-align: center;
+}
 
+.contgiu{
+    width: 100%;
+}
+#giu_link{
+    clear: both;
+    padding: 5px;
+    width: 80px;
+    height: 60px;
+    text-align: center;
+    display: table;
+    margin: auto;
+    
+}
+#agiu img{
+    height: 100%;
+    transition: 0.5s;
+
+}
+#agiu{
+    height: 100%;
+    
+}
+#agiu:hover img{
+    height: 110%;
+}
 
 
 #div_one{
@@ -117,19 +153,12 @@ input[type="checkbox"]{
     transform: translate(-50%,-50%);
 }
 
-#div_container_three{
-    position: relative;
-    width: 694px;
-    height: 350px;
-    margin: auto;
-    
-}
+
 .div_group{
-    position: relative;
-    float: left;
-    margin: 15px;
+    display: table;
+    margin: auto;
     height: 278px;
-    width: 200px;
+    width: 210px;
     text-decoration: none;
     transition: 0.8s ease;
     border: 1px solid rgb(172, 212, 245);
