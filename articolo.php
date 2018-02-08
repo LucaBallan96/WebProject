@@ -1,4 +1,7 @@
 <?php
+		if(!isset($_GET['id'])){
+		header("Location: iniziative.php");}
+
     include 'DBConnection.php';
     $conn=new DBConnection();
 ?>
@@ -30,7 +33,7 @@
 		</label>
 
         <div id="navbar">
-            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png" title="Vai alla pagina iniziale"></a>
+            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png" title="Vai alla pagina iniziale" alt="logo Costruzioni Bordignon S.r.l."></a>
             <div class="dropdown">
                 <a id="menu_bt1" class="drop_button" href="azienda.php" title="Visualizza le informazioni sull'azienda">Azienda</a>
                 <div id="content_menu_bt1" class="drop_content">
@@ -66,13 +69,13 @@
 					echo "<a href='admin.php' id='admin' title='Entra nell&#39area amministrativa del sito'>Area privata</a>";
 			?>
         </div>
-
+		<div class="nascosto">Ti trovi in: Home > Iniziative > Articoli</div>
 		<!--TITLE SUBTITLE-->
 		<a id="back_link" href="iniziative.php" title="iniziative e articoli">Iniziative</a>
-        <?php
-            $conn->get_article();
-        ?>
-            
+		
+			<?php
+				$conn->get_article();
+			?>
 		<!--CONTATTI-->
 		<div id="div_container_contatti">
 			<div id="div_contatti">

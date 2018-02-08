@@ -33,7 +33,7 @@
 		</label>
 
         <div id="navbar">
-            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png" title="Vai alla pagina iniziale"></a>
+            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png" title="Vai alla pagina iniziale" alt="logo Costruzioni Bordignon S.r.l."></a>
             <div class="dropdown">
                 <a id="menu_bt1" class="drop_button" href="azienda.php" title="Visualizza le informazioni sull'azienda">Azienda</a>
                 <div id="content_menu_bt1" class="drop_content">
@@ -69,6 +69,7 @@
 					echo "<a href='admin.php' id='admin' title='Entra nell&#39area amministrativa del sito'>Area privata</a>";
 			?>
         </div>
+		<div class="nascosto">Ti trovi in: Home > Lavora con Noi > Prenotazioni</div>
         
         <a id="back_link" href="lavoro.php" title="offerte di lavoro">Offerte</a>
 		

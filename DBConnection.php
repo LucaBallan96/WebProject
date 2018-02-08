@@ -26,7 +26,7 @@
 				$terminati2="";
 				while($row = $result->fetch_assoc()) {
 					$stringa="<a href='info_progetto.php?numero=".$row['id']."' class='grid_project' title='Visualizza le informazioni sul progetto ".$row['name']."'>
-							<img class='grid_pr_image' src='images/".$row['image']."'/>
+							<img class='grid_pr_image' src='images/".$row['image']."' />
 							<div class='grid_pr_name_div'><div class='grid_pr_name'>".$row['name']."</div></div>
 							<div class='grid_pr_location'>".$row['location']."</div>
 						</a>";
@@ -61,7 +61,7 @@
 					<div class='title_div'>Ultimo Articolo</div>
 				</div>
 				<div class='div_container_img'>
-					<img src='images/".$row['image']."'/>
+					<img src='images/".$row['image']."' alt='Ultimo articolo inserito'/>
 					<div class='div_overlay'>
 						<div class='div_text_inside_group'>".$row['title']."</div>
 					</div>
@@ -69,6 +69,18 @@
 		
 			</a>";
 			}
+			else{
+				echo "<a href='azienda.php' title='Storia e sede della nostra azienda' id='div_four' class='div_group'>
+				<div id='div_title_four' class='div_title_group'>
+						<div class='title_div'>Azienda</div>
+				</div>
+				<div class='div_container_img'>
+					<img src='images/sede.png' alt='Sede dell&#39azienda'/>
+					<div class='div_overlay'>
+						<div class='div_text_inside_group'>Scopri dove siamo</div>
+					</div>
+				</div>
+			</a>";}
 		}
 		// ULTIMO PROGETTO
 		public function get_last_project() {
@@ -81,7 +93,7 @@
 						<div class='title_div'>Ultimo Progetto</div>
 				</div>
 				<div class='div_container_img'>
-					<img src='images/".$row['image']."'/>
+					<img src='images/".$row['image']."'alt='Ultimo progetto inserito'/>
 					<div class='div_overlay'>
 					
 						<div class='div_text_inside_group'>".$row['name']."</div>
@@ -89,7 +101,18 @@
 				</div>
 				
 			</a>";
-			}
+			}else{
+				echo "<a href='azienda.php' title='Storia e sede della nostra azienda' id='div_four' class='div_group'>
+				<div id='div_title_four' class='div_title_group'>
+						<div class='title_div'>Azienda</div>
+				</div>
+				<div class='div_container_img'>
+					<img src='images/sede.png'alt='Sede dell&#39azienda'/>
+					<div class='div_overlay'>
+						<div class='div_text_inside_group'>Scopri dove siamo</div>
+					</div>
+				</div>
+			</a>";}
 		}
 		// ULTIMA OFFERTA
 		public function get_last_offer() {
@@ -108,7 +131,7 @@
 						<div class='title_div'>Offerte</div>
 				</div>
 				<div  class='div_container_img'>
-					<img id='img_offer' src='images/".$row['role'].".png'/>
+					<img id='img_offer' src='images/".$row['role'].".png'alt='Ultima offerta inserito'/>
 					<div class='div_overlay'>
 						<div class='div_text_inside_group'>".$row['branch']."</br></br>".$row['role']."</br></br>".$row['contract']."</div>
 					</div>
@@ -116,12 +139,12 @@
 			</a>";
 			}
 			else{
-				echo "<a href='azienda.php' id='div_four' class='div_group'>
+				echo "<a href='azienda.php' title='Storia e sede della nostra azienda' id='div_four' class='div_group'>
 				<div id='div_title_four' class='div_title_group'>
 						<div class='title_div'>Azienda</div>
 				</div>
 				<div class='div_container_img'>
-					<img src='images/sede.png'/>
+					<img src='images/sede.png'alt='Sede dell&#39azienda'/>
 					<div class='div_overlay'>
 						<div class='div_text_inside_group'>Scopri dove siamo</div>
 					</div>
@@ -192,18 +215,18 @@
 		}
 		// PRENOTAZIONI
 		public function get_prenotation(){
-
+			
 			$sql="SELECT * FROM webproject.offerte WHERE webproject.offerte.id = ANY (SELECT idOffer FROM webproject.form_offerte  WHERE form_offerte.user ='".$_SESSION['username']."')";
 			
 			$result = $this->conn->query($sql);
-			echo"<div class='title'>Prenotazioni Effettuate</div>";
+			echo"<h1 class='title'>Prenotazioni Effettuate</h1>";
 			if($result->num_rows > 0){
 				$count=1;
 				while($row=$result->fetch_assoc()){
 					
 					echo "<input id='of".$count."' type='checkbox' class='pro_select' />
 						<label class='label_offer' for='of".$count."'>
-							<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png'></div>
+							<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png' alt='offerta come ".$row['role']."'></div>
 							<div class='div_information'>
 								<div class='text'>
 									".$row['role']." - ".$row['branch']." - ".$row['contract']."</br></br>
@@ -219,7 +242,7 @@
 							</div>
 							
 							<form action='form_control.php' method='post'>
-							<input id='subsub' type='submit' value='Rimuovi' title='rimuovi questa offerta dalle prenotazioni' name='remove_off'> 
+							<input id='subsub' type='submit' value='' title='rimuovi questa offerta dalle prenotazioni' name='remove_off' > 
 							<input class='identity' type='text' name='idOffer' value='".$row['id']."'/>
 							<input class='identity' type='text' name='mydate' value='".$row1['date']."'/>
 						</form>
@@ -251,10 +274,11 @@
 			$sql="SELECT * FROM webproject.articoli";
 			$result = $this->conn->query($sql);
 			if($result->num_rows>0){
+	
 				while($row=$result->fetch_assoc()){
-					echo "<a class='link' href='articolo.php?id=".$row['id']."' title='".$row['title']."'><div class='container_article'>
+					echo "<div class='cont_ex'><a class='link' href='articolo.php?id=".$row['id']."' title='".$row['title']."'><div class='container_article'>
 					<div class='container_img'>
-					<img src='images/".$row['image']."'>
+					<img src='images/".$row['image']."' alt='immagine articolo'/>
 					</div>
 		
 					<div class='container_text'>
@@ -265,7 +289,7 @@
 					
 			
 			</div>
-			</a>";
+			</a></div>";
 				}
 			}
 			else{
@@ -281,8 +305,8 @@
 			$result = $this->conn->query($sql);
 			if($result->num_rows>0){
 				while($row=$result->fetch_assoc()){
-					echo "<div class='title'>".$row['title']."</div>
-					<div class='subtitle'>".$row['subtitle']."</div>
+					echo "<h1 class='title'>".$row['title']."</h1>
+					<h2 class='subtitle'>".$row['subtitle']."</h2>
 					<div class='divisor'></div>
 					<div class='informations'>
 						Editore - ".$row['house']." &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp Data - ".$row['date']."
@@ -290,7 +314,7 @@
 					<div class='divisor'></div>
 						
 					<div class='container_text_img'>
-					<div class='container_img'><img src='images/".$row['image']."'/></div>
+					<div class='container_img'><img src='images/".$row['image']."' alt='immagine articolo'/></div>
 						<div class='text'>
 							".$row['text']."
 							<div class='div_author'>Autore - ".$row['author']."</div>
@@ -303,9 +327,6 @@
 			else{
 				echo "<h2>Nessuna informazione trovata</h2>";
 			}
-
-
-
 
 			
 		}
@@ -321,7 +342,7 @@
 			<a href='prenotazioni.php' title='vedi le offerte che hai prenotato'>Vedi prenotazioni</a>
 			</div>
 			
-			<div class='title'>Lavora con Noi</div>
+			<h1 class='title'>Lavora con Noi</h1>
 			<div id='container_filter' ><label id='search_label' title='filtra per ruolo, settore o contratto'>Cerca : <input id='text_search' type='text' placeholder='filtra per ruolo, settore o contratto' oninput='offer_filter(this.value)'/></label></div>
 			";
 			$user=$_SESSION['username'];
@@ -347,7 +368,7 @@
 						<label class='label_offer' for='".$row['id']."'title='offerta di lavoro come ".$row['role']." nel settore ".$row['branch']."'>
 						
 						
-						<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png'></div>
+						<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png' alt='immagine offerta come ".$row['role']."'></div>
 							<div class='div_information'>
 								<div class='text'>
 									".$row['role']." - ".$row['branch']." - ".$row['contract']."</br></br>
@@ -602,11 +623,11 @@
 				$sql = "SELECT DISTINCT * FROM webproject.impiegati WHERE impiegati.branch='".$branches[$i]."'" ;
 				$result = $this->conn->query($sql);
 				if($result->num_rows > 0){
-					echo "<div class='subsubtitle'>".$branches[$i]."</div>  
+					echo "<h3 class='subsubtitle'>".$branches[$i]."</h3>  
 					<div class='divisor'></div>";
 					while($row=$result->fetch_assoc()){
 						echo "<div class='div_impiegato' title='".$row['role']." ".$row['firstname']." ".$row['lastname']."' >
-						<img class='img_impiegato' src='images/".$row['image']."'/></br></br>
+						<img class='img_impiegato' src='images/".$row['image']."' alt='impiegato ".$row['firstname']." ".$row['lastname']."'/></br></br>
 						<span class='spg'>Nome  </span></br><span class='spgr'>".$row['firstname']."</span></br> 
 						<span class='spg'>Cognome  </span></br><span class='spgr'>".$row['lastname']."</span></br>
 						<span class='spg'>Ruolo  </span></br><span class='spgr'>".$row['role']."</span></br>

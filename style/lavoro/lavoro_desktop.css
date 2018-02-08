@@ -6,6 +6,7 @@
     display: none;
 }
 .title{
+    font-weight: 100;
     padding-top: 80px;
     padding-bottom: 40px;
     color: rgba(0, 73, 169, 0.888);
@@ -116,7 +117,7 @@ input[type="checkbox"]{
     border: 1px solid  rgb(243, 250, 255);
 }
 .pro_select:checked + label + .form_offer{
-    height: 34em;
+    height: 36em;
     background-color: rgb(243, 250, 255);
     opacity: 1;
 }
@@ -181,7 +182,6 @@ input[type="checkbox"]{
 
 #container_prenotazioni{
     display: table;
-    
     font-size: 14px;
     position: fixed;
     right: 0;

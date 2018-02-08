@@ -1,5 +1,7 @@
 @import url("../navbar_mobile.css");
-
+.nascosto{
+    display: none;
+}
 #back_link {
     
         float: left;
@@ -11,7 +13,11 @@
         background-color: #0084ff;
     
     }
+    #back_link:hover{
+        text-decoration: underline;
+    }
 .title{
+    font-weight: 100;
     clear: both;
     padding-bottom: 40px;
     color: rgba(0, 73, 169, 0.888);
@@ -21,7 +27,7 @@
     margin: auto;
 }
 .subtitle{
-
+    font-weight: 100;
     padding-bottom: 40px;
     color: rgba(0, 73, 169, 0.888);
     text-align: center;
