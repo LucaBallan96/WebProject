@@ -349,7 +349,6 @@ body {
 }
 .submit_btn, .reset_btn {
     border: none;
-    outline: none;
     padding: 1em;
     font-size: 1em;
     color: white;
@@ -434,7 +433,6 @@ body {
 }
 .apply_btn {
     border: none;
-    outline: none;
     position: absolute;
     bottom: 2em;
     right: 2em;
@@ -591,12 +589,17 @@ body {
 .article_div {
     position: relative;
     width: calc(33.3% - 3em);
-    height: 600px;
+    height: 37.5em;
     float: left;
     margin: 0 3em 3em 0;
     min-width: 20em;
     background-color: #55bbff; 
     color: white;
+}
+@media screen and (min-width:720px) and (max-width:1170px) {
+    .article_div {
+        width: calc(50% - 3em);
+    }
 }
 .article_image {
     position: relative;
@@ -714,9 +717,8 @@ body {
 }
 .save_mod_art, .reset_mod_art {
     border: none;
-    outline: none;
     width: 4.75em;
-    height: 50px;
+    height: 3em;
     float: left;
     color: white;
     background-color: #55bbff;
@@ -724,7 +726,7 @@ body {
 .save_mod_art {
     margin-top: 4em;
 }
-.save_mod_art:hover, .reset_mod_art:hover {
+.save_mod_art:hover, .reset_mod_art:hover, .rem_art_form_btn:hover {
     background-color: #33a3ff;
     cursor: pointer;
     text-decoration: underline;
@@ -736,16 +738,10 @@ body {
 .rem_art_form_btn {
     display: block;
     border: none;
-    outline: none;
     padding: 0.7em;
     margin: auto;
     background-color: #55bbff;
     color: white;
-}
-.rem_art_form_btn:hover {
-    text-decoration: underline;
-    background-color: #33a3ff;
-    cursor: pointer;
 }
 .new_art_data, .new_off_data {
     border: none;
@@ -880,11 +876,9 @@ body {
 .mod_u_form_data {
     width: calc(100% - 5.5em);
     margin: 1em;
-    border: 1px solid red;
 }
 .mod_u_form_btn {
     border: none;
-    outline: none;
     padding: 0.7em;
     margin: 1em 0 0 2em;
     background-color: #55bbff;
@@ -939,7 +933,7 @@ body {
     margin-top: 0.8em;
     width: 80%;
     padding: 0.3em;
-    color: #696969;
+    color: grey;
 }
 .mod_off_dates legend {
     height: 2.5em;
@@ -963,7 +957,6 @@ body {
 }
 .mod_off_btn, .rem_off_btn, .cand_off_btn {
     border: none;
-    outline: none;
     width: 89px;
     height: calc(25% - 20px);
     margin: 10px 10px 10px 0;
@@ -1000,7 +993,6 @@ body {
 .rem_off_form_btn {
     display: block;
     border: none;
-    outline: none;
     padding: 1em;
     margin: auto;
     background-color: #55bbff;

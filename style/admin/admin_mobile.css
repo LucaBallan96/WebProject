@@ -343,7 +343,6 @@ body {
 }
 .submit_btn, .reset_btn {
     border: none;
-    outline: none;
     padding: 0.8em;
     font-size: 0.8em;
     color: white;
@@ -428,7 +427,6 @@ body {
 }
 .apply_btn {
     border: none;
-    outline: none;
     position: absolute;
     bottom: 2em;
     right: 2em;
@@ -713,7 +711,6 @@ body {
 }
 .save_mod_art, .reset_mod_art {
     border: none;
-    outline: none;
     width: 60px;
     height: 50px;
     float: left;
@@ -736,7 +733,6 @@ body {
 .rem_art_form_btn {
     display: block;
     border: none;
-    outline: none;
     padding: 0.7em;
     margin: auto;
     background-color: #008cff;
@@ -875,7 +871,6 @@ body {
 }
 .mod_u_form_btn {
     border: none;
-    outline: none;
     padding: 0.7em;
     margin: 10px 0 0 20px;
     background-color: #008cff;
@@ -962,7 +957,6 @@ body {
     position: absolute;
     right: 10px;
     border: none;
-    outline: none;
     width: 90px;
     height: 30px;
     background-color: #83cdff;
