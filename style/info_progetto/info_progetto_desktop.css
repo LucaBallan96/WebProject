@@ -9,6 +9,15 @@
     text-align: center;
     font-size: 30px;
 }
+#back_link {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    text-decoration: none;
+    padding: 1em;
+    color: white;
+	background-color: #0099ffa8;
+}
 #div_image {
     position: relative;
     width: calc(40% - 2em);

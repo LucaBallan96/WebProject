@@ -1,6 +1,8 @@
 <?php
     include 'DBConnection.php';
-    $conn=new DBConnection();
+	$conn=new DBConnection();
+
+	$_SESSION['next']='progetti.php';
 ?>
 
 <!DOCTYPE html>
@@ -67,6 +69,7 @@
 			?>
         </div>
         <div id="navbar_bottom_padding"></div>
+		<div class="nascosto">Ti trovi in: Home > Progetti</div>
 
         <input id="grid_control" class="view_control" type="radio" name="view_control" checked/>
         <label id="grid_view" class="view" for="grid_control" title="Visualizza i progetti come griglia">Griglia</label>
@@ -116,5 +119,8 @@
 			</div>
 		</div>
 
+		<?php
+			$_SESSION['page']='progetti.php';
+		?>
 	</body>
 </html>

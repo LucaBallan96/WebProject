@@ -1,0 +1,79 @@
+@import url("../navbar_desktop.css");
+body {
+    background: white;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+#navbar {
+    display: none;
+}
+.nascosto {
+    margin-top: 2em;
+    display: block;
+}
+.div_contatto:first-of-type {
+    width: calc(33.33% - 1em);
+    margin-right: 1em;
+}
+.div_contatto:last-of-type {
+    width: calc(33.33% - 1em);
+    margin-left: 1em;
+}
+#div_text_foot {
+    color: black;
+}
+
+
+#header {
+    padding: 3.5em 2em 2em;
+    text-align: center;
+    font-size: 30px;
+}
+#div_image {
+    position: relative;
+    width: calc(40% - 2em);
+    height: 300px;
+    float: left;
+    margin-left: 2em;
+    overflow: hidden;
+}
+#div_image img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 100%;
+}
+#div_specifiche {
+    width: calc(60% - 8em);
+    height: calc(300px - 4em);
+    margin: 2em 4em;
+    float: left;
+}
+.specifica {
+    height: 16.6%;
+    padding-top: 0.8em;
+    color: gray;
+    font-size: 1.2em;
+}
+.spec_data {
+    float: right;
+}
+hr {
+    border: none;
+    border-top: 1px solid #b9b9b9;
+}
+#div_desc {
+    width: 100%;
+    height: auto;
+    clear: both;
+    padding: 2em 8em;
+    text-align: center;
+    color: gray;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}

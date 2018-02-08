@@ -13,7 +13,10 @@
 			if($num==2)
 				$_SESSION['admin']='admin';
 			$conn->set_accesses();
-			header('Location: index.php');
+			if(isset($_SESSION['next']))
+				header('Location: '.$_SESSION['next']);
+			else
+				header('Location: index.php');
 		}
 	}
 

@@ -339,11 +339,11 @@
 			echo "<div id='container_prenotazioni'>
 			Benvenuto ".$_SESSION['username']."</br></br>
 			Offerte prenotate - ".$row['COUNT(idOffer)']." </br></br>
-			<a href='prenotazioni.php' title='vedi le offerte che hai prenotato'>Vedi prenotazioni</a>
+			<a href='prenotazioni.php' title='Visualizza le offerte per cui hai prenotato un colloquio'>Vedi prenotazioni</a>
 			</div>
 			
-			<h1 class='title'>Lavora con Noi</h1>
-			<div id='container_filter' ><label id='search_label' title='filtra per ruolo, settore o contratto'>Cerca : <input id='text_search' type='text' placeholder='filtra per ruolo, settore o contratto' oninput='offer_filter(this.value)'/></label></div>
+			<div class='title'>Lavora con Noi</div>
+			<div id='container_filter' ><label id='search_label' title='Inserisci un testo per filtrare le offerte secondo ruolo, settore di impiego o contratto'>Cerca : <input id='text_search' type='text' placeholder='filtra per ruolo, settore o contratto' oninput='offer_filter(this.value)'/></label></div>
 			";
 			$user=$_SESSION['username'];
 			
@@ -365,7 +365,7 @@
 					echo "
 					
 					<input id='".$row['id']."' type='checkbox' class='pro_select' />
-						<label class='label_offer' for='".$row['id']."'title='offerta di lavoro come ".$row['role']." nel settore ".$row['branch']."'>
+						<label class='label_offer' for='".$row['id']."'title='Offerta di lavoro come ".$row['role']." nel settore ".$row['branch']."'>
 						
 						
 						<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png' alt='immagine offerta come ".$row['role']."'></div>
@@ -431,7 +431,7 @@
 						$bday=$_POST['bday'];
 						$mail=$_POST['mail'];
 						$file=$_POST['file'];
-						$textmessage=$_POST['textmessage'];
+						$textmessage=htmlentities($_POST['textmessage'], ENT_QUOTES);
 						$date=$_POST['date'];
 						$username=$_SESSION['username'];
 						

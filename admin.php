@@ -5,8 +5,10 @@
 	if(!isset($_SESSION['admin'])) {
 		if(isset($_SESSION['username']))
 			header('Location: index.php');
-		else
+		else {
+			$_SESSION['next']='admin.php';
 			header('Location: login.php');
+		}
 	}
 ?>
 
@@ -25,15 +27,20 @@
 		<link rel="stylesheet" media="print" href="style/admin/admin_print.css">
 	</head>
 	<body>
+		<div class="nascosto">Ti trovi in: Home > Area Privata</div>
 
 		<!-- NAVIGATION -->
 		<div id="nav">
-			<a title="Torna alla pagina iniziale" href="index.php" id="nav_home" class="nav_link"><div>Home</div></a>
-			<a title="Impiegati dell'azienda" href="#impiegati" id="nav_people" class="nav_link"><div>Impiegati</div></a>
-			<a title="Progetti dell'azienda" href="#progetti" id="nav_projects" class="nav_link"><div>Progetti</div></a>
-			<a title="Articoli di stampa" href="#articoli" id="nav_articles" class="nav_link"><div>Articoli</div></a>
-			<a title="Utenti del sito" href="#utenti" id="nav_users" class="nav_link"><div>Utenti</div></a>
-			<a title="Offerte di lavoro e prenotazioni degli utenti" href="#offerte" id="nav_work" class="nav_link"><div>Lavoro</div></a>
+			<a title="Torna alla pagina iniziale" href="index.php" id="nav_home"><img id="logo" src="images/logo.png"/></a>
+			<a title="Impiegati dell'azienda" href="#impiegati" id="nav_people" class="nav_link">Impiegati</a>
+			<a title="Progetti dell'azienda" href="#progetti" id="nav_projects" class="nav_link">Progetti</a>
+			<a title="Articoli di stampa" href="#articoli" id="nav_articles" class="nav_link">Articoli</a>
+			<a title="Utenti del sito" href="#utenti" id="nav_users" class="nav_link">Utenti</a>
+			<a title="Offerte di lavoro e prenotazioni degli utenti" href="#offerte" id="nav_work" class="nav_link">Lavoro</a>
+			<a title='Effettua il logout dal sito' href='logout.php' id='logout' class="nav_link_dx">Logout</a>
+			<?php
+				echo "<a title='Visualizza le informazioni relative al tuo account' href='info_utente.php' id='user' class='nav_link_dx'>".$_SESSION['username']."</a>";
+			?>
 		</div>
 
 		<!-- TMP ERROR -->
@@ -228,5 +235,9 @@
 
 		<!--SCRIPT-->
 		<script type="text/javascript" src="script/menuScript.js"></script>
+
+		<?php
+			$_SESSION['page']='admin.php';
+		?>
     </body>
 </html>

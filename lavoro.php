@@ -2,8 +2,10 @@
 	include 'DBConnection.php';
 	$conn=new DBConnection();
 
-	if(!isset($_SESSION['username']))
+	if(!isset($_SESSION['username'])) {
+		$_SESSION['next']='lavoro.php';
 		header('Location: login.php');
+	}
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +71,8 @@
 					echo "<a href='admin.php' id='admin' title='Entra nell&#39area amministrativa del sito'>Area privata</a>";
 			?>
         </div>
-		<div class="nascosto">Ti trovi in: Home > Lavoro</div>
+		<div class="nascosto">Ti trovi in: Home > Lavora con noi</div>
+
 		<!--OFFERTE-->
         <?php
             $conn->get_offer();
@@ -112,5 +115,9 @@
 			</div>
 		</div>
 		
+		<?php
+			if(isset($_SESSION['username']))
+				$_SESSION['page']='lavoro.php';
+		?>
 	</body>
 </html>

@@ -1,6 +1,8 @@
 <?php
     include 'DBConnection.php';
-    $conn=new DBConnection();
+	$conn=new DBConnection();
+
+	$_SESSION['next']='iniziative.php';
 ?>
 
 <!DOCTYPE html>
@@ -67,6 +69,7 @@
 			?>
         </div>
 		<div class="nascosto">Ti trovi in: Home > Iniziative</div>
+		
         <!--STAMPA-->
         <h1 id="stampa" class="title">Rassegna Stampa</h1>
         <?php 
@@ -152,5 +155,8 @@
 			</div>
 		</div>
 
+		<?php
+			$_SESSION['page']='iniziative.php';
+		?>
     </body>
 </html>

@@ -1,9 +1,11 @@
 <?php
     include 'DBConnection.php';
-    $conn=new DBConnection();
+	$conn=new DBConnection();
 
-    if(!isset($_SESSION['username']))
-    header('Location: login.php');
+    if(!isset($_SESSION['username'])) {
+		$_SESSION['next']='prenotazioni.php';
+		header('Location: login.php');
+	}
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +73,7 @@
         </div>
 		<div class="nascosto">Ti trovi in: Home > Lavora con Noi > Prenotazioni</div>
         
-        <a id="back_link" href="lavoro.php" title="offerte di lavoro">Offerte</a>
+        <a id="back_link" href="lavoro.php" title="Torna alle offerte di lavoro">Offerte</a>
 		
 		<!--PRENOTAZIONI-->
         <?php
@@ -115,5 +117,8 @@
 			</div>
 		</div>
 
+		<?php
+			$_SESSION['page']='prenotazioni.php';
+		?>
 	</body>
 </html>

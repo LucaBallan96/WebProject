@@ -8,6 +8,9 @@
 body {
     background-color: #f1f5fa;
 }
+.nascosto {
+    display: none;
+}
 .header {
     width: 100%;
     padding: 3em 0 1em;

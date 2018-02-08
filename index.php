@@ -1,6 +1,8 @@
 <?php
 	include 'DBConnection.php';
 	$conn=new DBConnection();
+
+	$_SESSION['next']='index.php';
 ?>
 
 <!DOCTYPE html>
@@ -66,23 +68,14 @@
 					echo "<a href='admin.php' id='admin' title='Entra nell&#39area amministrativa del sito'>Area privata</a>";
 			?>
 		</div>
-		
-
-
-		<div class="nascosto">Ti trovi in: Home </div>
-	<!--MESSAGGI-->
+		<div class="nascosto">Ti trovi in: Home</div>
 	
-
-	
-		<?php 
-			$conn->get_messages();
+		<!--MESSAGGI-->
+		<?php
+			if(isset($_SESSION['username'])) { 
+				$conn->get_messages();
+			}
 		?>
-
-
-
-
-
-
 
 		<!--LOGO-->
 		<h1 id="div_one" title="Costruzioni Bordignon General Bau">
@@ -178,5 +171,8 @@
 			</div>
 		</div>
 
+		<?php
+			$_SESSION['page']='index.php';
+		?>
 	</body>
 </html>

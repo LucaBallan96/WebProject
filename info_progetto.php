@@ -1,6 +1,11 @@
 <?php
     include 'DBConnection.php';
-    $conn=new DBConnection();
+	$conn=new DBConnection();
+
+	if(!isset($_GET['numero']))
+		header('Location: progetti.php');
+
+	$_SESSION['next']='info_progetto.php?numero='.$_GET['numero'];
 ?>
 
 <!DOCTYPE html>
@@ -65,12 +70,15 @@
 				if(isset($_SESSION['admin']))
 					echo "<a href='admin.php' id='admin' title='Entra nell&#39area amministrativa del sito'>Area privata</a>";
 			?>
-        </div>
+		</div>
+		<div class="nascosto">Ti trovi in: Home > Progetti > Info Progetto</div>
 
-        <!-- INFO PROGETTO -->
-        <?php
+		<!-- INFO PROGETTO -->
+		<?php
+            if(isset($_SESSION['page']))
+                echo "<a id='back_link' href='".$_SESSION['page']."' title='Torna alla pagina precedente'>Indietro</a>";
             $progetto=$_GET['numero'];
-            $conn->get_info_progetto($progetto);
+			$conn->get_info_progetto($progetto);
         ?>
 
 		<!--CONTATTI-->
@@ -110,5 +118,8 @@
 			</div>
 		</div>
 
+		<?php
+			$_SESSION['page']='info_progetto.php?numero='.$_GET['numero'];
+		?>
     </body>
 </html>
