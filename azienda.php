@@ -1,6 +1,8 @@
 <?php
     include 'DBConnection.php';
     $conn=new DBConnection();
+
+    $_SESSION['next']='azienda.php';
 ?>
 
 <!DOCTYPE html>
@@ -160,7 +162,7 @@
                     B.G.P. General Bau Srl con sede a Bressanone (BZ) – Quota capitale partecipato 100%.</br></br>
                 </div>
             </div>
-            <div id="container_img_persone"><img id="organigramma"src="images/organigramma.png" title="organigramma aziendale"/></div>
+            <div id="container_img_persone"><img id="organigramma" src="images/organigramma.png" title="organigramma aziendale"/></div>
         </div>
 
         <!--IMPIEGATI-->
@@ -211,5 +213,8 @@
 		    </div>
 	    </div>
 
+        <?php
+			$_SESSION['page']='azienda.php';
+		?>
     </body>
 </html>

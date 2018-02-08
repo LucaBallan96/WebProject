@@ -1,0 +1,57 @@
+@import url("../navbar_desktop.css");
+body {
+    background: white;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+#navbar {
+    display: none;
+}
+.nascosto {
+    margin-top: 2em;
+    display: block;
+}
+
+
+.header {
+    width: 100%;
+    padding: 2em 2em;
+    text-align: center;
+    font-size: 36px;
+}
+#back_link {
+    display: none;
+}
+form {
+    width: 100%;
+    text-align: center;
+}
+#container {
+    position: relative;
+    left: 50%;
+    width: 720px;
+    height: 400px;
+    transform: translate(-50%, 0);
+}
+#div_img {
+    display: none;
+}
+#div_data {
+    width: 100%;
+    height: inherit;
+    padding-top: 4em;
+}
+.data {
+    padding: 1em 2em;
+}
+input {
+    padding: 0.2em;
+}
+#div_buttons, .error {
+    display: none;
+}

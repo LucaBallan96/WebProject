@@ -8,6 +8,9 @@
 body {
     background-color: #f1f5fa;
 }
+.nascosto {
+    display: none;
+}
 .header {
     margin: 4em 5em 1em;
     width: calc(100% - 10em);

@@ -7,6 +7,9 @@
 body {
     background-color: #f1f5fa;
 }
+.nascosto {
+    display: none;
+}
 
 /* NAVIGATION */
 

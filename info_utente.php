@@ -2,8 +2,10 @@
     include 'DBConnection.php';
     $conn=new DBConnection();
 
-    if(!isset($_SESSION['username']))
-    header('Location: login.php');
+    if(!isset($_SESSION['username'])) {
+        header('Location: login.php');
+        $_SESSION['next']='info_utente.php';
+    }
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +23,10 @@
 		<link rel="stylesheet" media="print" href="style/info_utente/info_utente_print.css">
 	</head>
 	<body>
-        <a id="back_link" href="index.php" title="Torna alla pagina iniziale">Indietro</a>
+        <div class="nascosto">Ti trovi in: Home > Info Account</div>
+        <?php
+            echo "<a id='back_link' href='".$_SESSION['page']."' title='Torna alla pagina precedente'>Indietro</a>";
+        ?>
         <h1 class="header"><?php echo $_SESSION['username']; ?> - Informazioni sul tuo account</h1>
         <form action="form_control.php" method="post">
             <?php
@@ -46,9 +51,7 @@
                             <input class='apply_btn' type='submit' value='Applica' title='Applica la scelta'/>
                         </form>
                     </div>";
-        ?>
 
-        <?php
             if(isset($_GET['error'])) {
                 if($_GET['error']==1)
                     echo "<p class='error'><b>Non sono permessi campi dati nulli per le credenziali</b></p>";
@@ -60,5 +63,9 @@
                     echo "<p class='error'><b>Nome utente non disponibile, riprovare</b></p>";
             }
         ?>
+
+        <?php
+			$_SESSION['page']='info_utente.php';
+		?>
     </body>
 </html>

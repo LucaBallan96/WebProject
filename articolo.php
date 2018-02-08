@@ -1,6 +1,8 @@
 <?php
     include 'DBConnection.php';
-    $conn=new DBConnection();
+	$conn=new DBConnection();
+
+	$_SESSION['next']='articolo.php?id='.$_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -110,5 +112,8 @@
 			</div>
 		</div>
 	
+		<?php
+			$_SESSION['page']='articolo.php?id='.$_GET['id'];
+		?>
 	</body>
 </html>

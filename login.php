@@ -3,7 +3,7 @@
 	$conn=new DBConnection();
 
 	if(isset($_SESSION['username'])) // se è già stato effettuato il login
-		header('Location: index.php');
+		header('Location: '.$_SESSION['page']);
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,11 @@
 		<link rel="stylesheet" media="print" href="style/login/login_print.css">
 	</head>
 	<body>
-        <a id="back_link" href="index.php" title='Torna alla pagina iniziale'>Indietro</a>
+        <div class="nascosto">Ti trovi in: Home > Login</div>
+        <?php
+            if(isset($_SESSION['page']))
+                echo "<a id='back_link' href='".$_SESSION['page']."' title='Torna alla ".$_SESSION['page']." precedente'>Indietro</a>";
+        ?>        
         <h1 class="header">Login</h1>
         <form action="form_control.php" method="post">
             <div id="container">
@@ -29,10 +33,10 @@
                     <img src="images/login.png" id="user_img">
                 </div>
                 <div id="div_data">
-                    <div class="data"><b>Username</b>
+                    <div class="data"><strong>Username</strong>
                         <input type="text" placeholder="Inserisci username" name="u" autofocus title='Inserisci il tuo nome utente' required>
                     </div>
-                    <div class="data"><b>Password</b>
+                    <div class="data"><strong>Password</strong>
                         <input type="password" placeholder="Inserisci password" name="p" title='Inserisci la password' required>
                     </div>
                     <div class="data">
@@ -50,5 +54,9 @@
                 echo "<p class='error'><b>Errore nelle credenziali, riprovare</b></p>";
             }
         ?>
+
+        <?php
+			$_SESSION['page']='login.php';
+		?>
     </body>
 </html>

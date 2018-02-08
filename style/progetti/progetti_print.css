@@ -1,0 +1,93 @@
+@import url("../navbar_desktop.css");
+body {
+    background: white;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+#navbar {
+    display: none;
+}
+.nascosto {
+    margin-top: 2em;
+    display: block;
+}
+.div_contatto:first-of-type {
+    width: calc(33.33% - 1em);
+    margin-right: 1em;
+}
+.div_contatto:last-of-type {
+    width: calc(33.33% - 1em);
+    margin-left: 1em;
+}
+#div_text_foot {
+    color: black;
+}
+
+
+
+#navbar_bottom_padding {
+    display: none;
+}
+.view_control, .view {
+    display: none;
+}
+#container_grid, #incorso, #terminati {
+    display: none;
+}
+#container_list {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+#incorso2 {
+    padding: 2em 2em 1em;
+    text-align: center;
+    font-size: 36px;
+}
+#terminati2 {
+    padding: 1em 2em;
+    text-align: center;
+    font-size: 36px;
+    clear: both;
+}
+#search_label {
+    display: none;
+}
+
+/* GRIGLIA */
+
+.grid_project {
+    display: none;
+}
+
+/* LISTA */
+
+.list_project {
+    width: calc(100% - 15em);
+    height: 40px;
+    margin: auto;
+    margin-bottom: 1em;
+    overflow: hidden;
+}
+.list_pr_image {
+    display: none;
+}
+.list_pr_name_a {
+    width: calc(100% - 150px);
+    height: 100%;
+    float: left;
+    text-decoration: none;
+}
+.list_pr_name, .list_pr_location {
+    position: relative;
+    top: 50%;
+    width: 50%;
+    float: left;
+    padding-left: 2em;
+    transform: translate(0, -50%);
+}

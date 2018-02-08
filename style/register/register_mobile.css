@@ -8,6 +8,9 @@
 body {
     background-color: #f1f5fa;
 }
+.nascosto {
+    display: none;
+}
 .header {
     width: 100%;
     padding: 4em 2em 2em;
@@ -46,6 +49,7 @@ form {
 .data_input input {
     float: right;
     width: 150px;
+    padding: 0.2em;
 }
 #div_buttons {
     width: 100%;

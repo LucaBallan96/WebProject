@@ -7,30 +7,47 @@
 body {
     background-color: #f1f5fa;
 }
+.nascosto {
+    display: none; 
+}
 
 /* NAVIGATION */
 
+#compact_menu, #cm_label {  /* only mobile */
+	display: none;
+}
 #nav {
-    width: 130px;
-    height: 100%;
-    position: fixed;
+	position: fixed;
+	left: 0%;
+	width: 100%;
 	background-color: #0099ffa8;
 }
-.nav_link {
-    width: 100%;
-    height: 16.6%;
-    display: block;
+.nav_link, .nav_link_dx {
+    padding: 1em 1.5em;
+    float: left;
     color: white;
-    text-align: center;
     text-decoration: none;
+    text-align: center;
+    background-color: transparent;
 }
-.nav_link div {
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
+.nav_link_dx {
+    float: right;
 }
-.nav_link:hover {
-    text-decoration: underline;
+#nav_home {
+	float: left;
+	width: 9em;
+	text-decoration: none;
+}
+#logo {
+	position: relative;
+	width: 100%;
+	padding: 0.8em;
+}
+#user {
+	background-color: #0066ff;
+	font-weight: bold;
+}
+.nav_link:hover, .nav_link_dx:hover, #user:hover {
     background-color: #008cff7a;
 }
 

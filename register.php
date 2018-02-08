@@ -1,9 +1,9 @@
 <?php
 	include 'DBConnection.php';
-	$conn=new DBConnection();
+    $conn=new DBConnection();
 
 	if(isset($_SESSION['username'])) // se è già stato effettuato il login
-		header('Location: index.php');
+        header('Location: '.$_SESSION['page']);
 ?>
 
 <!DOCTYPE html>
@@ -21,14 +21,18 @@
 		<link rel="stylesheet" media="print" href="style/register/register_print.css">
 	</head>
 	<body>
-        <a id="back_link" href="login.php">Indietro</a>
+        <div class="nascosto">Ti trovi in: Home > Login > Nuovo Account</div>
+        <?php
+            if(isset($_SESSION['page']))
+                echo "<a id='back_link' href='".$_SESSION['page']."' title='Torna alla pagina precedente'>Indietro</a>";
+        ?>
         <h1 class="header">Registrazione nuovo account</h1>
         <form action="form_control.php" method="post">
             <fieldset id="user_data">
-                <label class="data_input">Username: <input type="text" placeholder="Inserisci username" name="new_user" autofocus maxlength="30" pattern="([a-zA-Z])[a-zA-Z0-9._%@#+-]{5,}" title="Username: deve iniziare con una lettera e contenere almeno 6 caratteri. Sono accettati i simboli . + - _ % @ e #" required/></label>
-                <label class="data_input">Password: <input type="password" placeholder="Inserisci password" name="password" maxlength="30" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9._%@#+-]{8,}" title="Password: deve contenere almeno un numero, una lettera maiuscola ed una minuscola, e deve avere complessivamente almeno 8 caratteri. Sono accettati i simboli . + - _ % @ e #" required/></label>
-                <label class="data_input">Ripeti password: <input type="password" placeholder="Ripeti password" name="rep_password" title='Inserisci nuovamente la password' required/></label>
-                <label class="data_input">E-mail: <input type="email" placeholder="Inserisci e-mail" name="mail" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$" title="E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %" required/></label>
+                <label class="data_input"><strong>Username: </strong><input type="text" placeholder="Inserisci username" name="new_user" autofocus maxlength="30" pattern="([a-zA-Z])[a-zA-Z0-9._%@#+-]{5,}" title="Username: deve iniziare con una lettera e contenere almeno 6 caratteri. Sono accettati i simboli . + - _ % @ e #" required/></label>
+                <label class="data_input"><strong>Password: </strong><input type="password" placeholder="Inserisci password" name="password" maxlength="30" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9._%@#+-]{8,}" title="Password: deve contenere almeno un numero, una lettera maiuscola ed una minuscola, e deve avere complessivamente almeno 8 caratteri. Sono accettati i simboli . + - _ % @ e #" required/></label>
+                <label class="data_input"><strong>Ripeti password: </strong><input type="password" placeholder="Ripeti password" name="rep_password" title='Inserisci nuovamente la password' required/></label>
+                <label class="data_input"><strong>E-mail: </strong><input type="email" placeholder="Inserisci e-mail" name="mail" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$" title="E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %" required/></label>
             </fieldset>
             <div id="div_buttons">
                 <input class="btns" type="submit" value="Crea account" title='Salva i dati del nuovo account'/>
@@ -43,5 +47,9 @@
                     echo "<p class='error'><b>Nome utente già esistente</b></p>";
             }
         ?>
+
+        <?php
+			$_SESSION['page']='register.php';
+		?>
     </body>
 </html>
