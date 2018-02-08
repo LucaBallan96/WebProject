@@ -30,7 +30,7 @@
 		</label>
 
         <div id="navbar">
-            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png" title="Vai alla pagina iniziale" alt="logo Costruzioni Bordignon S.r.l."></a>
+            <a id="home_link" href="index.php"><img id="logo" src="images/logo.png" title="Vai alla pagina iniziale" alt="logo Costruzioni Bordignon S.r.l." ></a>
             <div class="dropdown">
                 <a id="menu_bt1" class="drop_button" href="azienda.php" title="Visualizza le informazioni sull'azienda">Azienda</a>
                 <div id="content_menu_bt1" class="drop_content">
@@ -96,8 +96,9 @@
 				$conn->get_last_project();
 				$conn->get_last_offer();
 			?>
+			<div id="giu_link"><a id="agiu" href="#div_slogan" >Giù</a></div>
 		</div>
-
+		
 		<!--SLOGAN-->
 		<div id="div_container_img_slogan">
 		</div>
