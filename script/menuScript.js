@@ -51,11 +51,13 @@ function uncheck_radio(rad) {
     else
         last=rad.id;
 }
-// LABEL 
 
-document.getElementsByClassName('label_offer').addEventListener("checking",keypressed);
-function keypressed(k){
-    if(k.keyCode==13)
-        alert("ciaone");
-    return false;
+// TASTO INVIO SUGLI ELEMENTI
+document.addEventListener("keypress", keypres);
+function keypres(k) {
+    if(k.keyCode==13) {
+        alert("tetta");
+        var x=document.activeElement.id;
+        document.getElementById(x).click();
+    }
 }

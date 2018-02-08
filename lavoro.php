@@ -73,7 +73,7 @@
 			?>
         </div>
 		<div class="nascosto">Ti trovi in: Home > Lavora con noi</div>
-		<label title='Uomo' id="ww" ><input id="www"type="checkbox" /> Uomo</label>
+		
 		<!--OFFERTE-->
         <?php
             $conn->get_offer();

@@ -1,9 +1,9 @@
 <?php
-		if(!isset($_GET['id'])){
-		header("Location: iniziative.php");}
-
     include 'DBConnection.php';
 	$conn=new DBConnection();
+
+	if(!isset($_GET['id']))
+		header('Location: iniziative.php');
 
 	$_SESSION['next']='articolo.php?id='.$_GET['id'];
 ?>
