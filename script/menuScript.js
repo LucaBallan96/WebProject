@@ -1,3 +1,12 @@
+// TASTO INVIO SUGLI ELEMENTI
+document.addEventListener("keypress", keypress);
+function keypress(k) {
+    if(k.keyCode==13) {
+        var x=document.activeElement.id;
+        document.getElementById(x).click();
+    }
+}
+
 // FILTRO PROGETTI
 function project_filter(str) {
     projects=document.getElementsByClassName('grid_project');
@@ -50,15 +59,4 @@ function uncheck_radio(rad) {
     }
     else
         last=rad.id;
-}
-
-alert("tetta");
-// TASTO INVIO SUGLI ELEMENTI
-document.addEventListener("keypress", keypress);
-function keypress(k) {
-    if(k.keyCode==13) {
-        var x=document.activeElement.id;
-        alert(x);
-        document.getElementById(x).click();
-    }
 }
