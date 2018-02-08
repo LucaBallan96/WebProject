@@ -36,23 +36,23 @@
             <div class="dropdown">
                 <a id="menu_bt1" class="drop_button" href="azienda.php" title="Visualizza le informazioni sull'azienda">Azienda</a>
                 <div id="content_menu_bt1" class="drop_content">
-                    <a href="azienda.php#storia" title="Leggi la storia dell'azienda"><pre>Storia&#9&#9&gt</pre></a>
-                    <a href="azienda.php#sedi" title="Visualizza le sedi in cui opera l'azienda"><pre>Sedi&#9&#9&#9&gt</pre></a>
-                    <a href="azienda.php#persone" title="Visualizza gli impiegati dell'azienda"><pre>Persone&#9&#9&gt</pre></a>
+                    <a href="azienda.php#storia" tabindex="0"title="Leggi la storia dell'azienda"><pre>Storia&#9&#9&gt</pre></a>
+                    <a href="azienda.php#sedi" tabindex="0"title="Visualizza le sedi in cui opera l'azienda"><pre>Sedi&#9&#9&#9&gt</pre></a>
+                    <a href="azienda.php#persone" tabindex="0"title="Visualizza gli impiegati dell'azienda"><pre>Persone&#9&#9&gt</pre></a>
                 </div>
             </div>
             <div class="dropdown">
                 <a id="menu_bt2" class="drop_button" href="progetti.php" title="Visualizza i progetti in cui si impegna l'azienda">Progetti</a>
                 <div id="content_menu_bt2" class="drop_content">
-                    <a href="progetti.php" title="Visualizza i progetti in corso"><pre>In corso&#9&#9&gt</pre></a>
-                    <a href="progetti.php#terminati" title="Visualizza i progetti terminati"><pre>Terminati&#9&#9&gt</pre></a>
+                    <a href="progetti.php" tabindex="0"title="Visualizza i progetti in corso"><pre>In corso&#9&#9&gt</pre></a>
+                    <a href="progetti.php#terminati" tabindex="0"title="Visualizza i progetti terminati"><pre>Terminati&#9&#9&gt</pre></a>
                 </div>
             </div>
             <div class="dropdown">
                 <a id="menu_bt3" class="drop_button" href="iniziative.php" title="Visualizza gli articoli sull'azienda e le certificazioni ricevute">Iniziative</a>
                 <div id="content_menu_bt3" class="drop_content">
-					<a href="iniziative.php#stampa" title="Leggi gli articoli che trattano dell'azienda"><pre>Stampa&#9&#9&#9&gt</pre></a>
-                    <a href="iniziative.php#certificazioni" title="Visualizza le certificazioni"><pre>Certificazioni&#9&#9&gt</pre></a>
+					<a href="iniziative.php#stampa" tabindex="0"title="Leggi gli articoli che trattano dell'azienda"><pre>Stampa&#9&#9&#9&gt</pre></a>
+                    <a href="iniziative.php#certificazioni" tabindex="0"title="Visualizza le certificazioni"><pre>Certificazioni&#9&#9&gt</pre></a>
                 </div>
 			</div>
 			<a href="lavoro.php" id="work" title="Visualizza le offerte di lavoro e fissa un colloquio con l'azienda">Lavora con noi</a>
@@ -72,9 +72,9 @@
 		<div class="nascosto">Ti trovi in: Home > Progetti</div>
 
         <input id="grid_control" class="view_control" type="radio" name="view_control" checked/>
-        <label id="grid_view" class="view" for="grid_control" title="Visualizza i progetti come griglia">Griglia</label>
+        <label id="grid_view" class="view" for="grid_control" tabindex="0"title="Visualizza i progetti come griglia">Griglia</label>
         <input id="list_control" class="view_control" type="radio" name="view_control"/>
-        <label id="list_view" class="view" for="list_control" title="Visualizza i progetti come elenco">Lista</label>
+        <label id="list_view" class="view" for="list_control" tabindex="0"title="Visualizza i progetti come elenco">Lista</label>
         <label id="search_label">Cerca <input id="text_search" type="text" placeholder="filtra per nome o città" oninput="project_filter(this.value)" title="Inserisci un testo per filtrare i progetti secondo il nome o la località"/></label>
 
 		<!-- PROGETTI -->

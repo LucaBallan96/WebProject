@@ -5,6 +5,13 @@
 .nascosto{
     display: none;
 }
+#ww{
+    position: absolute;
+    margin: 60px;
+}
+#www{
+    display: table;
+}
 .title{
     font-weight: 100;
     padding-top: 80px;
@@ -88,7 +95,7 @@ input[type="checkbox"]{
     
 }
 .form_offer {
-    
+    visibility: hidden;
     height: 0;
     opacity: 0;
     transition: 0.8s;
@@ -120,6 +127,7 @@ input[type="checkbox"]{
     height: 36em;
     background-color: rgb(243, 250, 255);
     opacity: 1;
+    visibility: visible;
 }
 
 

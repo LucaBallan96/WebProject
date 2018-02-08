@@ -36,23 +36,23 @@
             <div class="dropdown">
                 <a id="menu_bt1" class="drop_button" href="azienda.php" title="Visualizza le informazioni sull'azienda">Azienda</a>
                 <div id="content_menu_bt1" class="drop_content">
-                    <a href="azienda.php#storia" title="Leggi la storia dell'azienda"><pre>Storia&#9&#9&gt</pre></a>
-                    <a href="azienda.php#sedi" title="Visualizza le sedi in cui opera l'azienda"><pre>Sedi&#9&#9&#9&gt</pre></a>
-                    <a href="azienda.php#persone" title="Visualizza gli impiegati dell'azienda"><pre>Persone&#9&#9&gt</pre></a>
+                    <a href="azienda.php#storia" tabindex="0"title="Leggi la storia dell'azienda"><pre>Storia&#9&#9&gt</pre></a>
+                    <a href="azienda.php#sedi" tabindex="0"title="Visualizza le sedi in cui opera l'azienda"><pre>Sedi&#9&#9&#9&gt</pre></a>
+                    <a href="azienda.php#persone" tabindex="0"title="Visualizza gli impiegati dell'azienda"><pre>Persone&#9&#9&gt</pre></a>
                 </div>
             </div>
             <div class="dropdown">
                 <a id="menu_bt2" class="drop_button" href="progetti.php" title="Visualizza i progetti in cui si impegna l'azienda">Progetti</a>
                 <div id="content_menu_bt2" class="drop_content">
-                    <a href="progetti.php" title="Visualizza i progetti in corso"><pre>In corso&#9&#9&gt</pre></a>
-                    <a href="progetti.php#terminati" title="Visualizza i progetti terminati"><pre>Terminati&#9&#9&gt</pre></a>
+                    <a href="progetti.php" tabindex="0"title="Visualizza i progetti in corso"><pre>In corso&#9&#9&gt</pre></a>
+                    <a href="progetti.php#terminati" tabindex="0"title="Visualizza i progetti terminati"><pre>Terminati&#9&#9&gt</pre></a>
                 </div>
             </div>
             <div class="dropdown">
                 <a id="menu_bt3" class="drop_button" href="iniziative.php" title="Visualizza gli articoli sull'azienda e le certificazioni ricevute">Iniziative</a>
                 <div id="content_menu_bt3" class="drop_content">
-					<a href="iniziative.php#stampa" title="Leggi gli articoli che trattano dell'azienda"><pre>Stampa&#9&#9&#9&gt</pre></a>
-                    <a href="iniziative.php#certificazioni" title="Visualizza le certificazioni"><pre>Certificazioni&#9&#9&gt</pre></a>
+					<a href="iniziative.php#stampa" tabindex="0"title="Leggi gli articoli che trattano dell'azienda"><pre>Stampa&#9&#9&#9&gt</pre></a>
+                    <a href="iniziative.php#certificazioni" tabindex="0"title="Visualizza le certificazioni"><pre>Certificazioni&#9&#9&gt</pre></a>
                 </div>
 			</div>
 			<a href="lavoro.php" id="work" title="Visualizza le offerte di lavoro e fissa un colloquio con l'azienda">Lavora con noi</a>
@@ -133,7 +133,7 @@
                 </div>
             </div>
             <div id="container_img_sedi">
-                <iframe id ="map" title="mappa della sede principale Costruzioni Bordignon S.r.l."src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44522.22438841073!2d12.051779077956512!3d45.778424079105896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47793ae8658b48a7%3A0x94926af6ccab5215!2sCostruzioni+Bordignon+Srl!5e0!3m2!1sit!2sit!4v1514980483579"  frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe tabindex="-1"id ="map" title="mappa della sede principale Costruzioni Bordignon S.r.l."src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44522.22438841073!2d12.051779077956512!3d45.778424079105896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47793ae8658b48a7%3A0x94926af6ccab5215!2sCostruzioni+Bordignon+Srl!5e0!3m2!1sit!2sit!4v1514980483579"  frameborder="0" style="border:0" allowfullscreen></iframe>
                 <img id="img_persone"src="images/sede.png"title="sede Costruzioni Bordignon S.r.l." alt="sede Costruzioni Bordignon S.r.l."/>
             </div>
         </div>

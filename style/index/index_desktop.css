@@ -322,9 +322,7 @@ hr{
     color: rgb(98, 105, 146);
     
 }
-#div_button_storia{
-    text-decoration: none;
-}
+
 #div_img_storia{
     
     float: left;
@@ -337,24 +335,24 @@ hr{
     height: 45em;
  
 }
-#div_scopri{
-    background-color: #0099ffa8;
-    width: 200px;
-    height: 50px;
-    margin: auto;
-    
-}
-#title_scopri{
-    display: table;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+#div_button_storia{
+    text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
+}
+#div_scopri{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(145, 192, 254);
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;  
 }
 
-#div_button_storia:hover #title_scopri{
+
+#div_button_storia:hover {
     text-decoration: underline;
 
 }

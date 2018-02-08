@@ -21,9 +21,9 @@
 .cont_ex{
     width: 25%;
     float: left;
+
 }
 .container_article{
-    position: relative;
     display: table;
     margin: auto;
     transition: 1s ease;
