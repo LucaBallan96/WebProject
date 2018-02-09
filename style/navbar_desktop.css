@@ -32,9 +32,11 @@
 	float: left;
 }
 .dropdown {
+	height: 50px;
 	padding: 1em 0;
 }
 .drop_button {
+	height: 50px;
 	padding: 1em 1.5em;
 	color: white;
 	text-decoration: none;
@@ -58,6 +60,7 @@
 	float: right;
 }
 #contacts, #work, #login, #user {
+	height: 50px;
 	padding: 1em 1.5em;
 	color: white;
 	text-decoration: none;
