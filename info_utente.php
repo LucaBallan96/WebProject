@@ -22,7 +22,12 @@
 		<link rel="stylesheet" media="screen and (max-width:720px)" href="style/info_utente/info_utente_mobile.css">	
 		<link rel="stylesheet" media="print" href="style/info_utente/info_utente_print.css">
 	</head>
+
 	<body>
+     <!--SCRIPT-->
+		<script type="text/javascript" src="script/menuScript.js"></script>
+
+        
         <div class="nascosto">Ti trovi in: Home > Info Account</div>
         <?php
             echo "<a id='back_link' href='".$_SESSION['page']."' title='Torna alla pagina precedente'>Indietro</a>";

@@ -116,23 +116,20 @@ input[type="checkbox"]{
     height: 310px;
     padding: 20px; 
 }
-.contprimo{
-    width: 33.3%;
-    float: left;
-    text-align: center;
-}
 
 .contgiu{
     width: 100%;
+    height: 3.75em;
     
 }
 #giu_link{
+    
     clear: both;
-    padding: 5px;
-    width: 80px;
-    height: 60px;
+    padding: 0.1em;
+    width: 5em;
+    height: 3.75em;
     text-align: center;
-    display: table;
+    
     margin: auto;
     
 }
@@ -180,35 +177,40 @@ input[type="checkbox"]{
     
 }
 .div_title_group{
-    background-color: #0099ffa8;
-    position: relative;
+    background-color: #55bbff;
     height: 40px;
     width: 100%;
    
 }
+.contprimo{
+    width: 33.3%;
+    height: 278px;
+    float: left;
+    text-align: center;
+}
+
 .title_div{
-    display: table;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 0.3em;
     font-size: 20px;
     color: white;
 }
 .div_container_img{
     position: relative;
     width: 100%;
-    height: calc(100% - 40px);
+    height: 238px;
     overflow: hidden;
+    
 }
 
 .div_container_img img{
     transition: .8s ease;
     position: absolute;
     height: 110%;
-    top: 50%;
     left: 50%;
+    top:50%;
     transform: translate(-50%,-50%);
+    
 }
 #img_offer{
     height: 50%;
@@ -231,9 +233,15 @@ input[type="checkbox"]{
     text-decoration: underline;
     
 }
+.sp{
+    background-color: rgb(230, 244, 255);
+    border-radius: 5px 5px 5px 5px;
+    padding: 2px;
+}
 .div_text_inside_group{
     position: relative;
     color: rgb(98, 105, 146);
+    font-size: 18px; 
     display: table;
     left: 50%;
     top:50%;

@@ -12,11 +12,15 @@
 #back_link {
     position: fixed;
     left: 20px;
-    top: 20px;
+    top: 70px;
     text-decoration: none;
     padding: 1em;
     color: white;
 	background-color: #0099ffa8;
+}
+#back_link:hover{
+    text-decoration: underline;
+    
 }
 #div_image {
     position: relative;

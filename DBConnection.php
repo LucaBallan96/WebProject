@@ -63,7 +63,7 @@
 				<div class='div_container_img'>
 					<img src='images/".$row['image']."' alt='Ultimo articolo inserito'/>
 					<div class='div_overlay'>
-						<div class='div_text_inside_group'>".$row['title']."</div>
+						<div class='div_text_inside_group'><span class='sp'>".$row['title']."</span></div>
 					</div>
 				</div>
 		
@@ -77,7 +77,7 @@
 				<div class='div_container_img'>
 					<img src='images/sede.png' alt='Sede dell&#39azienda'/>
 					<div class='div_overlay'>
-						<div class='div_text_inside_group'>Scopri dove siamo</div>
+						<div class='div_text_inside_group'><span class='sp'>Scopri dove siamo</span></div>
 					</div>
 				</div>
 			</a></div>";}
@@ -96,7 +96,7 @@
 					<img src='images/".$row['image']."'alt='Ultimo progetto inserito'/>
 					<div class='div_overlay'>
 					
-						<div class='div_text_inside_group'>".$row['name']."</div>
+						<div class='div_text_inside_group'><span class='sp'>".$row['name']."</span></div>
 					</div>
 				</div>
 				
@@ -109,7 +109,7 @@
 				<div class='div_container_img'>
 					<img src='images/sede.png'alt='Sede dell&#39azienda'/>
 					<div class='div_overlay'>
-						<div class='div_text_inside_group'>Scopri dove siamo</div>
+						<div class='div_text_inside_group'><span class='sp'>Scopri dove siamo</span></div>
 					</div>
 				</div>
 			</a></div>";}
@@ -133,7 +133,7 @@
 				<div  class='div_container_img'>
 					<img id='img_offer' src='images/".$row['role'].".png'alt='Ultima offerta inserito'/>
 					<div class='div_overlay'>
-						<div class='div_text_inside_group'>".$row['branch']."</br></br>".$row['role']."</br></br>".$row['contract']."</div>
+						<div class='div_text_inside_group'><span class='sp'>".$row['branch']."</span></br></br><span class='sp'>".$row['role']."</span></br></br><span class='sp'>".$row['contract']."</span></div>
 					</div>
 				</div>
 			</a></div>";
@@ -376,6 +376,8 @@
 						
 						<div class='form_offer'>
 							<form id='f".$count."' action='form_control.php' method='post'>
+							<fieldset>
+							<legend>Prenotazione ad un colloquio</legend>
 								<input class='identity' type='text' name='id' value='".$row['id']."'/>
 								<div class='div_container_form'>
 									<div class='cont_general'><div class='general_informations'>
@@ -402,7 +404,7 @@
 									</div></div>
 									
 									
-								</div>	
+								</div>	</fieldset>
 							</form>
 						</div>";
 					$count=$count+1;
@@ -1190,15 +1192,15 @@
 			$row = $result->fetch_assoc();
 			echo "<fieldset id='user_data'>
 					<div class='data_input'>Numero di accessi a questo sito: ".$row['accesses']."</div>
-					<label class='data_input'>Username: <input type='text' name='username' placeholder='Inserisci username' value='".$row['username']."' autofocus maxlength='30' pattern='([a-zA-Z])[a-zA-Z0-9._%@#+-]{5,}' title='Username: deve iniziare con una lettera e contenere almeno 6 caratteri. Sono accettati i simboli . + - _ % @ e #' required/></label>
+					<label class='data_input'>Username: <input type='text' name='username' placeholder='username' value='".$row['username']."' autofocus maxlength='30' pattern='([a-zA-Z])[a-zA-Z0-9._%@#+-]{5,}' title='Username: deve iniziare con una lettera e contenere almeno 6 caratteri. Sono accettati i simboli . + - _ % @ e #' required/></label>
 					<input id='change_password_checkbox' type='checkbox' name='change_password'/>
-					<label class='data_input' id='change_password_label' for='change_password_checkbox' title='Modifica la password corrente'>Cambia password</label>
+					<label tabindex='0'class='data_input' id='change_password_label' for='change_password_checkbox' title='Modifica la password corrente'>Cambia password</label>
 					<div id='change_div'>
-						<label class='data_input'>Vecchia password: <input type='password' name='old_password' placeholder='Inserisci la password corrente' title='Inserisci la password corrente'/></label>
-						<label class='data_input'>Nuova password: <input type='password' name='new_password' placeholder='Inserisci la nuova password' maxlength='30' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9._%@#+-]{8,}' title='Nuova password: deve contenere almeno un numero, una lettera maiuscola ed una minuscola, e deve avere complessivamente almeno 8 caratteri. Sono accettati i simboli . + - _ % @ e #'/></label>
-						<label class='data_input'>Conferma password: <input type='password' name='rep_new_password' placeholder='Ripeti la nuova password' title='Inserisci nuovamente la nuova password'/></label>
+						<label class='data_input'>Vecchia password: <input type='password' name='old_password' placeholder='corrente' title='Inserisci la password corrente'/></label>
+						<label class='data_input'>Nuova password: <input type='password' name='new_password' placeholder='nuova' maxlength='30' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9._%@#+-]{8,}' title='Nuova password: deve contenere almeno un numero, una lettera maiuscola ed una minuscola, e deve avere complessivamente almeno 8 caratteri. Sono accettati i simboli . + - _ % @ e #'/></label>
+						<label class='data_input'>Conferma password: <input type='password' name='rep_new_password' placeholder='nuova' title='Inserisci nuovamente la nuova password'/></label>
 					</div>
-					<label class='data_input'>E-mail: <input type='email' name='mail' placeholder='Inserisci e-mail' value='".$row['mail']."' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$' title='E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %' required/></label>
+					<label class='data_input'>E-mail: <input type='email' name='mail' placeholder='e-mail' value='".$row['mail']."' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$' title='E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %' required/></label>
 				</fieldset>
 				<div id='div_buttons'>
 					<input class='btns' name='modify_user' type='submit' value='Salva modifiche' title='Salva i dati dell&#39utente'/>
