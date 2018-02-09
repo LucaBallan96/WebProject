@@ -1,9 +1,7 @@
 @import url("../navbar_desktop.css");
+
 #menu_bt1 {
-    background-color: #008cff7a;
-}
-.nascosto{
-    display: none;
+    background-color: #33a3ff;
 }
 
 /*TITLE*/

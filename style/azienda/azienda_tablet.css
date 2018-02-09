@@ -1,11 +1,10 @@
 @import url("../navbar_tablet.css");
-#menu_bt1 {
-    background-color: #008cff7a;
+
+#menu_bt1{
+    color: white;
+    text-decoration: none;
 }
 
-.nascosto{
-    display: none;
-}
 /*TITLE*/
 
 #title{

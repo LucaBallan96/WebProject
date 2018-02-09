@@ -1,7 +1,10 @@
 @import url("../navbar_mobile.css");
-.nascosto{
-    display: none;
+
+#menu_bt3{
+    color: white;
+    text-decoration: none;
 }
+
 #back_link {
     
         float: left;

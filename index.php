@@ -36,26 +36,26 @@
             <div class="dropdown">
                 <a id="menu_bt1" class="drop_button" href="azienda.php" title="Visualizza le informazioni sull'azienda">Azienda</a>
                 <div id="content_menu_bt1" class="drop_content">
-                    <a href="azienda.php#storia" tabindex="0" title="Leggi la storia dell'azienda">Storia<div>&gt</div></a>
-                    <a href="azienda.php#sedi" tabindex="0" title="Visualizza le sedi in cui opera l'azienda">Sedi<div>&gt</div></a>
-                    <a href="azienda.php#persone" tabindex="0" title="Visualizza gli impiegati dell'azienda">Persone<div>&gt</div></a>
+                    <a href="azienda.php#storia" title="Leggi la storia dell'azienda">Storia<div>&gt</div></a>
+                    <a href="azienda.php#sedi" title="Visualizza le sedi in cui opera l'azienda">Sedi<div>&gt</div></a>
+                    <a href="azienda.php#persone" title="Visualizza gli impiegati dell'azienda">Persone<div>&gt</div></a>
                 </div>
             </div>
             <div class="dropdown">
                 <a id="menu_bt2" class="drop_button" href="progetti.php" title="Visualizza i progetti in cui si impegna l'azienda">Progetti</a>
                 <div id="content_menu_bt2" class="drop_content">
-                    <a href="progetti.php" tabindex="0" title="Visualizza i progetti in corso">In corso<div>&gt</div></a>
-                    <a href="progetti.php#terminati" tabindex="0" title="Visualizza i progetti terminati">Terminati<div>&gt</div></a>
+                    <a href="progetti.php" title="Visualizza i progetti in corso">In corso<div>&gt</div></a>
+                    <a href="progetti.php#terminati" title="Visualizza i progetti terminati">Terminati<div>&gt</div></a>
                 </div>
             </div>
             <div class="dropdown">
                 <a id="menu_bt3" class="drop_button" href="iniziative.php" title="Visualizza gli articoli sull'azienda e le certificazioni ricevute">Iniziative</a>
                 <div id="content_menu_bt3" class="drop_content">
-					<a href="iniziative.php#stampa" tabindex="0" title="Leggi gli articoli che trattano dell'azienda">Stampa<div>&gt</div></a>
-                    <a href="iniziative.php#certificazioni" tabindex="0" title="Visualizza le certificazioni">Certificazioni<div>&gt</div></a>
+					<a href="iniziative.php#stampa" title="Leggi gli articoli che trattano dell'azienda">Stampa<div>&gt</div></a>
+                    <a href="iniziative.php#certificazioni" title="Visualizza le certificazioni">Certificazioni<div>&gt</div></a>
                 </div>
 			</div>
-			<a href="lavoro.php"  id="work" title="Visualizza le offerte di lavoro e fissa un colloquio con l'azienda">Lavora con noi</a>
+			<a href="lavoro.php" id="work" title="Visualizza le offerte di lavoro e fissa un colloquio con l'azienda">Lavora con noi</a>
 			<a href="#div_container_contatti" id="contacts" title="Visualizza i nostri contatti, potrai chiamarci o mandare una mail per ricevere ulteriori informazioni">Contatti</a>
 			<?php
 				if(!isset($_SESSION['username']))

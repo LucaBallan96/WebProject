@@ -1,12 +1,5 @@
 @import url("../navbar_desktop.css");
 
-
-
-.nascosto{
-    display: none;
-}
-
-
 /*MESSAGES*/
 
 input[type="checkbox"]{

@@ -1,7 +1,10 @@
 @import url("../navbar_tablet.css");
-.nascosto{
-    display: none;
+
+#menu_bt3{
+    color: white;
+    text-decoration: none;
 }
+
 #back_link {
     margin-top: 50px;
     position: absolute;

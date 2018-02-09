@@ -30,6 +30,13 @@
 		<div class="nascosto">Ti trovi in: Home > Area Privata</div>
 
 		<!-- NAVIGATION -->
+		<input id='compact_menu' type='checkbox'/>
+		<label id='cm_label' for='compact_menu' title='Visualizza le opzioni del menu'>
+			<div class="cm_line"></div>
+            <div class="cm_line"></div>
+            <div class="cm_line"></div>
+		</label>
+		
 		<div id="nav">
 			<a title="Torna alla pagina iniziale" href="index.php" id="nav_home"><img id="logo" src="images/logo.png"/></a>
 			<a title="Impiegati dell'azienda" href="#impiegati" id="nav_people" class="nav_link">Impiegati</a>

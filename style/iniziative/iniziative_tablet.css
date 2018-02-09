@@ -1,5 +1,9 @@
 @import url("../navbar_tablet.css");
 
+#menu_bt3{
+    color: white;
+    text-decoration: none;
+}
 
 .nascosto{
     display: none;

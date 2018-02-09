@@ -1,8 +1,10 @@
 @import url("../navbar_mobile.css");
 
-.nascosto{
-    display: none;
+#work{
+    color: white;
+    text-decoration: none;
 }
+
 #back_link:hover{
     text-decoration: underline;
 }

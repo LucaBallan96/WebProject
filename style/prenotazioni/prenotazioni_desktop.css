@@ -1,9 +1,9 @@
 @import url("../navbar_desktop.css");
 
-
-.nascosto{
-    display: none;
+#work{
+    background-color: #33a3ff;
 }
+
 #back_link {
     margin-top: 50px;
     position: absolute;

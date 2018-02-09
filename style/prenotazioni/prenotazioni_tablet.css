@@ -1,8 +1,10 @@
 @import url("../navbar_tablet.css");
 
-.nascosto{
-    display: none;
+#work{
+    color: white;
+    text-decoration: none;
 }
+
 #back_link:hover{
     text-decoration: underline;
 }

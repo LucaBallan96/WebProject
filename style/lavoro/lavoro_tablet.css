@@ -1,7 +1,10 @@
 @import url("../navbar_tablet.css");
-.nascosto{
-    display: none;
+
+#work{
+    color: white;
+    text-decoration: none;
 }
+
 .title{
     font-weight: 100;
     padding-top: 80px;

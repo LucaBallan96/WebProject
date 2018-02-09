@@ -1,10 +1,9 @@
 @import url("../navbar_desktop.css");
+
 #menu_bt3{
-    background-color: #008cff7a;
+    background-color: #33a3ff;
 }
-.nascosto{
-    display: none;
-}
+
 
 .title{
         font-weight: 100;
