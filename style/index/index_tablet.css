@@ -121,7 +121,7 @@ input[type="checkbox"]{
     width: 80px;
     height: 60px;
     text-align: center;
-    display: table;
+
     margin: auto;
     
 }
@@ -176,21 +176,35 @@ input[type="checkbox"]{
     width: 100%;
    
 }
+.div_title_group{
+    background-color: #55bbff;
+    
+    height: 40px;
+    width: 100%;
+   
+}
+.contprimo{
+    width: 33.3%;
+    height: 278px;
+    float: left;
+    text-align: center;
+}
+
 .title_div{
-    display: table;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 0.3em;
     font-size: 20px;
     color: white;
+    text-decoration: underline;
 }
 .div_container_img{
     position: relative;
     width: 100%;
-    height: calc(100% - 40px);
+    height: 238px;
     overflow: hidden;
+    
 }
+
 .div_container_img img{
     transition: .8s ease;
     position: absolute;
@@ -226,6 +240,7 @@ input[type="checkbox"]{
     display: table;
     left: 50%;
     top:50%;
+    font-size: 18px;
     transform: translate(-50%,-50%);
 }
 
@@ -308,6 +323,8 @@ hr{
     font-size: 18px;
 }
 #div_scopri{
+    text-decoration: underline;
+    text-decoration-color: white;
     width: 150px;
     height: 40px;
     background-color: rgb(145, 192, 254);
@@ -329,6 +346,11 @@ hr{
     margin: auto;
     color: rgb(98, 105, 146);
     
+}
+.sp{
+    background-color: rgb(230, 244, 255);
+    border-radius: 5px 5px 5px 5px;
+    padding: 2px;
 }
 #div_img_storia{
     
