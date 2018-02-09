@@ -19,16 +19,13 @@ body {
     font-size: 1.5em;
 }
 #back_link {
-    position: fixed;
+    position: absolute;
     left: 20px;
     top: 20px;
-    z-index: 1;
-    width: 60px;
-    height: 60px;
-    font-size: 0;
-    background-image: url("../../images/back_arrow.png");
-    background-size: 60px;
-    background-repeat: no-repeat;
+    text-decoration: none;
+    padding: 1em;
+    color: white;
+	background-color: #0099ffa8;
 }
 form {
     margin-top: 2em;
