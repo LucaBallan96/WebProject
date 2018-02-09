@@ -31,7 +31,7 @@
 							<div class='grid_pr_location'>".$row['location']."</div>
 						</a>";
 					$stringa2="<div class='list_project' title='Visualizza le informazioni sul progetto ".$row['name']."'>
-							<div class='list_pr_image' style='background-image: url(images/".$row['image'].")'></div>
+							<div class='list_pr_image'><img src='images/".$row['image']."'/></div>
 							<a href='info_progetto.php?numero=".$row['id']."' class='list_pr_name_a'><div class='list_pr_name'>".$row['name']."</div><div class='list_pr_location'>".$row['location']."</div></a>
 						</div>";
 					if($row['status']=='In corso') {
@@ -161,7 +161,7 @@
 				$row = $result->fetch_assoc();
 				//$dateString = date("d-m-Y", strtotime($row['begin']));
 				echo "<h1 id='header'>".$row['name']."</h1>
-						<div id='div_image' title='".$row['image']."'><img src='images/".$row['image']."'></img></div>
+						<div id='div_image' title='".$row['image']."'><img src='images/".$row['image']."'/></div>
 						<div id='div_specifiche'>
 							<div class='specifica'>Committente<p class='spec_data'>".$row['client']."</p></div><hr/>
 							<div class='specifica'>Tipologia<p class='spec_data'>".$row['type']."</p></div><hr/>
@@ -491,7 +491,7 @@
 								<input class='identity' type='text' name='old_image' value='".$row['image']."'/>
 								<div class='project_info'>
 									<div class='project_img'>
-										<div class='current_proj_img' style='background-image:url(../../images/".$row['image'].")'></div>
+										<div class='current_proj_img'><img src='images/".$row['image']."'/></div>
 										<div class='change_proj_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png' title='Inserisci una nuova foto per il progetto'/></div>
 									</div>
 									<div class='project_data'>
@@ -699,7 +699,7 @@
 								<input class='apply_btn' type='submit' value='Applica' title='Applica la scelta'/>
 							</form>
 						</div>
-						<div class='imp_image' style='background-image:url(../../images/".$row['image'].")'></div>
+						<div class='imp_image'><img src='images/".$row['image']."'/></div>
 						<div class='imp_info'>
 							<div class='imp_name'><div>".$row['firstname']." ".$row['lastname']."</div></div>
 							<div class='imp_birth'><div>".$row['birth']."</div></div>
@@ -821,7 +821,7 @@
 				$count=1;
 				while($row = $result->fetch_assoc()) {
 					echo "<div class='article_div'>
-							<div class='article_image' style='background-image:url(../../images/".$row['image'].")' title='".$row['image']."'></div>
+							<div class='article_image'><img src='images/".$row['image']."'/></div>
 							<div class='article_info_div'>
 								<div class='article_info'>Data:<div>".$row['date']."</div></div>
 								<div class='article_info'>Autore:<div>".$row['author']."</div></div>
@@ -832,7 +832,8 @@
 							<input id='mod_art_checkbox".$count."' class='mod_art_control' type='checkbox'/>
 							<label for='mod_art_checkbox".$count."' class='modify_article_btn' title='Apri o chiudi il form di modifica'></label>
 							<form id='mod_a".$count."' class='mod_art_form' action='form_control.php' method='post'>
-								<div class='article_image' style='background-image:url(../../images/".$row['image'].")'>
+								<div class='article_image'>
+									<img src='images/".$row['image']."'/>
 									<div class='change_art_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png' title='Inserisci una nuova immagine per l&#39articolo'/></div>
 								</div>
 								<div class='article_info_div'>

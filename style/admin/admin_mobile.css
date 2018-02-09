@@ -126,13 +126,19 @@ body {
     overflow: hidden;
 }
 .imp_image {
-    border: 1px solid #0099ffa8;
+    position: relative;
+    border: 1px solid #55bbff;
     border-bottom: none;
     width: 100%;
     height: 60%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow: hidden;
+}
+.imp_image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
 }
 .imp_info {
     width: 100%;
@@ -493,11 +499,17 @@ body {
     height: calc(35% - 2em);
 }
 .current_proj_img {
+    position: relative;
     width: 100%;
     height: 85%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.current_proj_img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
 }
 .change_proj_img {
     font-size: 0;
@@ -605,9 +617,14 @@ body {
     position: relative;
     width: 100%;
     height: 35%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.article_image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
 }
 .change_art_img {
     position: absolute;
