@@ -381,8 +381,8 @@
 								<input class='identity' type='text' name='id' value='".$row['id']."'/>
 								<div class='div_container_form'>
 									<div class='cont_general'><div class='general_informations'>
-									<label>Nome: <input class='in_form' type='text' name='firstname' placeholder=' Nome' pattern='[a-zA-Z\s]{1,30}' title='Inserisci il tuo nome' required></label><div class='divisor'></div><br>
-									<label>Cognome: <input class='in_form' type='text' name='lastname' placeholder=' Cognome' pattern='[a-zA-Z\s]{1,30}' title='Inserisci il tuo cognome' required></label><div class='divisor'></div><br>
+									<label class='lf'>Nome: <input class='in_form' type='text' name='firstname' placeholder=' Nome' pattern='[a-zA-Z\s]{1,30}' title='Inserisci il tuo nome' required></label><div class='divisor'></div><br>
+									<label class='lf'>Cognome: <input class='in_form' type='text' name='lastname' placeholder=' Cognome' pattern='[a-zA-Z\s]{1,30}' title='Inserisci il tuo cognome' required></label><div class='divisor'></div><br>
 										<div class='div_genre'>
 											Genere: 
 											<div class='container_radio'>
@@ -391,14 +391,14 @@
 											</div>
 										</div>
 										<div class='divisor'></div>
-										<label><br>Data di nascita: <input class='in_form' type='date' name='bday' placeholder=' yyyy-mm-gg' min='1900-01-01' max='2000-01-01' pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))' title='Inserisci la data di nascita: il formato è yyyy-mm-gg' required></label><div class='divisor'></div><br>
-										<label>E-Mail: <input class='in_form' type='email' name='mail' placeholder=' E-mail' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$'' title='E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %' required></label><div class='divisor'></div><br>
-										<label>Data colloquio: <select class='date_input' name='date' title='Seleziona la data per un colloquio tra quelle disponibili'>";
+										<label class='lf'><br>Data di nascita: <input class='in_form' type='date' name='bday' placeholder=' yyyy-mm-gg' min='1900-01-01' max='2000-01-01' pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))' title='Inserisci la data di nascita: il formato è yyyy-mm-gg' required></label><div class='divisor'></div><br>
+										<label class='lf'>E-Mail: <input class='in_form' type='email' name='mail' placeholder=' E-mail' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$'' title='E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %' required></label><div class='divisor'></div><br>
+										<label class='lf'>Data colloquio: <select class='date_input' name='date' title='Seleziona la data per un colloquio tra quelle disponibili'>";
 										for($j=0; $j<count($dates); $j++)
 											echo "<option value='".$dates[$j]."'>".$dates[$j]."</option>";
 	
 										echo "</select></label><div class='divisor'></div><br>
-										<label>Messaggio:</br></br>
+										<label class='lfmessage'>Messaggio:</br></br>
 										<textarea class='texta' rows='11' class='textmessage' name='textmessage' form='f".$count."' placeholder='Inserisci un messaggio' maxlength='1000' title='Inserisci un messaggio che descriva le tue qualità'> </textarea></label>
 										<input class='submit' type='submit' value='Invia' name='candidate' title='Invia il modulo'>  
 									</div></div>

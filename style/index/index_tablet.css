@@ -314,7 +314,7 @@ hr{
     
     float: left;
     width: 50%;
-    height: 900px;
+    height: 60em;
     
 }
 #div_button_storia{
@@ -337,7 +337,7 @@ hr{
 
 
 #div_container_storia{
-    height: 900px;
+    height: 60em;
     width: 100%;
 }
 #div_text_storia{
@@ -361,7 +361,7 @@ hr{
     background-repeat: no-repeat;
     background-size: 140%;
     width: 50%;
-    height: 900px;
+    height: 60em;
  
 }
 

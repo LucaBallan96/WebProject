@@ -112,7 +112,7 @@ legend{
 }
 
 .pro_select:checked + label + .form_offer{
-    height: 36em;
+    height: 40em;
     background-color: rgb(243, 250, 255);
     opacity: 1;
     visibility: visible;

@@ -30,10 +30,15 @@
     border: 1px solid  #008cff3d;
     box-shadow: 2px 2px 4px #008cff3d;
     margin-bottom: 20px;
+    
+}
+.link{
+    text-decoration: none;
 }
 .container_text{
     width: 200px;
     min-height: 90px;
+    
     
 }
 .container_img img{
@@ -60,6 +65,7 @@
 }
 .link:hover .container_article{
     text-decoration: underline;
+   
     box-shadow: 2px 8px 12px #008cff3d;
     background-color: rgb(221, 238, 255);
 }

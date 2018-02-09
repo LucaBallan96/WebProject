@@ -122,7 +122,7 @@ legend{
     border-top: 1px solid  rgb(243, 250, 255);
 }
 .pro_select:checked + label + .form_offer{
-    height: 43em;
+    height: 45em;
     background-color: rgb(243, 250, 255);
     opacity: 1;
 }
