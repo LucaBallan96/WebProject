@@ -399,7 +399,7 @@
 	
 										echo "</select></label><div class='divisor'></div><br>
 										<label class='lfmessage'>Messaggio:</br></br>
-										<textarea class='texta' rows='11' class='textmessage' name='textmessage' form='f".$count."' placeholder='Inserisci un messaggio' maxlength='1000' title='Inserisci un messaggio che descriva le tue qualità'> </textarea></label>
+										<textarea class='texta'  class='textmessage' name='textmessage' form='f".$count."' placeholder='Inserisci un messaggio' maxlength='1000' title='Inserisci un messaggio che descriva le tue qualità'> </textarea></label>
 										<input class='submit' type='submit' value='Invia' name='candidate' title='Invia il modulo'>  
 									</div></div>
 									
