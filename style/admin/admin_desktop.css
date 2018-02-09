@@ -930,7 +930,7 @@ body {
 }
 .mod_off_info, .mod_off_dates, .mod_off_mex {
     border: none;
-    width: calc(33.3% - 33px);
+    width: calc(33.3% - 2em);
     height: 100%;
     float: left;
 }
@@ -974,9 +974,9 @@ body {
 }
 .mod_off_btn, .rem_off_btn, .cand_off_btn {
     border: none;
-    width: 89px;
+    width: 6em;
     height: calc(25% - 20px);
-    margin: 10px 10px 10px 0;
+    margin: 10px 0;
     float: left;
     background-color: #55bbff;
     color: white;
@@ -984,12 +984,12 @@ body {
 }
 .rem_off_btn {
     position: absolute;
-    right: 0;
+    right: 0.6em;
     top: 50%;
 }
 .cand_off_btn {
     position: absolute;
-    right: 0;
+    right: 0.6em;
     top: 75%;
 }
 .rem_off_btn div, .cand_off_btn div {
