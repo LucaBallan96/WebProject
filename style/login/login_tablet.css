@@ -14,7 +14,7 @@ body {
 .header {
     width: 100%;
     padding-top: 3em;
-    color: #0049a9e2;
+    color: #1551a0;
     text-align: center;
     font-size: 1.7em;
 }
@@ -22,10 +22,10 @@ body {
     position: fixed;
     left: 20px;
     top: 20px;
-    text-decoration: none;
+    text-decoration: underline;
     padding: 1em;
     color: white;
-	background-color: #0099ffa8;
+	background-color: #55bbff;
 }
 form {
     margin-top: 5em;
@@ -66,7 +66,7 @@ input {
     border: none;
     padding: 1em;
     color: white;
-    background-color: #0099ffa8; 
+    background-color: #55bbff; 
     text-decoration: underline;
 }
 #cancel_btn {
@@ -74,7 +74,7 @@ input {
 }
 #div_buttons input:hover, #back_link:hover {
     cursor: pointer;
-    background-color: #008cff7a;
+    background-color: #33a3ff;
 }
 .error {
     width: 100%;

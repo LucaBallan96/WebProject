@@ -90,6 +90,9 @@
 .dropdown:hover .drop_content {
 	visibility: visible;
 }
+.drop_button:focus, #work:focus, #contacts:focus, #admin:focus, #login:focus, #user:focus {
+	background-color: #33a3ff;
+}
 .drop_content a:hover {
 	background-color: #0990ff;
 }

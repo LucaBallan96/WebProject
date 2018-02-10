@@ -1,7 +1,10 @@
 @import url("../navbar_mobile.css");
-.nascosto{
-    display: none;
+
+#menu_bt3{
+    color: white;
+    text-decoration: none;
 }
+
 #back_link {
     
         float: left;
@@ -10,17 +13,17 @@
         text-decoration: none;
         padding: 0.6em;
         color: white;
-        background-color: #0084ff;
+        background-color: #55bbff;
     
-    }
-    #back_link:hover{
-        text-decoration: underline;
-    }
+}
+#back_link:hover{
+    text-decoration: underline;
+}
 .title{
     font-weight: 100;
     clear: both;
     padding-bottom: 2.5em;
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     text-align: center;
     font-size: 2em;
     width: 90%;
@@ -29,7 +32,7 @@
 .subtitle{
     font-weight: 100;
     padding-bottom: 2.5em;
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     text-align: center;
     font-size: 1.38em;
     width: 90%;
@@ -39,7 +42,7 @@
     text-align: center;
     width: 100%;
     display: table;
-    color: rgb(98, 105, 146);
+    color: grey;
     font-size: 0.9em;
 }
 
@@ -49,7 +52,7 @@
     margin: auto;
     margin-top: 0.6em;
     margin-bottom: 0.6em;
-    border-top: 1px solid  #008cff3d;
+    border-top: 1px solid  #a1d9ff;
    
 }
 .container_text_img{
@@ -62,7 +65,7 @@
     
     width: 100%;
     padding: 1.25em;
-    color: rgb(98, 105, 146);
+    color: gray;
     font-size: 0.9em;
     
     

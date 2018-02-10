@@ -1,7 +1,10 @@
 @import url("../navbar_tablet.css");
-.nascosto{
-    display: none;
+
+#menu_bt3{
+    color: white;
+    text-decoration: none;
 }
+
 #back_link {
     margin-top: 3.12em;
     position: absolute;
@@ -10,7 +13,7 @@
     text-decoration: none;
     padding: 1em;
     color: white;
-    background-color: #0084ff;
+    background-color: #55bbff;
 }
 #back_link:hover{
     text-decoration: underline;
@@ -19,7 +22,7 @@
     font-weight: 100;
     padding-top: 4em;
     padding-bottom: 2.5em;
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     text-align: center;
     font-size: 2em;
     width: 90%;
@@ -28,7 +31,7 @@
 .subtitle{
     font-weight: 100;
     padding-bottom: 2.5em;
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     text-align: center;
     font-size: 1.38em;
     width: 90%;
@@ -38,7 +41,7 @@
     text-align: center;
     width: 100%;
     display: table;
-    color: rgb(98, 105, 146);
+    color: grey;
     font-size: 1em;
 }
 
@@ -48,7 +51,7 @@
     margin: auto;
     margin-top: 0.6em;
     margin-bottom: 0.6em;
-    border-top: 1px solid  #008cff3d;
+    border-top: 1px solid  #a1d9ff;
    
 }
 .container_text_img{
@@ -60,7 +63,7 @@
     float: left;
     width: 58%;
     padding: 1.25em;
-    color: rgb(98, 105, 146);
+    color: grey;
     font-size: 1em;
     
 }

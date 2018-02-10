@@ -103,6 +103,7 @@ body {
     position: relative;
     top: 50%;
     width: calc(100% - 2.5em);
+    float: left;
     transform: translate(0, -50%);
 }
 

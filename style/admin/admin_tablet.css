@@ -103,6 +103,7 @@ body {
     position: relative;
     top: 50%;
     width: calc(100% - 2.5em);
+    float: left;
     transform: translate(0, -50%);
 }
 
@@ -713,7 +714,7 @@ body {
     margin-top: 0;
     z-index: 1;
     background-image: url("../../images/close.png");
-    background-size: 40px;
+    background-size: 3.5em;
     background-color: #55bbff;
 }
 .mod_art_control:checked + .modify_article_btn:hover, .rem_art_control:checked + .remove_article_btn:hover {
