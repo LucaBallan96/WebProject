@@ -20,8 +20,8 @@ body {
 }
 #back_link {
     position: fixed;
-    left: 20px;
-    top: 20px;
+    left: 1.25em;
+    top: 1.25em;
     text-decoration: underline;
     padding: 1em;
     color: white;
@@ -34,8 +34,8 @@ form {
 #container {
     position: relative;
     left: 50%;
-    width: 720px;
-    height: 400px;
+    width: 45em;
+    height: 25em;
     transform: translate(-50%, 0);
 }
 #div_img {

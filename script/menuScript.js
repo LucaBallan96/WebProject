@@ -6,6 +6,18 @@ function keypress(k) {
         document.getElementById(x).click();
     }
 }
+//CAMBIA TITLE
+function changeTitle(){
+    input=document.getElementById("compact_menu");
+    label=document.getElementById("cm_label");
+    if(input.checked == true)
+    {
+        label.title="Chiudi";
+    }
+    else{
+        label.title="Visualizza le opzioni del menu";
+    }
+}
 
 // FILTRO PROGETTI
 function project_filter(str) {
@@ -60,3 +72,4 @@ function uncheck_radio(rad) {
     else
         last=rad.id;
 }
+

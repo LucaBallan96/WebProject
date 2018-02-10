@@ -25,6 +25,16 @@
     background-color: #0077ff;
     margin: 0.5em 0;
 }
+#cont_cm_line{
+	float: left;
+}
+
+#cont_img img{
+	float: left;
+	margin-top: 0.4em;
+	margin-left: 1em;
+	height: 1.6em;
+}
 #cm_label:hover, #cm_label:focus {
 	cursor: pointer;
 	background-color: #33a3ff;
