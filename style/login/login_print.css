@@ -12,12 +12,19 @@ a {
 #navbar {
     display: none;
 }
-.nascosto {
-    margin-top: 2em;
+.nascosto{
+	margin: 0.6em;
+	clear: both;
+    font-size: 0.75em;
     display: block;
 }
-
-
+.logo_nascosto{
+    width: 5em;
+ 
+}
+.logo_nascosto img{
+    width: 100%;
+}
 .header {
     font-weight: 100;
     width: 100%;
