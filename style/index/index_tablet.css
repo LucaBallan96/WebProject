@@ -143,13 +143,8 @@ input[type="checkbox"]{
 #div_one{
     
     width: 100%;
-<<<<<<< HEAD
-    height: 400px;
-    background-color: #f1f5fa;
-=======
     height: 10em;
     background-color: rgb(241, 245, 250);
->>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
 }
 #img_logo{
     position: relative;
@@ -170,13 +165,8 @@ input[type="checkbox"]{
     border: 1px solid #acd4f5;
     box-shadow: 2px 5px 5px grey;
 }
-<<<<<<< HEAD
 .div_group:hover{
     box-shadow: 5px 10px 18px grey;
-=======
-.div_group:hover, .div_group:focus{
-    box-shadow: 5px 10px 18px #888888;
->>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
     
 }
 
@@ -273,13 +263,8 @@ input[type="checkbox"]{
 }
 #div_slogan{
     width: 100%;
-<<<<<<< HEAD
-    height: 400px;
-    background-color: #f1f5fa;
-=======
     height: 25em;
-    background-color: rgb(241, 245, 250);
->>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
+    background-color: #f1f5fa;
 }
 #div_text_slogan{
     position: relative;
@@ -288,26 +273,16 @@ input[type="checkbox"]{
     transform: translate(-50%,-50%);
     display: table;
     text-align: center;
-<<<<<<< HEAD
     color: #1d2a74;
-    font-size: 20px;
-=======
-    color: rgb(29, 42, 116);
     font-size: 1.25em;
->>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
 
 }
 .hr{
     border-top: 0px;
-<<<<<<< HEAD
-    margin: 20px;
-    border-color: #a2c6f7;
-=======
     margin: 1.25em;
     width: 100%;
-    border-bottom: 1px solid rgb(162, 198, 247);
+    border-bottom: 1px solid #a2c6f7;
    
->>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
 }
 
 
@@ -351,15 +326,9 @@ input[type="checkbox"]{
 #div_scopri{
     text-decoration: underline;
     text-decoration-color: white;
-<<<<<<< HEAD
-    width: 150px;
-    height: 40px;
-    background-color: #55bbff;
-=======
     width: 9.4em;
     height: 2.5em;
-    background-color: rgb(145, 192, 254);
->>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
+    background-color: #55bbff;
     text-align: center;
     padding: 0.6em;
     margin: auto;
@@ -397,14 +366,13 @@ input[type="checkbox"]{
  
 }
 
-<<<<<<< HEAD
-#div_scopri:hover {
+#div_scopri:hover{
     background-color: #33a3ff;
-=======
-#div_button_storia:hover, #div_button_storia:focus {
-    text-decoration: underline;
+}
 
->>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
+#div_button_storia:hover, #div_button_storia:focus{
+    text-decoration: underline;
+    background-color: #33a3ff;
 }
 
 
