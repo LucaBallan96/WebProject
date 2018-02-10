@@ -54,6 +54,9 @@ a {
 #compact_menu:checked + label .cm_line {
 	display: none;
 }
+#compact_menu:checked + label #imgl{
+	display: none;
+}
 #compact_menu:checked + label {
 	z-index: 3;
 	top: 0;

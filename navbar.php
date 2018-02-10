@@ -7,7 +7,7 @@ echo"<input id='compact_menu' onclick='changeTitle()' type='checkbox'/>
     <div class='cm_line'></div>
     <div class='cm_line'></div>
     </div>
-    <div id='cont_img'><img src='images/logo.png'/></div>
+    <div id='cont_img'><img id ='imgl' src='images/logo.png'/></div>
 </label>
 
 <div id='navbar'>
