@@ -12,16 +12,17 @@
     text-decoration: none;
     padding: 1em;
     color: white;
-    background-color: #0084ff;
+    background-color: #55bbff;
 }
 #back_link:hover{
     text-decoration: underline;
+    background-color: #33a3ff;
 }
 .title{
     font-weight: 100;
     padding-top: 80px;
     padding-bottom: 40px;
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     text-align: center;
     font-size: 32px;
     width: 90%;
@@ -40,7 +41,7 @@
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-top: 1px solid  #008cff3d;
+    border-top: 1px solid #a1d9ff;
    
 }
 .div_img_offer{
@@ -78,7 +79,7 @@ input[type="checkbox"]{
 
 #container_prenotazioni{
     display: table;
-    border: 1px solid gray;
+    border: 1px solid grey;
     font-size: 14px;
     position: absolute;
     margin-top: 50px;
@@ -93,7 +94,7 @@ input[type="checkbox"]{
     border: none;
     padding: 0.8em 2.2em;
     color: white;
-    background-color: rgb(208, 234, 255);
+    background-color: #55bbff;
     background-image: url("../../images/remove.png");
     background-position: center;
     background-size: 30px;
@@ -101,6 +102,6 @@ input[type="checkbox"]{
     transition: 0.5s;
 }
 #subsub:hover {
-    background-color: rgb(160, 214, 255);
+    background-color: #33a3ff;
 }
 

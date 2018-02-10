@@ -13,17 +13,17 @@
         text-decoration: none;
         padding: 10px;
         color: white;
-        background-color: #0084ff;
+        background-color: #55bbff;
     
-    }
-    #back_link:hover{
-        text-decoration: underline;
-    }
+}
+#back_link:hover{
+    text-decoration: underline;
+}
 .title{
     font-weight: 100;
     clear: both;
     padding-bottom: 40px;
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     text-align: center;
     font-size: 32px;
     width: 90%;
@@ -32,7 +32,7 @@
 .subtitle{
     font-weight: 100;
     padding-bottom: 40px;
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     text-align: center;
     font-size: 22px;
     width: 90%;
@@ -42,7 +42,7 @@
     text-align: center;
     width: 100%;
     display: table;
-    color: rgb(98, 105, 146);
+    color: grey;
     font-size: 14px;
 }
 
@@ -52,7 +52,7 @@
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-top: 1px solid  #008cff3d;
+    border-top: 1px solid #a1d9ff;
    
 }
 .container_text_img{
@@ -65,7 +65,7 @@
     
     width: 100%;
     padding: 20px;
-    color: rgb(98, 105, 146);
+    color: grey;
     font-size: 14px;
     
     
@@ -84,50 +84,4 @@
     padding-top: 60px; 
     
     
-}
-
-/*CONTATTI*/
-
-
-#div_container_contatti{
-    position: relative;
-    background-color: rgb(241, 245, 250);
-    width: 100%;
-    height: 540px;
-    padding-top: 1px;
-}
-
-
-.div_contatto{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 40px;
-    font-size: 13px;
-    color: rgb(98, 105, 146);
-    display: table;
-    text-align: center;
-}
-
-
-
-
-/* FOOT */
-
-
-#div_foot{
-    
-    width: 100%;
-    height: 60px;
-    background-color: rgb(1, 52, 110);
-}
-
-#div_text_foot{
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 10px;
-    color: rgb(181, 183, 197);
-    display: table;
 }

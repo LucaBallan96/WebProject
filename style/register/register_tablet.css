@@ -14,7 +14,7 @@ body {
 .header {
     width: 100%;
     padding: 4em 2em 2em;
-    color: #0049a9e2;
+    color: #1551a0;
     text-align: center;
     font-size: 1.7em;
 }
@@ -24,7 +24,7 @@ body {
     top: 20px;
     padding: 1em;
     color: white;
-    background-color: #0099ffa8;
+    background-color: #55bbff;
 }
 form {
     display: block;
@@ -56,7 +56,7 @@ form {
     border: none;
     padding: 1em;
     color: white;
-    background-color: #0099ffa8;
+    background-color: #55bbff;
     text-decoration: underline;
 }
 #cancel_btn {
@@ -64,7 +64,7 @@ form {
 }
 .btns:hover, #back_link:hover {
     cursor: pointer;
-    background-color: #008cff7a;
+    background-color: #33a3ff;
 }
 .error {
     width: 100%;

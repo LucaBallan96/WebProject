@@ -163,11 +163,11 @@
 				echo "<h1 id='header'>".$row['name']."</h1>
 						<div id='div_image' title='".$row['image']."'><img src='images/".$row['image']."'/></div>
 						<div id='div_specifiche'>
-							<div class='specifica'>Committente<p class='spec_data'>".$row['client']."</p></div><hr/>
-							<div class='specifica'>Tipologia<p class='spec_data'>".$row['type']."</p></div><hr/>
-							<div class='specifica'>Località<p class='spec_data'>".$row['location']."</p></div><hr/>
-							<div class='specifica'>Direttore dei lavori<p class='spec_data'>".$row['director']."</p></div><hr/>
-							<div class='specifica'>Data di inizio<p class='spec_data'>".$row['begin']."</p></div><hr/>
+							<div class='specifica'>Committente<p class='spec_data'>".$row['client']."</p></div><div class='hor_row'></div>
+							<div class='specifica'>Tipologia<p class='spec_data'>".$row['type']."</p></div><div class='hor_row'></div>
+							<div class='specifica'>Località<p class='spec_data'>".$row['location']."</p></div><div class='hor_row'></div>
+							<div class='specifica'>Direttore dei lavori<p class='spec_data'>".$row['director']."</p></div><div class='hor_row'></div>
+							<div class='specifica'>Data di inizio<p class='spec_data'>".$row['begin']."</p></div><div class='hor_row'></div>
 							<div class='specifica'>Stato<p class='spec_data'>".$row['status']."</p></div>
 						</div>
 						<div id='div_desc'>".$row['description']."</div>";
@@ -212,6 +212,8 @@
 					$count=$count+1;
 				}
 			}
+			$sql="DELETE FROM webproject.messaggi WHERE user='".$username."'";
+			$result=$this->conn->query($sql);
 		}
 		// PRENOTAZIONI
 		public function get_prenotation(){

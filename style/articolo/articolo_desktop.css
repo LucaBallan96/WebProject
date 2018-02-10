@@ -12,7 +12,7 @@
     text-decoration: none;
     padding: 1em;
     color: white;
-    background-color: #0084ff;
+    background-color: #55bbff;
 }
 #back_link:hover{
     text-decoration: underline;
@@ -21,7 +21,7 @@
     font-weight: 100;
     padding-top: 4em;
     padding-bottom: 40px;
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     text-align: center;
     font-size: 36px;
     width: 90%;
@@ -30,7 +30,7 @@
 .subtitle{
     font-weight: 100;
     padding-bottom: 40px;
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     text-align: center;
     font-size: 26px;
     width: 90%;
@@ -40,7 +40,7 @@
     text-align: center;
     width: 100%;
     display: table;
-    color: rgb(98, 105, 146);
+    color: grey;
 }
 
 .divisor{
@@ -49,7 +49,7 @@
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-top: 1px solid  #008cff3d;
+    border-top: 1px solid #a1d9ff;
    
 }
 .container_text_img{
@@ -62,7 +62,7 @@
     float: left;
     width: 58%;
     padding: 20px;
-    color: rgb(98, 105, 146);
+    color: grey;
     
     
 }

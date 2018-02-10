@@ -11,7 +11,7 @@
     font-weight: 100;
     padding-top: 80px;
     padding-bottom: 40px;
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     text-align: center;
     font-size: 32px;
     width: 90%;
@@ -23,13 +23,13 @@
     padding-top: 40px;
     margin-left: 40px; 
     margin-right: 40px; 
-    border-top: 1px solid  #008cff3d;
+    border-top: 1px solid #a1d9ff;
    
 }
 
 .subtitle{
     font-weight: 100;
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     font-size: 20px;
     padding-top: 60px;
     padding-left: 40px;
@@ -37,12 +37,8 @@
     
 }
 
-a{
-    color: rgb(8, 8, 136);
-    
-}
 .text_general{
-    color: rgb(98, 105, 146);
+    color: grey;
     width: 50%;
     text-align: justify;  
     float: left;
@@ -70,14 +66,14 @@ a{
     margin-bottom: 20px;
     margin-top: 20px;
     height: 250px;
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: 5px 10px 18px grey;
 }
 
 
 /*SEDI*/
 
 span{
-    color: rgb(8, 8, 136);
+    color: #080888;
 }
 
 #container_img_sedi{
@@ -98,7 +94,7 @@ span{
 #img_persone{
     
     width:360px;
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: 5px 10px 18px grey;
     
 }
 #container_img_persone{
@@ -128,7 +124,7 @@ span{
     margin-left: 30px;
     margin-right: 30px; 
     font-size: 13px;
-    color: rgb(7, 7, 124);
+    color: #080888;
     overflow: hidden;
     padding: 10px;
 }
@@ -139,7 +135,7 @@ span{
 }
 .subsubtitle{
     font-weight: 100;
-    color: rgba(2, 44, 99, 0.888);
+    color: #1551a0;
     font-size: 20px;
     padding-top: 40px;
     padding-left: 30px;
@@ -149,7 +145,7 @@ span{
     clear: both;
 }
 .spg{
-    color: rgb(98, 105, 146);
+    color: grey;
 }
 .spgr{
     float: right;

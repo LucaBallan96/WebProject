@@ -72,8 +72,9 @@
 	
 		<!--MESSAGGI-->
 		<?php
-			if(isset($_SESSION['username'])) { 
+			if(isset($_SESSION['username']) && !isset($_SESSION['messages'])) { 
 				$conn->get_messages();
+				$_SESSION['messages']='seen';
 			}
 		?>
 

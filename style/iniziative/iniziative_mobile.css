@@ -5,11 +5,12 @@
     text-decoration: none;
 }
 
+
 .title{
     font-weight: 100;
     padding-top: 60px;
     padding-bottom: 40px;
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     text-align: center;
     font-size: 32px;
     width: 90%;
@@ -23,125 +24,123 @@
 }
 .container_article{
     text-decoration: underline;
-position: relative;
-display: table;
-margin: auto;
-margin-bottom: 20px;
-transition: 1s ease;
-border: 1px solid  #008cff3d;
-box-shadow: 2px 2px 4px #008cff3d;
+    position: relative;
+    display: table;
+    margin: auto;
+    margin-bottom: 20px;
+    transition: 1s ease;
+    border: 1px solid  #55bbff;
+    box-shadow: 2px 2px 4px #a1d9ff;
 }
 .link_generico{
-
-color: rgb(8, 8, 136);
+    color: #080888;
 }
 .container_img{
     text-align: center;
-width: 150px;
-height: 130px;
-
-overflow: hidden;
+    width: 150px;
+    height: 130px;
+    overflow: hidden;
 }
 .container_text{
-width: 150px;
-min-height: 90px;
+    width: 150px;
+    min-height: 90px;
 
 }
 .container_img img{
     height: 100%;
 }
 .text{
-font-size: 14px;
-color:rgb(98, 105, 146);
-width: 150px;
-padding: 5px;
-margin: auto;
+    font-size: 14px;
+    color:grey;
+    width: 150px;
+    padding: 5px;
+    margin: auto;
 }
 .link:hover .container_article{
     text-decoration: underline;
-    background-color: rgb(221, 238, 255);
-    box-shadow: 2px 8px 12px #008cff3d;
+    background-color: #ddeeff;
+    box-shadow: 2px 8px 12px #a1d9ff;
 }
 .container{
-display: table;
-width: 1000px;
-margin: auto;
+    display: table;
+    width: 1000px;
+    margin: auto;
 
 }
 /*CERTIFICAZIONI*/
 #text_certificazioni{
-width: 100%;
-padding: 20px;
-color:rgb(98, 105, 146);
-float: left;
+    width: 100%;
+    padding: 20px;
+    color:grey;
+    float: left;
 }
 #text_c{
-position: relative;
-left: 50%;
-transform: translateX(-50%);
-width: 80%;
-text-align: justify;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: justify;
 }
 #image_certificazioni{
-background-image: url("../../images/sicurezza.jpeg");
-background-attachment: fixed;
-background-size: 170%; 
-background-position-y: 50%;
-background-position-x: 40%;
-float: left;
-width: 50%;
-height: 600px;
-display: none;
+    background-image: url("../../images/sicurezza.jpeg");
+    background-attachment: fixed;
+    background-size: 170%; 
+    background-position-y: 50%;
+    background-position-x: 40%;
+    float: left;
+    width: 50%;
+    height: 600px;
+    display: none;
 }
 .subtitle{
     font-weight: 100;
-color: rgba(0, 73, 169, 0.888);
-font-size: 20px;
-padding-top: 60px;
-padding-left: 40px;
-clear: both;
+    color: #1551a0;
+    font-size: 20px;
+    padding-top: 60px;
+    padding-left: 40px;
+    clear: both;
 
 }
 .divisor{
 
-padding-top: 40px;
-margin-left: 40px; 
-margin-right: 40px; 
-border-top: 1px solid  #008cff3d;
+    padding-top: 40px;
+    margin-left: 40px; 
+    margin-right: 40px; 
+    border-top: 1px solid #a1d9ff;
 
 }
 #container_img_cb{
 
-width: 100%;
-height: 180px;
+    width: 100%;
+    height: 180px;
 
 }
 .cont_img_cert{
-width: 33%;
-float: left;
-text-align: center;
+    width: 33%;
+    float: left;
+    text-align: center;
 }
 .img_certification{
-height: 200px;
-margin-bottom: 20px; 
-transition: 0.8s;
+    height: 200px;
+    margin-bottom: 20px; 
+    transition: 0.8s;
 
 }
 #cont_cert{    
-width: 100%;
-padding: 20px;
+    width: 100%;
+    padding: 20px;
 }
 #text_cert{
-display: table;
-position: relative;
+    display: table;
+    position: relative;
 
-left: 50%;
-transform: translateX(-50%);
-color:rgb(98, 105, 146);
-font-size: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    color:grey
+    font-size: 14px;
 }
 .img_certification:hover{
-box-shadow: 5px 10px 18px #888888;
+    box-shadow: 5px 10px 18px #a1d9ff;
 
 }
 

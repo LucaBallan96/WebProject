@@ -8,7 +8,7 @@
     font-weight: 100;
     padding-top: 80px;
     padding-bottom: 40px;
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     text-align: center;
     font-size: 36px;
     width: 90%;
@@ -16,19 +16,19 @@
     
 }
 #container_filter{
-    color: rgba(0, 73, 169, 0.888);
+    color: #1551a0;
     width: 100%;
     text-align: center;
     padding-bottom: 40px; 
 }
 #text_search {
     width: 250px;
-    border: 1px solid #0077ff;
+    border: 1px solid #55bbff;
     
     
-    color: #696969;
+    color: grey;
     font-size: 1em;
-    background-color: #bfe6ff;
+    background-color: #daefff;
 }
 .label_offer{
     display: table;
@@ -36,8 +36,8 @@
     margin: auto;
     transition: 1s;
     padding: 10px;
-    border: 1px solid  #008cff3d;
-    box-shadow: 2px 2px 4px #008cff3d;
+    border: 1px solid  #a1d9ff;
+    box-shadow: 2px 2px 4px #a1d9ff;
     
 }
 
@@ -92,7 +92,7 @@ input[type="checkbox"]{
     margin-top: 15px;
     margin-bottom: 20px;
     overflow: hidden;
-    box-shadow: 5px 10px 18px #008cff3d;
+    box-shadow: 5px 10px 18px #a1d9ff;
 
 }
 fieldset{
@@ -101,18 +101,18 @@ fieldset{
 legend{
     padding-bottom:0.8em; 
     font-size: 1em;
-    color: rgb(151, 164, 172);
+    color: grey;
 }
 .label_offer:hover{
     cursor: pointer;
-    background-color: rgb(243, 250, 255);
-    box-shadow: 2px 5px 10px #008cff3d;
+    background-color: #f3faff;
+    box-shadow: 2px 5px 10px #a1d9ff;
     
 }
 
 .pro_select:checked + label + .form_offer{
     height: 52em;
-    background-color: rgb(243, 250, 255);
+    background-color: #f3faff;
     opacity: 1;
     visibility: visible;
 }
@@ -124,7 +124,7 @@ legend{
     margin: auto;
     margin-top: 10px;
     margin-bottom: 20px;
-    border-top: 1px solid  #008cff3d;
+    border-top: 1px solid  #a1d9ff;
    
 }
 .div_container_form{
@@ -151,13 +151,13 @@ legend{
     height: 10em;
     width: 100%;
     resize: none;
-    border: 1px solid rgb(218, 239, 255);
+    border: 1px solid #daefff;
 }
 .in_form{
     width: 250px;
     height: 20px;
     float: right;
-    border: 1px solid rgb(218, 239, 255);
+    border: 1px solid #daefff;
 }
 .container_radio{
     float: right;
@@ -177,7 +177,11 @@ legend{
     border: none;
     padding: 0.8em 1.2em;
     color: white;
-    background-color: #0099ffa8;
+    background-color: #55bbff;
+}
+.submit:hover {
+    background-color: #33a3ff;
+    text-decoration: underline;
 }
 .identity{
     display:none;
@@ -190,18 +194,15 @@ legend{
     font-size: 14px;
     position: fixed;
     right: 0;
-    background-color: rgb(241, 245, 250);;
+    background-color: #f1f5fa;;
     margin-top: 70px;
     margin-right: 20px;
     padding: 10px;
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: 5px 10px 18px grey;
 
 }
 #container_prenotazioni a{
-    color: black;
-}
-#container_prenotazioni a:hover{
-    color: rgba(23, 76, 111, 0.851);
+    color: #080888;
 }
 
    

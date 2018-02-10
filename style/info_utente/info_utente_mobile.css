@@ -16,7 +16,7 @@ body {
     width: calc(100% - 4em);
     border-bottom: 1px solid #a1d9ff;
     padding: 1em;
-    color: #0049a9e2;
+    color: #1551a0;
     font-size: 1.2em;
 }
 #back_link {
@@ -25,7 +25,8 @@ body {
     top: 20px;
     padding: 1em;
     color: white;
-	background-color: #0099ffa8;
+    background-color: #55bbff;
+    text-decoration: underline;
 }
 form {
     display: block;
@@ -84,17 +85,14 @@ form {
     color: white;
     font-size: 0.9em;
     text-decoration: underline;
-	background-color: #0099ffa8;
+	background-color: #55bbff;
 }
 #cancel_btn {
     margin-left: 1em;
 }
 .btns:hover, #back_link:hover{
     cursor: pointer;
-    background-color: #008cff7a;
-}
-#back_link:hover {
-    cursor: pointer;
+    background-color: #33a3ff;
 }
 .error {
     width: 100%;
@@ -114,7 +112,7 @@ form {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: #0099ffa8;
+    background-color: #55bbff;
     transition: 0.5s;
 }
 .remove_btn {
@@ -129,7 +127,7 @@ form {
     background-repeat: no-repeat;
 }
 .remove_btn:hover {
-    background-color: #008cff7a;
+    background-color: #33a3ff;
     cursor: pointer;
 }
 .remove_control:checked ~ .remove_form_div {
@@ -156,7 +154,7 @@ form {
     height: calc(100% - 2em);
     padding: 0 2em;
     margin-top: 3em;
-    color: #696969;
+    color: grey;
     text-align: center;
 }
 .radio_choice {
@@ -171,17 +169,17 @@ form {
     width: 100%;
     padding: 1em;
     color: white;
-    background-color: #0099ffa8;
+    text-decoration: underline;
+    background-color: #55bbff;
     margin-bottom: 1.5em;
 }
 .yes_no_div label:hover, .apply_btn:hover {
     cursor: pointer;
-    text-decoration: underline;
-    background-color: #0077ff; 
+    background-color: #33a3ff; 
 }
 .radio_choice:checked + label {
     border: 2px solid white;
-    background-color: #0077ff;
+    background-color: #33a3ff;
 }
 .apply_btn {
     border: none;
@@ -191,5 +189,5 @@ form {
     right: 2em;
     padding: 1em;
     color: white;
-    background-color: #0099ffa8;
+    background-color: #55bbff;
 }

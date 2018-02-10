@@ -15,7 +15,7 @@ input[type="checkbox"]{
 .div_close{
     z-index: 1;
     position: fixed;
-    background-color: rgb(134, 189, 247);
+    background-color: #86bdf7;
     color: white;
     right: 1em;
     margin-top: 60px;
@@ -27,7 +27,7 @@ input[type="checkbox"]{
 .div_close_2{
     z-index: 1;
     position: fixed;
-    background-color: rgb(134, 189, 247);
+    background-color: #86bdf7;
     color: white;
     right: 1em;
     margin-top: 110px;
@@ -52,7 +52,7 @@ input[type="checkbox"]{
     z-index: 1;
     margin-top: 60px; 
     position: fixed;
-    background-color: rgb(134, 189, 247);
+    background-color: #86bdf7;
     color: white;
     right: 2.2em;
     transition: 1s ease;
@@ -63,7 +63,7 @@ input[type="checkbox"]{
     z-index: 1;
     margin-top: 110px; 
     position: fixed;
-    background-color: rgb(134, 189, 247);
+    background-color: #86bdf7;
     color: white;
     right: 2.2em;
     transition: 1s ease;
@@ -71,11 +71,11 @@ input[type="checkbox"]{
     padding: 10px;
 }
 .div_close:hover{
-    color: rgba(48, 89, 138, 0.611);
+    color: #1551a0;
     cursor: pointer;
 }
 .div_close_2:hover{
-    color: rgba(48, 89, 138, 0.611);
+    color: #1551a0;
     cursor: pointer;
 }
 .pro_close:checked + label + .cont_message{
