@@ -106,8 +106,13 @@ input[type="checkbox"]{
 #div_one{
  
     width: 100%;
+<<<<<<< HEAD
+    height: 400px;
+    background-color: #f1f5fa;
+=======
     height: 10em;
     background-color: rgb(241, 245, 250);
+>>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
 }
 #img_logo{
     position: relative;
@@ -132,11 +137,16 @@ input[type="checkbox"]{
     width: 80%;
     text-decoration: none;
     transition: 0.8s ease;
-    border: 1px solid rgb(172, 212, 245);
-    box-shadow: 2px 5px 5px #888888;
+    border: 1px solid #acd4f5;
+    box-shadow: 2px 5px 5px grey;
 }
+<<<<<<< HEAD
+.div_group:hover{
+    box-shadow: 5px 10px 18px grey;
+=======
 .div_group:hover, .div_group:focus{
     box-shadow: 5px 10px 18px #888888;
+>>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
     
 }
 
@@ -195,7 +205,7 @@ input[type="checkbox"]{
 }
 .div_text_inside_group{
     position: relative;
-    color: rgb(98, 105, 146);
+    color: grey;
     display: table;
     left: 50%;
     top:50%;
@@ -229,8 +239,13 @@ input[type="checkbox"]{
     width: 100%;
     min-height: 25em;
  
+<<<<<<< HEAD
+    padding: 10px;
+    background-color: #f1f5fa;
+=======
     padding: 0.6em;
     background-color: rgb(241, 245, 250);
+>>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
     
 }
 #div_text_slogan{
@@ -245,17 +260,22 @@ input[type="checkbox"]{
     display: none;
 }
 .sp{
-    background-color: rgb(230, 244, 255);
+    background-color: #e6f4ff;
     border-radius: 5px 5px 5px 5px;
     padding: 0.2em;
 }
 
 .hr{
     border-top: 0px;
+<<<<<<< HEAD
+    margin: 20px;
+    border-color: #a2c6f7;
+=======
     margin: 1.25em;
     width: 90%;
     border-bottom: 1px solid rgb(162, 198, 247);
    
+>>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
 }
 
 
@@ -280,11 +300,10 @@ input[type="checkbox"]{
     font-size: 2em;
     display: table;
     text-align: center;
-    color: rgb(5, 82, 184);
+    color: #1551a0;
 }
-.link_generico{
-    text-decoration-color: blue;
-    color: rgb(8, 8, 136);
+.link_generico {
+    color: #080888;
 }
 #div_storia{
     
@@ -303,16 +322,21 @@ input[type="checkbox"]{
     background-size: 160%;
 }
 #div_button_storia{
-    text-decoration: none;
     color: white;
     font-size: 1.2em;
 }
 #div_scopri{
+<<<<<<< HEAD
+    width: 150px;
+    height: 40px;
+    background-color: #55bbff;
+=======
     text-decoration: underline;
     text-decoration-color: white;
     width: 9.4em;
     height: 2.5em;
     background-color: rgb(145, 192, 254);
+>>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
     text-align: center;
     padding: 0.6em;
     margin: auto;
@@ -327,15 +351,20 @@ input[type="checkbox"]{
 #div_text_storia{
     width: 80%;
     margin: auto;
-    color: rgb(98, 105, 146);
+    color: grey;
     text-align: center;
     
 }
 
 
+<<<<<<< HEAD
+#div_scopri:hover{
+    background-color: #33a3ff;
+=======
 #div_button_storia:hover, #div_button_storia:focus{
     text-decoration: underline;
 
+>>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
 }
 
 

@@ -10,6 +10,9 @@ body {
 .nascosto {
     display: none; 
 }
+a {
+    color: #080888;
+}
 
 /* NAVIGATION */
 
@@ -91,20 +94,20 @@ body {
     }
 }
 #error_image {
-    width: 3.75em;
+    width: 3em;
     height: 3.75em;
     float: left;
     background-image: url('../../images/warning.png');
     background-position: center;
-    background-size: 2.5em;
+    background-size: 2em;
     background-repeat: no-repeat;
 }
 #error_text {
-    position: relative;
+    position: absolute;
     top: 50%;
-    width: calc(100% - 2.5em);
-    float: left;
-    transform: translate(0, -50%);
+    left: 50%;
+    width: calc(100% - 6em);
+    transform: translate(-50%, -50%);
 }
 
 /* IMPIEGATI */
@@ -549,6 +552,9 @@ body {
     line-height: 1.5em;
     font-size: 0.9em;
 }
+.only_print_desc {
+    display: none;
+}
 .remove_proj_btn {
     display: none;
     position: absolute;
@@ -831,9 +837,6 @@ body {
     height: 25%;
     overflow: hidden;
 }
-.user_div a:hover{
-    color: white;
-}
 .mod_u_control, .rem_u_control {
     display: none;
 }
@@ -848,23 +851,16 @@ body {
     background-repeat: no-repeat;
 }
 .mod_u_label {
-    top: -7em;
+    top: 0;
     background-image: url("../../images/modify_user.png");
 }
 .rem_u_label {
-    top: -3.5em;
+    top: 3.5em;
     background-image: url("../../images/remove_user.png");
 }
 .mod_u_label:hover, .rem_u_label:hover {
     cursor: pointer;
     background-color: #33a3ff;
-}
-.user_div:hover .mod_u_label {
-    top: 0;
-    height: 3.5em;
-}
-.user_div:hover .rem_u_label {
-    top: 3.5em;
 }
 .mod_u_form, .rem_u_form {
     position: absolute;
@@ -879,7 +875,6 @@ body {
     height: 12.5em;
 }
 .mod_u_control:checked + .mod_u_label {
-    top: 0;
     z-index: 1;
     background-image: url("../../images/close.png");
 }
@@ -972,6 +967,9 @@ body {
     margin-top: 1em;
     resize: none;
     color: grey;
+}
+.only_print_text {
+    display: none;
 }
 .mod_off_btn, .rem_off_btn, .cand_off_btn {
     border: none;

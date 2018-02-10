@@ -44,8 +44,8 @@
 					}
 				}
 				$result->free();
-				echo "<div id='container_grid'><div id='incorso'>Progetti In Corso</div>".$incorso."<div id='terminati'>Progetti Terminati</div>".$terminati."</div>";
-				echo "<div id='container_list'><div id='incorso2'>Progetti In Corso</div>".$incorso2."<div id='terminati2'>Progetti Terminati</div>".$terminati2."</div>";
+				echo "<div id='container_grid'><h1 id='incorso'>Progetti In Corso</h1>".$incorso."<h1 id='terminati'>Progetti Terminati</h1>".$terminati."</div>";
+				echo "<div id='container_list'><h1 id='incorso2'>Progetti In Corso</h1>".$incorso2."<h1 id='terminati2'>Progetti Terminati</h1>".$terminati2."</div>";
 			} else {
 				echo "<p>Nessun progetto disponibile</p>";
 			}
@@ -514,6 +514,7 @@
 										<div>Data di inizio:<input type='date' name='begin' min='1900-01-01' max='2100-01-01' value='".$row['begin']."' title='Data di inizio del progetto' required/></div>
 									</div>
 									<textarea class='project_description' name='description' form='project_select".$count."_form' placeholder='Descrizione del progetto' maxlength='1000' title='Inserisci la descrizione del progetto'>".$row['description']."</textarea>
+									<div class='only_print_desc'>".$row['description']."</div>
 								</div>
 								<div class='proj_form_btns'>
 									<input class='submit_btn' type='submit' value='Salva modifiche' title='Salva i dati del progetto'/>
@@ -563,7 +564,6 @@
 			$di=htmlentities($_POST['director'], ENT_QUOTES);
 			$be=$_POST['begin'];
 			$de=htmlentities($_POST['description'], ENT_QUOTES);
-			$im=$_POST['image'];
 			$im="";
 			$gia_pres=false;
 			if($_FILES['image']['name']=="") { // IMMAGINE NON SELEZIONATA
@@ -836,7 +836,7 @@
 							</div>
 							<input id='mod_art_checkbox".$count."' class='mod_art_control' type='checkbox'/>
 							<label for='mod_art_checkbox".$count."' class='modify_article_btn' title='Apri o chiudi il form di modifica'></label>
-							<form id='mod_a".$count."' class='mod_art_form' action='form_control.php' method='post'>
+							<form id='mod_a".$count."' class='mod_art_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 								<div class='article_image'>
 									<img src='images/".$row['image']."'/>
 									<div class='change_art_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png' title='Inserisci una nuova immagine per l&#39articolo'/></div>
@@ -1027,6 +1027,7 @@
 					echo 		"</fieldset>
 								<div class='mod_off_mex'>
 									Descrizione:<textarea class='mod_off_text' form='mod_off_form".$count."' name='message' placeholder='Inserisci il messaggio' maxlength='1000' title='Inserisci il messaggio'>".$row['message']."</textarea>
+									<div class='only_print_text'>".$row['message']."</div>
 								</div>
 								<input class='mod_off_btn' type='submit' value='Salva' title='Salva i dati dell&#39offerta'/>
 								<input class='mod_off_btn' type='reset' value='Annulla' title='Resetta i dati inseriti'/>

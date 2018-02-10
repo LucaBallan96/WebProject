@@ -39,11 +39,11 @@
 		
 		<div id="nav">
 			<a title="Torna alla pagina iniziale" href="index.php" id="nav_home"><img id="logo" src="images/logo.png"/></a>
-			<a title="Impiegati dell'azienda" href="#impiegati" id="nav_people" class="nav_link">Impiegati</a>
-			<a title="Progetti dell'azienda" href="#progetti" id="nav_projects" class="nav_link">Progetti</a>
-			<a title="Articoli di stampa" href="#articoli" id="nav_articles" class="nav_link">Articoli</a>
-			<a title="Utenti del sito" href="#utenti" id="nav_users" class="nav_link">Utenti</a>
-			<a title="Offerte di lavoro e prenotazioni degli utenti" href="#offerte" id="nav_work" class="nav_link">Lavoro</a>
+			<a title="Impiegati dell'azienda" href="#impiegati" id="nav_people" class="nav_link" onclick="close_navbar()">Impiegati</a>
+			<a title="Progetti dell'azienda" href="#progetti" id="nav_projects" class="nav_link" onclick="close_navbar()">Progetti</a>
+			<a title="Articoli di stampa" href="#articoli" id="nav_articles" class="nav_link" onclick="close_navbar()">Articoli</a>
+			<a title="Utenti del sito" href="#utenti" id="nav_users" class="nav_link" onclick="close_navbar()">Utenti</a>
+			<a title="Offerte di lavoro e prenotazioni degli utenti" href="#offerte" id="nav_work" class="nav_link" onclick="close_navbar()">Lavoro</a>
 			<a title='Effettua il logout dal sito' href='logout.php' id='logout' class="nav_link_dx">Logout</a>
 			<?php
 				echo "<a title='Visualizza le informazioni relative al tuo account' href='info_utente.php' id='user' class='nav_link_dx'>".$_SESSION['username']."</a>";

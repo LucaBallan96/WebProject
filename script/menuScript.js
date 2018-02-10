@@ -1,3 +1,8 @@
+// CLICK SU CONTATTI
+function close_navbar() {
+    document.getElementById('cm_label').click();
+}
+
 // TASTO INVIO SUGLI ELEMENTI
 document.addEventListener("keypress", keypress);
 function keypress(k) {
@@ -72,4 +77,3 @@ function uncheck_radio(rad) {
     else
         last=rad.id;
 }
-
