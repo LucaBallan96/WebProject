@@ -27,6 +27,8 @@
 		<link rel="stylesheet" media="print" href="style/admin/admin_print.css">
 	</head>
 	<body>
+		<!--SCRIPT-->
+		<script type="text/javascript" src="script/menuScript.js"></script>
 		<div class="nascosto">Ti trovi in: Home > Area Privata</div>
 
 		<!-- NAVIGATION -->
@@ -68,7 +70,7 @@
 
 		<!-- NUOVO IMPIEGATO -->
 		<input type='checkbox' id='new_imp_control'/>
-		<label id='new_imp_btn' title='Inserisci un nuovo impiegato' for='new_imp_control'></label>
+		<label id='new_imp_btn' title='Inserisci un nuovo impiegato' for='new_imp_control' tabindex="0"></label>
 		<div id='new_imp_form_div'>
 			<form id='new_imp_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 				<fieldset id='new_imp_personal_info'>
@@ -105,7 +107,7 @@
 
 		<!-- NUOVO PROGETTO -->
 		<input type='checkbox' id='new_proj_control'/>
-		<label id='new_proj_btn' title='Inserisci un nuovo progetto' for='new_proj_control'></label>
+		<label id='new_proj_btn' title='Inserisci un nuovo progetto' for='new_proj_control' tabindex="0"></label>
 		<div id='new_proj_form_div'>
 			<form id='new_proj_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 				<div class='project_info'>
@@ -138,7 +140,7 @@
 
 		<!-- NUOVO ARTICOLO -->
 		<input type='checkbox' id='new_art_control'/>
-		<label id='new_art_btn' title='Inserisci un nuovo articolo' for='new_art_control'></label>
+		<label id='new_art_btn' title='Inserisci un nuovo articolo' for='new_art_control' tabindex="0"></label>
 		<div id='new_art_form_div'>
 			<form id='new_art_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 				<input class='identity' type='text' name='new_art' value='new_art'/>
@@ -163,7 +165,7 @@
 
 		<!-- NUOVA OFFERTA -->
 		<input type='checkbox' id='new_off_control'/>
-		<label id='new_off_btn' title='Inserisci una nuova offerta di lavoro' for='new_off_control'></label>
+		<label id='new_off_btn' title='Inserisci una nuova offerta di lavoro' for='new_off_control' tabindex="0"></label>
 		<div id='new_off_form_div'>
 			<form id='new_off_form' action='form_control.php' method='post'>
 				<input class='identity' type='text' name='new_off' value='new_off'/>
@@ -239,9 +241,6 @@
 				$conn->get_offerte_admin();
 			?>
 		</div>
-
-		<!--SCRIPT-->
-		<script type="text/javascript" src="script/menuScript.js"></script>
 
 		<?php
 			$_SESSION['page']='admin.php';
