@@ -16,3 +16,384 @@ a {
     margin-top: 2em;
     display: block;
 }
+
+#compact_menu, #cm_label, #nav {
+	display: none;
+}
+
+/* PARTI IN COMUNE */
+
+.container_est {
+    width: 100%;
+    display: table;
+}
+.header {
+    width: 100%;
+    padding: 2em 0em;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 100;
+    clear: both;
+}
+#tmp_error {
+    display: none;
+}
+.identity {
+    display: none;
+}
+
+/* IMPIEGATI */
+
+#left_container, #right_container {
+    width: calc(50% - 4.5em);
+    float: left;
+}
+#left_container {
+    margin-left: 3em;
+    margin-right: 1.5em;
+}
+#right_container {
+    margin-left: 1.5em;
+    margin-right: 3em;
+}
+.div_impiegato {
+    page-break-inside: avoid;
+    position: relative;
+    width: 100%;
+    height: 15em;
+    overflow: hidden;
+}
+.imp_image {
+    position: relative;
+    border: none;
+    float: left;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+}
+.imp_image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+.imp_info {
+    border: none;
+    float: left;
+    width: 60%;
+    height: 100%;
+    padding: 1em 0;
+}
+.imp_name, .imp_role, .imp_birth, .imp_mail {
+    width: calc(100% - 3.5em);
+    height: 25%;
+    font-size: 1.3em;
+}
+.imp_name div, .imp_role div, .imp_birth div, .imp_mail div {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding-left: 1.5em;
+}
+.imp_mail div a {
+    font-size: 0.8em;
+}
+.more_info {
+    display: none;
+}
+.check_control, #new_imp_control, #new_proj_control, #new_art_control, #new_off_control, .modify_control, .remove_control {
+    display: none;
+}
+.magic {
+    width: 100%;
+    height: 8em;
+    display: block;
+    margin-bottom: 6em;
+}
+.imp_more {
+    width: 100%;
+    height: 33.3%;
+    font-size: 1.2em;
+}
+.imp_more div {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding-left: 1.5em;
+}
+
+/* FORM DI INSERIMENTO */
+
+#new_imp_btn, #new_proj_btn, #new_art_btn, #new_off_btn {
+    display: none;
+}
+
+/* FORM DI MODIFICA */
+
+.modify_btn {
+    display: none;
+}
+.modify_form_div, .remove_form_div, #new_imp_form_div, #new_proj_form_div, #new_art_form_div, #new_off_form_div {
+    display: none;
+}
+
+/* FORM DI RIMOZIONE */
+
+.remove_btn {
+    display: none;
+}
+
+/* PROGETTI */
+
+.pro_select {
+    display: none;
+}
+.project_label {
+    display: block;
+    width: 100%;
+    margin-bottom: 4em;
+}
+.project_title {
+    position: relative;
+    padding: 1em 2em;
+}
+.modify_proj_form {
+    page-break-inside: avoid;
+    width: 100%;
+    overflow: hidden;
+}
+.project_info {
+    width: 100%;
+    height: auto;
+}
+.proj_form_btns {
+    display: none;
+}
+.project_img, .project_data {
+    height: 16em;
+    float: left;
+    color: grey;
+    padding: 0 1em;
+}
+.project_img {
+    width: 35%;
+    margin-bottom: 2em;
+}
+.project_data {
+    width: 65%;
+    margin-bottom: 2em;
+}
+.current_proj_img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.current_proj_img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    transform: translate(-50%, -50%);
+}
+.change_proj_img {
+    display: none;
+}
+.project_data div {
+    width: 100%;
+    height: 16.6%;
+    padding: 0.4em;
+}
+.project_data div input[type="text"], .project_data div input[type="date"] {
+    float: right;
+    width: 60%;
+    border: none;
+}
+.project_data div label {
+    float: right;
+    padding-left: 0.5em;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: transparent;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: transparent;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: transparent;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color: transparent;
+}
+.project_description {
+    display: none;
+}
+.only_print_desc {
+    width: 100%;
+    padding: 1em;
+    line-height: 1.5em;
+}
+.remove_proj_btn {
+    display: none;
+}
+
+/* ARTICOLI */
+
+#container_est_articles {
+    width: 100%;
+}
+.article_div {
+    page-break-inside: avoid;
+    position: relative;
+    width: calc(50% - 8em);
+    float: left;
+    margin: 4em;
+    min-width: 20em;
+}
+.article_image {
+    position: relative;
+    width: 100%;
+    height: 13em;
+    overflow: hidden;
+}
+.article_image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+.article_info_div {
+    width: calc(100% - 3em);
+    margin: 1.5em;
+    height: 11em;
+    float: left;
+}
+.article_info {
+    width: 100%;
+    height: 20%;
+    padding: 0.5em;
+}
+.article_info div {
+    float: right;
+}
+.modify_article_btn, .remove_article_btn {
+    display: none;
+}
+.article_text {
+    width: 100%;
+    padding: 1.5em;
+    line-height: 1.2em;
+}
+.article_text::-webkit-scrollbar {
+    display: none;
+}
+.mod_art_control, .rem_art_control, .rem_off_control, .cand_off_control {
+    display: none;
+}
+.mod_art_form, .rem_art_form, .rem_off_form {
+    display: none;
+}
+.article_info input {
+    float: right;
+    text-align: right;
+}
+
+/* UTENTI */
+
+#container_est_users {
+    width: calc(100% - 3em);
+    margin-left: 3em;
+}
+.user_div {
+    position: relative;
+    margin: 0 3em 3em 0;
+    width: calc(33.3% - 3em);
+    height: 10em;
+    float: left;
+}
+.user_data {
+    display: block;
+    padding: 0.8em;
+    height: 25%;
+    overflow: hidden;
+}
+.mod_u_control, .rem_u_control {
+    display: none;
+}
+.mod_u_label, .rem_u_label {
+    display: none;
+}
+.mod_u_form, .rem_u_form {
+    display: none;
+}
+
+/* LAVORO */
+
+.offer_div {
+    page-break-inside: avoid;
+    clear: both;
+    position: relative;
+    width: calc(100% - 4em);
+    display: table;
+    margin: 2em;
+}
+.mod_off_form {
+    width: 100%;
+    min-height: 15em;
+    margin-bottom: 4em;
+}
+.mod_off_mex {
+    border: none;
+    width: 40%;
+    float: left;
+}
+.mod_off_info, .mod_off_dates {
+    border: none;
+    width: 30%;
+    height: 15em;
+    float: left;
+}
+.mod_off_mex {
+    min-height: 15em;
+    padding: 0.5em 1em 1em;
+}
+.mod_off_data {
+    height: 33.3%;
+    padding: 0.5em 1em;
+}
+.mod_off_data input, .mod_off_data select {
+    display: block;
+    border: none;
+    margin-top: 0.7em;
+    margin-left: 1.5em;
+    width: 80%;
+}
+.mod_off_dates legend {
+    height: 2.5em;
+    padding: 0.5em 1.5em;
+}
+.mod_off_dates div {
+    height: calc(25% - 0.625em);
+    padding: 0.5em 2em;
+}
+.mod_off_date {
+    float: right;
+    border: none;
+}
+.mod_off_text {
+    display: none;
+}
+.only_print_text {
+    width: 100%;
+    margin-top: 1em;
+    resize: none;
+    border: none;
+}
+.mod_off_btn, .rem_off_btn, .cand_off_btn {
+    display: none;
+}
+.cand_off_div {
+    display: none;
+}

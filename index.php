@@ -56,7 +56,7 @@
                 </div>
 			</div>
 			<a href="lavoro.php" id="work" title="Visualizza le offerte di lavoro e fissa un colloquio con l'azienda">Lavora con noi</a>
-			<a href="#div_container_contatti" id="contacts" title="Visualizza i nostri contatti, potrai chiamarci o mandare una mail per ricevere ulteriori informazioni">Contatti</a>
+			<a href="#div_container_contatti" id="contacts" title="Visualizza i nostri contatti, potrai chiamarci o mandare una mail per ricevere ulteriori informazioni" onclick="close_navbar()">Contatti</a>
 			<?php
 				if(!isset($_SESSION['username']))
 					echo "<a href='login.php' id='login' title='Accedi con le tue credenziali oppure registrati se ancora non possiedi un account'>Login</a>";

@@ -10,6 +10,9 @@ body {
 .nascosto {
     display: none;
 }
+a {
+    color: #080888;
+}
 
 /* NAVIGATION */
 
@@ -130,20 +133,21 @@ body {
     }
 }
 #error_image {
-    width: 3.75em;
+    width: 3em;
     height: 3.75em;
     float: left;
     background-image: url('../../images/warning.png');
     background-position: center;
-    background-size: 2.5em;
+    background-size: 2em;
     background-repeat: no-repeat;
 }
 #error_text {
-    position: relative;
+    position: absolute;
     top: 50%;
-    width: calc(100% - 2.5em);
-    float: left;
-    transform: translate(0, -50%);
+    left: 50%;
+    width: calc(100% - 4em);
+    transform: translate(-50%, -50%);
+    font-size: 0.9em;
 }
 
 /* IMPIEGATI */
@@ -585,6 +589,9 @@ body {
     line-height: 1.5em;
     font-size: 0.9em;
 }
+.only_print_desc {
+    display: none;
+}
 .remove_proj_btn {
     display: none;
     position: absolute;
@@ -869,9 +876,6 @@ body {
     height: 25%;
     overflow: hidden;
 }
-.user_div a:hover{
-    color: white;
-}
 .mod_u_control, .rem_u_control {
     display: none;
 }
@@ -1015,6 +1019,9 @@ body {
     margin-top: 1em;
     resize: none;
     color: grey;
+}
+.only_print_text {
+    display: none;
 }
 .mod_off_text::-webkit-scrollbar {
     display: none;

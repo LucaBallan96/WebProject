@@ -4,6 +4,9 @@
 	margin: 0;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+a {
+	color: #080888;
+}
 
 /* NAVIGATION */
 
@@ -83,7 +86,6 @@
 }
 .drop_button {
 	padding: 1em 1.5em;
-	color: black;
 	text-decoration: underline;
 	background-color: transparent;
 	font-size: 1em;
@@ -99,7 +101,6 @@
 }
 #contacts, #work, #admin, #login, #user {
 	padding: 1em 1.5em;
-	color: black;
 	font-size: 1em;
 }
 #admin, #login, #user {
