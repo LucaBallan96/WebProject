@@ -28,7 +28,7 @@
 
 		<!-- NAVIGATION -->
 		<input id='compact_menu' type='checkbox'/>
-		<label id='cm_label' for='compact_menu' title='Visualizza le opzioni del menu'>
+		<label id='cm_label' tabindex="0" for='compact_menu' title='Visualizza le opzioni del menu'>
 			<div class="cm_line"></div>
             <div class="cm_line"></div>
             <div class="cm_line"></div>
@@ -72,9 +72,8 @@
 			?>
         </div>
 		<div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Lavora con Noi > Prenotazioni</div>
-        
+        <div class="contall">
         <a id="back_link" href="lavoro.php" title="Torna alle offerte di lavoro">Offerte</a>
-		
 		<!--PRENOTAZIONI-->
         <?php
             $conn->get_prenotation();
@@ -116,7 +115,7 @@
 				@Copyright 2012-2017 &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspCostruzioni Bordignon S.r.l &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspC.F. e P.IVA 0334405269 
 			</div>
 		</div>
-
+			</div>
 		<?php
 			$_SESSION['page']='prenotazioni.php';
 		?>

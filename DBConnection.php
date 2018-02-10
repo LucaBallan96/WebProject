@@ -278,7 +278,8 @@
 			if($result->num_rows>0){
 	
 				while($row=$result->fetch_assoc()){
-					echo "<div class='cont_ex'><a class='link' href='articolo.php?id=".$row['id']."' title='".$row['title']."'><div class='container_article'>
+					echo "<div  class='cont_ex'><a  class='link' href='articolo.php?id=".$row['id']."' title='".$row['title']."'><div class='container_article'>
+					
 					<div class='container_img'>
 					<img src='images/".$row['image']."' alt='immagine articolo'/>
 					</div>

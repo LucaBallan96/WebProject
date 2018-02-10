@@ -59,7 +59,7 @@
     padding: 0.4em;
     margin: auto;
 }
-.link:hover .container_article{
+.link:hover .container_article, .link:focus .container_article{
     text-decoration: underline;
     background-color: #ddeeff;
     box-shadow: 2px 8px 12px #a1d9ff;
@@ -140,7 +140,8 @@
     color:grey;
     font-size: 0.9em;
 }
-.img_certification:hover{
+
+.img_certification:hover, .img_certification:focus{
     box-shadow: 5px 10px 18px #a1d9ff;
     
 }

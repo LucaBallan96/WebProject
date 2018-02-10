@@ -17,11 +17,10 @@
 }
 .divisor{
     
-<<<<<<< HEAD
     padding-top: 2.5em;
     margin-left: 2.5em; 
     margin-right: 2.5em; 
-    border-top: 1px solid  #008cff3d;
+    border-top: 1px solid  #a1d9ff;
    
 }
 .d{
@@ -30,27 +29,14 @@
     padding: 0.5em;
     margin: auto;
     border-top: 1px solid  #008cff3d;
-=======
-    padding-top: 40px;
-    margin-left: 40px; 
-    margin-right: 40px; 
-    border-top: 1px solid #a1d9ff;
->>>>>>> a3b8f4507d5b9cdb61ef823308216e250fd098f7
    
 }
 .subtitle{
     font-weight: 100;
-<<<<<<< HEAD
-    color: rgb(1, 62, 143);
+    color: #1551a0;
     font-size: 1.5em;
     padding-top: 3.75em;
     padding-left: 2.5em;
-=======
-    color: #1551a0;
-    font-size: 24px;
-    padding-top: 60px;
-    padding-left: 40px;
->>>>>>> a3b8f4507d5b9cdb61ef823308216e250fd098f7
     clear: both;
     
 }
@@ -81,17 +67,10 @@
     text-align: center;
 }
 .img_storia{
-<<<<<<< HEAD
     margin-bottom: 1.25em;
     margin-top: 1.25em;
     height: 15.7em;
-    box-shadow: 5px 10px 18px #888888;
-=======
-    margin-bottom: 20px;
-    margin-top: 20px;
-    height: 250px;
     box-shadow: 5px 10px 18px grey;
->>>>>>> a3b8f4507d5b9cdb61ef823308216e250fd098f7
 }
 
 
@@ -120,13 +99,8 @@ span{
 
 #img_persone{
     
-<<<<<<< HEAD
     width:31.25em;
-    box-shadow: 5px 10px 18px #888888;
-=======
-    width:500px;
     box-shadow: 5px 10px 18px grey;
->>>>>>> a3b8f4507d5b9cdb61ef823308216e250fd098f7
     
 }
 #container_img_persone{
@@ -151,15 +125,9 @@ span{
     width: 14em;
     min-height: 15.7em;
     float: left;
-<<<<<<< HEAD
     margin: 0.75em; 
     font-size: 0.9em;
-    color: rgb(7, 7, 124);
-=======
-    margin: 12px; 
-    font-size: 13px;
     color: #080888;
->>>>>>> a3b8f4507d5b9cdb61ef823308216e250fd098f7
     overflow: hidden;
     padding: 0.6em;
     
@@ -170,29 +138,18 @@ span{
 }
 .subsubtitle{
     font-weight: 100;
-<<<<<<< HEAD
-    color: rgba(2, 44, 99, 0.888);
+    color: #1551a0;
     font-size: 1.25em;
     padding-top: 2.5em;
     padding-left: 1.9em;
-=======
-    color: #1551a0;
-    font-size: 20px;
-    padding-top: 40px;
-    padding-left: 30px;
->>>>>>> a3b8f4507d5b9cdb61ef823308216e250fd098f7
     clear: both;
 }
 .exception_impiegati{
     clear: both;
 }
 .spg{
-<<<<<<< HEAD
-    color: rgb(98, 105, 146);   
-    float: left;
-=======
     color: grey;   
->>>>>>> a3b8f4507d5b9cdb61ef823308216e250fd098f7
+    float: left;
 }
 .spgr{
     float: right;

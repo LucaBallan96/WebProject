@@ -108,12 +108,12 @@ legend{
     box-shadow: 5px 10px 18px #a1d9ff;
 
 }
-.label_offer:hover{
+.label_offer:hover, .label_offer:focus{
     cursor: pointer;
     background-color: #f3faff;
     box-shadow: 2px 5px 10px #a1d9ff;
 }
-.label_offer:hover .divisor{
+.label_offer:hover .divisor, .label_offer:focus .divisor{
     display: block;
     width: 18.75em;
     margin: auto;
@@ -186,7 +186,7 @@ legend{
     background-color: #55bbff;
     text-decoration: underline;
 }
-.submit:hover {
+.submit:hover, .submit:focus {
     background-color: #33a3ff;
 }
 .identity{

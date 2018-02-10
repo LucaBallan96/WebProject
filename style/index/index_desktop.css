@@ -67,11 +67,11 @@ input[type="checkbox"]{
     height: 2.5em;
     padding: 0.8em;
 }
-.div_close:hover{
+.div_close:hover, .div_close:focus {
     color: #1551a0;
     cursor: pointer;
 }
-.div_close_2:hover{
+.div_close_2:hover, .div_close_2:focus{
     color: #1551a0;
     cursor: pointer;
 }
@@ -135,7 +135,7 @@ input[type="checkbox"]{
     height: 100%;
     
 }
-#agiu:hover img{
+#agiu:hover img, #agiu:focus img{
     height: 110%;
 }
 
@@ -165,10 +165,11 @@ input[type="checkbox"]{
     border: 1px solid rgb(172, 212, 245);
     box-shadow: 2px 5px 5px #888888;
 }
-.div_group:hover{
+.div_group:hover, .div_group:focus{
     box-shadow: 5px 10px 18px #888888;
     
 }
+
 .div_title_group{
     background-color: #55bbff;
     height: 2.5em;
@@ -215,17 +216,20 @@ input[type="checkbox"]{
     width: 100%;
     height: calc(100% - 40px);
 }
-.div_group:hover .div_overlay{
+.div_group:hover .div_overlay, .div_group:focus .div_overlay{
     opacity: 1;
 } 
-.div_group:hover .div_container_img img{
+
+.div_group:hover .div_container_img img, .div_group:focus .div_container_img img{
     opacity: 0.5;
     height: 105%;
 } 
-.div_group:hover .title_div{
+
+.div_group:hover .title_div, .div_group:focus .title_div{
     text-decoration: underline;
     
 }
+
 .sp{
     background-color: rgb(230, 244, 255);
     border-radius: 5px 5px 5px 5px;
@@ -355,7 +359,7 @@ input[type="checkbox"]{
 }
 
 
-#div_button_storia:hover {
+#div_button_storia:hover, #div_button_storia:focus {
     text-decoration: underline;
 
 }

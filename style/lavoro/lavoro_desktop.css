@@ -103,7 +103,7 @@ legend{
     font-size: 1em;
     color: grey;
 }
-.label_offer:hover{
+.label_offer:hover, .label_offer:focus{
     cursor: pointer;
     background-color: #f3faff;
     box-shadow: 2px 5px 10px #a1d9ff;
@@ -179,7 +179,7 @@ legend{
     color: white;
     background-color: #55bbff;
 }
-.submit:hover {
+.submit:hover, .submit:focus {
     background-color: #33a3ff;
     text-decoration: underline;
 }

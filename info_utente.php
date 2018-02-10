@@ -29,6 +29,7 @@
 
         
         <div class="nascosto">Ti trovi in: Home > Info Account</div>
+        
         <?php
             echo "<a id='back_link' href='".$_SESSION['page']."' title='Torna alla pagina precedente'>Indietro</a>";
         ?>
