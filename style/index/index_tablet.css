@@ -18,8 +18,8 @@ input[type="checkbox"]{
     background-color: rgb(134, 189, 247);
     color: white;
     right: 1em;
-    margin-top: 60px;
-    height: 40px;
+    margin-top: 3.75em;
+    height: 2.5em;
     width: 1.2em;
     text-align: center;
     cursor: pointer;
@@ -30,8 +30,8 @@ input[type="checkbox"]{
     background-color: rgb(134, 189, 247);
     color: white;
     right: 1em;
-    margin-top: 110px;
-    height: 40px;
+    margin-top: 6.9em;
+    height: 2.5em;
     width: 1.2em;
     text-align: center;
     cursor: pointer;
@@ -50,25 +50,25 @@ input[type="checkbox"]{
 }
 .cont_message{
     z-index: 1;
-    margin-top: 60px; 
+    margin-top: 3.75em; 
     position: fixed;
     background-color: rgb(134, 189, 247);
     color: white;
     right: 2.2em;
     transition: 1s ease;
-    height: 40px;
-    padding: 10px;
+    height: 2.5em;
+    padding: 0.6em;
 }
 .cont_message_2{
     z-index: 1;
-    margin-top: 110px; 
+    margin-top: 6.9em; 
     position: fixed;
     background-color: rgb(134, 189, 247);
     color: white;
     right: 2.2em;
     transition: 1s ease;
-    height: 40px;
-    padding: 10px;
+    height: 2.5em;
+    padding: 0.6em;
 }
 .div_close:hover{
     color: rgba(48, 89, 138, 0.611);
@@ -101,9 +101,9 @@ input[type="checkbox"]{
 
 #cont_three{
     margin: auto;
-    width: 720px;
-    height: 310px;
-    padding: 20px; 
+    width: 45em;
+    height: 19.4em;
+    padding: 1.25em; 
 }
 .contprimo{
     width: 33.3%;
@@ -114,12 +114,13 @@ input[type="checkbox"]{
 
 .contgiu{
     width: 100%;
+    height: 5em;
 }
 #giu_link{
     clear: both;
-    padding: 5px;
-    width: 80px;
-    height: 60px;
+    padding: 0.3em;
+    width: 5em;
+    height: 3.75em;
     text-align: center;
 
     margin: auto;
@@ -142,12 +143,12 @@ input[type="checkbox"]{
 #div_one{
     
     width: 100%;
-    height: 400px;
+    height: 10em;
     background-color: rgb(241, 245, 250);
 }
 #img_logo{
     position: relative;
-    height: 250px;
+    height: 7em;
     top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -157,8 +158,8 @@ input[type="checkbox"]{
 .div_group{
     display: table;
     margin: auto;
-    height: 278px;
-    width: 210px;
+    height: 17.5em;
+    width: 13.15em;
     text-decoration: none;
     transition: 0.8s ease;
     border: 1px solid rgb(172, 212, 245);
@@ -172,20 +173,20 @@ input[type="checkbox"]{
 .div_title_group{
     background-color: #0099ffa8;
     position: relative;
-    height: 40px;
+    height: 2.5em;
     width: 100%;
    
 }
 .div_title_group{
     background-color: #55bbff;
     
-    height: 40px;
+    height: 2.5em;
     width: 100%;
    
 }
 .contprimo{
     width: 33.3%;
-    height: 278px;
+    height: 17.5em;
     float: left;
     text-align: center;
 }
@@ -193,14 +194,14 @@ input[type="checkbox"]{
 .title_div{
     text-align: center;
     padding: 0.3em;
-    font-size: 20px;
+    font-size: 1.25em;
     color: white;
     text-decoration: underline;
 }
 .div_container_img{
     position: relative;
     width: 100%;
-    height: 238px;
+    height: 15em;
     overflow: hidden;
     
 }
@@ -227,7 +228,7 @@ input[type="checkbox"]{
     opacity: 1;
 } 
 .div_group:hover .div_container_img img{
-    opacity: 0.3;
+    opacity: 0.5;
     height: 105%;
 } 
 .div_group:hover .title_div{
@@ -240,7 +241,7 @@ input[type="checkbox"]{
     display: table;
     left: 50%;
     top:50%;
-    font-size: 18px;
+    font-size: 1.2em;
     transform: translate(-50%,-50%);
 }
 
@@ -252,17 +253,17 @@ input[type="checkbox"]{
 
 
 #div_container_img_slogan{
-    background-image: url("images/yellow-hat.jpeg");
+    background-image: url("../../images/yellow-hat.jpeg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 180%;
     width: 100%;
-    height: 300px;
+    height: 18.75em;
 }
 #div_slogan{
     width: 100%;
-    height: 400px;
+    height: 25em;
     background-color: rgb(241, 245, 250);
 }
 #div_text_slogan{
@@ -273,13 +274,15 @@ input[type="checkbox"]{
     display: table;
     text-align: center;
     color: rgb(29, 42, 116);
-    font-size: 20px;
+    font-size: 1.25em;
 
 }
-hr{
+.hr{
     border-top: 0px;
-    margin: 20px;
-    border-color: rgb(162, 198, 247);
+    margin: 1.25em;
+    width: 100%;
+    border-bottom: 1px solid rgb(162, 198, 247);
+   
 }
 
 
@@ -298,10 +301,10 @@ hr{
 
 #h1_storia{
     font-weight: 100;
-    padding: 20px;
+    padding: 1.25em;
     width: 100%;
-    height: 70px;
-    font-size: 32px;
+    height: 4.4em;
+    font-size: 2em;
     display: table;
     text-align: center;
     color: rgb(5, 82, 184);
@@ -320,19 +323,19 @@ hr{
 #div_button_storia{
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 1.2em;
 }
 #div_scopri{
     text-decoration: underline;
     text-decoration-color: white;
-    width: 150px;
-    height: 40px;
+    width: 9.4em;
+    height: 2.5em;
     background-color: rgb(145, 192, 254);
     text-align: center;
-    padding: 10px;
+    padding: 0.6em;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;  
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;  
 }
 
 
@@ -342,7 +345,7 @@ hr{
 }
 #div_text_storia{
     
-    width: 300px;
+    width: 18.75em;
     margin: auto;
     color: rgb(98, 105, 146);
     
@@ -350,18 +353,18 @@ hr{
 .sp{
     background-color: rgb(230, 244, 255);
     border-radius: 5px 5px 5px 5px;
-    padding: 2px;
+    padding: 0.2em;
 }
 #div_img_storia{
     
     float: left;
-    background-image: url("images/building.jpeg");
+    background-image: url("../../images/building.jpeg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 140%;
     width: 50%;
-    height: 62em;
+    height: 65em;
  
 }
 

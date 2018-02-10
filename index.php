@@ -68,7 +68,7 @@
 					echo "<a href='admin.php' id='admin' title='Entra nell&#39area amministrativa del sito'>Area privata</a>";
 			?>
 		</div>
-		<div class="nascosto">Ti trovi in: Home</div>
+		<div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home</div>
 	
 		<!--MESSAGGI-->
 		<?php
@@ -103,7 +103,7 @@
 					<em>Oltre due generazioni di </br> costruttori edili. </br></br>
 					La terza generazione siamo noi,</br>
 					la quarta è nata e sta crescendo.</em></br>
-					<hr>
+					<div class="hr"></div>
 				</div>
 				<div id="div_text_slogan2">
 					Costruzioni Bordignon S.r.l., con oltre tre generazioni di storia alle spalle,</br>

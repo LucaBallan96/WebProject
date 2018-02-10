@@ -8,11 +8,11 @@
 
 .title{
         font-weight: 100;
-        padding-top: 80px;
-        padding-bottom: 40px;
+        padding-top: 2em;
+        padding-bottom: 1em;
         color: rgba(0, 73, 169, 0.888);
         text-align: center;
-        font-size: 36px;
+        font-size: 2.25em;
         width: 90%;
         margin: auto;
         clear: both;
@@ -29,15 +29,15 @@
     transition: 1s ease;
     border: 1px solid  #008cff3d;
     box-shadow: 2px 2px 4px #008cff3d;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
     
 }
 .link{
     text-decoration: none;
 }
 .container_text{
-    width: 200px;
-    min-height: 90px;
+    width: 12.5em;
+    min-height: 5.65em;
     
     
 }
@@ -51,15 +51,15 @@
 }
 .container_img{
     text-align: center;
-    width: 200px;
-    height: 150px;
+    width: 12.5em;
+    height: 9.4em;
     overflow: hidden;
 }
 .text{
     color:rgb(98, 105, 146);
-    font-size: 15px;
-    width: 200px;
-    padding: 5px;
+    font-size: 0.9em;
+    width: 12.5em;
+    padding: 0.4em;
     margin: auto;
 }
 .link:hover .container_article{
@@ -70,14 +70,14 @@
 }
 .container{
     display: table;
-    width: 1000px;
+    width: 62.5em;
     margin: auto;
    
 }
 /*CERTIFICAZIONI*/
 #text_certificazioni{
     width: 50%;
-    padding: 20px;
+    padding: 1.25em;
     color:rgb(98, 105, 146);
     float: left;
 }
@@ -85,7 +85,7 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 500px;
+    width: 31.25em;
 }
 #image_certificazioni{
     background-image: url("../../images/sicurezza.jpeg");
@@ -99,24 +99,24 @@
 .subtitle{
     font-weight: 100;
     color: rgba(0, 73, 169, 0.888);
-    font-size: 24px;
-    padding-top: 60px;
-    padding-left: 40px;
+    font-size: 1.5em;
+    padding-top: 3.75em;
+    padding-left: 2.5em;
     clear: both;
     
 }
 .divisor{
     
-    padding-top: 40px;
-    margin-left: 40px; 
-    margin-right: 40px; 
+    padding-top: 2.5em;
+    margin-left: 2.5em; 
+    margin-right: 2.5em; 
     border-top: 1px solid  #008cff3d;
    
 }
 #container_img_cb{
     
     width: 30%;
-    height: 800px;
+    height: 50em;
     float: left;
     text-align: center;
 }
@@ -127,8 +127,8 @@
 }
 .img_certification{
     box-shadow: 2px 4px 8px #3693da77;
-    height: 200px;
-    margin-bottom: 20px; 
+    height: 12.5em;
+    margin-bottom: 1.25em; 
     transition: 0.8s;
     
 }
@@ -142,7 +142,7 @@
     left: 50%;
     transform: translateX(-50%);
     color:rgb(98, 105, 146);
-    font-size: 14px;
+    font-size: 0.9em;
 }
 .img_certification:hover{
     box-shadow: 8px 12px 20px #2c81bd91;

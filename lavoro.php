@@ -71,7 +71,7 @@
 					echo "<a href='admin.php' id='admin' title='Entra nell&#39area amministrativa del sito'>Area privata</a>";
 			?>
         </div>
-		<div class="nascosto">Ti trovi in: Home > Lavora con noi</div>
+		<div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Lavora con Noi</div>
 		
 		<!--OFFERTE-->
         <?php

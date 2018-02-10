@@ -623,12 +623,12 @@
 					while($row=$result->fetch_assoc()){
 						echo "<div class='div_impiegato' title='".$row['role']." ".$row['firstname']." ".$row['lastname']."' >
 						<img class='img_impiegato' src='images/".$row['image']."' alt='impiegato ".$row['firstname']." ".$row['lastname']."'/></br></br>
-						<span class='spg'>Nome  </span></br><span class='spgr'>".$row['firstname']."</span></br> 
-						<span class='spg'>Cognome  </span></br><span class='spgr'>".$row['lastname']."</span></br>
-						<span class='spg'>Ruolo  </span></br><span class='spgr'>".$row['role']."</span></br>
-						<span class='spg'>Data di nascita  </span></br><span class='spgr'>".$row['birth']."</span></br>
-						<span class='spg'>Età  </span></br><span class='spgr'>".$row['age']."</span></br>
-						<span class='spg'>Inizio  </span></br><span class='spgr'>".$row['begin']."</span></br>
+						<span class='spg'>Nome  </span><span class='spgr'>".$row['firstname']."</span></br> <div class='d'></div>
+						<span class='spg'>Cognome  </span><span class='spgr'>".$row['lastname']."</span></br><div class='d'></div>
+						<span class='spg'>Ruolo  </span><span class='spgr'>".$row['role']."</span></br><div class='d'></div>
+						<span class='spg'>Data N. </span><span class='spgr'>".$row['birth']."</span></br><div class='d'></div>
+						<span class='spg'>Età  </span><span class='spgr'>".$row['age']."</span></br><div class='d'></div>
+						<span class='spg'>Inizio  </span><span class='spgr'>".$row['begin']."</span></br><div class='d'></div>
 						</div>";
 					
 					}

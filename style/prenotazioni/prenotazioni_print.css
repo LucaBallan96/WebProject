@@ -3,12 +3,19 @@
 	padding: 0;
     margin: 0;
     font-family: "Times New Roman", Times, serif;
-    font-size: 12px;
+    font-size: 0.75em;
 }
 .nascosto{
-	margin: 10px;
+	margin: 0.6em;
 	clear: both;
-	font-size: 12px;
+	font-size: 0.75em;
+}
+.logo_nascosto{
+    width: 5em;
+ 
+}
+.logo_nascosto img{
+    width: 100%;
 }
 #navbar {
 	display: none;
@@ -19,10 +26,10 @@
    
 }
 .title{
-    padding-bottom: 40px;
+    padding-bottom: 2.5em;
     color: black;
     text-align: center;
-    font-size: 30px;
+    font-size: 2em;
     width: 90%;
     margin: auto;
     
@@ -37,21 +44,21 @@
     display: block;
     width: 90%;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
     border-top: 1px solid  black;
    
 }
 .div_img_offer{
     width: 20%;
-    min-height: 150px;
-    padding: 15px;
+    min-height: 9.4em;
+    padding: 1em;
     float: left;
     overflow: hidden;
    
 }
 .div_information{
-    min-height: 150px;
+    min-height: 9.4em;
     width: 80%;
     float: left;    
 }
@@ -78,8 +85,8 @@ input[type="checkbox"]{
     border: 1px solid gray;
     
     position: absolute;
-    margin-top: 50px;
-    padding-left: 40px;
+    margin-top: 3.12em;
+    padding-left: 2.5em;
 }
 #subsub{
     display: none;
@@ -104,7 +111,7 @@ input[type="checkbox"]{
     position: relative;
     float: left;
     width: 33.33%;
-    margin-top: 70px;
+    margin-top: 4.4em;
     color: black;
 }
 a{
@@ -115,7 +122,7 @@ a{
 
 #div_foot{
     width: 100%;
-    height: 40px;
+    height: 2.5em;
     bottom: 0;
 }
 #div_text_foot{

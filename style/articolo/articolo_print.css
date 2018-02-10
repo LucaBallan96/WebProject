@@ -3,13 +3,20 @@
 	padding: 0;
     margin: 0;
     font-family: "Times New Roman", Times, serif;
-    font-size: 12px;
+    font-size: 0.75em;
 }
 
 .nascosto{
-	margin: 10px;
+	margin: 0.6em;
 	clear: both;
-	font-size: 12px;
+	font-size: 0.75em;
+}
+.logo_nascosto{
+    width: 5em;
+ 
+}
+.logo_nascosto img{
+    width: 100%;
 }
 #navbar {
 	display: none;
@@ -25,16 +32,16 @@
 
     color: black;
     text-align: center;
-    font-size: 30px;
+    font-size: 2em;
     width: 90%;
     margin: auto;
 }
 .subtitle{
 
-    padding-bottom: 40px;
+    padding-bottom: 2.5em;
     color: black;
     text-align: center;
-    font-size: 26px;
+    font-size: 1.62em;
     width: 90%;
     margin: auto;
 }
@@ -49,21 +56,21 @@
     display: block;
     width: 80%;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
     border-top: 1px solid  gray;
    
 }
 .container_text_img{
     display: table;
-    padding: 10px;
+    padding: 0.6em;
     
 }
 
 .text{
     float: left;
     width: 68%;
-    padding: 20px;
+    padding: 1.25em;
     color: black;
     
     
@@ -71,7 +78,7 @@
 .container_img{
     float: left;
     width: 32%;
-    padding: 20px;
+    padding: 1.25em;
     
 }
 .container_img img{
@@ -80,8 +87,8 @@
 .div_author{
     width: 100%;
     text-align: right;
-    padding-right: 40px;
-    padding-top: 60px; 
+    padding-right: 2.5em;
+    padding-top: 3.75em; 
 }
 input[type="checkbox"]{
     display: none;
@@ -106,7 +113,7 @@ input[type="checkbox"]{
     position: relative;
     float: left;
     width: 33.33%;
-    margin-top: 70px;
+    margin-top: 4.4em;
     
     color: black;
 }
@@ -118,7 +125,7 @@ a{
 
 #div_foot{
     width: 100%;
-    height: 40px;
+    height: 2.5em;
     bottom: 0;
 }
 #div_text_foot{

@@ -5,10 +5,10 @@
 #back_link {
     
         float: left;
-        margin-left: 20px;
-        margin-top: 70px;
+        margin-left: 1.25em;
+        margin-top: 4.4em;
         text-decoration: none;
-        padding: 10px;
+        padding: 0.6em;
         color: white;
         background-color: #0084ff;
     
@@ -19,19 +19,19 @@
 .title{
     font-weight: 100;
     clear: both;
-    padding-bottom: 40px;
+    padding-bottom: 2.5em;
     color: rgba(0, 73, 169, 0.888);
     text-align: center;
-    font-size: 32px;
+    font-size: 2em;
     width: 90%;
     margin: auto;
 }
 .subtitle{
     font-weight: 100;
-    padding-bottom: 40px;
+    padding-bottom: 2.5em;
     color: rgba(0, 73, 169, 0.888);
     text-align: center;
-    font-size: 22px;
+    font-size: 1.38em;
     width: 90%;
     margin: auto;
 }
@@ -40,15 +40,15 @@
     width: 100%;
     display: table;
     color: rgb(98, 105, 146);
-    font-size: 14px;
+    font-size: 0.9em;
 }
 
 .divisor{
     display: block;
     width: 80%;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
     border-top: 1px solid  #008cff3d;
    
 }
@@ -61,9 +61,9 @@
 .text{
     
     width: 100%;
-    padding: 20px;
+    padding: 1.25em;
     color: rgb(98, 105, 146);
-    font-size: 14px;
+    font-size: 0.9em;
     
     
 }
@@ -77,8 +77,8 @@
 .div_author{
     width: 100%;
     text-align: right;
-    padding-right: 40px;
-    padding-top: 60px; 
+    padding-right: 2.5em;
+    padding-top: 3.75em; 
     
     
 }
@@ -90,8 +90,8 @@
     position: relative;
     background-color: rgb(241, 245, 250);
     width: 100%;
-    height: 540px;
-    padding-top: 1px;
+    height: 33.75em;
+    padding-top: 0.2em;
 }
 
 
@@ -99,8 +99,8 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 40px;
-    font-size: 13px;
+    margin-top: 2.5em;
+    font-size: 0.8em;
     color: rgb(98, 105, 146);
     display: table;
     text-align: center;
@@ -115,7 +115,7 @@
 #div_foot{
     
     width: 100%;
-    height: 60px;
+    height: 3.75em;
     background-color: rgb(1, 52, 110);
 }
 
@@ -124,7 +124,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    font-size: 10px;
+    font-size: 0.6em;
     color: rgb(181, 183, 197);
     display: table;
 }

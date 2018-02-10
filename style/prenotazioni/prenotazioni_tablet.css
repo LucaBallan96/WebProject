@@ -7,10 +7,10 @@
     text-decoration: underline;
 }
 #back_link {
-    margin-top: 50px;
+    margin-top: 3.12em;
     position: absolute;
-    left: 20px;
-    top: 20px;
+    left: 1.25em;
+    top: 1.25em;
     text-decoration: none;
     padding: 1em;
     color: white;
@@ -18,45 +18,45 @@
 }
 .title{
     font-weight: 100;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding-top: 5em;
+    padding-bottom: 2.5em;
     color: rgba(0, 73, 169, 0.888);
     text-align: center;
-    font-size: 32px;
+    font-size: 2em;
     width: 90%;
     margin: auto;
     
 }
 .label_offer{
     display: table;
-    width: 600px;
+    width: 37.5em;
     margin: auto;
     
 }
 .divisor{
     display: block;
-    width: 600px;
+    width: 37.5em;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
     border-top: 1px solid  #008cff3d;
    
 }
 .div_img_offer{
     width: 20%;
-    min-height: 150px;
-    padding: 15px;
+    min-height: 9.4em;
+    padding: 1em;
     float: left;
     overflow: hidden;
    
 }
 .div_information{
-    min-height: 150px;
+    min-height: 9.4em;
     width: 80%;
     float: left;    
 }
 .text{
-    font-size: 14px;
+    font-size: 0.9em;
 }
 .img_offer{
     width: 100%;
@@ -71,32 +71,32 @@ input[type="checkbox"]{
     height: 0;
     opacity: 0;
     transition: 0.8s;
-    width: 700px;
+    width: 43.75em;
     margin: auto;
     overflow: hidden;
 
 }
 .pro_select:checked + label .form_offer{
-    height: 240px;
+    height: 15em;
     background-color: #e1f5ff;
     opacity: 1;
 }
 
 .div_container_form{
     
-    width: 650px;
+    width: 40.65em;
     display: table;
-    font-size: 14px;
+    font-size: 0.9em;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 0.6em;
 }
 .general_informations{
-    width: 300px;
+    width: 18.75em;
     float: left;
 
 }
 .in_form{
-    width: 180px;
+    width: 11.25em;
     float: right;
 }
 .container_radio{
@@ -127,10 +127,10 @@ input[type="checkbox"]{
 #container_prenotazioni{
     display: table;
     border: 1px solid gray;
-    font-size: 14px;
+    font-size: 0.9em;
     position: absolute;
-    margin-top: 50px;
-    padding-left: 40px;
+    margin-top: 3.12em;
+    padding-left: 2.5em;
 }
 #subsub{
     
@@ -144,7 +144,7 @@ input[type="checkbox"]{
     background-color: rgb(208, 234, 255);
     background-image: url("../../images/remove.png");
     background-position: center;
-    background-size: 20px;
+    background-size: 1.25em;
     background-repeat: no-repeat; 
     transition: 0.5s;
 }
