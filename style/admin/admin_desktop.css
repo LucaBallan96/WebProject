@@ -261,6 +261,7 @@ a {
 }
 #new_imp_control:checked ~ #new_imp_form_div, #new_proj_control:checked ~ #new_proj_form_div, #new_art_control:checked ~ #new_art_form_div, #new_off_control:checked ~ #new_off_form_div {
     left: 0;
+    visibility: visible;
 }
 #new_imp_control:checked + label, #new_proj_control:checked + label, #new_art_control:checked + label, #new_off_control:checked + label {
     position: fixed;
@@ -303,12 +304,14 @@ a {
     background-color: #55bbff;
     transition: 0.5s;
     overflow-y: scroll;
+    visibility: hidden;
 }
 .modify_form_div::-webkit-scrollbar, .remove_form_div::-webkit-scrollbar, #new_imp_form_div::-webkit-scrollbar, #new_proj_form_div::-webkit-scrollbar, #new_art_form_div::-webkit-scrollbar, #new_off_form_div::-webkit-scrollbar {
     display: none;
 }
 .modify_control:checked ~ .modify_form_div {
     left: 0;
+    visibility: visible;
 }
 .modify_control:checked + label {
     position: fixed;
@@ -392,6 +395,7 @@ a {
 }
 .remove_control:checked ~ .remove_form_div {
     left: 0;
+    visibility: visible;
 }
 .remove_control:checked + label {
     position: fixed;
@@ -479,6 +483,7 @@ a {
     overflow: hidden;
     opacity: 0;
     transition: opacity 2s, height 0.5s;
+    visibility: hidden;
 }
 .project_info {
     width: 100%;
@@ -494,6 +499,7 @@ a {
     height: 22em;
     border: 1px solid #55bbff;
     opacity: 1;
+    visibility: visible;
 }
 .pro_select:checked + label div .remove_proj_btn {
     display: block;
@@ -701,10 +707,12 @@ a {
     z-index: -1;
     overflow: hidden;
     transition: 0.5s;
+    visibility: hidden;
 }
 .mod_art_control:checked + label ~ .mod_art_form, .rem_art_control:checked + label ~ .rem_art_form, .rem_off_control:checked + label ~ .rem_off_form, .cand_off_control:checked + label ~ .cand_off_div {
     opacity: 1;
     z-index: 0;
+    visibility: visible;
 }
 .mod_art_control:checked + .modify_article_btn {
     position: absolute;
@@ -870,9 +878,11 @@ a {
     height: 0;
     transition: 0.5s;
     overflow: hidden;
+    visibility: hidden;
 }
 .mod_u_control:checked + label ~ .mod_u_form, .rem_u_control:checked + label ~ .rem_u_form {
     height: 12.5em;
+    visibility: visible;
 }
 .mod_u_control:checked + .mod_u_label {
     z-index: 1;

@@ -657,7 +657,7 @@
 				while($row = $result->fetch_assoc()) {
 					$stringa="<div class='div_impiegato'>
 						<input type='checkbox' id='modify".$count."' class='modify_control'/>
-						<label class='modify_btn' for='modify".$count."' title='Apri o chiudi il form di modifica'></label>
+						<label id='mod_imp_lab".$count."' class='modify_btn' for='modify".$count."' title='Apri o chiudi il form di modifica' tabindex='0'></label>
 						<div class='modify_form_div'>
 							<form class='modify_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 								<fieldset class='modify_personal_info'>
@@ -689,7 +689,7 @@
 							</form>
 						</div>
 						<input type='checkbox' id='remove".$count."' class='remove_control'/>
-						<label class='remove_btn' for='remove".$count."' title='Apri o chiudi il form di rimozione'></label>
+						<label id='rem_imp_lab".$count."' class='remove_btn' for='remove".$count."' title='Apri o chiudi il form di rimozione' tabindex='0'></label>
 						<div class='remove_form_div'>
 							<form class='remove_form' action='form_control.php' method='post'>
 								<fieldset class='remove_fieldset'>
@@ -713,7 +713,7 @@
 						</div>
 					</div>
 					<input type='checkbox' id='check".$count."' class='check_control'/>
-					<label class='btn' for='check".$count."' title='Visualizza ulteriori informazioni'>
+					<label id='more_info_lab".$count."' class='btn' for='check".$count."' title='Visualizza ulteriori informazioni' tabindex='0'>
 						<div class='magic'>
 							<div class='imp_more'><div>".$row['age']." anni</div></div>
 							<div class='imp_more'><div>Settore: ".$row['branch']."</div></div>
