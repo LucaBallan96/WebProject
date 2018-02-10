@@ -30,7 +30,7 @@
     left: 50%;
     transform: translate(1em, 0);
 }
-.view:hover {
+.view:hover, .view:focus {
     cursor: pointer;
     background-color: #33a3ff;
 }
@@ -70,7 +70,7 @@
     transform: translate(-50%, 0);
     font-size: 0.8em;
 }
-#search_label:hover {
+#search_label:hover, #search_label:focus {
     cursor: pointer;
 }
 #text_search {
@@ -120,11 +120,11 @@
     text-decoration: underline;
     transform: translate(0, -50%);
 }
-.grid_project:hover .grid_pr_image {
+.grid_project:hover .grid_pr_image, .grid_project:focus .grid_pr_image {
     width: 450px;
     opacity: 0.7;
 }
-.grid_project:hover .grid_pr_name_div {
+.grid_project:hover .grid_pr_name_div, .grid_project:focus .grid_pr_name_div {
     background-color: #33a3ff;
 }
 
@@ -172,10 +172,10 @@
     padding-left: 2em;
     transform: translate(0, -50%);
 }
-.list_project:hover .list_pr_image img {
+.list_project:hover .list_pr_image img, .list_project:focus .list_pr_image img {
     width: 130%;
     opacity: 0.7;
 }
-.list_project:hover .list_pr_name_a {
+.list_project:hover .list_pr_name_a, .list_project:focus .list_pr_name_a {
     background-color: #33a3ff;
 }

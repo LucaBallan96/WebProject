@@ -18,8 +18,8 @@ input[type="checkbox"]{
     background-color: #86bdf7;
     color: white;
     right: 1em;
-    margin-top: 60px;
-    height: 40px;
+    margin-top: 3.75em;
+    height: 2.5em;
     width: 1.2em;
     text-align: center;
     cursor: pointer;
@@ -30,8 +30,8 @@ input[type="checkbox"]{
     background-color: #86bdf7;
     color: white;
     right: 1em;
-    margin-top: 110px;
-    height: 40px;
+    margin-top: 6.8em;
+    height: 2.5em;
     width: 1.2em;
     text-align: center;
     cursor: pointer;
@@ -50,31 +50,31 @@ input[type="checkbox"]{
 }
 .cont_message{
     z-index: 1;
-    margin-top: 60px; 
+    margin-top: 3.75em; 
     position: fixed;
     background-color: #86bdf7;
     color: white;
     right: 2.2em;
     transition: 1s ease;
-    height: 40px;
-    padding: 10px;
+    height: 2.5em;
+    padding: 0.6em;
 }
 .cont_message_2{
     z-index: 1;
-    margin-top: 110px; 
+    margin-top: 6.8em; 
     position: fixed;
     background-color: #86bdf7;
     color: white;
     right: 2.2em;
     transition: 1s ease;
-    height: 40px;
-    padding: 10px;
+    height: 2.5em;
+    padding: 0.6em;
 }
-.div_close:hover{
+.div_close:hover, .div_close:focus{
     color: #1551a0;
     cursor: pointer;
 }
-.div_close_2:hover{
+.div_close_2:hover, .div_close_2:focus{
     color: #1551a0;
     cursor: pointer;
 }
@@ -106,12 +106,17 @@ input[type="checkbox"]{
 #div_one{
  
     width: 100%;
+<<<<<<< HEAD
     height: 400px;
     background-color: #f1f5fa;
+=======
+    height: 10em;
+    background-color: rgb(241, 245, 250);
+>>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
 }
 #img_logo{
     position: relative;
-    height: 250px;
+    height: 7em;
     top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -120,30 +125,35 @@ input[type="checkbox"]{
 #cont_three{
     position: relative;
     width: 100%;
-    height: 845px;
+    height: 52.8em;
     margin: auto;
     overflow: hidden;
 }
 .div_group{
     display: table;
     margin: auto;
-    margin-top: 20px;
-    height: 240px;
+    margin-top: 1.25em;
+    height: 15em;
     width: 80%;
     text-decoration: none;
     transition: 0.8s ease;
     border: 1px solid #acd4f5;
     box-shadow: 2px 5px 5px grey;
 }
+<<<<<<< HEAD
 .div_group:hover{
     box-shadow: 5px 10px 18px grey;
+=======
+.div_group:hover, .div_group:focus{
+    box-shadow: 5px 10px 18px #888888;
+>>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
     
 }
 
 .div_title_group{
     background-color: #55bbff;
     position: relative;
-    height: 40px;
+    height: 2.5em;
     width: 100%;
     margin: auto;
    
@@ -151,14 +161,14 @@ input[type="checkbox"]{
 .title_div{
     text-align: center;
     padding: 0.3em;
-    font-size: 20px;
+    font-size: 1.25em;
     color: white;
     text-decoration: underline;
 }
 .div_container_img{
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 12.5em;
     overflow: hidden;
     margin: auto;
 }
@@ -172,7 +182,7 @@ input[type="checkbox"]{
     transform: translate(-50%,-50%);
 }
 #img_offer{
-    width: 200px;
+    width: 12.5em;
 }
 .div_overlay{
     position: relative;
@@ -182,14 +192,14 @@ input[type="checkbox"]{
     height: calc(100% - 40px);
 }
 
-.div_group:hover .div_overlay{
+.div_group:hover .div_overlay, .div_group:focus .div_overlay{
     opacity: 1;
 } 
-.div_group:hover .div_container_img img{
-    opacity: 0.3;
+.div_group:hover .div_container_img img, .div_group:focus .div_container_img img{
+    opacity: 0.5;
     width: 100%;
 } 
-.div_group:hover .title_div{
+.div_group:hover .title_div, .div_group:focus .title_div{
     text-decoration: underline;
     
 }
@@ -199,7 +209,7 @@ input[type="checkbox"]{
     display: table;
     left: 50%;
     top:50%;
-    font-size: 18px;
+    font-size: 1.2em;
     transform: translate(-50%,-50%);
 }
 
@@ -216,29 +226,34 @@ input[type="checkbox"]{
 
 
 #div_container_img_slogan{
-    background-image: url("images/yellow-hat.jpeg");
+    background-image: url("../../images/yellow-hat.jpeg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 300%;
     width: 100%;
-    height: 250px;
+    height: 15.6em;
     clear: both;
 }
 #div_slogan{
     width: 100%;
-    min-height: 400px;
+    min-height: 25em;
  
+<<<<<<< HEAD
     padding: 10px;
     background-color: #f1f5fa;
+=======
+    padding: 0.6em;
+    background-color: rgb(241, 245, 250);
+>>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
     
 }
 #div_text_slogan{
-    padding-top: 70px;
+    padding-top: 4.3em;
     display: table;
     text-align: center;
     color: rgb(29, 42, 116);
-    font-size: 15px;
+    font-size: 1em;
 
 }
 #div_text_slogan2 br{
@@ -247,13 +262,20 @@ input[type="checkbox"]{
 .sp{
     background-color: #e6f4ff;
     border-radius: 5px 5px 5px 5px;
-    padding: 2px;
+    padding: 0.2em;
 }
 
-hr{
+.hr{
     border-top: 0px;
+<<<<<<< HEAD
     margin: 20px;
     border-color: #a2c6f7;
+=======
+    margin: 1.25em;
+    width: 90%;
+    border-bottom: 1px solid rgb(162, 198, 247);
+   
+>>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
 }
 
 
@@ -272,10 +294,10 @@ hr{
 
 #h1_storia{
     font-weight: 100;
-    padding: 20px;
+    padding: 1.25em;
     width: 100%;
-    height: 70px;
-    font-size: 32px;
+    height: 4.3em;
+    font-size: 2em;
     display: table;
     text-align: center;
     color: #1551a0;
@@ -292,8 +314,8 @@ hr{
 }
 
 #div_img_storia{
-    height: 250px;
-    background-image: url("images/building.jpeg");
+    height: 15.6em;
+    background-image: url("../../images/building.jpeg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -301,17 +323,25 @@ hr{
 }
 #div_button_storia{
     color: white;
-    font-size: 18px;
+    font-size: 1.2em;
 }
 #div_scopri{
+<<<<<<< HEAD
     width: 150px;
     height: 40px;
     background-color: #55bbff;
+=======
+    text-decoration: underline;
+    text-decoration-color: white;
+    width: 9.4em;
+    height: 2.5em;
+    background-color: rgb(145, 192, 254);
+>>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
     text-align: center;
-    padding: 10px;
+    padding: 0.6em;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;  
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;  
 }
 
 #div_container_storia{
@@ -327,8 +357,14 @@ hr{
 }
 
 
+<<<<<<< HEAD
 #div_scopri:hover{
     background-color: #33a3ff;
+=======
+#div_button_storia:hover, #div_button_storia:focus{
+    text-decoration: underline;
+
+>>>>>>> 8557f936b5d7ff726a670c09ea58d1a6479a8f6f
 }
 
 

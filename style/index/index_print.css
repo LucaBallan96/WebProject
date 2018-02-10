@@ -3,12 +3,19 @@
 	padding: 0;
     margin: 0;
     font-family: "Times New Roman", Times, serif;
-    font-size: 12px;
+    font-size: 0.75em;
 }
 .nascosto{
-	margin: 10px;
+	margin: 0.6em;
 	clear: both;
-	font-size: 12px;
+	font-size: 0.75em;
+}
+.logo_nascosto{
+    width: 5em;
+ 
+}
+.logo_nascosto img{
+    width: 100%;
 }
 #navbar {
 	display: none;
@@ -52,14 +59,14 @@ input[type="checkbox"]{
 #div_one{
     
     width: 100%;
-    height: 100px;
+    height: 6.25em;
    
    
 }
 
 #img_logo{
     position: relative;
-    height: 100px;
+    height: 6.25em;
     top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -77,10 +84,13 @@ input[type="checkbox"]{
 
 
 
-#div_container_three{
+#cont_three{
     display: none;
     
     
+}
+.contgiu{
+    display: none;
 }
 
 /*SLOGAN*/
@@ -89,7 +99,7 @@ input[type="checkbox"]{
 
 #div_slogan{
     width: 100%;
-    height: 300px;
+    height: 18.75em;
     
 }
 #div_text_slogan{
@@ -103,10 +113,11 @@ input[type="checkbox"]{
     
 
 }
-hr{
+.hr{
     border-top: 0px;
-    margin: 20px;
-    border-color: rgb(162, 198, 247);
+    margin: 1.25em;
+    width: 100%;
+    border-bottom: 1px solid black;
 }
 
 
@@ -125,10 +136,10 @@ hr{
 
 #h1_storia{
 
-    padding-bottom: 40px;
+    padding-bottom: 2.5em;
     color: black;
     text-align: center;
-    font-size: 30px;
+    font-size: 2em;
     width: 90%;
     margin: auto;
 }
@@ -140,8 +151,7 @@ hr{
     
     float: left;
     width: 100%;
-    
-    min-width: 650px;
+   
 }
 #div_container_storia{
     
@@ -151,7 +161,7 @@ hr{
 	text-align: justify;
 
 	color: black;
-    width: 650px;
+    width: 90%;
     margin: auto;
 
     
@@ -184,7 +194,7 @@ hr{
     position: relative;
     float: left;
     width: 33.33%;
-    margin-top: 70px;
+    margin-top: 4.4em;
 
     color: black;
 }
@@ -196,7 +206,7 @@ a{
 
 #div_foot{
     width: 100%;
-    height: 40px;
+    height: 2.5em;
     bottom: 0;
 }
 #div_text_foot{

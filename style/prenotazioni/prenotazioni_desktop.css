@@ -5,10 +5,10 @@
 }
 
 #back_link {
-    margin-top: 50px;
+    margin-top: 3.12em;
     position: absolute;
-    left: 20px;
-    top: 20px;
+    left: 1.25em;
+    top: 1.25em;
     text-decoration: none;
     padding: 1em;
     color: white;
@@ -20,45 +20,45 @@
 }
 .title{
     font-weight: 100;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding-top: 5em;
+    padding-bottom: 2.5em;
     color: #1551a0;
     text-align: center;
-    font-size: 32px;
+    font-size: 2em;
     width: 90%;
     margin: auto;
     
 }
 .label_offer{
     display: table;
-    width: 800px;
+    width: 50em;
     margin: auto;
     
 }
 .divisor{
     display: block;
-    width: 800px;
+    width: 50em;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-top: 1px solid #a1d9ff;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    border-top: 1px solid  #a1d9ff;
    
 }
 .div_img_offer{
     width: 20%;
-    min-height: 150px;
-    padding: 15px;
+    min-height: 9.4em;
+    padding: 1em;
     float: left;
     overflow: hidden;
    
 }
 .div_information{
-    min-height: 150px;
+    min-height: 9.4em;
     width: 80%;
     float: left;    
 }
 .text{
-    font-size: 14px;
+    font-size: 0.9em;
 }
 .img_offer{
     width: 100%;
@@ -80,10 +80,10 @@ input[type="checkbox"]{
 #container_prenotazioni{
     display: table;
     border: 1px solid grey;
-    font-size: 14px;
+    font-size: 0.9em;
     position: absolute;
-    margin-top: 50px;
-    padding-left: 40px;
+    margin-top: 3.12em;
+    padding-left: 2.5em;
 }
 #subsub{
     
@@ -97,7 +97,7 @@ input[type="checkbox"]{
     background-color: #55bbff;
     background-image: url("../../images/remove.png");
     background-position: center;
-    background-size: 30px;
+    background-size: 2em;
     background-repeat: no-repeat; 
     transition: 0.5s;
 }

@@ -5,10 +5,10 @@
 }
 
 #back_link {
-    margin-top: 50px;
+    margin-top: 3.12em;
     position: absolute;
-    left: 20px;
-    top: 20px;
+    left: 1.25em;
+    top: 1.25em;
     text-decoration: none;
     padding: 1em;
     color: white;
@@ -20,19 +20,19 @@
 .title{
     font-weight: 100;
     padding-top: 4em;
-    padding-bottom: 40px;
+    padding-bottom: 2.5em;
     color: #1551a0;
     text-align: center;
-    font-size: 36px;
+    font-size: 2.25em;
     width: 90%;
     margin: auto;
 }
 .subtitle{
     font-weight: 100;
-    padding-bottom: 40px;
+    padding-bottom: 2.5em;
     color: #1551a0;
     text-align: center;
-    font-size: 26px;
+    font-size: 1.6em;
     width: 90%;
     margin: auto;
 }
@@ -47,21 +47,21 @@
     display: block;
     width: 80%;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-top: 1px solid #a1d9ff;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    border-top: 1px solid  #a1d9ff;
    
 }
 .container_text_img{
     display: table;
-    padding: 10px;
+    padding: 0.6em;
     
 }
 
 .text{
     float: left;
     width: 58%;
-    padding: 20px;
+    padding: 1.25em;
     color: grey;
     
     
@@ -69,7 +69,7 @@
 .container_img{
     float: left;
     width: 42%;
-    padding: 20px;
+    padding: 1.25em;
     
 }
 .container_img img{
@@ -78,8 +78,8 @@
 .div_author{
     width: 100%;
     text-align: right;
-    padding-right: 40px;
-    padding-top: 60px; 
+    padding-right: 2.5em;
+    padding-top: 3.75em; 
 }
 
 

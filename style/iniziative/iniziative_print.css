@@ -3,12 +3,19 @@
 	padding: 0;
     margin: 0;
     font-family: "Times New Roman", Times, serif;
-    font-size: 12px;
+    font-size: 0.75em;
 }
 .nascosto{
-	margin: 10px;
+	margin: 0.6em;
 	clear: both;
-	font-size: 12px;
+	font-size: 0.75em;
+}
+.logo_nascosto{
+    width: 5em;
+ 
+}
+.logo_nascosto img{
+    width: 100%;
 }
 #navbar {
 	display: none;
@@ -19,10 +26,10 @@ input[type="checkbox"]{
 }
 .title{
     
-    padding-bottom: 40px;
+    padding-bottom: 2.5em;
     color: black;
     text-align: center;
-    font-size: 30px;
+    font-size: 2em;
     width: 90%;
     margin: auto;
     clear: both;
@@ -36,7 +43,7 @@ page-break-inside: avoid;
 position: relative;
 display: table;
 float: left;
-margin: 10px;
+margin: 0.6em;
 transition: 0.7s;
 transition: 1s ease;
 border: 1px solid  gray;
@@ -49,14 +56,14 @@ text-decoration: none;
 }
 .container_img{
     text-align: center;
-width: 150px;
-height: 100px;
+width: 9.4em;
+height: 6.25em;
 
 overflow: hidden;
 }
 .container_text{
-width: 150px;
-min-height: 100px;
+width: 9.4em;
+min-height: 6.25em;
 
 }
 .container_img img{
@@ -66,21 +73,21 @@ height: 100%;
 color:black;
 
 
-width: 150px;
-padding-top: 20px;
+width: 9.4em;
+padding-top: 1.25em;
 margin: auto;
 }
 
 .container{
 display: table;
-width: 1000px;
+width: 62.5em;
 margin: auto;
 
 }
 /*CERTIFICAZIONI*/
 #text_certificazioni{
 width: 100%;
-padding: 20px;
+padding: 1.25em;
 color:black;
 float: left;
 }
@@ -95,24 +102,24 @@ display: none;
 }
 .subtitle{
 color: black;
-font-size: 24px;
-padding-top: 60px;
-padding-left: 40px;
+font-size: 1.5em;
+padding-top: 3.75em;
+padding-left: 2.5em;
 clear: both;
 
 }
 .divisor{
     
-    padding-top: 40px;
-    margin-left: 40px; 
-    margin-right: 40px; 
+    padding-top: 2.5em;
+    margin-left: 2.5em; 
+    margin-right: 2.5em; 
     border-top: 1px solid  gray;
    
 }
 #container_img_cb{
     
     width: 30%;
-    height: 700px;
+    height: 43.75em;
     float: left;
     text-align: center;
 }
@@ -120,12 +127,12 @@ clear: both;
 .cont_img_cert{
     width: 100%;
     text-align: right;
-    padding-right: 40px;
+    padding-right: 2.5em;
 }
 .img_certification{
   
-    height: 200px;
-    margin-bottom: 20px; 
+    height: 12.5em;
+    margin-bottom: 1.25em; 
     transition: 0.8s;
     
 }
@@ -160,7 +167,7 @@ clear: both;
     position: relative;
     float: left;
     width: 33.33%;
-    margin-top: 70px;
+    margin-top: 4.4em;
    
     color: black;
 }
@@ -172,7 +179,7 @@ a{
 
 #div_foot{
     width: 100%;
-    height: 40px;
+    height: 2.5em;
     bottom: 0;
 }
 #div_text_foot{

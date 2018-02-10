@@ -8,29 +8,35 @@
 
 #title{
     font-weight: 100;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding-top: 2em;
     color: #1551a0;
     text-align: center;
-    font-size: 36px;
+    font-size: 2.25em;
     width: 90%;
     margin: auto;
 }
 .divisor{
     
-    padding-top: 40px;
-    margin-left: 40px; 
-    margin-right: 40px; 
-    border-top: 1px solid #a1d9ff;
+    padding-top: 2.5em;
+    margin-left: 2.5em; 
+    margin-right: 2.5em; 
+    border-top: 1px solid  #a1d9ff;
    
 }
-
+.d{
+    
+    width: 100%;
+    padding: 0.5em;
+    margin: auto;
+    border-top: 1px solid  #008cff3d;
+   
+}
 .subtitle{
     font-weight: 100;
     color: #1551a0;
-    font-size: 24px;
-    padding-top: 60px;
-    padding-left: 40px;
+    font-size: 1.5em;
+    padding-top: 3.75em;
+    padding-left: 2.5em;
     clear: both;
     
 }
@@ -43,7 +49,7 @@
     float: left;
 }
 .text{
-    width: 480px;
+    width: 30em;
     margin: auto;
 }
 
@@ -61,9 +67,9 @@
     text-align: center;
 }
 .img_storia{
-    margin-bottom: 20px;
-    margin-top: 20px;
-    height: 250px;
+    margin-bottom: 1.25em;
+    margin-top: 1.25em;
+    height: 15.7em;
     box-shadow: 5px 10px 18px grey;
 }
 
@@ -76,64 +82,66 @@ span{
 
 #container_img_sedi{
     width: 50%;
-    height: 460px;
+    height: 28.75em;
    
     float: left;
     text-align: center;
     
 }
 #map{
-    margin-top: 20px;
-    width:500px;
-    height:360px; 
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width:31.25em;
+    height:22.5em; 
 }
 
 /*PERSONE*/
 
 #img_persone{
     
-    width:500px;
+    width:31.25em;
     box-shadow: 5px 10px 18px grey;
     
 }
 #container_img_persone{
     width: 50%;
-    height: 500px;
+    height: 31.25em;
     float: left;
-    text-align: center;
+    
 }
 #organigramma{
-    height: 500px;
+    height: 31.25em;
     
 }
 
 /*IMPIEGATI*/
 
 #div_impiegati{
-    width: 1024px;
+    width: 62em;
     margin: auto;
 }
 .div_impiegato{
-    width: 180px;
-    min-height: 250px;
+    text-align: center;
+    width: 14em;
+    min-height: 15.7em;
     float: left;
-    margin: 12px; 
-    font-size: 13px;
+    margin: 0.75em; 
+    font-size: 0.9em;
     color: #080888;
     overflow: hidden;
-    padding: 10px;
+    padding: 0.6em;
+    
 }
 .img_impiegato{
-    height: 120px;
-    
-    
+    height: 7.5em;
+   
 }
 .subsubtitle{
     font-weight: 100;
     color: #1551a0;
-    font-size: 20px;
-    padding-top: 40px;
-    padding-left: 30px;
+    font-size: 1.25em;
+    padding-top: 2.5em;
+    padding-left: 1.9em;
     clear: both;
 }
 .exception_impiegati{
@@ -141,6 +149,7 @@ span{
 }
 .spg{
     color: grey;   
+    float: left;
 }
 .spgr{
     float: right;

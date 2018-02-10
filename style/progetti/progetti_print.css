@@ -16,6 +16,7 @@ a {
     margin-top: 2em;
     display: block;
 }
+
 .div_contatto:first-of-type {
     width: calc(33.33% - 1em);
     margin-right: 1em;

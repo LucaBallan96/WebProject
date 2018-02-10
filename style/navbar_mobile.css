@@ -27,15 +27,19 @@ a {
     background-color: #0077ff;
     margin: 0.5em 0;
 }
-#cm_label:hover {
+#cm_label:hover,#cm_label:focus {
 	cursor: pointer;
 	background-color: #33a3ff;
 }
-#cm_label:hover .cm_line {
+#cm_label:hover .cm_line, #cm_label:focus .cm_line {
 	background-color: white;
 }
 #compact_menu:checked ~ #navbar {
 	left: 0;
+	visibility: visible;
+}
+#compact_menu:checked ~ .contall{
+	visibility: hidden;
 }
 #compact_menu:checked + label .cm_line {
 	display: none;
@@ -48,7 +52,7 @@ a {
 	height: 3.5em;
 	padding: 0;
 	background-color: transparent;
-    background-image: url("../../images/close.png");
+    background-image: url("../images/close.png");
     background-position: center;
     background-size: 2.5em;
     background-repeat: no-repeat;
@@ -56,7 +60,11 @@ a {
 #compact_menu:checked + label:hover {
 	background-color: #33a3ff;
 }
+#compact_menu:checked + label:focus {
+	background-color: #33a3ff;
+}
 #navbar {
+	visibility: hidden;
 	position: fixed;
 	z-index: 2;
 	left: -100%;
@@ -89,7 +97,7 @@ a {
 	text-decoration: underline;
 	font-size: 1em;
 }
-.drop_button:hover {
+.drop_button:hover, .drop_button:focus {
 	color: white;
 }
 .drop_content {
@@ -105,7 +113,7 @@ a {
 #admin, #login, #user {
 	display: block;
 }
-#work:hover, #contacts:hover, #admin:hover, #login:hover, #user:hover {
+#work:hover, #contacts:hover, #admin:hover, #login:hover, #user:hover, #work:focus, #contacts:focus, #admin:focus, #login:focus, #user:focus {
 	color: white;
 }
 .nascosto {

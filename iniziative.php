@@ -25,7 +25,7 @@
 
 		<!-- NAVIGATION -->
 		<input id='compact_menu' type='checkbox'/>
-		<label id='cm_label' for='compact_menu' title='Visualizza le opzioni del menu'>
+		<label id='cm_label' tabindex="0"for='compact_menu' title='Visualizza le opzioni del menu'>
 			<div class="cm_line"></div>
             <div class="cm_line"></div>
             <div class="cm_line"></div>
@@ -68,8 +68,8 @@
 					echo "<a href='admin.php' id='admin' title='Entra nell&#39area amministrativa del sito'>Area privata</a>";
 			?>
         </div>
-		<div class="nascosto">Ti trovi in: Home > Iniziative</div>
-		
+		<div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Iniziative</div>
+		<div class="contall">
         <!--STAMPA-->
         <h1 id="stampa" class="title">Rassegna Stampa</h1>
         <?php 
@@ -91,9 +91,9 @@
 			<h2 id="storia" class="subtitle">Certificazioni Costruzioni Bordignon S.r.l.</h2>
 			<div class="divisor"></div>
 			<div id="container_img_cb">
-				<div class="cont_img_cert"><a class="a_img" href="images/iso.jpeg" ><img class="img_certification" src="images/iso.jpeg" title=" certificazione iso"/ alt="certificazione iso"></a></div>
-				<div class="cont_img_cert"><a class="a_img" href="images/ohsas.jpeg" ><img class="img_certification" src="images/ohsas.jpeg" title="certificazione ohsas" alt="certificazione ohsas"/></a></div>
-				<div class="cont_img_cert"><a class="a_img" href="images/soa.jpeg" ><img class="img_certification" src="images/soa.jpeg" title="certificazione soa" alt="certificazione soa"/></a></div>
+				<div class="cont_img_cert"><a  class="a_img" href="images/iso.jpeg" ><img class="img_certification" src="images/iso.jpeg" title=" certificazione iso"/ alt="certificazione iso"></a></div>
+				<div class="cont_img_cert"><a  class="a_img" href="images/ohsas.jpeg" ><img class="img_certification" src="images/ohsas.jpeg" title="certificazione ohsas" alt="certificazione ohsas"/></a></div>
+				<div class="cont_img_cert"><a  class="a_img" href="images/soa.jpeg" ><img class="img_certification" src="images/soa.jpeg" title="certificazione soa" alt="certificazione soa"/></a></div>
 			</div>
 			<div id="cont_cert">
 				<div id="text_cert">
@@ -154,7 +154,7 @@
 				@Copyright 2012-2017 &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspCostruzioni Bordignon S.r.l &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspC.F. e P.IVA 0334405269 
 			</div>
 		</div>
-
+					</div>
 		<?php
 			$_SESSION['page']='iniziative.php';
 		?>

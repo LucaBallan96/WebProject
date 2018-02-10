@@ -7,33 +7,33 @@
 
 .title{
     font-weight: 100;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding-top: 2em;
+    padding-bottom: 1em;
     color: #1551a0;
     text-align: center;
-    font-size: 32px;
+    font-size: 2em;
     width: 100%;
    
     
 }
 .label_offer{
     display: table;
-    width: 600px;
+    width: 37.5em;
     margin: auto;
     transition: 1s;
-    padding: 10px;
-    border: 1px solid  #a1d9ff;
+    padding: 0.6em;
+    border: 1px solid #a1d9ff;
     box-shadow: 2px 2px 4px #a1d9ff;
 }
 #container_filter{
     color: #1551a0;
     width: 100%;
-    font-size: 13px;
+    font-size: 0.8em;
     text-align: center;
-    padding-bottom: 40px; 
+    padding-bottom: 2.5em; 
 }
 #text_search {
-    width: 250px;
+    width: 15.65em;
     border: 1px solid #55bbff;
     padding: 0.3em;
     color: grey;
@@ -43,17 +43,17 @@
 .divisor{
     transition: 0.5s;
     display: block;
-    width: 500px;
+    width: 31.25em;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border-top: 1px solid #a1d9ff;
+    margin-top: 0.6em;
+    margin-bottom: 1.25em;
+    border-top: 1px solid  #a1d9ff;
    
 }
 .div_img_offer{
     width: 20%;
-    height: 120px;
-    padding: 15px;
+    height: 7.5em;
+    padding: 1em;
     float: left;
     overflow: hidden;
    
@@ -62,27 +62,27 @@
     float: right;
 }
 .div_information{
-    min-height: 120px;
+    min-height: 7.5em;
     width: 80%;
     float: left;    
 }
 .text{
-    font-size: 13px;
+    font-size: 0.8em;
 }
 .img_offer{
     width: 100%;
 }
 input[type="date"]{
-    font-size: 14px;
-    height: 22px;
+    font-size: 0.9em;
+    height: 1.38em;
 }
 input[type="email"]{
-    font-size: 14px;
-    height: 22px;
+    font-size: 0.9em;
+    height: 1.38em;
 }
 input[type="text"]{
-    font-size: 14px;
-    height: 22px;
+    font-size: 0.9em;
+    height: 1.38em;
 }
 input[type="checkbox"]{
     display: none;
@@ -100,29 +100,29 @@ legend{
     height: 0;
     opacity: 0;
     transition: 0.8s;
-    width: 600px;
-    margin-bottom: 15px;
+    width: 37.5em;
+    margin-bottom: 1em;
     margin: auto;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 1em;
+    margin-bottom: 1.25em;
     overflow: hidden;
     padding: 1em;
     box-shadow: 5px 10px 18px #a1d9ff;
 
 }
-.label_offer:hover{
+.label_offer:hover, .label_offer:focus{
     cursor: pointer;
     background-color: #f3faff;
     box-shadow:2px 5px 10px #a1d9ff;
     
 }
-.label_offer:hover .divisor{
+.label_offer:hover .divisor, .label_offer:focus .divisor{
     display: block;
-    width: 500px;
+    width: 31.25em;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border-top: 1px solid  #a1d9ff;
+    margin-top: 0.6em;
+    margin-bottom: 1.25em;
+    border-top: 1px solid #a1d9ff;
 }
 .pro_select:checked + label + .form_offer{
     height: 48em;
@@ -133,15 +133,15 @@ legend{
 
 .div_container_form{
     
-    width: 550px;
+    width: 34.4em;
     display: table;
-    font-size: 13px;
+    font-size: 0.8em;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 0.6em;
 }
 .general_informations{
     
-    width: 500px;
+    width: 31.25em;
     float: left;
 
 }
@@ -157,8 +157,8 @@ legend{
     border: 1px solid #daefff;
 }
 .in_form{
-    width: 200px;
-    height: 20px;
+    width: 12.5em;
+    height: 1.25em;
     float: right;
     border: 1px solid #daefff;
 }
@@ -183,7 +183,7 @@ legend{
     background-color: #55bbff;
     text-decoration: underline;
 }
-.submit:hover {
+.submit:hover, .submit:focus {
     background-color: #33a3ff;
 }
 .identity{
@@ -196,14 +196,14 @@ legend{
     
     position: absolute;
     
-    font-size: 13px;
+    font-size: 0.8em;
     float: right;
     right: 0;
-    background-color: #f1f5fa;;
-    margin-top: 70px;
-    margin-right: 20px;
-    padding: 10px;
-    box-shadow: 5px 10px 18px grey
+    background-color: #f1f5fa;
+    margin-top: 4.4em;
+    margin-right: 1.25em;
+    padding: 0.6em;
+    box-shadow: 5px 10px 18px grey;
 
 }
 #container_prenotazioni a{

@@ -25,7 +25,7 @@
 
 		<!-- NAVIGATION -->
 		<input id='compact_menu' type='checkbox'/>
-		<label id='cm_label' for='compact_menu' title='Visualizza le opzioni del menu'>
+		<label id='cm_label' tabindex="0" for='compact_menu' title='Visualizza le opzioni del menu'>
 			<div class="cm_line"></div>
             <div class="cm_line"></div>
             <div class="cm_line"></div>
@@ -70,7 +70,7 @@
         </div>
         <div id="navbar_bottom_padding"></div>
 		<div class="nascosto">Ti trovi in: Home > Progetti</div>
-
+<div class="contall">
         <input id="grid_control" class="view_control" type="radio" name="view_control" checked/>
         <label id="grid_view" class="view" for="grid_control" tabindex="0"title="Visualizza i progetti come griglia">Griglia</label>
         <input id="list_control" class="view_control" type="radio" name="view_control"/>
@@ -118,7 +118,7 @@
 				@Copyright 2012-2017 &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspCostruzioni Bordignon S.r.l &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspC.F. e P.IVA 0334405269 
 			</div>
 		</div>
-
+			</div>
 		<?php
 			$_SESSION['page']='progetti.php';
 		?>

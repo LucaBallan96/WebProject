@@ -6,11 +6,11 @@
 
 .title{
     font-weight: 100;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding-top: 2em;
+    padding-bottom: 1em;
     color: #1551a0;
     text-align: center;
-    font-size: 36px;
+    font-size: 2.25em;
     width: 90%;
     margin: auto;
     
@@ -19,10 +19,10 @@
     color: #1551a0;
     width: 100%;
     text-align: center;
-    padding-bottom: 40px; 
+    padding-bottom: 2.5em; 
 }
 #text_search {
-    width: 250px;
+    width: 15.65em;
     border: 1px solid #55bbff;
     
     
@@ -32,10 +32,10 @@
 }
 .label_offer{
     display: table;
-    width: 800px;
+    width: 50em;
     margin: auto;
     transition: 1s;
-    padding: 10px;
+    padding: 0.6em;
     border: 1px solid  #a1d9ff;
     box-shadow: 2px 2px 4px #a1d9ff;
     
@@ -43,8 +43,8 @@
 
 .div_img_offer{
     width: 20%;
-    height: 150px;
-    padding: 15px;
+    height: 9.4em;
+    padding: 0.9em;
     float: left;
     overflow: hidden;
     
@@ -54,28 +54,28 @@
     float: right;
 }
 .div_information{
-    min-height: 150px;
+    min-height: 9.4em;
     width: 80%;
     float: left;   
     
 }
 .text{
-    font-size: 14px;
+    font-size: 0.9em;
 }
 .img_offer{
     width: 100%;
 }
 input[type="email"]{
-    font-size: 14px;
-    height: 22px;
+    font-size: 0.9em;
+    height: 1.38em;
 }
 input[type="date"]{
-    font-size: 14px;
-    height: 22px;
+    font-size: 0.9em;
+    height: 1.38em;
 }
 input[type="text"]{
-    font-size: 14px;
-    height: 22px;
+    font-size: 0.9em;
+    height: 1.38em;
 }
 input[type="checkbox"]{
     display: none;
@@ -86,11 +86,11 @@ input[type="checkbox"]{
     height: 0;
     opacity: 0;
     transition: 0.8s;
-    width: 700px;
+    width: 43.75em;
     margin: auto;
     padding: 1em;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 1em;
+    margin-bottom: 1.25em;
     overflow: hidden;
     box-shadow: 5px 10px 18px #a1d9ff;
 
@@ -103,7 +103,7 @@ legend{
     font-size: 1em;
     color: grey;
 }
-.label_offer:hover{
+.label_offer:hover, .label_offer:focus{
     cursor: pointer;
     background-color: #f3faff;
     box-shadow: 2px 5px 10px #a1d9ff;
@@ -120,20 +120,20 @@ legend{
 .divisor{
     transition: 0.5s;
     display: block;
-    width: 600px;
+    width: 37.5em;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border-top: 1px solid  #a1d9ff;
+    margin-top: 0.6em;
+    margin-bottom: 1.25em;
+    border-top: 1px solid #a1d9ff;
    
 }
 .div_container_form{
     
-    width: 650px;
+    width: 40.65em;
     display: table;
-    font-size: 14px;
+    font-size: 0.9em;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 0.6em;
 }
 .general_informations{
     
@@ -154,8 +154,8 @@ legend{
     border: 1px solid #daefff;
 }
 .in_form{
-    width: 250px;
-    height: 20px;
+    width: 15.65em;
+    height: 1.25em;
     float: right;
     border: 1px solid #daefff;
 }
@@ -179,7 +179,7 @@ legend{
     color: white;
     background-color: #55bbff;
 }
-.submit:hover {
+.submit:hover, .submit:focus {
     background-color: #33a3ff;
     text-decoration: underline;
 }
@@ -191,13 +191,13 @@ legend{
 
 #container_prenotazioni{
     display: table;
-    font-size: 14px;
+    font-size: 0.9em;
     position: fixed;
     right: 0;
-    background-color: #f1f5fa;;
-    margin-top: 70px;
-    margin-right: 20px;
-    padding: 10px;
+    background-color: #f1f5fa;
+    margin-top: 4.4em;
+    margin-right: 1.25em;
+    padding: 0.6em;
     box-shadow: 5px 10px 18px grey;
 
 }
