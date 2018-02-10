@@ -34,7 +34,7 @@
         <?php
             echo "<a id='back_link' href='".$_SESSION['page']."' title='Torna alla pagina precedente'>Indietro</a>";
         ?>
-        
+
         <h1 class="header"><?php echo $_SESSION['username']; ?> - Informazioni sul tuo account</h1>
         <form action="form_control.php" method="post">
             <?php

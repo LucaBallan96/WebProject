@@ -135,7 +135,6 @@ form {
     left: 0;
     visibility: visible;
 }
-
 .remove_control:checked + label {
     z-index: 2;
     background-image: url("../../images/close.png");
