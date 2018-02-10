@@ -54,7 +54,7 @@ form {
 #change_password_label {
     color: blue;
 }
-#change_password_label:hover {
+#change_password_label:hover, #change_password_label:focus {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -88,7 +88,7 @@ form {
 #cancel_btn {
     margin-left: 1em;
 }
-.btns:hover, #back_link:hover {
+.btns:hover, #back_link:hover, .btns:focus, #back_link:focus {
     cursor: pointer;
     text-decoration: underline;
     background-color: #33a3ff;
@@ -127,13 +127,16 @@ form {
     background-size: 3.12em;
     background-repeat: no-repeat;
 }
-.remove_btn:hover {
+.remove_btn:hover,.remove_btn:focus {
     background-color: #33a3ff;
     cursor: pointer;
 }
 .remove_control:checked ~ .remove_form_div {
     left: 0;
     visibility: visible;
+}
+.remove_control:checked ~ .contall {
+    visibility: hidden;
 }
 .remove_control:checked + label {
     z-index: 2;
@@ -172,7 +175,7 @@ form {
     background-color: #55bbff;
     margin-right: 2em;
 }
-.yes_no_div label:hover, .apply_btn:hover {
+.yes_no_div label:hover, .apply_btn:hover, .yes_no_div label:focus, .apply_btn:focus {
     cursor: pointer;
     text-decoration: underline;
     background-color: #33a3ff; 
