@@ -102,6 +102,7 @@ form {
     display: none;
 }
 .remove_form_div {
+    visibility: hidden;
     position: fixed;
     top: 0;
     left: -100%;
@@ -129,6 +130,7 @@ form {
 }
 .remove_control:checked ~ .remove_form_div {
     left: 0;
+    visibility: visible;
 }
 .remove_control:checked + label {
     z-index: 2;
@@ -141,7 +143,7 @@ form {
     transform: translate(-50%, -50%);
     width: 37.5em;
     height: 12.5em;
-    background-color: #a1d9ff;
+    background-color: #bce4ff;
 }
 .remove_fieldset {
     border: none;
@@ -150,7 +152,7 @@ form {
     height: calc(100% - 2em);
     margin-top: 2em;
     padding: 3em;
-    color: grey;
+    color: gray;;
     text-align: center;
 }
 .radio_choice {
@@ -178,7 +180,6 @@ form {
 }
 .apply_btn {
     border: none;
-    outline: none;
     position: absolute;
     bottom: 2em;
     right: 2em;

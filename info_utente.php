@@ -29,32 +29,36 @@
 
         
         <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Info Account</div>
+       
         
         <?php
             echo "<a id='back_link' href='".$_SESSION['page']."' title='Torna alla pagina precedente'>Indietro</a>";
         ?>
+        
         <h1 class="header"><?php echo $_SESSION['username']; ?> - Informazioni sul tuo account</h1>
         <form action="form_control.php" method="post">
             <?php
                 $conn->get_user_info();
             ?>
         </form>
+
         <?php
             if(!isset($_SESSION['admin']))
                 echo "<input type='checkbox' id='remove' class='remove_control'/>
-                    <label class='remove_btn' for='remove' title='Rimuovi questo account'></label>
+                   <label id='rmv' class='remove_btn' for='remove' tabindex='0' title='Rimuovi questo account'></label>
                     <div class='remove_form_div'>
                         <form class='remove_form' action='form_control.php' method='post'>
                             <fieldset class='remove_fieldset'>
                                 <legend>Rimuovere definitivamente l'utente ".$_SESSION['username']." e tutti i suoi dati?</legend>
                                 <div class='yes_no_div'>
                                     <input id='yes' class='radio_choice' type='radio' name='remove_user' value='yes' checked/>
-                                    <label for='yes' title='Rimuovi'>Si, rimuovi</label>
+                                    <label for='yes' tabindex='0' title='Rimuovi'>Si, rimuovi</label>
                                     <input id='no' class='radio_choice' type='radio' name='remove_user' value='no'/>
-                                    <label for='no' title='Mantieni'>No, mantieni</label>
+                                    <label for='no' tabindex='0' title='Mantieni'>No, mantieni</label>
                                 </div>
+                                <input class='apply_btn' type='submit' value='Applica' title='Applica la scelta'/>
                             </fieldset>
-                            <input class='apply_btn' type='submit' value='Applica' title='Applica la scelta'/>
+                            
                         </form>
                     </div>";
 
