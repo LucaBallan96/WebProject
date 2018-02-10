@@ -3,7 +3,7 @@ body {
     background: white;
     color: black;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 12px;
+    font-size: 0.75em;
 }
 a {
     color: black;
@@ -12,18 +12,25 @@ a {
 #navbar {
     display: none;
 }
-.nascosto {
-    margin-top: 2em;
+.nascosto{
+	margin: 0.6em;
+	clear: both;
+    font-size: 0.75em;
     display: block;
 }
-
-
+.logo_nascosto{
+    width: 5em;
+ 
+}
+.logo_nascosto img{
+    width: 100%;
+}
 .header {
     font-weight: 100;
     width: 100%;
     padding: 2em 2em;
     text-align: center;
-    font-size: 36px;
+    font-size: 2.25em;
 }
 #back_link {
     display: none;
@@ -35,8 +42,8 @@ form {
 #container {
     position: relative;
     left: 50%;
-    width: 720px;
-    height: 400px;
+    width: 45em;
+    height: 25em;
     transform: translate(-50%, 0);
 }
 #div_img {

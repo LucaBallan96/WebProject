@@ -27,50 +27,9 @@
 		<script type="text/javascript" src="script/menuScript.js"></script>
 
 		<!-- NAVIGATION -->
-		<input id='compact_menu' type='checkbox'/>
-		<label id='cm_label' tabindex="0"for='compact_menu' title='Visualizza le opzioni del menu'>
-			<div class="cm_line"></div>
-            <div class="cm_line"></div>
-            <div class="cm_line"></div>
-		</label>
+		<?php include 'navbar.php';?>
 
-        <div id="navbar">
-            <a id="home_link"  href="index.php"><img id="logo" src="images/logo.png" title="Vai alla pagina iniziale" alt="logo Costruzioni Bordignon S.r.l."></a>
-            <div class="dropdown">
-                <a id="menu_bt1" class="drop_button" href="azienda.php" title="Visualizza le informazioni sull'azienda">Azienda</a>
-                <div id="content_menu_bt1" class="drop_content">
-                    <a href="azienda.php#storia" tabindex="0"title="Leggi la storia dell'azienda"><pre>Storia&#9&#9&gt</pre></a>
-                    <a href="azienda.php#sedi" tabindex="0"title="Visualizza le sedi in cui opera l'azienda"><pre>Sedi&#9&#9&#9&gt</pre></a>
-                    <a href="azienda.php#persone" tabindex="0"title="Visualizza gli impiegati dell'azienda"><pre>Persone&#9&#9&gt</pre></a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a id="menu_bt2" class="drop_button" href="progetti.php" title="Visualizza i progetti in cui si impegna l'azienda">Progetti</a>
-                <div id="content_menu_bt2" class="drop_content">
-                    <a href="progetti.php" tabindex="0"title="Visualizza i progetti in corso"><pre>In corso&#9&#9&gt</pre></a>
-                    <a href="progetti.php#terminati" tabindex="0"title="Visualizza i progetti terminati"><pre>Terminati&#9&#9&gt</pre></a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a id="menu_bt3" class="drop_button" href="iniziative.php" title="Visualizza gli articoli sull'azienda e le certificazioni ricevute">Iniziative</a>
-                <div id="content_menu_bt3" class="drop_content">
-					<a href="iniziative.php#stampa" tabindex="0"title="Leggi gli articoli che trattano dell'azienda"><pre>Stampa&#9&#9&#9&gt</pre></a>
-                    <a href="iniziative.php#certificazioni" tabindex="0"title="Visualizza le certificazioni"><pre>Certificazioni&#9&#9&gt</pre></a>
-                </div>
-			</div>
-			<a href="lavoro.php" id="work" title="Visualizza le offerte di lavoro e fissa un colloquio con l'azienda">Lavora con noi</a>
-			<a href="#div_container_contatti" id="contacts" title="Visualizza i nostri contatti, potrai chiamarci o mandare una mail per ricevere ulteriori informazioni">Contatti</a>
-			<?php
-				if(!isset($_SESSION['username']))
-					echo "<a href='login.php' id='login' title='Accedi con le tue credenziali oppure registrati se ancora non possiedi un account'>Login</a>";
-				else {
-					echo "<a href='logout.php' id='login' title='Effettua il logout dal sito'>Logout</a>
-						<a href='info_utente.php' id='user' title='Visualizza le informazioni relative al tuo account'>".$_SESSION['username']."</a>";
-				}
-				if(isset($_SESSION['admin']))
-					echo "<a href='admin.php' id='admin' title='Entra nell&#39area amministrativa del sito'>Area privata</a>";
-			?>
-        </div>
+		
 		<div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Lavora con Noi</div>
 		<div class="contall">
 		<!--OFFERTE-->

@@ -12,9 +12,22 @@ a {
 #navbar {
     display: none;
 }
-.nascosto {
-    margin-top: 2em;
+
+.nascosto{
+	margin: 0.6em;
+	clear: both;
+    font-size: 0.75em;
     display: block;
+}
+.logo_nascosto{
+    width: 5em;
+ 
+}
+#back_link{
+    display: none;
+}
+.logo_nascosto img{
+    width: 100%;
 }
 .div_contatto:first-of-type {
     width: calc(33.33% - 1em);

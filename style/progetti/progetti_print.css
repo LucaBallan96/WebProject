@@ -13,8 +13,16 @@ a {
     display: none;
 }
 .nascosto {
-    margin-top: 2em;
+    margin:0.6em;
     display: block;
+    clear: both;
+}
+.logo_nascosto{
+    width: 5em;
+ 
+}
+.logo_nascosto img{
+    width: 100%;
 }
 
 .div_contatto:first-of-type {

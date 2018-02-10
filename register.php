@@ -21,7 +21,7 @@
 		<link rel="stylesheet" media="print" href="style/register/register_print.css">
 	</head>
 	<body>
-        <div class="nascosto">Ti trovi in: Home > Login > Nuovo Account</div>
+        <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Login > Nuovo Account</div>
         <?php
             if(isset($_SESSION['page']))
                 echo "<a id='back_link' href='".$_SESSION['page']."' title='Torna alla pagina precedente'>Indietro</a>";

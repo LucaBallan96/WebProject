@@ -8,12 +8,12 @@
     padding: 3.5em 2em 2em;
     color: #1551a0;
     text-align: center;
-    font-size: 30px;
+    font-size: 2em;
 }
 #back_link {
     position: fixed;
-    left: 20px;
-    top: 70px;
+    left: 1.25em;
+    top: 4.4em;
     padding: 1em;
     color: white;
 	background-color: #55bbff;
@@ -24,7 +24,7 @@
 #div_image {
     position: relative;
     width: calc(40% - 2em);
-    height: 300px;
+    height: 18.75em;
     float: left;
     margin-left: 2em;
     overflow: hidden;
@@ -37,7 +37,7 @@
 }
 #div_specifiche {
     width: calc(60% - 4em);
-    height: calc(300px - 4em);
+    height: 14.75em;
     margin: 2em 2em;
     float: left;
 }

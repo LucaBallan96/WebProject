@@ -21,8 +21,8 @@ body {
 }
 #back_link {
     position: fixed;
-    left: 20px;
-    top: 20px;
+    left: 1.25em;
+    top: 1.25em;
     padding: 1em;
     color: white;
 	background-color: #55bbff;
@@ -30,11 +30,11 @@ body {
 form {
     display: block;
     width: 100%;
-    height: 450px;
+    height: 28.12em;
 }
 #user_data {
     border: none;
-    width: 450px;
+    width: 28.12em;
     height: 80%;
     margin: auto;
 }
@@ -43,7 +43,7 @@ form {
     padding: 0.8em;
 }
 .data_input input {
-    width: 250px;
+    width: 15.62em;
     float: right;
 }
 #change_password_checkbox {
@@ -66,7 +66,7 @@ form {
 }
 #change_password_checkbox:checked ~ #change_div {
     visibility: visible;
-    height: 140px;
+    height: 8.75em;
     opacity: 1;
 }
 #change_password_checkbox:checked + label {
@@ -102,6 +102,7 @@ form {
     display: none;
 }
 .remove_form_div {
+    visibility: hidden;
     position: fixed;
     top: 0;
     left: -100%;
@@ -114,13 +115,13 @@ form {
 }
 .remove_btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
+    top: 1.25em;
+    right: 1.25em;
+    width: 3.75em;
+    height: 3.75em;
     background-image: url("../../images/remove_user.png");
     background-position: center;
-    background-size: 50px;
+    background-size: 3.12em;
     background-repeat: no-repeat;
 }
 .remove_btn:hover {
@@ -129,6 +130,7 @@ form {
 }
 .remove_control:checked ~ .remove_form_div {
     left: 0;
+    visibility: visible;
 }
 .remove_control:checked + label {
     z-index: 2;
@@ -139,9 +141,9 @@ form {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
-    height: 200px;
-    background-color: #a1d9ff;
+    width: 37.5em;
+    height: 12.5em;
+    background-color: #bce4ff;
 }
 .remove_fieldset {
     border: none;
@@ -150,7 +152,7 @@ form {
     height: calc(100% - 2em);
     margin-top: 2em;
     padding: 3em;
-    color: grey;
+    color: gray;;
     text-align: center;
 }
 .radio_choice {
@@ -178,7 +180,6 @@ form {
 }
 .apply_btn {
     border: none;
-    outline: none;
     position: absolute;
     bottom: 2em;
     right: 2em;
