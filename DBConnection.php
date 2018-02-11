@@ -689,7 +689,7 @@
 							</form>
 						</div>
 						<input type='checkbox' id='remove".$count."' class='remove_control'/>
-						<label id='rem_imp_lab".$count."' class='remove_btn' for='remove".$count."' title='Rimuovi i dati dell&#39impiegato tabindex='0' onclick='changeVisibility(this)'></label>
+						<label id='rem_imp_lab".$count."' class='remove_btn' for='remove".$count."' title='Rimuovi i dati dell&#39impiegato' tabindex='0' onclick='changeVisibility(this)'></label>
 						<div id='rem_imp_div".$count."' class='remove_form_div'>
 							<form class='remove_form' action='form_control.php' method='post'>
 								<fieldset class='remove_fieldset'>
