@@ -29,10 +29,16 @@
 		<!-- NAVIGATION -->
 		<?php include 'navbar.php';?>
 
-		
 		<div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Lavora con Noi > Prenotazioni</div>
         <div class="contall">
-        <a id="back_link" href="lavoro.php" title="Torna alle offerte di lavoro">Offerte</a>
+
+		<?php
+            if(isset($_SERVER['HTTP_REFERER']))
+                echo "<a id='back_link' href='".$_SERVER['HTTP_REFERER']."' title='Torna alla pagina precedente'>Indietro</a>";
+            else
+                echo "<a id='back_link' href='lavoro.php' title='Torna alle offerte'>Offerte</a>";
+        ?>
+
 		<!--PRENOTAZIONI-->
         <?php
             $conn->get_prenotation();
@@ -74,9 +80,8 @@
 				@Copyright 2012-2017 &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspCostruzioni Bordignon S.r.l &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspC.F. e P.IVA 0334405269 
 			</div>
 		</div>
-			</div>
-		<?php
-			$_SESSION['page']='prenotazioni.php';
-		?>
+		
+		</div>
+
 	</body>
 </html>

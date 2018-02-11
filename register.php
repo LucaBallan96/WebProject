@@ -3,7 +3,7 @@
     $conn=new DBConnection();
 
 	if(isset($_SESSION['username'])) // se è già stato effettuato il login
-        header('Location: '.$_SESSION['page']);
+        header('Location: index.php');
 ?>
 
 <!DOCTYPE html>
@@ -22,10 +22,14 @@
 	</head>
 	<body>
         <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Login > Nuovo Account</div>
+
         <?php
-            if(isset($_SESSION['page']))
-                echo "<a id='back_link' href='".$_SESSION['page']."' title='Torna alla pagina precedente'>Indietro</a>";
+            if(isset($_SERVER['HTTP_REFERER']))
+                echo "<a id='back_link' href='".$_SERVER['HTTP_REFERER']."' title='Torna alla pagina precedente'>Indietro</a>";
+            else
+                echo "<a id='back_link' href='login.php' title='Torna alla pagina di Login'>Login</a>";
         ?>
+
         <h1 class="header">Registrazione nuovo account</h1>
         <form action="form_control.php" method="post">
             <fieldset id="user_data">
@@ -48,8 +52,5 @@
             }
         ?>
 
-        <?php
-			$_SESSION['page']='register.php';
-		?>
     </body>
 </html>

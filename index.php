@@ -134,10 +134,8 @@
 				@Copyright 2012-2017 &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspCostruzioni Bordignon S.r.l &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspC.F. e P.IVA 0334405269
 			</div>
 		</div>
+		
 		</div>
-		<?php
-			$_SESSION['page']='index.php';
-		?>
 		
 	</body>
 </html>

@@ -26,9 +26,9 @@
 		<!-- NAVIGATION -->
 		<?php include 'navbar.php';?>
 
-		
 		<div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Iniziative</div>
 		<div class="contall">
+
         <!--STAMPA-->
         <h1 id="stampa" class="title">Rassegna Stampa</h1>
         <?php 
@@ -113,9 +113,8 @@
 				@Copyright 2012-2017 &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspCostruzioni Bordignon S.r.l &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspC.F. e P.IVA 0334405269 
 			</div>
 		</div>
-					</div>
-		<?php
-			$_SESSION['page']='iniziative.php';
-		?>
+					
+		</div>
+
     </body>
 </html>

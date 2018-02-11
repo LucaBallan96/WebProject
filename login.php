@@ -3,7 +3,7 @@
 	$conn=new DBConnection();
 
 	if(isset($_SESSION['username'])) // se è già stato effettuato il login
-		header('Location: '.$_SESSION['page']);
+		header('Location: index.php');
 ?>
 
 <!DOCTYPE html>
@@ -22,10 +22,18 @@
 	</head>
 	<body>
         <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Login</div>
+
         <?php
-            if(isset($_SESSION['page']))
-                echo "<a id='back_link' href='".$_SESSION['page']."' title='Torna alla ".$_SESSION['page']." precedente'>Indietro</a>";
-        ?>        
+            if(isset($_SERVER['HTTP_REFERER'])) {
+                if(!strpos($_SERVER['HTTP_REFERER'],'register.php') && !strpos($_SERVER['HTTP_REFERER'],'articolo.php') && !strpos($_SERVER['HTTP_REFERER'],'info_progetto.php'))
+                    echo "<a id='back_link' href='".$_SERVER['HTTP_REFERER']."' title='Torna alla pagina precedente'>Indietro</a>";
+                else
+                    echo "<a id='back_link' href='index.php' title='Torna alla pagina iniziale'>Home</a>";
+            }
+            else
+                echo "<a id='back_link' href='index.php' title='Torna alla pagina iniziale'>Home</a>";
+        ?>
+
         <h1 class="header">Login</h1>
         <form action="form_control.php" method="post">
             <div id="container">
@@ -55,8 +63,5 @@
             }
         ?>
 
-        <?php
-			$_SESSION['page']='login.php';
-		?>
     </body>
 </html>

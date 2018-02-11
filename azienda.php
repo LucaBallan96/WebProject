@@ -26,10 +26,9 @@
 		<!-- NAVIGATION -->
         <?php include 'navbar.php';?>
         
-
-        
         <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Azienda</div>
         <div class="contall">
+        
         <!--TITLE-->
         <h1 id="title">La Nostra Azienda</h1>
          
@@ -173,9 +172,8 @@
 			    @Copyright 2012-2017 &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspCostruzioni Bordignon S.r.l &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspC.F. e P.IVA 0334405269 
 		    </div>
 	    </div>
-                </div>
-        <?php
-			$_SESSION['page']='azienda.php';
-		?>
+                
+        </div>
+
     </body>
 </html>

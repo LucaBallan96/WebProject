@@ -29,14 +29,20 @@
 		<!-- NAVIGATION -->
 		<?php include 'navbar.php';?>
 
-		
 		<div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Progetti > Info Progetto</div>
-<div class="contall">
+		
+		<div class="contall">
+
+        <?php
+            if(isset($_SERVER['HTTP_REFERER']))
+                echo "<a id='back_link' href='".$_SERVER['HTTP_REFERER']."' title='Torna alla pagina precedente'>Indietro</a>";
+            else
+                echo "<a id='back_link' href='progetti.php' title='Torna ai progetti'>Progetti</a>";
+        ?>
+
 		<!-- INFO PROGETTO -->
 		<?php
-            if(isset($_SESSION['page']))
-                echo "<a id='back_link' href='".$_SESSION['page']."' title='Torna alla pagina precedente'>Indietro</a>";
-            $progetto=$_GET['numero'];
+		    $progetto=$_GET['numero'];
 			$conn->get_info_progetto($progetto);
         ?>
 
@@ -76,9 +82,8 @@
 				@Copyright 2012-2017 &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspCostruzioni Bordignon S.r.l &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspC.F. e P.IVA 0334405269 
 			</div>
 		</div>
-			</div>
-		<?php
-			$_SESSION['page']='info_progetto.php?numero='.$_GET['numero'];
-		?>
+		
+		</div>
+
     </body>
 </html>

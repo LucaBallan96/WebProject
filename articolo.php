@@ -32,13 +32,20 @@
 		
 		<div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Iniziative > Articoli</div>
 		<div class="contall">
+
+        <?php
+            if(isset($_SERVER['HTTP_REFERER']))
+                echo "<a id='back_link' href='".$_SERVER['HTTP_REFERER']."' title='Torna alla pagina precedente'>Indietro</a>";
+            else
+                echo "<a id='back_link' href='iniziative.php' title='Torna agli articoli'>Articoli</a>";
+        ?>
+
 		<!--TITLE SUBTITLE-->
-		<a id="back_link" href="iniziative.php" title="iniziative e articoli">Iniziative</a>
-		
-			<?php
-				$conn->get_article();
-			?>
+		<?php
+			$conn->get_article();
+		?>
 		<!--CONTATTI-->
+
 		<div id="div_container_contatti">
 			<div id="div_contatti">
 				<div id="div_bordignon" class="div_contatto">
@@ -74,9 +81,8 @@
 				@Copyright 2012-2017 &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspCostruzioni Bordignon S.r.l &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspC.F. e P.IVA 0334405269 
 			</div>
 		</div>
-			</div>
-		<?php
-			$_SESSION['page']='articolo.php?id='.$_GET['id'];
-		?>
+		
+		</div>
+
 	</body>
 </html>

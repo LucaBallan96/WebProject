@@ -26,15 +26,15 @@
 		<!-- NAVIGATION -->
 		<?php include 'navbar.php';?>
 
-		
         <div id="navbar_bottom_padding"></div>
-		<div class="nascosto">Ti trovi in: Home > Progetti</div>
-<div class="contall">
+        <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Progetti</div>
+		<div class="contall">
+
         <input id="grid_control" class="view_control" type="radio" name="view_control" checked/>
-        <label id="grid_view" class="view" for="grid_control" tabindex="0"title="Visualizza i progetti come griglia">Griglia</label>
+        <label id="grid_view" class="view" for="grid_control" tabindex="0" title="Visualizza i progetti come griglia">Griglia</label>
         <input id="list_control" class="view_control" type="radio" name="view_control"/>
-        <label id="list_view" class="view" for="list_control" tabindex="0"title="Visualizza i progetti come elenco">Lista</label>
-        <label id="search_label">Cerca <input id="text_search" type="text" placeholder="filtra per nome o città" oninput="project_filter(this.value)" title="Inserisci un testo per filtrare i progetti secondo il nome o la località"/></label>
+        <label id="list_view" class="view" for="list_control" tabindex="0" title="Visualizza i progetti come elenco">Lista</label>
+        <label id="search_label">Cerca <input id="text_search" type="text" placeholder="Filtra per nome o città" oninput="project_filter(this.value)" title="Inserisci un testo per filtrare i progetti secondo il nome o la località"/></label>
 
 		<!-- PROGETTI -->
         <?php
@@ -77,9 +77,8 @@
 				@Copyright 2012-2017 &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspCostruzioni Bordignon S.r.l &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspC.F. e P.IVA 0334405269 
 			</div>
 		</div>
-			</div>
-		<?php
-			$_SESSION['page']='progetti.php';
-		?>
+		
+		</div>
+
 	</body>
 </html>

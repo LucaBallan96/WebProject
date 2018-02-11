@@ -27,7 +27,6 @@
      <!--SCRIPT-->
 		<script type="text/javascript" src="script/menuScript.js"></script>
 
-        
         <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Info Account</div>
        
         <?php
@@ -50,9 +49,14 @@
                         </form>
                     </div>";
         ?>
+
         <div class="contall">
+
         <?php
-            echo "<a id='back_link' href='".$_SESSION['page']."' title='Torna alla pagina precedente'>Indietro</a>";
+            if(isset($_SERVER['HTTP_REFERER']))
+                echo "<a id='back_link' href='".$_SERVER['HTTP_REFERER']."' title='Torna alla pagina precedente'>Indietro</a>";
+            else
+                echo "<a id='back_link' href='index.php' title='Torna alla pagina iniziale'>Home</a>";
         ?>
         
         <h1 class="header"><?php echo $_SESSION['username']; ?> - Informazioni sul tuo account</h1>
@@ -74,10 +78,7 @@
                 else if($_GET['error']==4)
                     echo "<p class='error'><b>Nome utente non disponibile, riprovare</b></p>";
             }
-        ?>       
+        ?>
 
-        <?php
-			$_SESSION['page']='info_utente.php';
-		?>
     </body>
 </html>

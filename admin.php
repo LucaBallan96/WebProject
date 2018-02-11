@@ -248,9 +248,6 @@
 
 		</div>
 		</div>
-
-		<?php
-			$_SESSION['page']='admin.php';
-		?>
+		
     </body>
 </html>
