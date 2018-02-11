@@ -192,6 +192,11 @@ a{
     color: black;
     display: table;
 }
+p {
+    width: 100%;
+    text-align: center;
+    padding: 2em;
+}
 
 
 

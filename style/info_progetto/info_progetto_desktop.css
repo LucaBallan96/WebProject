@@ -10,7 +10,7 @@
     font-size: 2em;
 }
 #back_link {
-    position: fixed;
+    position: absolute;
     left: 1.25em;
     top: 4.4em;
     text-decoration: none;
@@ -35,6 +35,7 @@
     left: 50%;
     transform: translate(-50%, 0);
     height: 100%;
+    text-align: center;
 }
 #div_specifiche {
     width: calc(60% - 8em);

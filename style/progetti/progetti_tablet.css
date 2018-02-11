@@ -1,4 +1,4 @@
-@import url("../navbar_mobile.css");
+@import url("../navbar_tablet.css");
 
 #menu_bt2{
     color: white;
@@ -96,6 +96,7 @@
 	left: 50%;
     transform: translate(-50%,-50%);
     transition: 0.5s;
+    text-align: center;
 }
 .grid_pr_name_div {
     position: absolute;
@@ -147,6 +148,7 @@
     width: 100%;
     transition: 0.5s;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 .list_pr_name_a {
     width: calc(100% - 150px);
@@ -174,4 +176,9 @@
 }
 .list_project:hover .list_pr_name_a, .list_project:focus .list_pr_name_a {
     background-color: #33a3ff;
+}
+p {
+    width: 100%;
+    text-align: center;
+    padding: 6em 0 2em;
 }

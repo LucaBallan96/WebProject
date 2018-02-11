@@ -1,4 +1,4 @@
-@import url("../navbar_mobile.css");
+@import url("../navbar_tablet.css");
 
 #menu_bt2{
     color: white;
@@ -11,7 +11,7 @@
     font-size: 2em;
 }
 #back_link {
-    position: fixed;
+    position: absolute;
     left: 1.25em;
     top: 4.4em;
     padding: 1em;
@@ -34,6 +34,7 @@
     left: 50%;
     transform: translate(-50%, 0);
     height: 100%;
+    text-align: center;
 }
 #div_specifiche {
     width: calc(60% - 4em);

@@ -50,9 +50,9 @@
                 </div>
             </div>
             <div id="container_img_storia">
-                <div class="container_img"><img class="img_storia"src="images/1.png" title="infrastruttura per turbina elettrica" alt="infrastruttura per turbina elettrica"/></div>
-                <div class="container_img"><img class="img_storia"src="images/2.png" title="cantiere vecchia cava" alt="cantiere vecchia cava"/></div>
-                <div class="container_img"><img class="img_storia"src="images/3.png" title="prime impalcature usate in azienda" alt="prime impalcature usate in azienda"/></div>
+                <div class="container_img"><img class="img_storia" src="images/1.png" title="Infrastruttura per turbina elettrica" alt="Infrastruttura per turbina elettrica"/></div>
+                <div class="container_img"><img class="img_storia" src="images/2.png" title="Cantiere della vecchia cava" alt="Cantiere della vecchia cava"/></div>
+                <div class="container_img"><img class="img_storia" src="images/3.png" title="Prime impalcature usate in azienda" alt="Prime impalcature usate in azienda"/></div>
             </div>
         </div>
 
@@ -93,8 +93,8 @@
                 </div>
             </div>
             <div id="container_img_sedi">
-                <iframe tabindex="-1"id ="map" title="mappa della sede principale Costruzioni Bordignon S.r.l."src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44522.22438841073!2d12.051779077956512!3d45.778424079105896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47793ae8658b48a7%3A0x94926af6ccab5215!2sCostruzioni+Bordignon+Srl!5e0!3m2!1sit!2sit!4v1514980483579"  frameborder="0" style="border:0" allowfullscreen></iframe>
-                <img id="img_persone"src="images/sede.png"title="sede Costruzioni Bordignon S.r.l." alt="sede Costruzioni Bordignon S.r.l."/>
+                <iframe tabindex="-1" id ="map" title="Mappa della sede principale Costruzioni Bordignon S.r.l." src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44522.22438841073!2d12.051779077956512!3d45.778424079105896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47793ae8658b48a7%3A0x94926af6ccab5215!2sCostruzioni+Bordignon+Srl!5e0!3m2!1sit!2sit!4v1514980483579"  frameborder="0" style="border:0" allowfullscreen></iframe>
+                <img id="img_persone" src="images/sede.png"title="Sede Costruzioni Bordignon S.r.l." alt="Sede Costruzioni Bordignon S.r.l."/>
             </div>
         </div>
     
@@ -122,7 +122,7 @@
                     B.G.P. General Bau Srl con sede a Bressanone (BZ) – Quota capitale partecipato 100%.</br></br>
                 </div>
             </div>
-            <div id="container_img_persone"><img id="organigramma" src="images/organigramma.png" title="organigramma aziendale"/></div>
+            <div id="container_img_persone"><img id="organigramma" alt="Organigramma aziendale" src="images/organigramma.png" title="Organigramma aziendale"/></div>
         </div>
 
         <!--IMPIEGATI-->

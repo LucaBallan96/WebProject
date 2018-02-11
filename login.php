@@ -25,7 +25,7 @@
 
         <?php
             if(isset($_SERVER['HTTP_REFERER'])) {
-                if(!strpos($_SERVER['HTTP_REFERER'],'register.php') && !strpos($_SERVER['HTTP_REFERER'],'articolo.php') && !strpos($_SERVER['HTTP_REFERER'],'info_progetto.php'))
+                if(!strpos($_SERVER['HTTP_REFERER'],'register.php') && !strpos($_SERVER['HTTP_REFERER'],'articolo.php') && !strpos($_SERVER['HTTP_REFERER'],'info_progetto.php') && !strpos($_SERVER['HTTP_REFERER'],'login.php'))
                     echo "<a id='back_link' href='".$_SERVER['HTTP_REFERER']."' title='Torna alla pagina precedente'>Indietro</a>";
                 else
                     echo "<a id='back_link' href='index.php' title='Torna alla pagina iniziale'>Home</a>";

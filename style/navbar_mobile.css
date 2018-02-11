@@ -127,6 +127,9 @@ a {
 #admin, #login, #user {
 	display: block;
 }
+#user {
+	font-weight: bold;
+}
 #work:hover, #contacts:hover, #admin:hover, #login:hover, #user:hover, #work:focus, #contacts:focus, #admin:focus, #login:focus, #user:focus {
 	color: #afd2ff;
 }

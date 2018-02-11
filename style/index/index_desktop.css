@@ -129,7 +129,8 @@ input[type="checkbox"]{
 #agiu img{
     height: 100%;
     transition: 0.5s;
-
+    line-height: 3.75em;
+    text-align: center;
 }
 #agiu{
     height: 100%;
@@ -208,6 +209,7 @@ input[type="checkbox"]{
     top:50%;
     transform: translate(-50%,-50%);
     line-height: 15em;
+    text-align: center;
 }
 #img_offer{
     height: 50%;
@@ -240,7 +242,7 @@ input[type="checkbox"]{
 }
 .div_text_inside_group{
     position: relative;
-    color: grey;
+    color: #01346e;
     font-size: 1.2em; 
     display: table;
     left: 50%;

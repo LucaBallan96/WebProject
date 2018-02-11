@@ -11,31 +11,31 @@ echo "<input id='compact_menu' onclick='changeTitle(this)' type='checkbox'/>
     </label>
 
     <div id='navbar'>
-        <a id='home_link' href='index.php' ><img id='logo' src='images/logo.png' title='Vai alla pagina iniziale' accesskey='h' alt='Logo Costruzioni Bordignon S.r.l.' ></a>
+        <a id='home_link' href='index.php' ><img id='logo' src='images/logo.png' title='Vai alla pagina iniziale' accesskey='h' alt='Logo Costruzioni Bordignon S.r.l.'/></a>
         <div class='dropdown'>
-            <a id='menu_bt1' class='drop_button' href='azienda.php' accesskey='a' title='Visualizza le informazioni sull'azienda'><u>A</u>zienda</a>
+            <a id='menu_bt1' class='drop_button' href='azienda.php' accesskey='a' title='Visualizza le informazioni sull&#39azienda'><u>A</u>zienda</a>
             <div id='content_menu_bt1' class='drop_content'>
-                <a href='azienda.php#storia' title='Leggi la storia dell'azienda' >Storia<div>&gt</div></a>
-                <a href='azienda.php#sedi' title='Visualizza le sedi in cui opera l'azienda' >Sedi<div>&gt</div></a>
-                <a href='azienda.php#persone' title='Visualizza gli impiegati dell'azienda'>Persone<div>&gt</div></a>
+                <a href='azienda.php#storia' title='Leggi la storia dell&#39azienda' >Storia<div>&gt</div></a>
+                <a href='azienda.php#sedi' title='Visualizza le sedi in cui opera l&#39azienda' >Sedi<div>&gt</div></a>
+                <a href='azienda.php#persone' title='Visualizza gli impiegati dell&#39azienda'>Persone<div>&gt</div></a>
             </div>
         </div>
         <div class='dropdown'>
-            <a id='menu_bt2' class='drop_button' href='progetti.php' title='Visualizza i progetti in cui si impegna l'azienda' accesskey='p'><u>P</u>rogetti</a>
+            <a id='menu_bt2' class='drop_button' href='progetti.php' title='Visualizza i progetti in cui si impegna l&#39azienda' accesskey='p'><u>P</u>rogetti</a>
             <div id='content_menu_bt2' class='drop_content'>
                 <a href='progetti.php' title='Visualizza i progetti in corso'>In corso<div>&gt</div></a>
                 <a href='progetti.php#terminati' title='Visualizza i progetti terminati'>Terminati<div>&gt</div></a>
             </div>
         </div>
         <div class='dropdown'>
-            <a id='menu_bt3' class='drop_button' href='iniziative.php' title='Visualizza gli articoli sull'azienda e le certificazioni ricevute' accesskey='i'><u>I</u>niziative</a>
+            <a id='menu_bt3' class='drop_button' href='iniziative.php' title='Visualizza gli articoli sull&#39azienda e le certificazioni ricevute' accesskey='i'><u>I</u>niziative</a>
             <div id='content_menu_bt3' class='drop_content'>
-                <a href='iniziative.php#stampa' title='Leggi gli articoli che trattano dell'azienda'>Stampa<div>&gt</div></a>
+                <a href='iniziative.php#stampa' title='Leggi gli articoli che trattano dell&#39azienda'>Stampa<div>&gt</div></a>
                 <a href='iniziative.php#certificazioni' title='Visualizza le certificazioni'>Certificazioni<div>&gt</div></a>
             </div>
         </div>
-        <a href='lavoro.php' id='work' title='Visualizza le offerte di lavoro e fissa un colloquio con l'azienda' accesskey='v'>La<u>v</u>ora con noi</a>
-        <a href='#div_container_contatti' id='contacts' title='Visualizza i nostri contatti, potrai chiamarci o mandare una mail per ricevere ulteriori informazioni' accesskey='c'><u>C</u>ontatti</a>";
+        <a href='lavoro.php' id='work' title='Visualizza le offerte di lavoro e fissa un colloquio con l&#39azienda' accesskey='v'>La<u>v</u>ora con noi</a>
+        <a href='#div_container_contatti' id='contacts' title='Visualizza i nostri contatti, potrai chiamarci o mandare una mail per ricevere ulteriori informazioni' onclick='close_navbar()' accesskey='c'><u>C</u>ontatti</a>";
     
 if(!isset($_SESSION['username']))
     echo "<a href='login.php' id='login' title='Accedi con le tue credenziali oppure registrati se ancora non possiedi un account' accesskey='l'><u>L</u>ogin</a>";

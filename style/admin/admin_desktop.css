@@ -47,7 +47,6 @@ a {
 	padding: 0.8em;
 }
 #user {
-	background-color: #0066ff;
 	font-weight: bold;
 }
 .nav_link:hover, .nav_link_dx:hover, #user:hover, .nav_link:focus, .nav_link_dx:focus, #user:focus {
@@ -79,7 +78,7 @@ a {
     background-color: white;
     z-index: 4;
     text-align: center;
-    border: 2px solid grey;
+    border: 2px solid #33a3ff;
     border-radius: 0.7em;
     overflow: hidden;
     animation: fade 1s 2s 1 forwards;
@@ -106,6 +105,15 @@ a {
     left: 50%;
     width: calc(100% - 6em);
     transform: translate(-50%, -50%);
+}
+.no_disp {
+    position: absolute;
+    left: 20em;
+    width: calc(100% - 40em);
+    padding: 0.5em 0;
+    text-align: center;
+    border-top: 1px solid #a1d9ff;
+    border-bottom: 1px solid #a1d9ff;
 }
 
 /* IMPIEGATI */
@@ -152,7 +160,7 @@ a {
     width: 60%;
     height: 100%;
     padding: 1em 0;
-    color: grey;
+    color: #01346e;
 }
 .imp_name, .imp_role, .imp_birth, .imp_mail {
     width: calc(100% - 3.5em);
@@ -334,7 +342,7 @@ a {
     width: 50%;
     height: calc(85% - 2em);
     float: left;
-    color: grey;
+    color: #01346e;
     padding: 2.5em 2em;
     margin-top: 2em;
 }
@@ -417,7 +425,7 @@ a {
     height: calc(100% - 2em);
     margin-top: 2em;
     padding: 3em;
-    color: grey;
+    color: #01346e;
     text-align: center;
 }
 .radio_choice {
@@ -506,7 +514,7 @@ a {
     height: calc(100% - 2em);
     float: left;
     margin: 1em;
-    color: grey;
+    color: #01346e;
 }
 .project_img {
     width: calc(35% - 2em);
@@ -540,7 +548,6 @@ a {
 .project_data div input[type="text"], .project_data div input[type="date"] {
     float: right;
     width: 40%;
-    padding: 0.3em;
 }
 .project_data div label, .new_proj_data div label {
     float: right;
@@ -552,7 +559,7 @@ a {
     float: left;
     resize: none;
     margin: 1em;
-    color: grey;
+    color: #01346e;
     line-height: 1.5em;
     font-size: 0.9em;
 }
@@ -594,13 +601,12 @@ a {
     margin-top: 2em;
     padding: 0.5em;
     resize: none;
-    color: grey;
+    color: #01346e;;
     line-height: 1.5em;
 }
 .new_proj_data div input[type="text"], .new_proj_data div input[type="date"], .new_proj_image {
     float: right;
     width: 50%;
-    padding: 0.3em;
 }
 
 /* ARTICOLI */
@@ -612,7 +618,7 @@ a {
 .article_div {
     position: relative;
     width: calc(33.3% - 3em);
-    height: 37.5em;
+    min-height: 37.5em;
     float: left;
     margin: 0 3em 3em 0;
     min-width: 20em;
@@ -627,7 +633,7 @@ a {
 .article_image {
     position: relative;
     width: 100%;
-    height: 35%;
+    height: 15em;
     overflow: hidden;
 }
 .article_image img {
@@ -647,7 +653,8 @@ a {
     font-size: 0.8em;
 }
 .article_info_div {
-    width: calc(100% - 4em);
+    border: 1px solid red;
+    width: calc(100% - 5em);
     height: 30%;
     float: left;
 }
@@ -661,9 +668,9 @@ a {
 }
 .modify_article_btn, .remove_article_btn {
     display: block;
-    width: 4em;
+    width: 4.5em;
     height: 3.5em;
-    float: left;
+    float: right;
     background-position: center;
     background-size: 2.2em;
     background-repeat: no-repeat;
@@ -682,7 +689,7 @@ a {
 }
 .article_text {
     width: 100%;
-    height: calc(35% - 1em);
+    height: 30%;
     padding: 0.5em;
     margin-bottom: 1em;
     overflow-y: scroll;
@@ -700,7 +707,7 @@ a {
     background-color: #83cdff;
     color: black;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     opacity: 0;
     z-index: -1;
     overflow: hidden;
@@ -736,10 +743,11 @@ a {
 .article_info input {
     float: right;
     text-align: right;
+    width: 60%;
 }
 .mod_art_form textarea {
     width: calc(100% - 1em);
-    height: calc(35% - 1.5em);
+    height: 10em;
     font-size: 1em;
     padding: 0;
     margin: 0.5em 0.5em 1em;
@@ -747,9 +755,9 @@ a {
 }
 .save_mod_art, .reset_mod_art {
     border: none;
-    width: 4.75em;
+    width: 4.5em;
     height: 3em;
-    float: left;
+    float: right;
     color: white;
     background-color: #01346e;
 }
@@ -780,7 +788,7 @@ a {
     margin-top: 1em;
     padding: 2.5em 1em 1em 1.5em;
     float: left;
-    color: grey;
+    color: #01346e;
 }
 .new_art_info {
     width: 100%;
@@ -788,8 +796,7 @@ a {
 }
 .new_art_info input {
     float: right;
-    width: 9em;
-    padding: 0.3em;
+    width: 14em;
 }
 .new_art_info input[type='file'] {
     width: 14em;
@@ -799,7 +806,7 @@ a {
     height: calc(100% - 100px - 2em);
     float: left;
     margin: 1em;
-    color: grey;
+    color: #01346e;
 }
 .new_art_text, .new_off_mex {
     width: 100%;
@@ -836,6 +843,9 @@ a {
     background-color: #01346e;
     color: white;
     overflow: hidden;
+}
+.user_div a {
+    color: white;
 }
 .user_data {
     display: block;
@@ -895,15 +905,37 @@ a {
     background-image: url("../../images/close.png");
 }
 .mod_u_form_data {
+    position: relative;
     width: calc(100% - 5.5em);
-    margin: 1em;
+    height: 25%;
+}
+.mod_u_form_data input {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+}
+.mod_u_form_btn_div {
+    position: relative;
+    width: 100%;
+    height: 25%;
+}
+.mod_u_form_btn_div div {
+    display: table;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 .mod_u_form_btn {
     border: none;
     padding: 0.7em;
-    margin: 1em 0 0 2em;
+    float: left;
     background-color: #01346e;
     color: white;
+}
+.mod_u_form_btn:last-of-type {
+    margin-left: 2em;
 }
 .mod_u_form_btn:hover, .mod_u_form_btn:focus {
     text-decoration: underline;
@@ -925,11 +957,12 @@ a {
     margin: auto;
     margin-bottom: 3em;
     background-color: #83cdff;
+    overflow: hidden;
 }
 .mod_off_form {
     width: 100%;
     height: 15em;
-    color: white;
+    color: #01346e;
     transition: 0.5s;
 }
 .mod_off_info, .mod_off_dates, .mod_off_mex {
@@ -953,8 +986,7 @@ a {
     display: block;
     margin-top: 0.8em;
     width: 80%;
-    padding: 0.3em;
-    color: grey;
+    color: #01346e;
 }
 .mod_off_dates legend {
     height: 2.5em;
@@ -966,7 +998,7 @@ a {
 }
 .mod_off_date {
     float: right;
-    color: grey;
+    color: #01346e;
 }
 .mod_off_text {
     width: 100%;
@@ -974,7 +1006,7 @@ a {
     padding: 0.5em;
     margin-top: 1em;
     resize: none;
-    color: grey;
+    color: #01346e;
 }
 .only_print_text {
     display: none;
@@ -1061,7 +1093,7 @@ a {
 .cand_personal_info, .cand_general_info {
     height: 100%;
     float: left;
-    color: grey;
+    color: #01346e;
     font-size: 0.9em;
 }
 .cand_personal_info {
@@ -1079,6 +1111,8 @@ a {
 }
 .new_off_info input, .new_off_info select {
     float: right;
-    width: 9em;
-    padding: 0.3em;
+    width: 14em;
+}
+.no_cand {
+    padding: 2em;
 }

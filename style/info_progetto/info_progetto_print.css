@@ -58,6 +58,7 @@ a {
     left: 50%;
     transform: translate(-50%, 0);
     height: 100%;
+    text-align: center;
 }
 #div_specifiche {
     width: calc(60% - 8em);

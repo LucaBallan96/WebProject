@@ -31,7 +31,7 @@ a {
     width: 100%;
     padding: 2em 0em;
     text-align: center;
-    font-size: 36px;
+    font-size: 2em;
     font-weight: 100;
     clear: both;
 }
@@ -40,6 +40,13 @@ a {
 }
 .identity {
     display: none;
+}
+.no_disp {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0.5em 0;
+    text-align: center;
 }
 
 /* IMPIEGATI */

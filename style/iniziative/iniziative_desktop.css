@@ -147,4 +147,8 @@
     box-shadow: 8px 12px 20px #a1d9ff;
     
 }
-
+p {
+    width: 100%;
+    text-align: center;
+    padding: 2em;
+}

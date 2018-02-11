@@ -51,7 +51,7 @@
 				$conn->get_last_offer();
 			?>
 			</div>
-			<div class="contgiu"><div id="giu_link"><a id="agiu" href="#div_slogan" ><img src="images/giu.png" title="esplora pagina" alt="esplora pagina"/></a></div></div>
+			<div class="contgiu"><div id="giu_link"><a id="agiu" href="#div_slogan" ><img src="images/giu.png" title="Esplora la pagina" alt="Esplora la pagina"/></a></div></div>
 		
 		
 		<!--SLOGAN-->

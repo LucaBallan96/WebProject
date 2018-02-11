@@ -127,6 +127,9 @@ a {
 #admin, #login, #user {
 	display: block;
 }
+#user {
+	font-weight: bold;
+}
 #work:hover, #contacts:hover, #admin:hover, #login:hover, #user:hover, #work:focus, #contacts:focus, #admin:focus, #login:focus, #user:focus {
 	color: #afd2ff;
 }
@@ -144,13 +147,14 @@ a {
 }
 #div_contatti{
     height: 15em;
-    width: 44em;
+    width: 100%;
     margin: auto;
 }
 .div_contatto{
     position: relative;
     float: left;
-    width: 33.33%;
+	width: 33.33%;
+	padding-left: 2em;
     margin-top: 5.5em;
     font-size: 0.75em;
 	color: grey;

@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	date_default_timezone_set('UTC');
 
 	class DBConnection {
 		private $conn;
@@ -26,12 +27,12 @@
 				$terminati2="";
 				while($row = $result->fetch_assoc()) {
 					$stringa="<a href='info_progetto.php?numero=".$row['id']."' class='grid_project' title='Visualizza le informazioni sul progetto ".$row['name']."'>
-							<img class='grid_pr_image' src='images/".$row['image']."' />
+							<img class='grid_pr_image' src='images/".$row['image']."' alt='Foto del progetto ".$row['name']."'/>
 							<div class='grid_pr_name_div'><div class='grid_pr_name'>".$row['name']."</div></div>
 							<div class='grid_pr_location'>".$row['location']."</div>
 						</a>";
 					$stringa2="<div class='list_project' title='Visualizza le informazioni sul progetto ".$row['name']."'>
-							<div class='list_pr_image'><img src='images/".$row['image']."'/></div>
+							<div class='list_pr_image'><img src='images/".$row['image']."' alt='Foto del progetto ".$row['name']."'/></div>
 							<a href='info_progetto.php?numero=".$row['id']."' class='list_pr_name_a'><div class='list_pr_name'>".$row['name']."</div><div class='list_pr_location'>".$row['location']."</div></a>
 						</div>";
 					if($row['status']=='In corso') {
@@ -93,7 +94,7 @@
 						<div class='title_div'>Ultimo Progetto</div>
 				</div>
 				<div class='div_container_img'>
-					<img src='images/".$row['image']."'alt='Ultimo progetto inserito'/>
+					<img src='images/".$row['image']."' alt='Ultimo progetto inserito'/>
 					<div class='div_overlay'>
 					
 						<div class='div_text_inside_group'><span class='sp'>".$row['name']."</span></div>
@@ -131,7 +132,7 @@
 						<div class='title_div'>Offerte</div>
 				</div>
 				<div  class='div_container_img'>
-					<img id='img_offer' src='images/".$row['role'].".png'alt='Ultima offerta inserito'/>
+					<img id='img_offer' src='images/".$row['role'].".png'alt='Ultima offerta inserita'/>
 					<div class='div_overlay'>
 						<div class='div_text_inside_group'><span class='sp'>".$row['branch']."</span></br></br><span class='sp'>".$row['role']."</span></br></br><span class='sp'>".$row['contract']."</span></div>
 					</div>
@@ -161,7 +162,7 @@
 				$row = $result->fetch_assoc();
 				//$dateString = date("d-m-Y", strtotime($row['begin']));
 				echo "<h1 id='header'>".$row['name']."</h1>
-						<div id='div_image' title='".$row['image']."'><img src='images/".$row['image']."'/></div>
+						<div id='div_image' title='".$row['image']."'><img src='images/".$row['image']."' alt='Foto del progetto ".$row['name']."'/></div>
 						<div id='div_specifiche'>
 							<div class='specifica'>Committente<p class='spec_data'>".$row['client']."</p></div><div class='hor_row'></div>
 							<div class='specifica'>Tipologia<p class='spec_data'>".$row['type']."</p></div><div class='hor_row'></div>
@@ -228,7 +229,7 @@
 					
 					echo "<input id='of".$count."' type='checkbox' class='pro_select' />
 						<label class='label_offer' for='of".$count."'>
-							<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png' alt='offerta come ".$row['role']."'></div>
+							<div class='div_img_offer'><img class='img_offer' src='images/".$row['role'].".png' alt='Offerta come ".$row['role']."'></div>
 							<div class='div_information'>
 								<div class='text'>
 									".$row['role']." - ".$row['branch']." - ".$row['contract']."</br></br>
@@ -257,7 +258,7 @@
 				}
 			}
 			else{
-				echo "<p class='exception_offer' align='center'>Nessun'offerta prenotata</p>
+				echo "<p class='exception_offer' align='center'>Nessuna prenotazione effettuata</p>
 					<div class='divisor'></div>";
 			}
 		}
@@ -281,7 +282,7 @@
 					echo "<div  class='cont_ex'><a  class='link' href='articolo.php?id=".$row['id']."' title='".$row['title']."'><div class='container_article'>
 					
 					<div class='container_img'>
-					<img src='images/".$row['image']."' alt='immagine articolo'/>
+					<img src='images/".$row['image']."' alt='Immagine articolo'/>
 					</div>
 		
 					<div class='container_text'>
@@ -296,7 +297,7 @@
 				}
 			}
 			else{
-				echo "<h2>Nessun Articolo</h2>";
+				echo "<p>Nessun articolo disponibile</p>";
 			}
 		}
 
@@ -317,7 +318,7 @@
 					<div class='divisor'></div>
 						
 					<div class='container_text_img'>
-					<div class='container_img'><img src='images/".$row['image']."' alt='immagine articolo'/></div>
+					<div class='container_img'><img src='images/".$row['image']."' alt='Immagine articolo'/></div>
 						<div class='text'>
 							".$row['text']."
 							<div class='div_author'>Autore - ".$row['author']."</div>
@@ -328,7 +329,7 @@
 				}
 			}
 			else{
-				echo "<h2>Nessuna informazione trovata</h2>";
+				echo "<p>Nessuna informazione disponibile su questo articolo</p>";
 			}
 
 			
@@ -496,7 +497,7 @@
 								<input class='identity' type='text' name='old_image' value='".$row['image']."'/>
 								<div class='project_info'>
 									<div class='project_img'>
-										<div class='current_proj_img'><img src='images/".$row['image']."'/></div>
+										<div class='current_proj_img'><img src='images/".$row['image']."' alt='Immagine corrente progetto ".$row['name']."'/></div>
 										<div class='change_proj_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png' title='Inserisci una nuova foto per il progetto'/></div>
 									</div>
 									<div class='project_data'>
@@ -526,7 +527,7 @@
 				}
 			}
 			else {
-				echo "<p>Nessun progetto disponibile</p>";
+				echo "<p class='no_disp'>Nessun progetto disponibile</p>";
 			}
 		}
 
@@ -625,7 +626,7 @@
 					<div class='divisor'></div>";
 					while($row=$result->fetch_assoc()){
 						echo "<div class='div_impiegato' title='".$row['role']." ".$row['firstname']." ".$row['lastname']."' >
-						<img class='img_impiegato' src='images/".$row['image']."' alt='impiegato ".$row['firstname']." ".$row['lastname']."'/></br></br>
+						<img class='img_impiegato' src='images/".$row['image']."' alt='Impiegato ".$row['firstname']." ".$row['lastname']."'/></br></br>
 						<span class='spg'>Nome  </span><span class='spgr'>".$row['firstname']."</span></br> <div class='d'></div>
 						<span class='spg'>Cognome  </span><span class='spgr'>".$row['lastname']."</span></br><div class='d'></div>
 						<span class='spg'>Ruolo  </span><span class='spgr'>".$row['role']."</span></br><div class='d'></div>
@@ -704,7 +705,7 @@
 								<input class='apply_btn' type='submit' value='Applica' title='Applica la scelta'/>
 							</form>
 						</div>
-						<div class='imp_image'><img src='images/".$row['image']."'/></div>
+						<div class='imp_image'><img src='images/".$row['image']."' alt='Impiegato ".$row['firstname']." ".$row['lastname']."'/></div>
 						<div class='imp_info'>
 							<div class='imp_name'><div>".$row['firstname']." ".$row['lastname']."</div></div>
 							<div class='imp_birth'><div>".$row['birth']."</div></div>
@@ -729,7 +730,7 @@
 				}
 				echo "<div id='left_container'>".$left."</div><div id='right_container'>".$right."</div>";
 			} else
-				echo "<p>Nessun impiegato disponibile</p>";
+				echo "<p class='no_disp'>Nessun impiegato disponibile</p>";
 		}
 
 		public function remove_impiegato($imp) {
@@ -826,7 +827,7 @@
 				$count=1;
 				while($row = $result->fetch_assoc()) {
 					echo "<div class='article_div'>
-							<div class='article_image'><img src='images/".$row['image']."'/></div>
+							<div class='article_image'><img src='images/".$row['image']."' alt='Articolo ".$row['title']."'/></div>
 							<div class='article_info_div'>
 								<div class='article_info'>Data:<div>".$row['date']."</div></div>
 								<div class='article_info'>Autore:<div>".$row['author']."</div></div>
@@ -838,7 +839,7 @@
 							<label id='mod_art_lab".$count."' for='mod_art_checkbox".$count."' class='modify_article_btn' title='Modifica i dati dell&#39articolo' tabindex='0'></label>
 							<form id='mod_a".$count."' class='mod_art_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 								<div class='article_image'>
-									<img src='images/".$row['image']."'/>
+									<img src='images/".$row['image']."' alt='Immagine corrente articolo ".$row['title']."'/>
 									<div class='change_art_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png' title='Inserisci una nuova immagine per l&#39articolo'/></div>
 								</div>
 								<div class='article_info_div'>
@@ -866,7 +867,7 @@
 					$count++;
 				}
 			} else
-				echo "<p>Nessun articolo disponibile</p>";
+				echo "<p class='no_disp'>Nessun articolo disponibile</p>";
 		}
 
 		public function remove_articolo($art) {
@@ -1031,13 +1032,13 @@
 						}
 					}
 					else
-						echo	"<p>Nessuna candidatura a questa offerta</p>
+						echo	"<p class='no_cand'>Nessuna candidatura a questa offerta</p>
 							</div>";
 					echo "</div>";
 					$count++;
 				}
 			} else
-				echo "<p>Nessuna offerta disponibile</p>";
+				echo "<p class='no_disp'>Nessuna offerta disponibile</p>";
 		}
 
 		public function remove_offerta($off) {
@@ -1230,11 +1231,15 @@
 							<form class='mod_u_form' action='form_control.php' method='post'>
 								<input type='text' class='identity' name='old_user' value='".$row['username']."'/>
 								<input type='text' class='identity' name='old_accesses' value='".$row['accesses']."'/>
-								<input type='text' class='mod_u_form_data' name='admin_mod_user' placeholder='Username' value='".$row['username']."' maxlength='30' pattern='([a-zA-Z])[a-zA-Z0-9._%@#+-]{5,}' title='Username: deve iniziare con una lettera e contenere almeno 6 caratteri. Sono accettati i simboli . + - _ % @ e #' required/>
-								<input type='text' class='mod_u_form_data' name='admin_mod_u_pass' placeholder='Password' value='".$row['password']."' maxlength='30' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9._%@#+-]{8,}' title='Password: deve contenere almeno un numero, una lettera maiuscola ed una minuscola, e deve avere complessivamente almeno 8 caratteri. Sono accettati i simboli . + - _ % @ e #' required/>
-								<input type='email' class='mod_u_form_data' name='admin_mod_u_mail' placeholder='E-mail' value='".$row['mail']."' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$' title='E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %' required/>
-								<input type='submit' class='mod_u_form_btn' value='Salva' title='Salva i dati dell&#39utente'/>
-								<input type='reset' class='mod_u_form_btn' value='Annulla' title='Resetta i dati inseriti'/>
+								<div class='mod_u_form_data'><input type='text' name='admin_mod_user' placeholder='Username' value='".$row['username']."' maxlength='30' pattern='([a-zA-Z])[a-zA-Z0-9._%@#+-]{5,}' title='Username: deve iniziare con una lettera e contenere almeno 6 caratteri. Sono accettati i simboli . + - _ % @ e #' required/></div>
+								<div class='mod_u_form_data'><input type='text' name='admin_mod_u_pass' placeholder='Password' value='".$row['password']."' maxlength='30' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9._%@#+-]{8,}' title='Password: deve contenere almeno un numero, una lettera maiuscola ed una minuscola, e deve avere complessivamente almeno 8 caratteri. Sono accettati i simboli . + - _ % @ e #' required/></div>
+								<div class='mod_u_form_data'><input type='email' name='admin_mod_u_mail' placeholder='E-mail' value='".$row['mail']."' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$' title='E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %' required/></div>
+								<div class='mod_u_form_btn_div'>
+									<div>
+										<input class='mod_u_form_btn' type='submit' value='Salva' title='Salva i dati dell&#39utente'/>
+										<input class='mod_u_form_btn' type='reset' value='Annulla' title='Resetta i dati inseriti'/>
+									</div>
+								</div>
 							</form>
 							<input id='rem_u_checkbox".$count."' class='rem_u_control' type='checkbox' onclick='changeTitle(this)'/>
 							<label id='rem_u_lab".$count."' for='rem_u_checkbox".$count."' class='rem_u_label' title='Rimuovi i dati dell&#39utente' tabindex='0'></label>
@@ -1247,7 +1252,7 @@
 					$count++;
 				}
 			} else
-				echo "<p>Nessun utente disponibile</p>";
+				echo "<p class='no_disp'>Nessun utente disponibile</p>";
 		}
 
 		// RIMOZIONE UTENTE

@@ -99,3 +99,8 @@ a {
     padding-left: 2em;
     transform: translate(0, -50%);
 }
+p {
+    width: 100%;
+    text-align: center;
+    padding: 2em;
+}

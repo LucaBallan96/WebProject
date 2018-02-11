@@ -6,6 +6,7 @@
 }
 body {
     background-color: #f1f5fa;
+    min-width: 380px;
 }
 .nascosto {
     display: none;
@@ -30,7 +31,7 @@ a {
 .cm_line {
 	width: 2em;
     height: 0.2em;
-    background-color: #0077ff;
+    background-color: white;
     margin: 0.5em 0;
 }
 #cm_label:hover {
@@ -40,9 +41,6 @@ a {
 #cm_label:hover, #cm_label:focus {
 	cursor: pointer;
 	background-color: #33a3ff;
-}
-#cm_label:hover .cm_line, #cm_label:focus .cm_line {
-	background-color: white;
 }
 #compact_menu:checked ~ #nav {
 	left: 0;
@@ -87,8 +85,8 @@ a {
     width: 100%;
     padding: 1em 1.5em;
     display: block;
-    color: black;
     text-decoration: underline;
+    color: white;
 }
 #nav_home {
     display: block;
@@ -100,8 +98,11 @@ a {
 	width: 100%;
 	padding: 0.8em;
 }
+#user {
+	font-weight: bold;
+}
 .nav_link:hover, .nav_link_dx:hover, #user:hover, .nav_link:focus, .nav_link_dx:focus, #user:focus {
-    color: white;
+    color: #afd2ff;
 }
 
 /* PARTI IN COMUNE */
@@ -112,7 +113,7 @@ a {
 }
 .header {
     width: 100%;
-    padding: 1.5em 0em;
+    padding: 2em 0em;
     color: #1551a0;
     text-align: center;
     font-size: 1.4em;
@@ -129,7 +130,7 @@ a {
     background-color: white;
     z-index: 4;
     text-align: center;
-    border: 2px solid grey;
+    border: 2px solid #33a3ff;
     border-radius: 10px;
     overflow: hidden;
     animation: fade 1s 2s 1 forwards;
@@ -157,6 +158,15 @@ a {
     width: calc(100% - 4em);
     transform: translate(-50%, -50%);
     font-size: 0.9em;
+}
+.no_disp {
+    position: absolute;
+    left: 5em;
+    width: calc(100% - 10em);
+    padding: 0.5em 0;
+    text-align: center;
+    border-top: 1px solid #a1d9ff;
+    border-bottom: 1px solid #a1d9ff;
 }
 
 /* IMPIEGATI */
@@ -195,7 +205,7 @@ a {
     border: 1px solid #01346e;
     width: 100%;
     height: 40%;
-    color: grey;
+    color: #01346e;
 }
 .imp_name, .imp_role, .imp_birth, .imp_mail {
     width: 100%;
@@ -377,7 +387,7 @@ a {
     height: 25em;
     float: left;
     font-size: 0.8em;
-    color: grey;
+    color: #01346e;
     padding: 2.5em 2em;
     margin-top: 2em;
 }
@@ -461,7 +471,7 @@ a {
     height: calc(100% - 2em);
     padding: 0 2em;
     margin-top: 3em;
-    color: grey;
+    color: #01346e;
     text-align: center;
 }
 .radio_choice {
@@ -550,7 +560,7 @@ a {
 .project_img, .project_data, .new_proj_data, .new_proj_description {
     float: left;
     margin: 1em;
-    color: grey;
+    color: #01346e;
     font-size: 0.9em;
 }
 .project_img {
@@ -600,7 +610,7 @@ a {
     resize: none;
     padding: 0.5em;
     margin: 1em;
-    color: grey;
+    color: #01346e;
     line-height: 1.5em;
     font-size: 0.9em;
 }
@@ -666,8 +676,8 @@ a {
 .article_div {
     position: relative;
     width: 60%;
-    min-width: 17.5em;
-    height: 37.5em;
+    min-width: 20em;
+    min-height: 37.5em;
     margin: auto;
     margin-bottom: 2em;
     background-color: #01346e;
@@ -677,7 +687,7 @@ a {
 .article_image {
     position: relative;
     width: 100%;
-    height: 35%;
+    height: 15em;
     overflow: hidden;
 }
 .article_image img {
@@ -697,7 +707,7 @@ a {
     font-size: 0.8em;
 }
 .article_info_div {
-    width: calc(100% - 4em);
+    width: calc(100% - 5em);
     height: 30%;
     float: left;
 }
@@ -711,9 +721,9 @@ a {
 }
 .modify_article_btn, .remove_article_btn {
     display: block;
-    width: 4em;
+    width: 4.5em;
     height: 3.5em;
-    float: left;
+    float: right;
     background-position: center;
     background-size: 2.2em;
     background-repeat: no-repeat;
@@ -731,7 +741,7 @@ a {
 }
 .article_text {
     width: 100%;
-    height: calc(35% - 1em);
+    height: 30%;
     padding: 0.5em;
     margin-bottom: 1em;
     overflow-y: scroll;
@@ -749,7 +759,7 @@ a {
     background-color: #83cdff;
     color: black;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     opacity: 0;
     z-index: -1;
     overflow: hidden;
@@ -785,11 +795,11 @@ a {
 .article_info input {
     float: right;
     text-align: right;
-    width: 7.5em;
+    width: 50%;
 }
 .mod_art_form textarea {
     width: calc(100% - 1em);
-    height: calc(35% - 1.5em);
+    height: 10em;
     font-size: 1em;
     padding: 0;
     margin: 0.5em 0.5em 1em;
@@ -797,9 +807,9 @@ a {
 }
 .save_mod_art, .reset_mod_art {
     border: none;
-    width: 4.75em;
+    width: 4.5em;
     height: 3em;
-    float: left;
+    float: right;
     color: white;
     background-color: #01346e;
 }
@@ -830,7 +840,7 @@ a {
     margin-top: 1em;
     padding: 2.5em 1em 1em 1.5em;
     float: left;
-    color: grey;
+    color: #01346e;
     font-size: 0.8em;
 }
 .new_art_info {
@@ -848,7 +858,7 @@ a {
     width: 100%;
     height: 100px;
     float: left;
-    color: grey;
+    color: #01346e;
     font-size: 0;
 }
 .new_art_text, .new_off_mex {
@@ -886,6 +896,9 @@ a {
     background-color: #01346e;
     color: white;
     overflow: hidden;
+}
+.user_div a {
+    color: white;
 }
 .user_data {
     display: block;
@@ -946,15 +959,37 @@ a {
     background-image: url("../../images/close.png");
 }
 .mod_u_form_data {
+    position: relative;
     width: calc(100% - 5em);
-    margin: 1em;
+    height: 25%;
+}
+.mod_u_form_data input {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+}
+.mod_u_form_btn_div {
+    position: relative;
+    width: 100%;
+    height: 25%;
+}
+.mod_u_form_btn_div div {
+    display: table;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 .mod_u_form_btn {
     border: none;
     padding: 0.7em;
-    margin: 10px 0 0 20px;
+    float: left;
     background-color: #01346e;
     color: white;
+}
+.mod_u_form_btn:last-of-type {
+    margin-left: 2em;
 }
 .mod_u_form_btn:hover, .mod_u_form_btn:focus {
     text-decoration: underline;
@@ -981,12 +1016,13 @@ a {
     margin: auto;
     margin-bottom: 2em;
     background-color: #83cdff;
+    overflow: hidden;
 }
 .mod_off_form {
     position: relative;
     width: 100%;
     height: 30em;
-    color: white;
+    color: #01346e;
     transition: 0.5s;
     font-size: 0.9em;
     overflow: scroll;
@@ -1037,7 +1073,7 @@ a {
     padding: 0.5em;
     margin-top: 1em;
     resize: none;
-    color: grey;
+    color: #01346e;
 }
 .only_print_text {
     display: none;
@@ -1127,7 +1163,7 @@ a {
 .cand_personal_info, .cand_general_info {
     height: 100%;
     float: left;
-    color: grey;
+    color: #01346e;
     font-size: 0.9em;
 }
 .cand_personal_info {
@@ -1152,4 +1188,7 @@ a {
 .new_off_info input, .new_off_info select {
     float: right;
     width: 100px;
+}
+.no_cand {
+    padding: 2em;
 }

@@ -34,7 +34,10 @@
 
 		<?php
             if(isset($_SERVER['HTTP_REFERER']))
-                echo "<a id='back_link' href='".$_SERVER['HTTP_REFERER']."' title='Torna alla pagina precedente'>Indietro</a>";
+                if(!strpos($_SERVER['HTTP_REFERER'],'prenotazioni.php'))
+                    echo "<a id='back_link' href='".$_SERVER['HTTP_REFERER']."' title='Torna alla pagina precedente'>Indietro</a>";
+                else
+                    echo "<a id='back_link' href='index.php' title='Torna alle offerte'>Offerte</a>";
             else
                 echo "<a id='back_link' href='lavoro.php' title='Torna alle offerte'>Offerte</a>";
         ?>
