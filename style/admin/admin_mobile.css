@@ -37,11 +37,19 @@ a {
 	cursor: pointer;
 	background-color: #33a3ff;
 }
-#cm_label:hover .cm_line {
+#cm_label:hover, #cm_label:focus {
+	cursor: pointer;
+	background-color: #33a3ff;
+}
+#cm_label:hover .cm_line, #cm_label:focus .cm_line {
 	background-color: white;
 }
 #compact_menu:checked ~ #nav {
 	left: 0;
+	visibility: visible;
+}
+#compact_menu:checked ~ #contall_outnav{
+	visibility: hidden;
 }
 #compact_menu:checked + label .cm_line {
 	display: none;
@@ -59,10 +67,11 @@ a {
     background-size: 2.5em;
     background-repeat: no-repeat;
 }
-#compact_menu:checked + label:hover {
+#compact_menu:checked + label:hover, #compact_menu:checked + label:focus {
 	background-color: #33a3ff;
 }
 #nav {
+    visibility: hidden;
 	position: fixed;
 	z-index: 2;
 	left: -100%;
@@ -91,7 +100,7 @@ a {
 	width: 100%;
 	padding: 0.8em;
 }
-.nav_link:hover, .nav_link_dx:hover {
+.nav_link:hover, .nav_link_dx:hover, #user:hover, .nav_link:focus, .nav_link_dx:focus, #user:focus {
     color: white;
 }
 
@@ -290,6 +299,7 @@ a {
 }
 #new_imp_control:checked ~ #new_imp_form_div, #new_proj_control:checked ~ #new_proj_form_div, #new_art_control:checked ~ #new_art_form_div, #new_off_control:checked ~ #new_off_form_div {
     left: 0;
+    visibility: visible;
 }
 #new_imp_control:checked + label, #new_proj_control:checked + label, #new_art_control:checked + label, #new_off_control:checked + label {
     position: fixed;
@@ -318,7 +328,7 @@ a {
     background-size: 2.5em;
     background-repeat: no-repeat;
 }
-.modify_btn:hover, #new_imp_btn:hover, #new_proj_btn:hover, #new_art_btn:hover, #new_off_btn:hover {
+.modify_btn:hover, #new_imp_btn:hover, #new_proj_btn:hover, #new_art_btn:hover, #new_off_btn:hover, .modify_btn:focus, #new_imp_btn:focus, #new_proj_btn:focus, #new_art_btn:focus, #new_off_btn:focus {
     background-color: #33a3ff;
     cursor: pointer;
 }
@@ -333,12 +343,14 @@ a {
     background-color: #55bbff;
     transition: 0.5s;
     overflow-y: scroll;
+    visibility: hidden;
 }
 .modify_form_div::-webkit-scrollbar, .remove_form_div::-webkit-scrollbar, #new_imp_form_div::-webkit-scrollbar, #new_proj_form_div::-webkit-scrollbar, #new_art_form_div::-webkit-scrollbar, #new_off_form_div::-webkit-scrollbar {
     display: none;
 }
 .modify_control:checked ~ .modify_form_div {
     left: 0;
+    visibility: visible;
 }
 .modify_control:checked + label {
     position: fixed;
@@ -399,7 +411,7 @@ a {
 .reset_btn {
     margin-left: 1em;
 }
-.submit_btn:hover, .reset_btn:hover {
+.submit_btn:hover, .reset_btn:hover, .submit_btn:focus, .reset_btn:focus {
     cursor: pointer;
     text-decoration: underline;
     background-color: #33a3ff; 
@@ -419,12 +431,13 @@ a {
     background-size: 2.5em;
     background-repeat: no-repeat;
 }
-.remove_btn:hover {
+.remove_btn:hover, .remove_btn:focus {
     background-color: #33a3ff;
     cursor: pointer;
 }
 .remove_control:checked ~ .remove_form_div {
     left: 0;
+    visibility: visible;
 }
 .remove_control:checked + label {
     position: fixed;
@@ -466,7 +479,7 @@ a {
     background-color: #55bbff;
     margin-bottom: 1.5em;
 }
-.yes_no_div label:hover, .apply_btn:hover {
+.yes_no_div label:hover, .apply_btn:hover, .yes_no_div label:focus, .apply_btn:focus {
     cursor: pointer;
     text-decoration: underline;
     background-color: #33a3ff; 
@@ -513,6 +526,7 @@ a {
     overflow: hidden;
     opacity: 0;
     transition: opacity 2s, height 0.5s;
+    visibility: hidden;
 }
 .project_info {
     width: 100%;
@@ -528,6 +542,7 @@ a {
     height: 32em;
     border: 1px solid #55bbff;
     opacity: 1;
+    visibility: visible;
 }
 .pro_select:checked + label div .remove_proj_btn {
     display: block;
@@ -604,7 +619,7 @@ a {
     background-size: 2em;
     background-repeat: no-repeat;
 }
-.remove_proj_btn:hover {
+.remove_proj_btn:hover, .remove_proj_btn:focus {
     cursor: pointer;
     background-color: #008cff;
 }
@@ -710,7 +725,7 @@ a {
 .remove_article_btn {
     background-image: url('../../images/remove.png');
 }
-.modify_article_btn:hover, .remove_article_btn:hover {
+.modify_article_btn:hover, .remove_article_btn:hover, .modify_article_btn:focus, .remove_article_btn:focus {
     background-color: #33a3ff;
     cursor: pointer;
 }
@@ -739,10 +754,12 @@ a {
     z-index: -1;
     overflow: hidden;
     transition: 0.5s;
+    visibility: hidden;
 }
 .mod_art_control:checked + label ~ .mod_art_form, .rem_art_control:checked + label ~ .rem_art_form, .rem_off_control:checked + label ~ .rem_off_form, .cand_off_control:checked + label ~ .cand_off_div {
     opacity: 1;
     z-index: 0;
+    visibility: visible;
 }
 .mod_art_control:checked + .modify_article_btn {
     position: absolute;
@@ -789,7 +806,7 @@ a {
 .save_mod_art {
     margin-top: 4em;
 }
-.save_mod_art:hover, .reset_mod_art:hover {
+.save_mod_art:hover, .reset_mod_art:hover, .rem_art_form_btn:hover, .save_mod_art:focus, .reset_mod_art:focus, .rem_art_form_btn:focus {
     background-color: #33a3ff;
     cursor: pointer;
     text-decoration: underline;
@@ -897,7 +914,7 @@ a {
     top: 2.5em;
     background-image: url("../../images/remove_user.png");
 }
-.mod_u_label:hover, .rem_u_label:hover {
+.mod_u_label:hover, .rem_u_label:hover, .mod_u_label:focus, .rem_u_label:focus {
     cursor: pointer;
     background-color: #33a3ff;
 }
@@ -909,9 +926,11 @@ a {
     height: 0;
     transition: 0.5s;
     overflow: hidden;
+    visibility: hidden;
 }
 .mod_u_control:checked + label ~ .mod_u_form, .rem_u_control:checked + label ~ .rem_u_form {
     height: 12.5em;
+    visibility: visible;
 }
 .mod_u_control:checked + .mod_u_label {
     top: 0;
@@ -937,7 +956,7 @@ a {
     background-color: #55bbff;
     color: white;
 }
-.mod_u_form_btn:hover {
+.mod_u_form_btn:hover, .mod_u_form_btn:focus {
     text-decoration: underline;
     cursor: pointer;
     background-color: #33a3ff;
@@ -1057,7 +1076,7 @@ a {
     transform: translate(0, -50%);
     text-align: center;
 }
-.mod_off_btn:hover, .rem_off_btn:hover, .rem_off_form_btn:hover, .cand_off_btn:hover {
+.mod_off_btn:hover, .rem_off_btn:hover, .rem_off_form_btn:hover, .cand_off_btn:hover, .mod_off_btn:focus, .rem_off_btn:focus, .rem_off_form_btn:focus, .cand_off_btn:focus {
     background-color: #33a3ff;
     text-decoration: underline;
     cursor: pointer;

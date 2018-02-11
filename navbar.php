@@ -1,17 +1,17 @@
 <?php
 
-echo"<input id='compact_menu' onclick='changeTitle()' type='checkbox'/>
-<label id='cm_label' tabindex='0'  for='compact_menu' title='Visualizza le opzioni del menu'>
+echo"<input id='compact_menu' onclick='changeTitle(this)' type='checkbox'/>
+<label id='cm_label' tabindex='0' for='compact_menu' title='Visualizza le opzioni del menu'>
     <div id='cont_cm_line'>
     <div class='cm_line'></div>
     <div class='cm_line'></div>
     <div class='cm_line'></div>
     </div>
-    <div id='cont_img'><img id ='imgl' src='images/logo.png'alt='logo Costruzioni Bordignon S.r.l.'/></div>
+    <div id='cont_img'><img id ='imgl' src='images/logo.png' alt='logo Costruzioni Bordignon S.r.l.'/></div>
 </label>
 
 <div id='navbar'>
-    <a id='home_link' href='index.php' ><img id='logo' src='images/logo.png' title='Vai alla pagina iniziale' accesskey='h' alt='logo Costruzioni Bordignon S.r.l.' ></a>
+    <a id='home_link' href='index.php' ><img id='logo' src='images/logo.png' title='Vai alla pagina iniziale' accesskey='h' alt='Logo Costruzioni Bordignon S.r.l.' ></a>
     <div class='dropdown'>
         <a id='menu_bt1' class='drop_button' href='azienda.php' accesskey='a' title='Visualizza le informazioni sull'azienda'><u>A</u>zienda</a>
         <div id='content_menu_bt1' class='drop_content'>
@@ -40,7 +40,7 @@ echo"<input id='compact_menu' onclick='changeTitle()' type='checkbox'/>
         if(!isset($_SESSION['username']))
             echo "<a href='login.php' id='login' title='Accedi con le tue credenziali oppure registrati se ancora non possiedi un account' accesskey='l'><u>L</u>ogin</a>";
         else {
-            echo "<a href='logout.php' id='login' title='Effettua il logout dal sito'accesskey='l'><u>L</u>ogout</a>
+            echo "<a href='logout.php' id='login' title='Effettua il logout dal sito' accesskey='l'><u>L</u>ogout</a>
                 <a href='info_utente.php' id='user' title='Visualizza le informazioni relative al tuo account' accesskey='u'>".$_SESSION['username']."</a>";
         }
         if(isset($_SESSION['admin']))

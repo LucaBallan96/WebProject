@@ -471,19 +471,19 @@
 				$count=1;
 				while($row = $result->fetch_assoc()) {
 					echo "<input id='project_select".$count."' class='pro_select' type='radio' name='pro_select' onclick='uncheck_radio(this)'/>
-						<label class='project_label' for='project_select".$count."' title='Visualizza e modifica i dati del progetto ".$row['name']."'>
+						<label id='mod_proj_lab".$count."' class='project_label' for='project_select".$count."' title='Visualizza e modifica i dati del progetto ".$row['name']."' tabindex='0'>
 							<div class='project_title'>".$row['name']."
 								<input type='checkbox' id='removeproj".$count."' class='remove_control'/>
-								<label class='remove_proj_btn' for='removeproj".$count."' title='Apri o chiudi il form di rimozione'></label>
-								<div class='remove_form_div'>
+								<label id='rem_proj_lab".$count."' class='remove_proj_btn' for='removeproj".$count."' title='Rimuovi i dati del progetto' tabindex='0' onclick='changeVisibility(this)'></label>
+								<div id='rem_proj_div".$count."' class='remove_form_div'>
 									<form class='remove_form' action='form_control.php' method='post'>
 										<fieldset class='remove_fieldset'>
 											<legend>Rimuovere definitivamente il progetto ".$row['name']." e tutti i suoi dati?</legend>
 											<div class='yes_no_div'>
 												<input id='yes_proj".$count."' class='radio_choice' type='radio' name='remove_proj' value='".$row['id']."' checked/>
-												<label for='yes_proj".$count."' title='Rimuovi'>Si, rimuovi</label>
+												<label id='yes_proj_lab".$count."' for='yes_proj".$count."' title='Rimuovi' tabindex='0'>Si, rimuovi</label>
 												<input id='no_proj".$count."' class='radio_choice' type='radio' name='remove_proj' value='no'/>
-												<label for='no_proj".$count."' title='Mantieni'>No, mantieni</label>
+												<label id='no_proj_lab".$count."' for='no_proj".$count."' title='Mantieni' tabindex='0'>No, mantieni</label>
 											</div>
 										</fieldset>
 										<input class='apply_btn' type='submit' value='Applica' title='Applica la scelta'/>
@@ -657,8 +657,8 @@
 				while($row = $result->fetch_assoc()) {
 					$stringa="<div class='div_impiegato'>
 						<input type='checkbox' id='modify".$count."' class='modify_control'/>
-						<label id='mod_imp_lab".$count."' class='modify_btn' for='modify".$count."' title='Apri o chiudi il form di modifica' tabindex='0'></label>
-						<div class='modify_form_div'>
+						<label id='mod_imp_lab".$count."' class='modify_btn' for='modify".$count."' title='Modifica i dati dell&#39impiegato' tabindex='0' onclick='changeVisibility(this)'></label>
+						<div id='mod_imp_div".$count."' class='modify_form_div'>
 							<form class='modify_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 								<fieldset class='modify_personal_info'>
 									<legend>Informazioni personali</legend>
@@ -689,16 +689,16 @@
 							</form>
 						</div>
 						<input type='checkbox' id='remove".$count."' class='remove_control'/>
-						<label id='rem_imp_lab".$count."' class='remove_btn' for='remove".$count."' title='Apri o chiudi il form di rimozione' tabindex='0'></label>
-						<div class='remove_form_div'>
+						<label id='rem_imp_lab".$count."' class='remove_btn' for='remove".$count."' title='Rimuovi i dati dell&#39impiegato tabindex='0' onclick='changeVisibility(this)'></label>
+						<div id='rem_imp_div".$count."' class='remove_form_div'>
 							<form class='remove_form' action='form_control.php' method='post'>
 								<fieldset class='remove_fieldset'>
 									<legend>Rimuovere definitivamente ".$row['firstname']." ".$row['lastname']." e tutti i suoi dati?</legend>
 									<div class='yes_no_div'>
 										<input id='yes".$count."' class='radio_choice' type='radio' name='remove_imp' value='".$row['id']."' checked/>
-										<label for='yes".$count."' title='Rimuovi'>Si, rimuovi</label>
+										<label id='yes_imp_lab".$count."' for='yes".$count."' title='Rimuovi' tabindex='0'>Si, rimuovi</label>
 										<input id='no".$count."' class='radio_choice' type='radio' name='remove_imp' value='no'/>
-										<label for='no".$count."' title='Mantieni'>No, mantieni</label>
+										<label id='no_proj_lab".$count."' for='no".$count."' title='Mantieni' tabindex='0'>No, mantieni</label>
 									</div>
 								</fieldset>
 								<input class='apply_btn' type='submit' value='Applica' title='Applica la scelta'/>
@@ -719,7 +719,7 @@
 							<div class='imp_more'><div>Settore: ".$row['branch']."</div></div>
 							<div class='imp_more'><div>Impiegato dell&#39azienda dal ".$row['begin']."</div></div>		
 						</div>
-						<div class='more_info'><div>+</div></div>
+						<div id='more_info_div".$count."' class='more_info'><div>+</div></div>
 					</label>";
 					if($count%2!=0)
 						$left=$left.$stringa;
@@ -834,8 +834,8 @@
 								<div class='article_info'>Titolo:<div>".$row['title']."</div></div>
 								<div class='article_info'>Sottotitolo:<div>".$row['subtitle']."</div></div>
 							</div>
-							<input id='mod_art_checkbox".$count."' class='mod_art_control' type='checkbox'/>
-							<label for='mod_art_checkbox".$count."' class='modify_article_btn' title='Apri o chiudi il form di modifica'></label>
+							<input id='mod_art_checkbox".$count."' class='mod_art_control' type='checkbox' onclick='changeTitle(this)'/>
+							<label id='mod_art_lab".$count."' for='mod_art_checkbox".$count."' class='modify_article_btn' title='Modifica i dati dell&#39articolo' tabindex='0'></label>
 							<form id='mod_a".$count."' class='mod_art_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 								<div class='article_image'>
 									<img src='images/".$row['image']."'/>
@@ -854,8 +854,8 @@
 								<input class='reset_mod_art' type='reset' value='Reset' title='Resetta i dati inseriti'/>
 								<textarea class='article_text' name='text' form='mod_a".$count."' placeholder='Inserisci il testo' maxlength='2000' title='Inserisci il testo dell&#39articolo'>".$row['text']."</textarea>
 							</form>
-							<input id='rem_art_checkbox".$count."' class='rem_art_control' type='checkbox'/>
-							<label for='rem_art_checkbox".$count."' class='remove_article_btn' title='Apri o chiudi il form di rimozione'></label>
+							<input id='rem_art_checkbox".$count."' class='rem_art_control' type='checkbox'/ onclick='changeTitle(this)'>
+							<label id='rem_art_lab".$count."' for='rem_art_checkbox".$count."' class='remove_article_btn' title='Rimuovi i dati dell&#39articolo' tabindex='0'></label>
 							<form class='rem_art_form' action='form_control.php' method='post'>
 								<div>Vuoi eliminare definitivamente questo articolo e tutte le informazioni in esso contenute?</div>
 								<input class='identity' type='text' name='remove_article' value='".$row['id']."'/>
@@ -958,41 +958,8 @@
 				$count=1;
 				$roles=array('Presidente','Vicepresidente','Segretario','Ingegnere','Architetto','Geometra','Progettista','Muratore','Carpentiere','Magazziniere');
 				while($row = $result->fetch_assoc()) {
-					echo "<div class='offer_div'>
-							<input id='rem_off_checkbox".$count."' class='rem_off_control' type='checkbox'/>
-							<label for='rem_off_checkbox".$count."' class='rem_off_btn' title='Apri o chiudi il form di rimozione'><div>Elimina</div></label>
-							<form class='rem_off_form' action='form_control.php' method='post'>
-								<div>Vuoi eliminare definitivamente questa offerta, i colloqui e le relative prenotazioni degli utenti?</div>
-								<input class='identity' type='text' name='remove_offer' value='".$row['id']."'/>
-								<input type='submit' class='rem_off_form_btn' value='Elimina'/>
-							</form>
-							<input id='cand_off_checkbox".$count."' class='cand_off_control' type='checkbox'/>
-							<label for='cand_off_checkbox".$count."' class='cand_off_btn' title='Apri o chiudi l&#39elenco delle prenotazioni'><div>Candidature</div></label>
-							<div class='cand_off_div'>";
 					$idOffer=$row['id'];
-					$sql2 = "SELECT * FROM webproject.form_offerte WHERE idOffer='$idOffer'";
-					$result2 = $this->conn->query($sql2);
-					if ($result2->num_rows > 0) {
-						while($row2 = $result2->fetch_assoc()) {
-							//$birthStr = date("d-m-Y", strtotime($row2['birth']));
-							//$dateStr = date("d-m-Y", strtotime($row2['date']));
-							echo "<div class='cand_div'>
-									<div class='cand_personal_info'>
-										".$row2['firstname']." ".$row2['lastname']."<br/><br/>
-										".$row2['genre']."<br/><br/>
-										".$row2['birth']."<br/><br/>
-										".$row2['mail']."
-									</div>
-									<div class='cand_general_info'>
-										Prenotazione colloquio in data:<br/><br/>".$row2['date']."<br/><br/>
-										'".$row2['message']."'
-									</div>
-								</div>";
-						}
-					}
-					else
-						echo "<p>Nessuna candidatura a questa offerta</p>";
-					echo	"</div>
+					echo "<div class='offer_div'>
 							<form id='mod_off_form".$count."' class='mod_off_form' action='form_control.php' method='post'>
 								<input class='identity' type='text' name='modify_offer' value='".$row['id']."'/>
 								<fieldset class='mod_off_info'>
@@ -1032,7 +999,41 @@
 								<input class='mod_off_btn' type='submit' value='Salva' title='Salva i dati dell&#39offerta'/>
 								<input class='mod_off_btn' type='reset' value='Annulla' title='Resetta i dati inseriti'/>
 							</form>
-						</div>";
+							<input id='rem_off_checkbox".$count."' class='rem_off_control' type='checkbox' onclick='changeTitle(this)'/>
+							<label id='rem_off_lab".$count."' for='rem_off_checkbox".$count."' class='rem_off_btn' title='Rimuovi i dati dell&#39offerta' tabindex='0'><div>Elimina</div></label>
+							<form class='rem_off_form' action='form_control.php' method='post'>
+								<div>Vuoi eliminare definitivamente questa offerta, i colloqui e le relative prenotazioni degli utenti?</div>
+								<input class='identity' type='text' name='remove_offer' value='".$row['id']."'/>
+								<input type='submit' class='rem_off_form_btn' value='Elimina'/>
+							</form>
+							<input id='cand_off_checkbox".$count."' class='cand_off_control' type='checkbox' onclick='changeTitle(this)'/>
+							<label id='cand_off_lab".$count."' for='cand_off_checkbox".$count."' class='cand_off_btn' title='Visualizza l&#39elenco delle prenotazioni' tabindex='0'><div>Candidature</div></label>
+							<div class='cand_off_div'>";
+					$sql2 = "SELECT * FROM webproject.form_offerte WHERE idOffer='$idOffer'";
+					$result2 = $this->conn->query($sql2);
+					if ($result2->num_rows > 0) {
+						while($row2 = $result2->fetch_assoc()) {
+							//$birthStr = date("d-m-Y", strtotime($row2['birth']));
+							//$dateStr = date("d-m-Y", strtotime($row2['date']));
+							echo "<div class='cand_div'>
+									<div class='cand_personal_info'>
+										".$row2['firstname']." ".$row2['lastname']."<br/><br/>
+										".$row2['genre']."<br/><br/>
+										".$row2['birth']."<br/><br/>
+										".$row2['mail']."
+									</div>
+									<div class='cand_general_info'>
+										Prenotazione colloquio in data:<br/><br/>".$row2['date']."<br/><br/>
+										'".$row2['message']."'
+									</div>
+								</div>
+							</div>";
+						}
+					}
+					else
+						echo	"<p>Nessuna candidatura a questa offerta</p>
+							</div>";
+					echo "</div>";
 					$count++;
 				}
 			} else
@@ -1224,8 +1225,8 @@
 							<div class='user_data'>P: ".$row['password']."</div>
 							<div class='user_data'>Numero accessi al sito: ".$row['accesses']."</div>
 							<a class='user_data' href='mailto:".$row['mail']."' title='Invia una mail a ".$row['username']."'>".$row['mail']."</a>
-							<input id='mod_u_checkbox".$count."' class='mod_u_control' type='checkbox'/>
-							<label for='mod_u_checkbox".$count."' class='mod_u_label' title='Apri o chiudi il form di modifica'></label>
+							<input id='mod_u_checkbox".$count."' class='mod_u_control' type='checkbox' onclick='changeTitle(this)'/>
+							<label id='mod_u_lab".$count."' for='mod_u_checkbox".$count."' class='mod_u_label' title='Modifica i dati dell&#39utente' tabindex='0'></label>
 							<form class='mod_u_form' action='form_control.php' method='post'>
 								<input type='text' class='identity' name='old_user' value='".$row['username']."'/>
 								<input type='text' class='identity' name='old_accesses' value='".$row['accesses']."'/>
@@ -1235,8 +1236,8 @@
 								<input type='submit' class='mod_u_form_btn' value='Salva' title='Salva i dati dell&#39utente'/>
 								<input type='reset' class='mod_u_form_btn' value='Annulla' title='Resetta i dati inseriti'/>
 							</form>
-							<input id='rem_u_checkbox".$count."' class='rem_u_control' type='checkbox'/>
-							<label for='rem_u_checkbox".$count."' class='rem_u_label' title='Apri o chiudi il form di rimozione'></label>
+							<input id='rem_u_checkbox".$count."' class='rem_u_control' type='checkbox' onclick='changeTitle(this)'/>
+							<label id='rem_u_lab".$count."' for='rem_u_checkbox".$count."' class='rem_u_label' title='Rimuovi i dati dell&#39utente' tabindex='0'></label>
 							<form class='rem_u_form' action='form_control.php' method='post'>
 								<div>Vuoi eliminare definitivamente questo account?</div>
 								<input type='text' class='identity' name='admin_rem_user' value='".$row['username']."'/>
