@@ -27,7 +27,7 @@ body {
     text-decoration: none;
     padding: 1em;
     color: white;
-	background-color: #55bbff;
+	background-color: #01346e;
 }
 form {
     display: block;
@@ -83,7 +83,7 @@ form {
     border: none;
     padding: 1em;
     color: white;
-	background-color: #55bbff;
+	background-color: #01346e;
 }
 #cancel_btn {
     margin-left: 1em;
@@ -113,7 +113,7 @@ form {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: #55bbff;
+    background-color: #01346e;
     transition: 0.5s;
 }
 .remove_btn {
@@ -172,7 +172,7 @@ form {
     float: center;
     padding: 1em;
     color: white;
-    background-color: #55bbff;
+    background-color: #01346e;
     margin-right: 2em;
 }
 .yes_no_div label:hover, .apply_btn:hover, .yes_no_div label:focus, .apply_btn:focus {
@@ -191,5 +191,5 @@ form {
     right: 2em;
     padding: 1em;
     color: white;
-    background-color: #55bbff;
+    background-color: #01346e;
 }

@@ -15,7 +15,7 @@ input[type="checkbox"]{
 .div_close{
     z-index: 1;
     position: fixed;
-    background-color: #86bdf7;
+    background-color: #01346e;
     color: white;
     right: 1em;
     margin-top: 3.75em;
@@ -27,7 +27,7 @@ input[type="checkbox"]{
 .div_close_2{
     z-index: 1;
     position: fixed;
-    background-color: #86bdf7;
+    background-color: #01346e;
     color: white;
     right: 1em;
     margin-top: 6.8em;
@@ -52,7 +52,7 @@ input[type="checkbox"]{
     z-index: 1;
     margin-top: 3.75em; 
     position: fixed;
-    background-color: #86bdf7;
+    background-color: #01346e;
     color: white;
     right: 2.2em;
     transition: 1s ease;
@@ -63,7 +63,7 @@ input[type="checkbox"]{
     z-index: 1;
     margin-top: 6.8em; 
     position: fixed;
-    background-color: #86bdf7;
+    background-color: #01346e;
     color: white;
     right: 2.2em;
     transition: 1s ease;
@@ -124,6 +124,10 @@ input[type="checkbox"]{
     margin: auto;
     overflow: hidden;
 }
+.div_group:hover .div_title_group {
+    background-color: #33a3ff;
+    
+}
 .div_group{
     display: table;
     margin: auto;
@@ -141,7 +145,7 @@ input[type="checkbox"]{
 }
 
 .div_title_group{
-    background-color: #55bbff;
+    background-color: #01346e;
     position: relative;
     height: 2.5em;
     width: 100%;
@@ -310,7 +314,7 @@ input[type="checkbox"]{
     text-decoration-color: white;
     width: 9.4em;
     height: 2.5em;
-    background-color: #55bbff;
+    background-color: #01346e;
     text-align: center;
     padding: 0.6em;
     margin: auto;

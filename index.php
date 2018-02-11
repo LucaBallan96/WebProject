@@ -90,7 +90,7 @@
 					piccoli lavori civili che tuttavia contribuiscono ad accrescere l'esperienza, fondamentale per un continuo miglioramento professionale.</br></br></br></br>
 					La continua <em>qualificazione</em> e l'<em>incremento dell'organico </em>permettono inoltre di rendere l'azienda sempre più <em>flessibile e attenta </em> alle esigenze, ai particolari e agli standard richiesti dalla committenza. 
 					<div id="div_scopri" >
-						<a href="azienda.php#storia" id="div_button_storia" >
+						<a href="azienda.php#storia" id="div_button_storia" title="Esplora la nostra azienda">
 							Scopri di più
 						</a>
 					</div> 

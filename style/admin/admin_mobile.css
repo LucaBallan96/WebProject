@@ -25,7 +25,7 @@ a {
 	width: 100%;
 	display: block;
 	padding: 0.5em 1em;
-	background-color: #55bbff;
+	background-color: #01346e;
 }
 .cm_line {
 	width: 2em;
@@ -68,7 +68,7 @@ a {
 	left: -100%;
 	width: 100%;
 	height: 100%;
-	background-color: #55bbff;
+	background-color: #01346e;
 	overflow-y: scroll;
 }
 #nav::-webkit-scrollbar {
@@ -169,7 +169,7 @@ a {
 }
 .imp_image {
     position: relative;
-    border: 1px solid #55bbff;
+    border: 1px solid #01346e;
     border-bottom: none;
     width: 100%;
     height: 60%;
@@ -183,7 +183,7 @@ a {
     transform: translate(-50%, -50%);
 }
 .imp_info {
-    border: 1px solid #55bbff;
+    border: 1px solid #01346e;
     width: 100%;
     height: 40%;
     color: grey;
@@ -200,14 +200,14 @@ a {
     padding-left: 1em;
 }
 .more_info {
-    border: 1px solid #55bbff;
+    border: 1px solid #01346e;
     width: 100%;
     height: 1.6em;
     clear: both;
     color: white;
     font-size: 1em;
     text-align: center;
-    background-color: #55bbff;
+    background-color: #01346e;
     margin-bottom: 32px;
     transition: 0.5s;
 }
@@ -228,13 +228,13 @@ a {
     width: 100%;
     height: 0;
     display: block;
-    background-color: #55bbff;
+    background-color: #01346e;
     transition: 0.5s;
 }
 .check_control:checked + label .magic {
     height: 120px;
-    border-left: 1px solid #55bbff;
-    border-right: 1px solid #55bbff;
+    border-left: 1px solid #01346e;
+    border-right: 1px solid #01346e;
     background-color: white;
 }
 .check_control:checked + label .imp_more {
@@ -270,7 +270,7 @@ a {
     background-position: center;
     background-size: 2.5em;
     background-repeat: no-repeat;
-    background-color: #55bbff;
+    background-color: #01346e;
 }
 #new_imp_btn {
     margin-left: 2em;
@@ -330,7 +330,7 @@ a {
     width: 100%;
     height: 100%;
     z-index: 2;
-    background-color: #55bbff;
+    background-color: #01346e;
     transition: 0.5s;
     overflow-y: scroll;
 }
@@ -394,7 +394,7 @@ a {
     padding: 0.8em;
     font-size: 0.8em;
     color: white;
-    background-color: #55bbff;
+    background-color: #01346e;
 }
 .reset_btn {
     margin-left: 1em;
@@ -463,7 +463,7 @@ a {
     width: 100%;
     padding: 1em;
     color: white;
-    background-color: #55bbff;
+    background-color: #01346e;
     margin-bottom: 1.5em;
 }
 .yes_no_div label:hover, .apply_btn:hover {
@@ -482,7 +482,7 @@ a {
     right: 2em;
     padding: 1em;
     color: white;
-    background-color: #55bbff;
+    background-color: #01346e;
 }
 
 /* PROGETTI */
@@ -499,7 +499,7 @@ a {
     position: relative;
     padding: 1em 2em;
     color: white;
-    background-color: #55bbff;
+    background-color: #01346e;
 }
 .project_title:hover {
     cursor: pointer;
@@ -526,7 +526,7 @@ a {
 }
 .pro_select:checked + label .modify_proj_form {
     height: 32em;
-    border: 1px solid #55bbff;
+    border: 1px solid #01346e;
     opacity: 1;
 }
 .pro_select:checked + label div .remove_proj_btn {
@@ -655,7 +655,7 @@ a {
     height: 37.5em;
     margin: auto;
     margin-bottom: 2em;
-    background-color: #55bbff;
+    background-color: #01346e;
     color: white;
     font-size: 0.9em;
 }
@@ -702,7 +702,7 @@ a {
     background-position: center;
     background-size: 2.2em;
     background-repeat: no-repeat;
-    background-color: #55bbff;
+    background-color: #01346e;
 }
 .modify_article_btn {
     background-image: url('../../images/modify_article.png');
@@ -750,7 +750,7 @@ a {
     z-index: 1;
     background-image: url("../../images/close.png");
     background-size: 40px;
-    background-color: #55bbff;
+    background-color: #01346e;
 }
 .rem_art_control:checked + .remove_article_btn {
     position: absolute;
@@ -760,7 +760,7 @@ a {
     background-image: url("../../images/close.png");
     background-size: 3.5em;
     font-size: 0;
-    background-color: #55bbff;
+    background-color: #01346e;
 }
 .mod_art_control:checked + .modify_article_btn:hover, .rem_art_control:checked + .remove_article_btn:hover {
     background-color: #33a3ff;
@@ -784,7 +784,7 @@ a {
     height: 3em;
     float: left;
     color: white;
-    background-color: #55bbff;
+    background-color: #01346e;
 }
 .save_mod_art {
     margin-top: 4em;
@@ -803,7 +803,7 @@ a {
     border: none;
     padding: 0.7em;
     margin: auto;
-    background-color: #55bbff;
+    background-color: #01346e;
     color: white;
 }
 .new_art_data, .new_off_data {
@@ -866,7 +866,7 @@ a {
     height: 12.5em;
     min-width: 12.5em;
     float: left;
-    background-color: #55bbff;
+    background-color: #01346e;
     color: white;
     overflow: hidden;
 }
@@ -934,7 +934,7 @@ a {
     border: none;
     padding: 0.7em;
     margin: 10px 0 0 20px;
-    background-color: #55bbff;
+    background-color: #01346e;
     color: white;
 }
 .mod_u_form_btn:hover {
@@ -955,7 +955,7 @@ a {
 /* LAVORO */
 
 .offer_div {
-    border: 1px solid #55bbff;
+    border: 1px solid #01346e;
     position: relative;
     width: calc(100% - 2em);
     height: auto;
@@ -1031,7 +1031,7 @@ a {
     width: 80px;
     height: 2.75em;
     float: right;
-    background-color: #55bbff;
+    background-color: #01346e;
     color: white;
     z-index: 1;
 }
@@ -1071,7 +1071,7 @@ a {
     border: none;
     padding: 0.7em;
     margin: auto;
-    background-color: #55bbff;
+    background-color: #01346e;
     color: white;
 }
 .rem_off_control:checked + .rem_off_btn, .cand_off_control:checked + .cand_off_btn {
@@ -1099,7 +1099,7 @@ a {
     margin-left: 2em;
     float: left;
     background-color: white;
-    border: 1px solid #55bbff;
+    border: 1px solid #01346e;
     overflow-y: scroll;
 }
 .cand_div::-webkit-scrollbar {
