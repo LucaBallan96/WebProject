@@ -25,7 +25,7 @@ body {
     top: 1.25em;
     padding: 1em;
     color: white;
-	background-color: #55bbff;
+	background-color: #01346e;
 }
 form {
     display: block;
@@ -58,13 +58,13 @@ form {
     border: none;
     padding: 1em;
     color: white;
-    background-color: #55bbff;
+    background-color: #01346e;
     text-decoration: underline;
 }
 #cancel_btn {
     margin-left: 1em;
 }
-.btns:hover, #back_link:hover {
+.btns:hover, #back_link:hover, .btns:focus, #back_link:focus {
     cursor: pointer;
     background-color: #33a3ff;
 }

@@ -23,7 +23,7 @@
 }
 #text_search {
     width: 15.65em;
-    border: 1px solid #55bbff;
+    border: 1px solid #01346e;
     
     
     color: grey;
@@ -177,7 +177,7 @@ legend{
     border: none;
     padding: 0.8em 1.2em;
     color: white;
-    background-color: #55bbff;
+    background-color: #01346e;
 }
 .submit:hover, .submit:focus {
     background-color: #33a3ff;

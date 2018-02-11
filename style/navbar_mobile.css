@@ -19,12 +19,12 @@ a {
 	width: 100%;
 	display: block;
 	padding: 0.5em 1em;
-	background-color: #55bbff;
+	background-color: #01346e;
 }
 .cm_line {
 	width: 2em;
     height: 0.2em;
-    background-color: #0077ff;
+    background-color: white;
     margin: 0.5em 0;
 }
 #cont_cm_line{
@@ -82,7 +82,7 @@ a {
 	left: -100%;
 	width: 100%;
 	height: 100%;
-	background-color: #55bbff;
+	background-color: #01346e;
 	overflow-y: scroll;
 }
 #navbar::-webkit-scrollbar {
@@ -108,9 +108,10 @@ a {
 	padding: 1em 1.5em;
 	text-decoration: underline;
 	font-size: 1em;
+	color: white;
 }
 .drop_button:hover, .drop_button:focus {
-	color: white;
+	color: #afd2ff;
 }
 .drop_content {
 	display: none;	
@@ -121,12 +122,13 @@ a {
 #contacts, #work, #admin, #login, #user {
 	padding: 1em 1.5em;
 	font-size: 1em;
+	color: white;
 }
 #admin, #login, #user {
 	display: block;
 }
 #work:hover, #contacts:hover, #admin:hover, #login:hover, #user:hover, #work:focus, #contacts:focus, #admin:focus, #login:focus, #user:focus {
-	color: white;
+	color: #afd2ff;
 }
 .nascosto {
 	display: none;

@@ -16,9 +16,9 @@
     top: 4.4em;
     padding: 1em;
     color: white;
-	background-color: #55bbff;
+	background-color: #01346e;
 }
-#back_link:hover{
+#back_link:hover, #back_link:hover{
     background-color: #33a3ff;
 }
 #div_image {
