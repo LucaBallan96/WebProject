@@ -49,17 +49,6 @@
                             
                         </form>
                     </div>";
-
-            if(isset($_GET['error'])) {
-                if($_GET['error']==1)
-                    echo "<p class='error'><b>Non sono permessi campi dati nulli per le credenziali</b></p>";
-                else if($_GET['error']==2)
-                    echo "<p class='error'><b>Le password inserite non coincidono</b></p>";
-                else if($_GET['error']==3)
-                    echo "<p class='error'><b>La vecchia password è errata</b></p>";
-                else if($_GET['error']==4)
-                    echo "<p class='error'><b>Nome utente non disponibile, riprovare</b></p>";
-            }
         ?>
         <div class="contall">
         <?php
@@ -73,7 +62,19 @@
             ?>
         </form>
         </div>
-       
+
+        <?php
+            if(isset($_GET['error'])) {
+                if($_GET['error']==1)
+                    echo "<p class='error'><b>Non sono permessi campi dati nulli per le credenziali</b></p>";
+                else if($_GET['error']==2)
+                    echo "<p class='error'><b>Le password inserite non coincidono</b></p>";
+                else if($_GET['error']==3)
+                    echo "<p class='error'><b>La vecchia password è errata</b></p>";
+                else if($_GET['error']==4)
+                    echo "<p class='error'><b>Nome utente non disponibile, riprovare</b></p>";
+            }
+        ?>       
 
         <?php
 			$_SESSION['page']='info_utente.php';

@@ -207,7 +207,7 @@ input[type="checkbox"]{
     left: 50%;
     top:50%;
     transform: translate(-50%,-50%);
-    
+    line-height: 15em;
 }
 #img_offer{
     height: 50%;

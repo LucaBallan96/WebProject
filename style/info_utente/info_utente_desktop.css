@@ -103,7 +103,6 @@ form {
 .remove_control {
     display: none;
 }
-
 .remove_form_div {
     visibility: hidden;
     position: fixed;

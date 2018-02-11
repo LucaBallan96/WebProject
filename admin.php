@@ -31,26 +31,30 @@
 		<script type="text/javascript" src="script/menuScript.js"></script>
 		<div class="nascosto">Ti trovi in: Home > Area Privata</div>
 
+		<div id='contall'>
+
 		<!-- NAVIGATION -->
 		<input id='compact_menu' type='checkbox'/>
-		<label id='cm_label' for='compact_menu' title='Visualizza le opzioni del menu'>
+		<label id='cm_label' tabindex='0' for='compact_menu' title='Visualizza le opzioni del menu'>
 			<div class="cm_line"></div>
             <div class="cm_line"></div>
             <div class="cm_line"></div>
 		</label>
-		
+
 		<div id="nav">
-			<a title="Torna alla pagina iniziale" href="index.php" id="nav_home"><img id="logo" src="images/logo.png"/></a>
-			<a title="Impiegati dell'azienda" href="#impiegati" id="nav_people" class="nav_link" onclick="close_navbar()">Impiegati</a>
-			<a title="Progetti dell'azienda" href="#progetti" id="nav_projects" class="nav_link" onclick="close_navbar()">Progetti</a>
-			<a title="Articoli di stampa" href="#articoli" id="nav_articles" class="nav_link" onclick="close_navbar()">Articoli</a>
-			<a title="Utenti del sito" href="#utenti" id="nav_users" class="nav_link" onclick="close_navbar()">Utenti</a>
-			<a title="Offerte di lavoro e prenotazioni degli utenti" href="#offerte" id="nav_work" class="nav_link" onclick="close_navbar()">Lavoro</a>
-			<a title='Effettua il logout dal sito' href='logout.php' id='logout' class="nav_link_dx">Logout</a>
+			<a title="Torna alla pagina iniziale" href="index.php" id="nav_home"><img id="logo" src="images/logo.png" accesskey='h'/></a>
+			<a title="Impiegati dell'azienda" href="#impiegati" id="nav_people" class="nav_link" onclick="close_navbar()" accesskey='i'><u>I</u>mpiegati</a>
+			<a title="Progetti dell'azienda" href="#progetti" id="nav_projects" class="nav_link" onclick="close_navbar()" accesskey='p'><u>P</u>rogetti</a>
+			<a title="Articoli di stampa" href="#articoli" id="nav_articles" class="nav_link" onclick="close_navbar()" accesskey='a'><u>A</u>rticoli</a>
+			<a title="Utenti del sito" href="#utenti" id="nav_users" class="nav_link" onclick="close_navbar()" accesskey='t'>U<u>t</u>enti</a>
+			<a title="Offerte di lavoro e prenotazioni degli utenti" href="#offerte" id="nav_work" class="nav_link" onclick="close_navbar()" accesskey='v'>La<u>v</u>oro</a>
+			<a title='Effettua il logout dal sito' href='logout.php' id='logout' class="nav_link_dx" accesskey='l'><u>L</u>ogout</a>
 			<?php
-				echo "<a title='Visualizza le informazioni relative al tuo account' href='info_utente.php' id='user' class='nav_link_dx'>".$_SESSION['username']."</a>";
+				echo "<a title='Visualizza le informazioni relative al tuo account' href='info_utente.php' id='user' class='nav_link_dx' accesskey='u'>".$_SESSION['username']."</a>";
 			?>
 		</div>
+
+		<div id='contall_outnav'>
 
 		<!-- TMP ERROR -->
 		<?php
@@ -70,7 +74,7 @@
 
 		<!-- NUOVO IMPIEGATO -->
 		<input type='checkbox' id='new_imp_control'/>
-		<label id='new_imp_btn' title='Inserisci un nuovo impiegato' for='new_imp_control' tabindex="0"></label>
+		<label id='new_imp_btn' title='Inserisci un nuovo impiegato' for='new_imp_control' tabindex="0" onclick="changeVisibility(this)"></label>
 		<div id='new_imp_form_div'>
 			<form id='new_imp_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 				<fieldset id='new_imp_personal_info'>
@@ -107,7 +111,7 @@
 
 		<!-- NUOVO PROGETTO -->
 		<input type='checkbox' id='new_proj_control'/>
-		<label id='new_proj_btn' title='Inserisci un nuovo progetto' for='new_proj_control' tabindex="0"></label>
+		<label id='new_proj_btn' title='Inserisci un nuovo progetto' for='new_proj_control' tabindex="0" onclick="changeVisibility(this)"></label>
 		<div id='new_proj_form_div'>
 			<form id='new_proj_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 				<div class='project_info'>
@@ -140,7 +144,7 @@
 
 		<!-- NUOVO ARTICOLO -->
 		<input type='checkbox' id='new_art_control'/>
-		<label id='new_art_btn' title='Inserisci un nuovo articolo' for='new_art_control' tabindex="0"></label>
+		<label id='new_art_btn' title='Inserisci un nuovo articolo' for='new_art_control' tabindex="0" onclick="changeVisibility(this)"></label>
 		<div id='new_art_form_div'>
 			<form id='new_art_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 				<input class='identity' type='text' name='new_art' value='new_art'/>
@@ -165,7 +169,7 @@
 
 		<!-- NUOVA OFFERTA -->
 		<input type='checkbox' id='new_off_control'/>
-		<label id='new_off_btn' title='Inserisci una nuova offerta di lavoro' for='new_off_control' tabindex="0"></label>
+		<label id='new_off_btn' title='Inserisci una nuova offerta di lavoro' for='new_off_control' tabindex="0" onclick="changeVisibility(this)"></label>
 		<div id='new_off_form_div'>
 			<form id='new_off_form' action='form_control.php' method='post'>
 				<input class='identity' type='text' name='new_off' value='new_off'/>
@@ -240,6 +244,9 @@
 			<?php
 				$conn->get_offerte_admin();
 			?>
+		</div>
+
+		</div>
 		</div>
 
 		<?php

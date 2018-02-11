@@ -25,7 +25,6 @@ a {
 	left: 0%;
 	width: 100%;
     background-color: #01346e;
-    border-bottom: 1px solid black;
 }
 .nav_link, .nav_link_dx {
     padding: 1em 1.5em;
@@ -51,9 +50,8 @@ a {
 	background-color: #0066ff;
 	font-weight: bold;
 }
-.nav_link:hover, .nav_link_dx:hover, #user:hover {
+.nav_link:hover, .nav_link_dx:hover, #user:hover, .nav_link:focus, .nav_link_dx:focus, #user:focus {
     background-color: #33a3ff;
-    text-decoration: underline;
 }
 
 /* PARTI IN COMUNE */
@@ -289,7 +287,7 @@ a {
     background-size: 3em;
     background-repeat: no-repeat;
 }
-.modify_btn:hover, #new_imp_btn:hover, #new_proj_btn:hover, #new_art_btn:hover, #new_off_btn:hover {
+.modify_btn:hover, #new_imp_btn:hover, #new_proj_btn:hover, #new_art_btn:hover, #new_off_btn:hover, .modify_btn:focus, #new_imp_btn:focus, #new_proj_btn:focus, #new_art_btn:focus, #new_off_btn:focus {
     background-color: #33a3ff;
     cursor: pointer;
 }
@@ -370,7 +368,7 @@ a {
 .reset_btn {
     margin-left: 2em;
 }
-.submit_btn:hover, .reset_btn:hover {
+.submit_btn:hover, .reset_btn:hover, .submit_btn:focus, .reset_btn:focus {
     cursor: pointer;
     text-decoration: underline;
     background-color: #33a3ff; 
@@ -389,7 +387,7 @@ a {
     background-size: 3em;
     background-repeat: no-repeat;
 }
-.remove_btn:hover {
+.remove_btn:hover, .remove_btn:focus {
     background-color: #33a3ff;
     cursor: pointer;
 }
@@ -436,7 +434,7 @@ a {
     background-color: #01346e;
     margin-right: 2em;
 }
-.yes_no_div label:hover, .apply_btn:hover {
+.yes_no_div label:hover, .apply_btn:hover, .yes_no_div label:focus, .apply_btn:focus {
     cursor: pointer;
     text-decoration: underline;
     background-color: #33a3ff; 
@@ -573,7 +571,7 @@ a {
     background-size: 2.2em;
     background-repeat: no-repeat;
 }
-.remove_proj_btn:hover {
+.remove_proj_btn:hover, .remove_proj_btn:focus {
     cursor: pointer;
     background-color: #008cff;
 }
@@ -678,7 +676,7 @@ a {
     margin-top: 0.5em;
     background-image: url('../../images/remove.png');
 }
-.modify_article_btn:hover, .remove_article_btn:hover {
+.modify_article_btn:hover, .remove_article_btn:hover, .modify_article_btn:focus, .remove_article_btn:focus {
     background-color: #33a3ff;
     cursor: pointer;
 }
@@ -758,7 +756,7 @@ a {
 .save_mod_art {
     margin-top: 4em;
 }
-.save_mod_art:hover, .reset_mod_art:hover, .rem_art_form_btn:hover {
+.save_mod_art:hover, .reset_mod_art:hover, .rem_art_form_btn:hover, .save_mod_art:focus, .reset_mod_art:focus, .rem_art_form_btn:focus {
     background-color: #33a3ff;
     cursor: pointer;
     text-decoration: underline;
@@ -866,7 +864,7 @@ a {
     top: 3.5em;
     background-image: url("../../images/remove_user.png");
 }
-.mod_u_label:hover, .rem_u_label:hover {
+.mod_u_label:hover, .rem_u_label:hover, .mod_u_label:focus, .rem_u_label:focus {
     cursor: pointer;
     background-color: #33a3ff;
 }
@@ -907,7 +905,7 @@ a {
     background-color: #01346e;
     color: white;
 }
-.mod_u_form_btn:hover {
+.mod_u_form_btn:hover, .mod_u_form_btn:focus {
     text-decoration: underline;
     cursor: pointer;
     background-color: #33a3ff;
@@ -1007,7 +1005,7 @@ a {
     transform: translate(0, -50%);
     text-align: center;
 }
-.mod_off_btn:hover, .rem_off_btn:hover, .rem_off_form_btn:hover, .cand_off_btn:hover {
+.mod_off_btn:hover, .rem_off_btn:hover, .rem_off_form_btn:hover, .cand_off_btn:hover, .mod_off_btn:focus, .rem_off_btn:focus, .rem_off_form_btn:focus, .cand_off_btn:focus {
     background-color: #33a3ff;
     text-decoration: underline;
     cursor: pointer;
