@@ -1007,6 +1007,7 @@ a {
 }
 .mod_off_date {
     float: right;
+    width: 60%;
     color: #01346e;
 }
 .mod_off_text {
