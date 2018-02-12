@@ -15,23 +15,23 @@ echo "<input id='compact_menu' onclick='changeTitle(this)' type='checkbox'/>
         <div class='dropdown'>
             <a id='menu_bt1' class='drop_button' href='azienda.php' accesskey='a' title='Visualizza le informazioni sull&#39;azienda'><u>A</u>zienda</a>
             <div id='content_menu_bt1' class='drop_content'>
-                <a href='azienda.php#storia' title='Leggi la storia dell&#39;azienda' >Storia<div>&gt</div></a>
-                <a href='azienda.php#sedi' title='Visualizza le sedi in cui opera l&#39;azienda' >Sedi<div>&gt</div></a>
-                <a href='azienda.php#persone' title='Visualizza gli impiegati dell&#39;azienda'>Persone<div>&gt</div></a>
+                <a href='azienda.php#storia' title='Leggi la storia dell&#39;azienda' >Storia<div>&gt;</div></a>
+                <a href='azienda.php#sedi' title='Visualizza le sedi in cui opera l&#39;azienda' >Sedi<div>&gt;</div></a>
+                <a href='azienda.php#persone' title='Visualizza gli impiegati dell&#39;azienda'>Persone<div>&gt;</div></a>
             </div>
         </div>
         <div class='dropdown'>
             <a id='menu_bt2' class='drop_button' href='progetti.php' title='Visualizza i progetti in cui si impegna l&#39;azienda' accesskey='p'><u>P</u>rogetti</a>
             <div id='content_menu_bt2' class='drop_content'>
-                <a href='progetti.php' title='Visualizza i progetti in corso'>In corso<div>&gt</div></a>
-                <a href='progetti.php#terminati' title='Visualizza i progetti terminati'>Terminati<div>&gt</div></a>
+                <a href='progetti.php' title='Visualizza i progetti in corso'>In corso<div>&gt;</div></a>
+                <a href='progetti.php#terminati' title='Visualizza i progetti terminati'>Terminati<div>&gt;</div></a>
             </div>
         </div>
         <div class='dropdown'>
             <a id='menu_bt3' class='drop_button' href='iniziative.php' title='Visualizza gli articoli sull&#39;azienda e le certificazioni ricevute' accesskey='i'><u>I</u>niziative</a>
             <div id='content_menu_bt3' class='drop_content'>
-                <a href='iniziative.php#stampa' title='Leggi gli articoli che trattano dell&#39;azienda'>Stampa<div>&gt</div></a>
-                <a href='iniziative.php#certificazioni' title='Visualizza le certificazioni'>Certificazioni<div>&gt</div></a>
+                <a href='iniziative.php#stampa' title='Leggi gli articoli che trattano dell&#39;azienda'>Stampa<div>&gt;</div></a>
+                <a href='iniziative.php#certificazioni' title='Visualizza le certificazioni'>Certificazioni<div>&gt;</div></a>
             </div>
         </div>
         <a href='lavoro.php' id='work' title='Visualizza le offerte di lavoro e fissa un colloquio con l&#39;azienda' accesskey='v'>La<u>v</u>ora con noi</a>
