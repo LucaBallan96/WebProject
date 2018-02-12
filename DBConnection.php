@@ -57,7 +57,7 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
-				echo "<div class='contprimo'><a href='articolo.php?id=".$row['id']."' id='div_two' class='div_group' title='Leggi l&#39articolo più recente'>
+				echo "<div class='contprimo'><a href='articolo.php?id=".$row['id']."' id='div_two' class='div_group' title='Leggi l&#39;articolo più recente'>
 				<div id='div_title_two' class='div_title_group'>
 					<div class='title_div'>Ultimo Articolo</div>
 				</div>
@@ -76,7 +76,7 @@
 						<div class='title_div'>Azienda</div>
 				</div>
 				<div class='div_container_img'>
-					<img src='images/sede.png' alt='Sede dell&#39azienda'/>
+					<img src='images/sede.png' alt='Sede dell&#39;azienda'/>
 					<div class='div_overlay'>
 						<div class='div_text_inside_group'><span class='sp'>Scopri dove siamo</span></div>
 					</div>
@@ -89,7 +89,7 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
-				echo "<div class='contprimo'><a href='info_progetto.php?numero=".$row['id']."'id='div_three' class='div_group' title='Visualizza l&#39ultimo progetto iniziato'>
+				echo "<div class='contprimo'><a href='info_progetto.php?numero=".$row['id']."'id='div_three' class='div_group' title='Visualizza l&#39;ultimo progetto iniziato'>
 				<div id='div_title_three' class='div_title_group'>
 						<div class='title_div'>Ultimo Progetto</div>
 				</div>
@@ -108,7 +108,7 @@
 						<div class='title_div'>Azienda</div>
 				</div>
 				<div class='div_container_img'>
-					<img src='images/sede.png'alt='Sede dell&#39azienda'/>
+					<img src='images/sede.png'alt='Sede dell&#39;azienda'/>
 					<div class='div_overlay'>
 						<div class='div_text_inside_group'><span class='sp'>Scopri dove siamo</span></div>
 					</div>
@@ -134,7 +134,7 @@
 				<div  class='div_container_img'>
 					<img id='img_offer' src='images/".$row['role'].".png'alt='Ultima offerta inserita'/>
 					<div class='div_overlay'>
-						<div class='div_text_inside_group'><span class='sp'>".$row['branch']."</span></br></br><span class='sp'>".$row['role']."</span></br></br><span class='sp'>".$row['contract']."</span></div>
+						<div class='div_text_inside_group'><span class='sp'>".$row['branch']."</span><br/><br/><span class='sp'>".$row['role']."</span><br/><br/><span class='sp'>".$row['contract']."</span></div>
 					</div>
 				</div>
 			</a></div>";
@@ -145,7 +145,7 @@
 						<div class='title_div'>Azienda</div>
 				</div>
 				<div class='div_container_img'>
-					<img src='images/sede.png'alt='Sede dell&#39azienda'/>
+					<img src='images/sede.png'alt='Sede dell&#39;azienda'/>
 					<div class='div_overlay'>
 						<div class='div_text_inside_group'>Scopri dove siamo</div>
 					</div>
@@ -232,8 +232,8 @@
 							<div class='div_img_offer'><img class='img_offer' src='images/".$row['role'].".png' alt='Offerta come ".$row['role']."'></div>
 							<div class='div_information'>
 								<div class='text'>
-									".$row['role']." - ".$row['branch']." - ".$row['contract']."</br></br>
-									".$row['message']."	</br></br>";
+									".$row['role']." - ".$row['branch']." - ".$row['contract']."<br/><br/>
+									".$row['message']."	<br/><br/>";
 									
 									$username=$_SESSION['username'];
 									$sql1="SELECT date FROM webproject.form_offerte WHERE idOffer='".$row['id']."' and user='".$username."'";
@@ -341,8 +341,8 @@
 			$result = $this->conn->query($sql);
 			$row = $result->fetch_assoc();
 			echo "<div id='container_prenotazioni'>
-			Benvenuto ".$_SESSION['username']."</br></br>
-			Offerte prenotate - ".$row['COUNT(idOffer)']." </br></br>
+			Benvenuto ".$_SESSION['username']."<br/><br/>
+			Offerte prenotate - ".$row['COUNT(idOffer)']." <br/><br/>
 			<a href='prenotazioni.php' title='Visualizza le offerte per cui hai prenotato un colloquio'>Vedi prenotazioni</a>
 			</div>
 			
@@ -372,7 +372,7 @@
 							<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png' alt='Immagine offerta di lavoro come ".$row['role']."'></div>
 							<div class='div_information'>
 								<div class='text'>
-									".$row['role']." - ".$row['branch']." - ".$row['contract']."</br></br>
+									".$row['role']." - ".$row['branch']." - ".$row['contract']."<br/><br/>
 									".$row['message']."		
 								</div>
 							</div>
@@ -385,8 +385,8 @@
 								<input class='identity' type='text' name='id' value='".$row['id']."'/>
 								<div class='div_container_form'>
 									<div class='cont_general'><div class='general_informations'>
-									<label class='lf'>Nome: <input class='in_form' type='text' name='firstname' placeholder=' Nome' pattern='[a-zA-Z\s]{1,30}' title='Inserisci il tuo nome' required></label><div class='divisor'></div><br>
-									<label class='lf'>Cognome: <input class='in_form' type='text' name='lastname' placeholder=' Cognome' pattern='[a-zA-Z\s]{1,30}' title='Inserisci il tuo cognome' required></label><div class='divisor'></div><br>
+									<label class='lf'>Nome: <input class='in_form' type='text' name='firstname' placeholder=' Nome' pattern='[a-zA-Z\s]{1,30}' title='Inserisci il tuo nome' required></label><div class='divisor'></div><br/>
+									<label class='lf'>Cognome: <input class='in_form' type='text' name='lastname' placeholder=' Cognome' pattern='[a-zA-Z\s]{1,30}' title='Inserisci il tuo cognome' required></label><div class='divisor'></div><br/>
 										<div class='div_genre'>
 											Genere: 
 											<div class='container_radio'>
@@ -395,14 +395,14 @@
 											</div>
 										</div>
 										<div class='divisor'></div>
-										<label class='lf'><br>Data di nascita: <input class='in_form' type='date' name='bday' placeholder=' yyyy-mm-gg' min='1900-01-01' max='2000-01-01' pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))' title='Inserisci la data di nascita: il formato è yyyy-mm-gg' required></label><div class='divisor'></div><br>
-										<label class='lf'>E-Mail: <input class='in_form' type='email' name='mail' placeholder=' E-mail' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$'' title='E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %' required></label><div class='divisor'></div><br>
+										<label class='lf'><br/>Data di nascita: <input class='in_form' type='date' name='bday' placeholder=' yyyy-mm-gg' min='1900-01-01' max='2000-01-01' pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))' title='Inserisci la data di nascita: il formato è yyyy-mm-gg' required></label><div class='divisor'></div><br/>
+										<label class='lf'>E-Mail: <input class='in_form' type='email' name='mail' placeholder=' E-mail' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$' title='E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %' required></label><div class='divisor'></div><br/>
 										<label class='lf'>Data colloquio: <select class='date_input' name='date' title='Seleziona la data per un colloquio tra quelle disponibili'>";
 										for($j=0; $j<count($dates); $j++)
 											echo "<option value='".$dates[$j]."'>".$dates[$j]."</option>";
 	
-										echo "</select></label><div class='divisor'></div><br>
-										<label class='lfmessage'>Messaggio:</br></br>
+										echo "</select></label><div class='divisor'></div><br/>
+										<label class='lfmessage'>Messaggio:<br/><br/>
 										<textarea class='texta'  class='textmessage' name='textmessage' form='f".$count."' placeholder='Inserisci un messaggio' maxlength='1000' title='Inserisci un messaggio che descriva le tue qualità'> </textarea></label>
 										<input class='submit' type='submit' value='Invia' name='candidate' title='Invia il modulo'>  
 									</div></div>
@@ -626,13 +626,13 @@
 					<div class='divisor'></div>";
 					while($row=$result->fetch_assoc()){
 						echo "<div class='div_impiegato' title='".$row['role']." ".$row['firstname']." ".$row['lastname']."' >
-						<img class='img_impiegato' src='images/".$row['image']."' alt='Impiegato ".$row['firstname']." ".$row['lastname']."'/></br></br>
-						<span class='spg'>Nome  </span><span class='spgr'>".$row['firstname']."</span></br> <div class='d'></div>
-						<span class='spg'>Cognome  </span><span class='spgr'>".$row['lastname']."</span></br><div class='d'></div>
-						<span class='spg'>Ruolo  </span><span class='spgr'>".$row['role']."</span></br><div class='d'></div>
-						<span class='spg'>Data N. </span><span class='spgr'>".$row['birth']."</span></br><div class='d'></div>
-						<span class='spg'>Età  </span><span class='spgr'>".$row['age']."</span></br><div class='d'></div>
-						<span class='spg'>Inizio  </span><span class='spgr'>".$row['begin']."</span></br><div class='d'></div>
+						<img class='img_impiegato' src='images/".$row['image']."' alt='Impiegato ".$row['firstname']." ".$row['lastname']."'/><br/><br/>
+						<span class='spg'>Nome  </span><span class='spgr'>".$row['firstname']."</span><br/> <div class='d'></div>
+						<span class='spg'>Cognome  </span><span class='spgr'>".$row['lastname']."</span><br/><div class='d'></div>
+						<span class='spg'>Ruolo  </span><span class='spgr'>".$row['role']."</span><br/><div class='d'></div>
+						<span class='spg'>Data N. </span><span class='spgr'>".$row['birth']."</span><br/><div class='d'></div>
+						<span class='spg'>Età  </span><span class='spgr'>".$row['age']."</span><br/><div class='d'></div>
+						<span class='spg'>Inizio  </span><span class='spgr'>".$row['begin']."</span><br/><div class='d'></div>
 						</div>";
 					
 					}
@@ -658,24 +658,24 @@
 				while($row = $result->fetch_assoc()) {
 					$stringa="<div class='div_impiegato'>
 						<input type='checkbox' id='modify".$count."' class='modify_control'/>
-						<label id='mod_imp_lab".$count."' class='modify_btn' for='modify".$count."' title='Modifica i dati dell&#39impiegato' tabindex='0' onclick='changeVisibility(this)'></label>
+						<label id='mod_imp_lab".$count."' class='modify_btn' for='modify".$count."' title='Modifica i dati dell&#39;impiegato' tabindex='0' onclick='changeVisibility(this)'></label>
 						<div id='mod_imp_div".$count."' class='modify_form_div'>
 							<form class='modify_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 								<fieldset class='modify_personal_info'>
 									<legend>Informazioni personali</legend>
 									<input class='identity' type='text' name='modify_imp' value='".$row['id']."'/>
 									<input class='identity' type='text' name='old_image' value='".$row['image']."'/>
-									<div>Nome:<input type='text' name='firstname' value='".$row['firstname']."' placeholder='Nome' pattern='[a-zA-Z\s]{1,30}' title='Nome dell&#39impiegato: massimo 30 caratteri alfabetici' required/></div>
-									<div>Cognome:<input type='text' name='lastname' value='".$row['lastname']."' placeholder='Cognome' pattern='[a-zA-Z\s]{1,30}' title='Cognome dell&#39impiegato: massimo 30 caratteri alfabetici' required/></div>
-									<div>Data di nascita:<input type='date' name='birth' min='1900-01-01' max='2000-01-01' value='".$row['birth']."' title='Inserisci la data di nascita dell&#39impiegato'/></div>
-									<div>Età:<input type='number' name='age' value='".$row['age']."' min='18' max='99' placeholder='Età' title='Inserisci l&#39età dell&#39impiegato'/></div>
-									<div>E-mail:<input type='email' value='".$row['mail']."' name='mail' placeholder='E-mail' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$' title='E-mail dell&#39impiegato: il formato è quello standard. Sono accettati i simboli . + - _ e %'/></div>
-									<div class='file_select'>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png' title='Inserisci una foto dell&#39impiegato'/></div>
-									<div>Settore:<input type='text' name='branch' value='".$row['branch']."' placeholder='Settore di impiego' pattern='[a-zA-Z0-9\s]{1,30}' title='Settore dell&#39impiegato: massimo 30 caratteri alfanumerici'/></div>
-									<div>Anno di inizio:<input type='number' name='begin' value='".$row['begin']."' min='1900' max='2018' placeholder='Anno di inizio' title='Inserisci l&#39anno di inizio dell&#39impiegato'/></div>
+									<div>Nome:<input type='text' name='firstname' value='".$row['firstname']."' placeholder='Nome' pattern='[a-zA-Z\s]{1,30}' title='Nome dell&#39;impiegato: massimo 30 caratteri alfabetici' required/></div>
+									<div>Cognome:<input type='text' name='lastname' value='".$row['lastname']."' placeholder='Cognome' pattern='[a-zA-Z\s]{1,30}' title='Cognome dell&#39;impiegato: massimo 30 caratteri alfabetici' required/></div>
+									<div>Data di nascita:<input type='date' name='birth' min='1900-01-01' max='2000-01-01' value='".$row['birth']."' title='Inserisci la data di nascita dell&#39;impiegato'/></div>
+									<div>Età:<input type='number' name='age' value='".$row['age']."' min='18' max='99' placeholder='Età' title='Inserisci l&#39;età dell&#39;impiegato'/></div>
+									<div>E-mail:<input type='email' value='".$row['mail']."' name='mail' placeholder='E-mail' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$' title='E-mail dell&#39;impiegato: il formato è quello standard. Sono accettati i simboli . + - _ e %'/></div>
+									<div class='file_select'>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png' title='Inserisci una foto dell&#39;impiegato'/></div>
+									<div>Settore:<input type='text' name='branch' value='".$row['branch']."' placeholder='Settore di impiego' pattern='[a-zA-Z0-9\s]{1,30}' title='Settore dell&#39;impiegato: massimo 30 caratteri alfanumerici'/></div>
+									<div>Anno di inizio:<input type='number' name='begin' value='".$row['begin']."' min='1900' max='2018' placeholder='Anno di inizio' title='Inserisci l&#39;anno di inizio dell&#39;impiegato'/></div>
 								</fieldset>
 								<fieldset class='modify_company_info'>
-									<legend>Ruolo nell&#39azienda:</legend>";
+									<legend>Ruolo nell&#39;azienda:</legend>";
 					for($i=0; $i<count($roles); $i++) {
 						if($row['role']==$roles[$i])
 							$stringa=$stringa."<div><label title='".$roles[$i]."'><input type='radio' name='role' value='".$roles[$i]."' checked/> ".$roles[$i]."</label></div>";
@@ -684,13 +684,13 @@
 					}
 					$stringa=$stringa."</fieldset>
 								<div class='submit_reset_div'>
-									<input class='submit_btn' type='submit' value='Salva modifiche' title='Salva i dati dell&#39impiegato'/>
+									<input class='submit_btn' type='submit' value='Salva modifiche' title='Salva i dati dell&#39;impiegato'/>
 									<input class='reset_btn' type='reset' value='Annulla modifiche' title='Resetta i dati inseriti'/>
 								</div>
 							</form>
 						</div>
 						<input type='checkbox' id='remove".$count."' class='remove_control'/>
-						<label id='rem_imp_lab".$count."' class='remove_btn' for='remove".$count."' title='Rimuovi i dati dell&#39impiegato' tabindex='0' onclick='changeVisibility(this)'></label>
+						<label id='rem_imp_lab".$count."' class='remove_btn' for='remove".$count."' title='Rimuovi i dati dell&#39;impiegato' tabindex='0' onclick='changeVisibility(this)'></label>
 						<div id='rem_imp_div".$count."' class='remove_form_div'>
 							<form class='remove_form' action='form_control.php' method='post'>
 								<fieldset class='remove_fieldset'>
@@ -718,7 +718,7 @@
 						<div class='magic'>
 							<div class='imp_more'><div>".$row['age']." anni</div></div>
 							<div class='imp_more'><div>Settore: ".$row['branch']."</div></div>
-							<div class='imp_more'><div>Impiegato dell&#39azienda dal ".$row['begin']."</div></div>		
+							<div class='imp_more'><div>Impiegato dell&#39;azienda dal ".$row['begin']."</div></div>		
 						</div>
 						<div id='more_info_div".$count."' class='more_info'><div>+</div></div>
 					</label>";
@@ -827,7 +827,7 @@
 				$count=1;
 				while($row = $result->fetch_assoc()) {
 					echo "<div class='article_div'>
-							<div class='article_image'><img src='images/".$row['image']."' alt='Articolo ".$row['title']."'/></div>
+							<div class='article_image'><img src='images/".$row['image']."' alt='Illustrazione per ".$row['title']."'/></div>
 							<div class='article_info_div'>
 								<div class='article_info'>Data:<div>".$row['date']."</div></div>
 								<div class='article_info'>Autore:<div>".$row['author']."</div></div>
@@ -836,31 +836,31 @@
 								<div class='article_info'>Sottotitolo:<div>".$row['subtitle']."</div></div>
 							</div>
 							<input id='mod_art_checkbox".$count."' class='mod_art_control' type='checkbox' onclick='changeTitle(this)'/>
-							<label id='mod_art_lab".$count."' for='mod_art_checkbox".$count."' class='modify_article_btn' title='Modifica i dati dell&#39articolo' tabindex='0'></label>
+							<label id='mod_art_lab".$count."' for='mod_art_checkbox".$count."' class='modify_article_btn' title='Modifica i dati dell&#39;articolo' tabindex='0'></label>
 							<form id='mod_a".$count."' class='mod_art_form' action='form_control.php' method='post' enctype='multipart/form-data'>
 								<div class='article_image'>
 									<img src='images/".$row['image']."' alt='Immagine corrente articolo ".$row['title']."'/>
-									<div class='change_art_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png' title='Inserisci una nuova immagine per l&#39articolo'/></div>
+									<div class='change_art_img'>Cambia: <input type='file' name='image' accept='.jpg, .jpeg, .png' title='Inserisci una nuova immagine per l&#39;articolo'/></div>
 								</div>
 								<div class='article_info_div'>
-									<div class='article_info'>Data:<input type='date' min='1900-01-01' max='".date('Y-m-d')."' name='date' value='".$row['date']."' title='Inserisci la data di pubblicazione dell&#39articolo' required/></div>
-									<div class='article_info'>Autore:<input type='text' name='author' value='".$row['author']."' placeholder='Autore' pattern='.{1,30}' title='Autore dell&#39articolo: massimo 30 caratteri' required/></div>
+									<div class='article_info'>Data:<input type='date' min='1900-01-01' max='".date('Y-m-d')."' name='date' value='".$row['date']."' title='Inserisci la data di pubblicazione dell&#39;articolo' required/></div>
+									<div class='article_info'>Autore:<input type='text' name='author' value='".$row['author']."' placeholder='Autore' pattern='.{1,30}' title='Autore dell&#39;articolo: massimo 30 caratteri' required/></div>
 									<div class='article_info'>Stampa:<input type='text' name='house' value='".$row['house']."' placeholder='Ente di stampa' pattern='.{1,30}' title='Ente di stampa: massimo 30 caratteri' required/></div>
-									<div class='article_info'>Titolo:<input type='text' name='title' value='".$row['title']."' placeholder='Titolo' maxlength='50' title='Inserisci un titolo per l&#39articolo' required/></div>
-									<div class='article_info'>Sottotitolo:<input type='text' name='subtitle' placeholder='Sottotitolo' value='".$row['subtitle']."' placeholder='Sottotitolo' maxlength='100' title='Inserisci un sottotitolo per l&#39articolo' required/></div>
+									<div class='article_info'>Titolo:<input type='text' name='title' value='".$row['title']."' placeholder='Titolo' maxlength='50' title='Inserisci un titolo per l&#39;articolo' required/></div>
+									<div class='article_info'>Sottotitolo:<input type='text' name='subtitle' placeholder='Sottotitolo' value='".$row['subtitle']."' placeholder='Sottotitolo' maxlength='100' title='Inserisci un sottotitolo per l&#39;articolo' required/></div>
 								</div>
 								<input class='identity' type='text' name='modify_article' value='".$row['id']."'/>
 								<input class='identity' type='text' name='old_image' value='".$row['image']."'/>
-								<input class='save_mod_art' type='submit' value='Salva' title='Salva i dati dell&#39articolo'/>
+								<input class='save_mod_art' type='submit' value='Salva' title='Salva i dati dell&#39;articolo'/>
 								<input class='reset_mod_art' type='reset' value='Reset' title='Resetta i dati inseriti'/>
-								<textarea class='article_text' name='text' form='mod_a".$count."' placeholder='Inserisci il testo' maxlength='2000' title='Inserisci il testo dell&#39articolo'>".$row['text']."</textarea>
+								<textarea class='article_text' name='text' form='mod_a".$count."' placeholder='Inserisci il testo' maxlength='2000' title='Inserisci il testo dell&#39;articolo'>".$row['text']."</textarea>
 							</form>
 							<input id='rem_art_checkbox".$count."' class='rem_art_control' type='checkbox'/ onclick='changeTitle(this)'>
-							<label id='rem_art_lab".$count."' for='rem_art_checkbox".$count."' class='remove_article_btn' title='Rimuovi i dati dell&#39articolo' tabindex='0'></label>
+							<label id='rem_art_lab".$count."' for='rem_art_checkbox".$count."' class='remove_article_btn' title='Rimuovi i dati dell&#39;articolo' tabindex='0'></label>
 							<form class='rem_art_form' action='form_control.php' method='post'>
 								<div>Vuoi eliminare definitivamente questo articolo e tutte le informazioni in esso contenute?</div>
 								<input class='identity' type='text' name='remove_article' value='".$row['id']."'/>
-								<input type='submit' class='rem_art_form_btn' value='Elimina' title='Elimina l&#39articolo'/>
+								<input type='submit' class='rem_art_form_btn' value='Elimina' title='Elimina l&#39;articolo'/>
 							</form>
 							<div class='article_text'>".$row['text']."</div>
 						</div>";
@@ -997,18 +997,18 @@
 									Descrizione:<textarea class='mod_off_text' form='mod_off_form".$count."' name='message' placeholder='Inserisci il messaggio' maxlength='1000' title='Inserisci il messaggio'>".$row['message']."</textarea>
 									<div class='only_print_text'>".$row['message']."</div>
 								</div>
-								<input class='mod_off_btn' type='submit' value='Salva' title='Salva i dati dell&#39offerta'/>
+								<input class='mod_off_btn' type='submit' value='Salva' title='Salva i dati dell&#39;offerta'/>
 								<input class='mod_off_btn' type='reset' value='Annulla' title='Resetta i dati inseriti'/>
 							</form>
 							<input id='rem_off_checkbox".$count."' class='rem_off_control' type='checkbox' onclick='changeTitle(this)'/>
-							<label id='rem_off_lab".$count."' for='rem_off_checkbox".$count."' class='rem_off_btn' title='Rimuovi i dati dell&#39offerta' tabindex='0'><div>Elimina</div></label>
+							<label id='rem_off_lab".$count."' for='rem_off_checkbox".$count."' class='rem_off_btn' title='Rimuovi i dati dell&#39;offerta' tabindex='0'><div>Elimina</div></label>
 							<form class='rem_off_form' action='form_control.php' method='post'>
 								<div>Vuoi eliminare definitivamente questa offerta, i colloqui e le relative prenotazioni degli utenti?</div>
 								<input class='identity' type='text' name='remove_offer' value='".$row['id']."'/>
 								<input type='submit' class='rem_off_form_btn' value='Elimina'/>
 							</form>
 							<input id='cand_off_checkbox".$count."' class='cand_off_control' type='checkbox' onclick='changeTitle(this)'/>
-							<label id='cand_off_lab".$count."' for='cand_off_checkbox".$count."' class='cand_off_btn' title='Visualizza l&#39elenco delle prenotazioni' tabindex='0'><div>Candidature</div></label>
+							<label id='cand_off_lab".$count."' for='cand_off_checkbox".$count."' class='cand_off_btn' title='Visualizza l&#39;elenco delle prenotazioni' tabindex='0'><div>Candidature</div></label>
 							<div class='cand_off_div'>";
 					$sql2 = "SELECT * FROM webproject.form_offerte WHERE idOffer='$idOffer'";
 					$result2 = $this->conn->query($sql2);
@@ -1209,7 +1209,7 @@
 					<label class='data_input'>E-mail: <input type='email' name='mail' placeholder='e-mail' value='".$row['mail']."' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$' title='E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %' required/></label>
 				</fieldset>
 				<div id='div_buttons'>
-					<input class='btns' name='modify_user' type='submit' value='Salva modifiche' title='Salva i dati dell&#39utente'/>
+					<input class='btns' name='modify_user' type='submit' value='Salva modifiche' title='Salva i dati dell&#39;utente'/>
 					<input class='btns' type='reset' id='cancel_btn' value='Annulla modifiche' title='Resetta i dati inseriti'/>
 				</div>";
 		}
@@ -1227,7 +1227,7 @@
 							<div class='user_data'>Numero accessi al sito: ".$row['accesses']."</div>
 							<a class='user_data' href='mailto:".$row['mail']."' title='Invia una mail a ".$row['username']."'>".$row['mail']."</a>
 							<input id='mod_u_checkbox".$count."' class='mod_u_control' type='checkbox' onclick='changeTitle(this)'/>
-							<label id='mod_u_lab".$count."' for='mod_u_checkbox".$count."' class='mod_u_label' title='Modifica i dati dell&#39utente' tabindex='0'></label>
+							<label id='mod_u_lab".$count."' for='mod_u_checkbox".$count."' class='mod_u_label' title='Modifica i dati dell&#39;utente' tabindex='0'></label>
 							<form class='mod_u_form' action='form_control.php' method='post'>
 								<input type='text' class='identity' name='old_user' value='".$row['username']."'/>
 								<input type='text' class='identity' name='old_accesses' value='".$row['accesses']."'/>
@@ -1236,17 +1236,17 @@
 								<div class='mod_u_form_data'><input type='email' name='admin_mod_u_mail' placeholder='E-mail' value='".$row['mail']."' maxlength='50' pattern='[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$' title='E-mail: il formato è quello standard. Sono accettati i simboli . + - _ e %' required/></div>
 								<div class='mod_u_form_btn_div'>
 									<div>
-										<input class='mod_u_form_btn' type='submit' value='Salva' title='Salva i dati dell&#39utente'/>
+										<input class='mod_u_form_btn' type='submit' value='Salva' title='Salva i dati dell&#39;utente'/>
 										<input class='mod_u_form_btn' type='reset' value='Annulla' title='Resetta i dati inseriti'/>
 									</div>
 								</div>
 							</form>
 							<input id='rem_u_checkbox".$count."' class='rem_u_control' type='checkbox' onclick='changeTitle(this)'/>
-							<label id='rem_u_lab".$count."' for='rem_u_checkbox".$count."' class='rem_u_label' title='Rimuovi i dati dell&#39utente' tabindex='0'></label>
+							<label id='rem_u_lab".$count."' for='rem_u_checkbox".$count."' class='rem_u_label' title='Rimuovi i dati dell&#39;utente' tabindex='0'></label>
 							<form class='rem_u_form' action='form_control.php' method='post'>
 								<div>Vuoi eliminare definitivamente questo account?</div>
 								<input type='text' class='identity' name='admin_rem_user' value='".$row['username']."'/>
-								<input type='submit' class='mod_u_form_btn' value='Elimina' title='Elimina l&#39utente'/>
+								<input type='submit' class='mod_u_form_btn' value='Elimina' title='Elimina l&#39;utente'/>
 							</form>
 						</div>";
 					$count++;

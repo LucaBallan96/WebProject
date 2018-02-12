@@ -7,7 +7,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="it">
     <head>
 		<title>Costruzioni Bordignon S.r.l.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,7 +59,7 @@
         </form>
         <?php
             if(isset($_GET['error'])) {
-                echo "<p class='error'><b>Errore nelle credenziali, riprovare</b></p>";
+                echo "<p class='error'><strong>Errore nelle credenziali, riprovare</strong></p>";
             }
         ?>
 

@@ -28,7 +28,7 @@ a {
     border-bottom: 1px solid black;
 }
 .nav_link, .nav_link_dx {
-    padding: 1em 0.9em;
+    padding: 1em 0.65em;
     float: left;
     color: white;
     text-decoration: none;
@@ -49,6 +49,16 @@ a {
 }
 #user {
 	font-weight: bold;
+}
+#admin {
+    width: 60px;
+    height: 50px;
+    padding: 0;
+	background-image: url('../../images/admin.png');
+	background-size: 35px;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-color: #33a3ff;
 }
 .nav_link:hover, .nav_link_dx:hover, #user:hover, .nav_link:focus, .nav_link_dx:focus, #user:focus {
     background-color: #33a3ff;

@@ -7,7 +7,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="it">
     <head>
 		<title>Costruzioni Bordignon S.r.l.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
 		<link rel="stylesheet" media="print" href="style/register/register_print.css">
 	</head>
 	<body>
-        <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Login > Nuovo Account</div>
+        <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png" alt="logo Costruzioni Bordignon S.r.l."/></div>Ti trovi in: Home > Login > Nuovo Account</div>
 
         <?php
             if(isset($_SERVER['HTTP_REFERER']))
@@ -46,9 +46,9 @@
         <?php
             if(isset($_GET['error'])) {
                 if($_GET['error']==1)
-                    echo "<p class='error'><b>Le password inserite non coincidono</b></p>";
+                    echo "<p class='error'><strong>Le password inserite non coincidono</strong></p>";
                 else
-                    echo "<p class='error'><b>Nome utente già esistente</b></p>";
+                    echo "<p class='error'><strong>Nome utente già esistente</strong></p>";
             }
         ?>
 

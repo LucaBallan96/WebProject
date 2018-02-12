@@ -9,7 +9,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="it">
     <head>
 		<title>Costruzioni Bordignon S.r.l.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +29,7 @@
 		<!-- NAVIGATION -->
 		<?php include 'navbar.php';?>
 
-		<div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Progetti > Info Progetto</div>
+		<div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png" alt="logo Costruzioni Bordignon S.r.l."/></div>Ti trovi in: Home > Progetti > Info Progetto</div>
 		
 		<div class="contall">
 
@@ -50,27 +50,27 @@
 		<div id="div_container_contatti">
 			<div id="div_contatti">
 				<div id="div_bordignon" class="div_contatto">
-					<b>COSTRUZIONI BORDIGNON S.r.l</b></br></br>
-					Via Monte Grappa,21/A</br>
-					31040 Volpago del Montello(TV)</br>
-					Tel : 0423 620077</br>
-					Fax : 0423 620356</br></br>
+					<strong>COSTRUZIONI BORDIGNON S.r.l</strong><br/><br/>
+					Via Monte Grappa,21/A<br/>
+					31040 Volpago del Montello(TV)<br/>
+					Tel : 0423 620077<br/>
+					Fax : 0423 620356<br/><br/>
 					Mail : <a href="mailto:info@costruzionibordignon.it" title="Invia una mail a COSTRUZIONI BORDIGNON S.r.l.">info@costruzionibordignon.it</a>
 				</div>
 				<div id="div_generalbau" class="div_contatto">
-					<b>B.G.P. GENERAL BAU S.r.l.</b></br></br>
-					Via S. Cassiano, 2</br>
-					39042 Bressanone (BZ)</br>
-					Tel : 0472 838669</br>
-					Fax : 0472 838669</br></br>
+					<strong>B.G.P. GENERAL BAU S.r.l.</strong><br/><br/>
+					Via S. Cassiano, 2<br/>
+					39042 Bressanone (BZ)<br/>
+					Tel : 0472 838669<br/>
+					Fax : 0472 838669<br/><br/>
 					Mail : <a href="mailto:info@bgpgeneralbau.com" title="Invia una mail a B.G.P. GENERAL BAU S.r.l.">info@bgpgeneralbau.com</a>
 				</div>
 				<div id="div_service" class="div_contatto">
-					<b>BORDIGNON SERVICE S.r.l.</b></br></br>
-					Corso Mazzini, 61</br>
-					31044 Montebelluna (TV)</br>
-					Tel : 0423 604592</br>
-					Fax : 0423 247699</br></br>
+					<strong>BORDIGNON SERVICE S.r.l.</strong><br/><br/>
+					Corso Mazzini, 61<br/>
+					31044 Montebelluna (TV)<br/>
+					Tel : 0423 604592<br/>
+					Fax : 0423 247699<br/><br/>
 					Mail : <a href="mailto:info@immobiliarebordignon.eu" title="Invia una mail a BORDIGNON SERVICE S.r.l.">info@immobiliarebordignon.eu</a>
 				</div>
 			</div>

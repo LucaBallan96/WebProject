@@ -13,7 +13,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="it">
     <head>
 		<title>Costruzioni Bordignon S.r.l.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +42,7 @@
 		</label>
 
 		<div id="nav">
-			<a title="Torna alla pagina iniziale" href="index.php" id="nav_home"><img id="logo" src="images/logo.png" accesskey='h'/></a>
+			<a title="Torna alla pagina iniziale" href="index.php" id="nav_home"><img id="logo" src="images/logo.png" alt='logo Costruzioni Bordignon S.r.l.' accesskey='h'/></a>
 			<a title="Impiegati dell'azienda" href="#impiegati" id="nav_people" class="nav_link" onclick="close_navbar()" accesskey='i'><u>I</u>mpiegati</a>
 			<a title="Progetti dell'azienda" href="#progetti" id="nav_projects" class="nav_link" onclick="close_navbar()" accesskey='p'><u>P</u>rogetti</a>
 			<a title="Articoli di stampa" href="#articoli" id="nav_articles" class="nav_link" onclick="close_navbar()" accesskey='a'><u>A</u>rticoli</a>
@@ -52,6 +52,7 @@
 			<?php
 				echo "<a title='Visualizza le informazioni relative al tuo account' href='info_utente.php' id='user' class='nav_link_dx' accesskey='u'>".$_SESSION['username']."</a>";
 			?>
+			<div title='Sei nell&#39;area amministrativa del sito' id='admin' class="nav_link_dx"></div>
 		</div>
 
 		<div id='contall_outnav'>
@@ -65,9 +66,9 @@
 				if($_GET['error']==4)
 					echo "Nome utente non disponibile, modifica annullata";
 				else if($_GET['error']==5)
-					echo "Errore nel caricamento dell&#39immagine";
+					echo "Errore nel caricamento dell&#39;immagine";
 				else if($_GET['error']==6)
-					echo "Errore nella rimozione dell&#39immagine";
+					echo "Errore nella rimozione dell&#39;immagine";
 				echo "</div></div>";
             }
 		?>
@@ -80,14 +81,14 @@
 				<fieldset id='new_imp_personal_info'>
 					<legend>Informazioni personali</legend>
 					<input class='identity' type='text' name='new_imp' value='new_imp'/>
-					<div>Nome:<input type='text' name='firstname' placeholder="Nome" pattern="[a-zA-Z\s]{1,30}" title="Nome dell&#39impiegato: massimo 30 caratteri alfabetici" required/></div>
-					<div>Cognome:<input type='text' name='lastname' placeholder="Cognome" pattern="[a-zA-Z\s]{1,30}" title="Cognome dell&#39impiegato: massimo 30 caratteri alfabetici" required/></div>
-					<div>Data di nascita:<input type='date' name='birth' placeholder='yyyy-mm-gg' min='1900-01-01' max='2000-01-01' pattern='(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))' title="Inserisci la data di nascita dell&#39impiegato; il formato è yyyy-mm-dd"/></div>
-					<div>Età:<input type='number' name='age' min='18' max='99' placeholder="Età" title="Inserisci l&#39età dell&#39impiegato"/></div>
-					<div>E-mail:<input type='email' name='mail' placeholder="E-mail" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$" title="E-mail dell&#39impiegato: il formato è quello standard. Sono accettati i simboli . + - _ e %"/></div>
-					<div>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png' title="Inserisci una foto dell&#39impiegato"/></div>
-					<div>Settore:<input type='text' name='branch' placeholder="Settore di impiego" pattern="[a-zA-Z0-9\s]{1,30}" title="Settore dell&#39impiegato: massimo 30 caratteri alfanumerici"/></div>
-					<div>Anno di inizio:<input type='number' name='begin' min='1900' max='2018' placeholder="Anno di inizio" title="Inserisci l&#39anno di inizio dell&#39impiegato"/></div>
+					<div>Nome:<input type='text' name='firstname' placeholder="Nome" pattern="[a-zA-Z\s]{1,30}" title="Nome dell&#39;impiegato: massimo 30 caratteri alfabetici" required/></div>
+					<div>Cognome:<input type='text' name='lastname' placeholder="Cognome" pattern="[a-zA-Z\s]{1,30}" title="Cognome dell&#39;impiegato: massimo 30 caratteri alfabetici" required/></div>
+					<div>Data di nascita:<input type='date' name='birth' min='1900-01-01' max='2000-01-01' title="Inserisci la data di nascita dell&#39;impiegato; il formato è yyyy-mm-dd"/></div>
+					<div>Età:<input type='number' name='age' min='18' max='99' placeholder="Età" title="Inserisci l&#39;età dell&#39;impiegato"/></div>
+					<div>E-mail:<input type='email' name='mail' placeholder="E-mail" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9._%+-]+\.[a-z]{2,3}$" title="E-mail dell&#39;impiegato: il formato è quello standard. Sono accettati i simboli . + - _ e %"/></div>
+					<div>Foto:<input type='file' name='image' accept='.jpg, .jpeg, .png' title="Inserisci una foto dell&#39;impiegato"/></div>
+					<div>Settore:<input type='text' name='branch' placeholder="Settore di impiego" pattern="[a-zA-Z0-9\s]{1,30}" title="Settore dell&#39;impiegato: massimo 30 caratteri alfanumerici"/></div>
+					<div>Anno di inizio:<input type='number' name='begin' min='1900' max='2018' placeholder="Anno di inizio" title="Inserisci l&#39;anno di inizio dell&#39;impiegato"/></div>
 				</fieldset>
 				<fieldset id='new_imp_company_info'>
 					<legend>Ruolo nell'azienda:</legend>
@@ -103,7 +104,7 @@
 					<div><label title="Magazziniere"><input type='radio' name='role' value='Magazziniere'/>Magazziniere</label></div>
 				</fieldset>
 				<div class='submit_reset_div'>
-					<input class='submit_btn' type='submit' value='Salva impiegato' title="Salva i dati dell&#39impiegato"/>
+					<input class='submit_btn' type='submit' value='Salva impiegato' title="Salva i dati dell&#39;impiegato"/>
 					<input class='reset_btn' type='reset' value='Reset' title="Resetta i dati inseriti"/>
 				</div>
 			</form>
@@ -131,7 +132,7 @@
 						<div>Data di inizio:<input type='date' name='begin' min='1900-01-01' max='2100-01-01' title="Data di inizio del progetto" required/></div>
 					</fieldset>
 					<div class='new_proj_description'>
-						Descrizione:</br>
+						Descrizione:<br/>
 						<textarea class='new_proj_desc' name='description' form='new_proj_form' placeholder='Descrizione del progetto' maxlength="1000" title="Inserisci la descrizione del progetto"></textarea>
 					</div>
 				</div>
@@ -177,8 +178,8 @@
 					<legend>Informazioni sull'offerta:</legend>
 					<div class='new_off_info'>Settore di impiego:<input type='text' name='branch' placeholder='Settore di impiego' pattern="[a-zA-Z0-9\s]{1,30}" title="Settore di impiego: massimo 30 caratteri alfanumerici" required/></div>
 					<div class='new_off_info' title="Ruolo professionale">Ruolo professionale:
-						<select form='new_off_form' name='role' title="Seleziona il ruolo professionale" required/>
-  							<option value='Presidente' title="Presidente">Presidente</option>
+						<select form='new_off_form' name='role' title="Seleziona il ruolo professionale" required>
+  							<option value='Presidente' title="Presidente" selected>Presidente</option>
   							<option value='Vicepresidente' title="Vicepresidente">Vicepresidente</option>
   							<option value='Segretario' title="Segretario">Segretario</option>
 							<option value='Ingegnere' title="Ingegnere">Ingegnere</option>
@@ -191,10 +192,10 @@
 						</select>
 					</div>
 					<div class='new_off_info'>Tipo di contratto:<input type='text' name='contract' placeholder='Tipo di contratto' pattern=".{1,30}" title="Tipo di contratto: massimo 30 caratteri" required/></div>
-					<div class='new_off_info'>Data 1° colloquio:<input class='new_off_date' type='date' name='date1' min='' max='2100-01-01' title="Seleziona la data del primo colloquio"/></div>
-					<div class='new_off_info'>Data 2° colloquio:<input class='new_off_date' type='date' name='date2' min='' max='2100-01-01' title="Seleziona la data del secondo colloquio"/></div>
-					<div class='new_off_info'>Data 3° colloquio:<input class='new_off_date' type='date' name='date3' min='' max='2100-01-01' title="Seleziona la data del terzo colloquio"/></div>
-					<div class='new_off_info'>Data 4° colloquio:<input class='new_off_date' type='date' name='date4' min='' max='2100-01-01' title="Seleziona la data del quarto colloquio"/></div>
+					<div class='new_off_info'>Data 1° colloquio:<input class='new_off_date' type='date' name='date1' min='1900-01-01' max='2100-01-01' title="Seleziona la data del primo colloquio"/></div>
+					<div class='new_off_info'>Data 2° colloquio:<input class='new_off_date' type='date' name='date2' min='1900-01-01' max='2100-01-01' title="Seleziona la data del secondo colloquio"/></div>
+					<div class='new_off_info'>Data 3° colloquio:<input class='new_off_date' type='date' name='date3' min='1900-01-01' max='2100-01-01' title="Seleziona la data del terzo colloquio"/></div>
+					<div class='new_off_info'>Data 4° colloquio:<input class='new_off_date' type='date' name='date4' min='1900-01-01' max='2100-01-01' title="Seleziona la data del quarto colloquio"/></div>
 				</fieldset>
 				<div class='new_off_mex_div'>
 					Descrizione:<textarea class='new_off_mex' form='new_off_form' name='message' placeholder='Inserisci il messaggio' maxlength="1000" title="Inserisci il messaggio"></textarea>

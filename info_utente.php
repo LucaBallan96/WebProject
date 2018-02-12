@@ -9,7 +9,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="it">
     <head>
 		<title>Costruzioni Bordignon S.r.l.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
      <!--SCRIPT-->
 		<script type="text/javascript" src="script/menuScript.js"></script>
 
-        <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Info Account</div>
+        <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png" alt="logo Costruzioni Bordignon S.r.l."/></div>Ti trovi in: Home > Info Account</div>
        
         <?php
             if(!isset($_SESSION['admin']))
@@ -70,13 +70,13 @@
         <?php
             if(isset($_GET['error'])) {
                 if($_GET['error']==1)
-                    echo "<p class='error'><b>Non sono permessi campi dati nulli per le credenziali</b></p>";
+                    echo "<p class='error'><strong>Non sono permessi campi dati nulli per le credenziali</strong></p>";
                 else if($_GET['error']==2)
-                    echo "<p class='error'><b>Le password inserite non coincidono</b></p>";
+                    echo "<p class='error'><strong>Le password inserite non coincidono</strong></p>";
                 else if($_GET['error']==3)
-                    echo "<p class='error'><b>La vecchia password è errata</b></p>";
+                    echo "<p class='error'><strong>La vecchia password è errata</strong></p>";
                 else if($_GET['error']==4)
-                    echo "<p class='error'><b>Nome utente non disponibile, riprovare</b></p>";
+                    echo "<p class='error'><strong>Nome utente non disponibile, riprovare</strong></p>";
             }
         ?>
 
