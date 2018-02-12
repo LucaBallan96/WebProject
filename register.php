@@ -24,8 +24,12 @@
         <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png" alt="logo Costruzioni Bordignon S.r.l."/></div>Ti trovi in: Home > Login > Nuovo Account</div>
 
         <?php
-            if(isset($_SERVER['HTTP_REFERER']))
-                echo "<a id='back_link' href='".$_SERVER['HTTP_REFERER']."' title='Torna alla pagina precedente'>Indietro</a>";
+            if(isset($_SERVER['HTTP_REFERER'])) {
+                if(!strpos($_SERVER['HTTP_REFERER'],'register.php'))
+                    echo "<a id='back_link' href='".$_SERVER['HTTP_REFERER']."' title='Torna alla pagina precedente'>Indietro</a>";
+                else
+                    echo "<a id='back_link' href='login.php' title='Torna alla pagina di Login'>Login</a>";
+            }
             else
                 echo "<a id='back_link' href='login.php' title='Torna alla pagina di Login'>Login</a>";
         ?>

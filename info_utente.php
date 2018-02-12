@@ -53,8 +53,12 @@
         <div class="contall">
 
         <?php
-            if(isset($_SERVER['HTTP_REFERER']))
-                echo "<a id='back_link' href='".$_SERVER['HTTP_REFERER']."' title='Torna alla pagina precedente'>Indietro</a>";
+            if(isset($_SERVER['HTTP_REFERER'])) {
+                if(!strpos($_SERVER['HTTP_REFERER'],'info_utente.php'))
+                    echo "<a id='back_link' href='".$_SERVER['HTTP_REFERER']."' title='Torna alla pagina precedente'>Indietro</a>";
+                else
+                    echo "<a id='back_link' href='index.php' title='Torna alla pagina iniziale'>Home</a>";
+            }
             else
                 echo "<a id='back_link' href='index.php' title='Torna alla pagina iniziale'>Home</a>";
         ?>
