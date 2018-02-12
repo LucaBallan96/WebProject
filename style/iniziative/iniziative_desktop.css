@@ -36,8 +36,8 @@
 }
 .container_text{
     width: 12.5em;
-    min-height: 5.65em;
-    
+    height: 5.65em;
+    overflow: scroll;
     
 }
 .container_img img{

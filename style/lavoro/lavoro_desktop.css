@@ -22,10 +22,9 @@
     padding-bottom: 2.5em; 
 }
 #text_search {
-    width: 15.65em;
+    width: 17em;
+    height: 1.5em;
     border: 1px solid #01346e;
-    
-    
     color: grey;
     font-size: 1em;
     background-color: #daefff;
