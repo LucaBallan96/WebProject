@@ -89,7 +89,7 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
-				echo "<div class='contprimo'><a href='info_progetto.php?numero=".$row['id']."'id='div_three' class='div_group' title='Visualizza l&#39;ultimo progetto iniziato'>
+				echo "<div class='contprimo'><a href='info_progetto.php?numero=".$row['id']."' id='div_three' class='div_group' title='Visualizza l&#39;ultimo progetto iniziato'>
 				<div id='div_title_three' class='div_title_group'>
 						<div class='title_div'>Ultimo Progetto</div>
 				</div>
@@ -127,12 +127,12 @@
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 				$row = $result->fetch_assoc();
-				echo "<div class='contprimo'><a href='lavoro.php#".$row['id']."'id='div_four' class='div_group' title='Visualizza una o più offerte di lavoro'>
-				<div id='div_title_four'class='div_title_group'>
+				echo "<div class='contprimo'><a href='lavoro.php#".$row['id']."' id='div_four' class='div_group' title='Visualizza una o più offerte di lavoro'>
+				<div id='div_title_four' class='div_title_group'>
 						<div class='title_div'>Offerte</div>
 				</div>
 				<div  class='div_container_img'>
-					<img id='img_offer' src='images/".$row['role'].".png'alt='Ultima offerta inserita'/>
+					<img id='img_offer' src='images/".$row['role'].".png' alt='Ultima offerta inserita'/>
 					<div class='div_overlay'>
 						<div class='div_text_inside_group'><span class='sp'>".$row['branch']."</span><br/><br/><span class='sp'>".$row['role']."</span><br/><br/><span class='sp'>".$row['contract']."</span></div>
 					</div>
@@ -145,7 +145,7 @@
 						<div class='title_div'>Azienda</div>
 				</div>
 				<div class='div_container_img'>
-					<img src='images/sede.png'alt='Sede dell&#39;azienda'/>
+					<img src='images/sede.png' alt='Sede dell&#39;azienda'/>
 					<div class='div_overlay'>
 						<div class='div_text_inside_group'>Scopri dove siamo</div>
 					</div>
@@ -187,7 +187,7 @@
 					if(strpos($a,'modifiche')!==false){
 						echo "<input id='".$count."' type='checkbox' class='pro_close' />
 						<label class='label_close' for='".$count."'>
-							<div class='div_close' title='chiudi notifica'>&nbspx&nbsp
+							<div class='div_close' title='chiudi notifica'>&nbsp;x&nbsp;
 							</div>
 						</label>
 						<div class='cont_message'>
@@ -200,7 +200,7 @@
 					elseif(strpos($a,'rimossa')!==false){
 						echo "<input id='".$count."' type='checkbox' class='pro_close' />
 						<label class='label_close' for='".$count."'>
-							<div class='div_close_2' title='chiudi notifica'>&nbspx&nbsp
+							<div class='div_close_2' title='chiudi notifica'>&nbsp;x&nbsp;
 							</div>
 						</label>
 						<div class='cont_message_2'>
@@ -313,7 +313,7 @@
 					<h2 class='subtitle'>".$row['subtitle']."</h2>
 					<div class='divisor'></div>
 					<div class='informations'>
-						Editore - ".$row['house']." &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp Data - ".$row['date']."
+						Editore - ".$row['house']." &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Data - ".$row['date']."
 					</div>
 					<div class='divisor'></div>
 						
@@ -369,7 +369,7 @@
 					echo "<input id='".$row['id']."'  type='checkbox' class='pro_select' />
 						<label id='offer_label".$row['id']."' class='label_offer' tabindex='0' for='".$row['id']."' title='Offerta di lavoro come ".$row['role']." nel settore ".$row['branch']."'>
 						
-							<div class='div_img_offer'><img class='img_offer'src='images/".$row['role'].".png' alt='Immagine offerta di lavoro come ".$row['role']."'></div>
+							<div class='div_img_offer'><img class='img_offer' src='images/".$row['role'].".png' alt='Immagine offerta di lavoro come ".$row['role']."'></div>
 							<div class='div_information'>
 								<div class='text'>
 									".$row['role']." - ".$row['branch']." - ".$row['contract']."<br/><br/>
@@ -390,8 +390,8 @@
 										<div class='div_genre'>
 											Genere: 
 											<div class='container_radio'>
-												<label title='Uomo'><input type='radio' name='gender' value='male' checked> Uomo</label> &nbsp&nbsp&nbsp
-												<label title='Donna'><input type='radio' name='gender' value='female'> Donna</label>&nbsp&nbsp&nbsp
+												<label title='Uomo'><input type='radio' name='gender' value='male' checked> Uomo</label> &nbsp;&nbsp;&nbsp;
+												<label title='Donna'><input type='radio' name='gender' value='female'> Donna</label>&nbsp;&nbsp;&nbsp;
 											</div>
 										</div>
 										<div class='divisor'></div>
@@ -403,7 +403,7 @@
 	
 										echo "</select></label><div class='divisor'></div><br/>
 										<label class='lfmessage'>Messaggio:<br/><br/>
-										<textarea class='texta'  class='textmessage' name='textmessage' form='f".$count."' placeholder='Inserisci un messaggio' maxlength='1000' title='Inserisci un messaggio che descriva le tue qualità'> </textarea></label>
+										<textarea class='texta' name='textmessage' form='f".$count."' placeholder='Inserisci un messaggio' maxlength='1000' title='Inserisci un messaggio che descriva le tue qualità'> </textarea></label>
 										<input class='submit' type='submit' value='Invia' name='candidate' title='Invia il modulo'>  
 									</div></div>
 									
@@ -1200,7 +1200,7 @@
 					<div class='data_input'>Numero di accessi a questo sito: ".$row['accesses']."</div>
 					<label class='data_input'>Username: <input type='text' name='username' placeholder='username' value='".$row['username']."' autofocus maxlength='30' pattern='([a-zA-Z])[a-zA-Z0-9._%@#+-]{5,}' title='Username: deve iniziare con una lettera e contenere almeno 6 caratteri. Sono accettati i simboli . + - _ % @ e #' required/></label>
 					<input id='change_password_checkbox' type='checkbox' name='change_password'/>
-					<label tabindex='0'class='data_input' id='change_password_label' for='change_password_checkbox' title='Modifica la password corrente'>Cambia password</label>
+					<label tabindex='0' class='data_input' id='change_password_label' for='change_password_checkbox' title='Modifica la password corrente'>Cambia password</label>
 					<div id='change_div'>
 						<label class='data_input'>Vecchia password: <input type='password' name='old_password' placeholder='corrente' title='Inserisci la password corrente'/></label>
 						<label class='data_input'>Nuova password: <input type='password' name='new_password' placeholder='nuova' maxlength='30' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9._%@#+-]{8,}' title='Nuova password: deve contenere almeno un numero, una lettera maiuscola ed una minuscola, e deve avere complessivamente almeno 8 caratteri. Sono accettati i simboli . + - _ % @ e #'/></label>

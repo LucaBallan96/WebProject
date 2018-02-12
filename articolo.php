@@ -77,7 +77,7 @@
 		<!-- FOOT -->
 		<div id="div_foot">
 			<div id="div_text_foot">
-				@Copyright 2012-2017 &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspCostruzioni Bordignon S.r.l &nbsp&nbsp&nbsp| &nbsp&nbsp&nbspC.F. e P.IVA 0334405269 
+				@Copyright 2012-2017 &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;Costruzioni Bordignon S.r.l &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;C.F. e P.IVA 0334405269 
 			</div>
 		</div>
 		

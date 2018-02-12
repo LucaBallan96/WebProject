@@ -21,7 +21,7 @@
 		<link rel="stylesheet" media="print" href="style/login/login_print.css">
 	</head>
 	<body>
-        <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png"/></div>Ti trovi in: Home > Login</div>
+        <div class="nascosto"><div class="logo_nascosto"><img src="images/logo_azzurro.png" alt="logo Costruzioni Bordignon S.r.l."/></div>Ti trovi in: Home > Login</div>
 
         <?php
             if(isset($_SERVER['HTTP_REFERER'])) {
@@ -38,7 +38,7 @@
         <form action="form_control.php" method="post">
             <div id="container">
                 <div id="div_img">
-                    <img src="images/login.png" id="user_img">
+                    <img src="images/login.png" id="user_img" alt="icona Login"/>
                 </div>
                 <div id="div_data">
                     <div class="data"><strong>Username</strong>
