@@ -47,6 +47,15 @@ width: 9.4em;
 height: 5.65em;
 overflow: scroll;
 }
+@media screen and (max-width:400px) {
+    .container_article {
+        width:90%;
+        display: block;
+    }
+    .container_img, .container_text {
+        width:100%;
+    }
+}
 .container_img img{
     height: 100%;
 }

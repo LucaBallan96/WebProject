@@ -159,3 +159,25 @@ span{
 .spgr{
     float: right;
 }
+
+@media screen and (max-width:400px) {
+    .img_storia{
+        width:90%;
+    }
+    #map{
+        width: 90%;
+    }
+    #organigramma{
+        width: 95%;
+    }
+    #img_persone{
+        width: 90%;
+    }
+    .div_impiegato{
+        clear: both;
+        float: none;
+        margin: auto;
+        width: 13em;
+    }
+
+}
