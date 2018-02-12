@@ -168,7 +168,8 @@ span{
         width: 90%;
     }
     #organigramma{
-        width: 95%;
+        width: 90%;
+        
     }
     #img_persone{
         width: 90%;
@@ -176,8 +177,13 @@ span{
     .div_impiegato{
         clear: both;
         float: none;
+        margin: 0;
         margin: auto;
         width: 13em;
+        
+    }
+    #div_impiegati{
+        width:100%; 
     }
 
 }
